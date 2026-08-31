@@ -1,0 +1,27 @@
+{
+  "cargo": "cargo 1.97.1 (c980f4866 2026-06-30)",
+  "logical_cores": 20,
+  "machine": "AMD64",
+  "os": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "python": "3.13.7",
+  "release": "11",
+  "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)\nbinary: rustc\ncommit-hash: 8bab26f4f68e0e26f0bb7960be334d5b520ea452\ncommit-date: 2026-07-14\nhost: x86_64-pc-windows-msvc\nrelease: 1.97.1\nLLVM version: 22.1.6",
+  "system": "Windows",
+  "tool_version": "AEROST-TOOL-RESEARCH-BASELINE",
+  "windows_cim": {
+    "computer": {
+      "TotalPhysicalMemory": 34070847488
+    },
+    "cpu": {
+      "Name": "12th Gen Intel(R) Core(TM) i7-12700H",
+      "NumberOfCores": 14,
+      "NumberOfLogicalProcessors": 20
+    },
+    "os": {
+      "BuildNumber": "26200",
+      "Caption": "Microsoft Windows 11 Home Single Language",
+      "Version": "10.0.26200"
+    }
+  }
+}

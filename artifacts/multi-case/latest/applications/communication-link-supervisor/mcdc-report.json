@@ -1,0 +1,199 @@
+{
+  "complete": true,
+  "conditions_analyzed": 7,
+  "decisions": [
+    {
+      "conditions": [
+        "AIR-COND-7CE862BD5FCD",
+        "AIR-COND-BED7779F4424",
+        "AIR-COND-64F15C3C5A02",
+        "AIR-COND-7E9750C7D61B"
+      ],
+      "decision_id": "AIR-DEC-E11528F772D0",
+      "pairs": [
+        {
+          "a": {
+            "conditions": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-LINK-STARTUP-SECONDARY-001"
+          },
+          "b": {
+            "conditions": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "SYN-2026B77AD385-A"
+          },
+          "condition_id": "AIR-COND-7CE862BD5FCD"
+        },
+        {
+          "a": {
+            "conditions": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-LINK-STARTUP-SECONDARY-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "SYN-CA02F73989C9-A"
+          },
+          "condition_id": "AIR-COND-BED7779F4424"
+        },
+        {
+          "a": {
+            "conditions": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-LINK-STARTUP-PRIMARY-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-LINK-STARTUP-LOCKOUT-001"
+          },
+          "condition_id": "AIR-COND-64F15C3C5A02"
+        },
+        {
+          "a": {
+            "conditions": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-LINK-STARTUP-SECONDARY-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-LINK-STARTUP-LOCKOUT-001"
+          },
+          "condition_id": "AIR-COND-7E9750C7D61B"
+        }
+      ]
+    },
+    {
+      "conditions": [
+        "AIR-COND-4089AB0D6750",
+        "AIR-COND-793843FC2D65",
+        "AIR-COND-7320AD49DCC7"
+      ],
+      "decision_id": "AIR-DEC-F15FB827C5C1",
+      "pairs": [
+        {
+          "a": {
+            "conditions": [
+              false,
+              true,
+              false
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-LINK-PRIMARY-FAILOVER-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              true,
+              false
+            ],
+            "cycle": 1,
+            "result": true,
+            "scenario": "SYN-8308D1130A7B-B"
+          },
+          "condition_id": "AIR-COND-4089AB0D6750"
+        },
+        {
+          "a": {
+            "conditions": [
+              false,
+              true,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-LINK-BOTH-UNAVAILABLE-001"
+          },
+          "b": {
+            "conditions": [
+              false,
+              false,
+              true
+            ],
+            "cycle": 1,
+            "result": false,
+            "scenario": "SYN-CAE11E7875BE-B"
+          },
+          "condition_id": "AIR-COND-793843FC2D65"
+        },
+        {
+          "a": {
+            "conditions": [
+              false,
+              true,
+              false
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-LINK-PRIMARY-FAILOVER-001"
+          },
+          "b": {
+            "conditions": [
+              false,
+              true,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-LINK-BOTH-UNAVAILABLE-001"
+          },
+          "condition_id": "AIR-COND-7320AD49DCC7"
+        }
+      ]
+    }
+  ],
+  "independence_pairs_found": 7,
+  "independence_pairs_required": 7,
+  "selected_decisions": 2
+}

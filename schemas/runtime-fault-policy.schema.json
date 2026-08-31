@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "program",
+    "runtime_fault_policy",
+    "diagnostic_policy"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "program": {
+      "type": "string"
+    },
+    "runtime_fault_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "normal_commit_inhibited",
+        "retained_assignments",
+        "output_assignments",
+        "diagnostic"
+      ],
+      "properties": {
+        "normal_commit_inhibited": {
+          "type": "boolean"
+        },
+        "retained_assignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "target"
+            ],
+            "properties": {
+              "target": {
+                "type": "string"
+              },
+              "value": {},
+              "from_state": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "output_assignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "target"
+            ],
+            "properties": {
+              "target": {
+                "type": "string"
+              },
+              "value": {},
+              "from_state": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "diagnostic": {
+          "type": "string"
+        }
+      }
+    },
+    "diagnostic_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state_transition",
+        "latched_flags"
+      ],
+      "properties": {
+        "state_transition": {
+          "type": "string"
+        },
+        "latched_flags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "state_variable",
+              "active_value",
+              "diagnostic"
+            ],
+            "properties": {
+              "state_variable": {
+                "type": "string"
+              },
+              "active_value": {},
+              "diagnostic": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "assurance_obligations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reset_paths",
+        "recovery_paths"
+      ],
+      "properties": {
+        "reset_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/assurancePath"
+          }
+        },
+        "recovery_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/assurancePath"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "retainedAssignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target",
+        "value"
+      ],
+      "properties": {
+        "target": {
+          "type": "string"
+        },
+        "value": {}
+      }
+    },
+    "assurancePath": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "subject_ids",
+        "requirements",
+        "attributes",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "requirements": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "state_variable",
+            "from_values",
+            "to_value",
+            "retained_assignments"
+          ],
+          "properties": {
+            "state_variable": {
+              "type": "string",
+              "minLength": 1
+            },
+            "from_values": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {}
+            },
+            "to_value": {},
+            "retained_assignments": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/retainedAssignment"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

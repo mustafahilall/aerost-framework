@@ -1,0 +1,31 @@
+# Rust build outputs
+/target/
+**/target/
+
+# Python generated files
+**/__pycache__/
+*.py[cod]
+
+# Local environments and editor state
+.env
+.env.*
+.idea/
+.vs/
+*.code-workspace
+
+# Windows and filesystem noise
+Thumbs.db
+Desktop.ini
+
+# Logs and transient files
+*.log
+*.tmp
+*.bak
+
+# AEROST transient workspaces
+/.tmp/
+/paper/
+/validation/
+/artifacts/reproducibility-work/
+/artifacts/**/mutation-work/
+/aerost-*-run.log

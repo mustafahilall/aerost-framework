@@ -1,0 +1,1268 @@
+{
+  "description": "Deterministic one-cycle vectors selected by greedy set cover to close all statement, decision-outcome, and atomic-condition-outcome obligations not covered by tests/scenarios.json. Expected results are frozen from the independently coded policy oracle.",
+  "scenarios": [
+    {
+      "coverage_targets": [
+        "AIR-COND-144BC0B8AB3F=false",
+        "AIR-COND-40809FD7BD8C=false",
+        "AIR-COND-79C6E960DBD5=false",
+        "AIR-COND-C9A77B0A56A4=true",
+        "AIR-COND-D3BFA46CC2AB=false",
+        "AIR-COND-E13100E69473=true",
+        "AIR-DEC-865460DD81C4=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": true,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "CRITICAL"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-817FF4A2CA56=true",
+        "AIR-COND-C14F85047E54=true",
+        "AIR-COND-FB54F2EE1373=true",
+        "AIR-DEC-9F38AA8D783B=true",
+        "AIR-DEC-E154C6B87FFB=true",
+        "AIR-STMT-742539D6F747",
+        "AIR-STMT-B7A45416CCD0"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-002",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "DEGRADED"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-00908D0AC570=true",
+        "AIR-COND-5B282D6B19D0=true",
+        "AIR-COND-66F919A4468C=true",
+        "AIR-DEC-9A422B741657=true",
+        "AIR-DEC-9BBFBE456C16=true",
+        "AIR-STMT-324860089FA3",
+        "AIR-STMT-502BF6714318"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-003",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "ENERGY_CONSERVATION"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-1342E8B61A2A=true",
+        "AIR-COND-160BD1733874=true",
+        "AIR-COND-FC4C836BC163=true",
+        "AIR-DEC-2A128CF8D3BB=true",
+        "AIR-DEC-4F304D4EE080=true",
+        "AIR-STMT-2695352AEE34",
+        "AIR-STMT-38804274281F"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-004",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-2D0D9A9B15DB=false",
+        "AIR-COND-418210273076=false",
+        "AIR-COND-7475F8D3D8FD=false",
+        "AIR-COND-E3220C881F3F=false",
+        "AIR-COND-FA89E0B9D778=false",
+        "AIR-DEC-3769441570C5=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": true,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-005",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "LOCKOUT"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-15F32731B053=false",
+        "AIR-COND-DC2862148359=false",
+        "AIR-COND-E627EE416F1A=false",
+        "AIR-COND-E9CE4594367D=false",
+        "AIR-DEC-0D2B6D2854BB=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": true,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": true,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-006",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "DEGRADED"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-36B0D097C415=true",
+        "AIR-COND-7E3F9A986A6A=true",
+        "AIR-COND-BABD48A64B79=true",
+        "AIR-DEC-40B6217C7A61=true",
+        "AIR-STMT-94E73C63A6B1"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": true,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": true,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": true,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-007",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "ENERGY_CONSERVATION"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-2F99F25465C8=true",
+        "AIR-COND-592BFC643C74=true",
+        "AIR-COND-F4060203942C=true",
+        "AIR-DEC-93A18B494A46=true",
+        "AIR-STMT-138B96328901"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": true,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": true,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": true,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-008",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-6FC64088584E=false",
+        "AIR-COND-A47FB4F62113=false",
+        "AIR-COND-BB61825D52A7=true",
+        "AIR-COND-EE98B9F464DC=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": true,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": true
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-009",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "CRITICAL"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-BA77AC6CEF43=true",
+        "AIR-COND-D2D9B19380C7=true",
+        "AIR-DEC-2BF8D2D61B9A=true",
+        "AIR-STMT-FCC6F3D279F7"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": true,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": true
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-010",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "DEGRADED"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-FB54F2EE1373=false",
+        "AIR-DEC-9F38AA8D783B=false",
+        "AIR-STMT-C3992B293712"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-011",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "DEGRADED"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-BC1A60139F1A=true",
+        "AIR-DEC-A01E6CFC8F35=true",
+        "AIR-STMT-A648EBCC4774"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": true,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-012",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "ENERGY_CONSERVATION"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-A60A2BD8F2FD=false",
+        "AIR-COND-B75BA1081948=false",
+        "AIR-DEC-602C491CE204=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "ENERGY_CONSERVATION"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "ENERGY_CONSERVATION"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": true,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": true
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-013",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "ENERGY_CONSERVATION"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-5B282D6B19D0=false",
+        "AIR-DEC-9BBFBE456C16=false",
+        "AIR-STMT-2B029DE35DDA"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-014",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "ENERGY_CONSERVATION"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-14721A8DD0AF=false",
+        "AIR-COND-2C0CE59B2B64=false",
+        "AIR-COND-CC11C4447B85=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": true,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": true
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-015",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "LOCKOUT"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-50A7117E5BB5=true",
+        "AIR-DEC-F26BBA9634D5=true",
+        "AIR-STMT-22037CE76C48"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": true,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-016",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-160BD1733874=false",
+        "AIR-DEC-4F304D4EE080=false",
+        "AIR-STMT-806A417F5C3F"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-017",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-DEC-BB5E24035C0C=true",
+        "AIR-STMT-2682265396A7"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-018",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "CRITICAL"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-3BDC2757859D=false",
+        "AIR-COND-83F3B5EB4933=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": true,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": true,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-019",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "DEGRADED"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-741536FE89BA=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": true,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-020",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "CRITICAL"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-679C2BD98047=true"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": true,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-021",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "ENERGY_CONSERVATION"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-97DBB6731217=false"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": true,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-022",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "LOCKOUT"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-9C40B9684FA7=true"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": true,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-023",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": []
+    },
+    {
+      "coverage_targets": [
+        "AIR-COND-B3AB2C8B1E72=true"
+      ],
+      "cycles": [
+        {
+          "blocking_runtime_fault": false,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": true,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-COVERAGE-CLOSURE-024",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": []
+    }
+  ]
+}

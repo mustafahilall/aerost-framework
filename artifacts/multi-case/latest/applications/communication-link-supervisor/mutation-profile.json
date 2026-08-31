@@ -1,0 +1,143 @@
+{
+  "schema_version": "AEROST-MUTATION-PROFILE-0.1",
+  "application_id": "communication-link-supervisor",
+  "profile_version": "ASCP-0.2",
+  "mutations": [
+    {
+      "id": "MUT-INVALID-GUARD",
+      "operator": "invalid-guard",
+      "description": "Force the transition-stage input-validity guard to true.",
+      "operation": {
+        "kind": "replace-decision-expression",
+        "selector": {
+          "mutation_tag": "invalid-guard",
+          "stage": "transition"
+        },
+        "replacement": {
+          "kind": "bool",
+          "value": true
+        },
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-LOST-LINK-OPERATOR",
+      "operator": "lost-link-operator",
+      "description": "Replace the selected lost-link OR with AND.",
+      "operation": {
+        "kind": "replace-decision-binary-operator",
+        "selector": {
+          "mutation_tag": "lost-link-operator",
+          "stage": "transition"
+        },
+        "from": "OR",
+        "to": "AND",
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-RECOVERY-ENTRY-GUARD",
+      "operator": "recovery-entry-guard",
+      "description": "Reduce degraded recovery entry to RecoveryStable alone.",
+      "operation": {
+        "kind": "replace-decision-expression",
+        "selector": {
+          "mutation_tag": "recovery-entry-guard",
+          "stage": "transition"
+        },
+        "replacement": {
+          "kind": "name",
+          "value": "RecoveryStable"
+        },
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-WEAKEN-LINK-RECOVERY",
+      "operator": "weaken-link-recovery",
+      "description": "Reduce return-to-nominal recovery to ResetAuthorized alone.",
+      "operation": {
+        "kind": "replace-decision-expression",
+        "selector": {
+          "mutation_tag": "weaken-link-recovery",
+          "stage": "transition"
+        },
+        "replacement": {
+          "kind": "name",
+          "value": "ResetAuthorized"
+        },
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-COMMAND-DEFAULT",
+      "operator": "command-default",
+      "description": "Change the conservative CommandPermit default to true.",
+      "operation": {
+        "kind": "set-assignment-boolean",
+        "selector": {
+          "target": "CommandPermit",
+          "expression_kind": "bool",
+          "expression_value": false,
+          "stage": "output",
+          "mutation_tag": "command-default"
+        },
+        "value": true,
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-SWAP-LINK-SELECTION",
+      "operator": "swap-link-selection",
+      "description": "Swap primary and secondary link-selection expressions in DEGRADED.",
+      "operation": {
+        "kind": "swap-assignment-expressions",
+        "left_selector": {
+          "target": "UsePrimaryLink",
+          "case_value": "DEGRADED",
+          "stage": "output"
+        },
+        "right_selector": {
+          "target": "UseSecondaryLink",
+          "case_value": "DEGRADED",
+          "stage": "output"
+        }
+      }
+    },
+    {
+      "id": "MUT-LOST-PROCEDURE-DELETE",
+      "operator": "lost-procedure-delete",
+      "description": "Suppress the lost-link procedure request in LOST_LINK.",
+      "operation": {
+        "kind": "set-assignment-boolean",
+        "selector": {
+          "target": "LostLinkProcedureRequest",
+          "case_value": "LOST_LINK",
+          "expression_kind": "bool",
+          "expression_value": true,
+          "stage": "output"
+        },
+        "value": false,
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-INVALID-OUTPUT-GUARD",
+      "operator": "invalid-output-guard",
+      "description": "Disable the invalid-input conservative output branch.",
+      "operation": {
+        "kind": "replace-decision-expression",
+        "selector": {
+          "mutation_tag": "invalid-output-guard",
+          "stage": "output"
+        },
+        "replacement": {
+          "kind": "bool",
+          "value": false
+        },
+        "match": "exactly-one"
+      }
+    }
+  ],
+  "manual_suite_gate": false
+}

@@ -1,0 +1,402 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerost.example/schemas/assurance-suite-comparison.schema.json",
+  "title": "AEROST Assurance Suite Comparison Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_version",
+    "program_id",
+    "comparison_run_id",
+    "tool",
+    "suite_count",
+    "suites",
+    "comparisons",
+    "claim_boundary",
+    "deterministic",
+    "passed",
+    "replay_passed",
+    "final_automatic_complete",
+    "manual_suite_gate",
+    "manual_suite_gate_passed",
+    "acceptance_passed"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "AEROST-ASSURANCE-SUITE-COMPARISON-0.2"
+    },
+    "profile_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "program_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comparison_run_id": {
+      "type": "string",
+      "pattern": "^COMPARE-RUN-[0-9A-F]{12}$"
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "const": "aerost-assurance-suite-comparison"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "suite_count": {
+      "const": 5
+    },
+    "suites": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "$ref": "#/$defs/suite"
+      }
+    },
+    "comparisons": {
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "$ref": "#/$defs/comparison"
+      }
+    },
+    "claim_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "global_minimum_claimed",
+        "bounded_completeness_claimed",
+        "mutation_scope"
+      ],
+      "properties": {
+        "global_minimum_claimed": {
+          "const": false
+        },
+        "bounded_completeness_claimed": {
+          "const": true
+        },
+        "mutation_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mutation_profile_driven": {
+          "type": "boolean"
+        }
+      }
+    },
+    "deterministic": {
+      "const": true
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "replay_passed": {
+      "type": "boolean"
+    },
+    "final_automatic_complete": {
+      "type": "boolean"
+    },
+    "manual_suite_gate": {
+      "type": "boolean"
+    },
+    "manual_suite_gate_passed": {
+      "type": "boolean"
+    },
+    "acceptance_passed": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "countPair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "covered",
+        "total",
+        "complete"
+      ],
+      "properties": {
+        "covered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "complete": {
+          "type": "boolean"
+        }
+      }
+    },
+    "kindCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "covered",
+        "total",
+        "percent"
+      ],
+      "properties": {
+        "covered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "mutantRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mutant_id",
+        "operator",
+        "killed",
+        "first_detection"
+      ],
+      "properties": {
+        "mutant_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "killed": {
+          "type": "boolean"
+        },
+        "first_detection": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "scenario_id",
+                "cycle"
+              ],
+              "properties": {
+                "scenario_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "cycle": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "suite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "origin",
+        "scenario_count",
+        "cycle_count",
+        "replay_passed",
+        "obligations",
+        "mcdc",
+        "fault_reset_recovery",
+        "requirements",
+        "mutation"
+      ],
+      "properties": {
+        "name": {
+          "enum": [
+            "manual-requirements",
+            "manual-closure",
+            "automatic-unreduced",
+            "automatic-obligation-reduced",
+            "automatic-mutation-aware-reduced"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "cycle_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "replay_passed": {
+          "type": "boolean"
+        },
+        "obligations": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "covered",
+            "total",
+            "percent",
+            "uncovered_count",
+            "uncovered_ids",
+            "by_kind"
+          ],
+          "properties": {
+            "covered": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "total": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "percent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "uncovered_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "uncovered_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "by_kind": {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": {
+                "$ref": "#/$defs/kindCoverage"
+              }
+            }
+          }
+        },
+        "mcdc": {
+          "$ref": "#/$defs/countPair"
+        },
+        "fault_reset_recovery": {
+          "$ref": "#/$defs/countPair"
+        },
+        "requirements": {
+          "$ref": "#/$defs/countPair"
+        },
+        "mutation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "killed",
+            "total",
+            "score_percent",
+            "surviving",
+            "records"
+          ],
+          "properties": {
+            "killed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "total": {
+              "const": 8
+            },
+            "score_percent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "surviving": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "records": {
+              "type": "array",
+              "minItems": 8,
+              "maxItems": 8,
+              "items": {
+                "$ref": "#/$defs/mutantRecord"
+              }
+            }
+          }
+        }
+      }
+    },
+    "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseline",
+        "candidate",
+        "scenario_delta",
+        "cycle_delta",
+        "scenario_change_percent",
+        "cycle_change_percent",
+        "obligation_coverage_delta",
+        "mcdc_delta",
+        "mutation_kill_delta"
+      ],
+      "properties": {
+        "baseline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario_delta": {
+          "type": "integer"
+        },
+        "cycle_delta": {
+          "type": "integer"
+        },
+        "scenario_change_percent": {
+          "type": "number"
+        },
+        "cycle_change_percent": {
+          "type": "number"
+        },
+        "obligation_coverage_delta": {
+          "type": "integer"
+        },
+        "mcdc_delta": {
+          "type": "integer"
+        },
+        "mutation_kill_delta": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

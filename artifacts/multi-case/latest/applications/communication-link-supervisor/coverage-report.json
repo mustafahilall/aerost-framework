@@ -1,0 +1,37 @@
+{
+  "case_arms_reached": [
+    "AIR-STMT-48AD42CC4969::DEGRADED",
+    "AIR-STMT-48AD42CC4969::INITIALIZING",
+    "AIR-STMT-48AD42CC4969::LOCKOUT",
+    "AIR-STMT-48AD42CC4969::LOST_LINK",
+    "AIR-STMT-48AD42CC4969::NOMINAL",
+    "AIR-STMT-48AD42CC4969::RECOVERY_PENDING",
+    "AIR-STMT-7FE4FD402DDD::DEGRADED",
+    "AIR-STMT-7FE4FD402DDD::INITIALIZING",
+    "AIR-STMT-7FE4FD402DDD::LOCKOUT",
+    "AIR-STMT-7FE4FD402DDD::LOST_LINK",
+    "AIR-STMT-7FE4FD402DDD::NOMINAL",
+    "AIR-STMT-7FE4FD402DDD::RECOVERY_PENDING"
+  ],
+  "claim_critical_closed": true,
+  "claim_critical_open_count": 0,
+  "complete": true,
+  "condition": {
+    "both_outcomes": 42,
+    "percent": 100.0,
+    "total": 42
+  },
+  "coverage_scope": "all executable AIR statements, both outcomes of every AIR decision, and both outcomes of every atomic AIR condition",
+  "decision": {
+    "both_outcomes": 14,
+    "percent": 100.0,
+    "total": 14
+  },
+  "statement": {
+    "percent": 100.0,
+    "reached": 59,
+    "total": 59
+  },
+  "uncovered_count": 0,
+  "uncovered_items": []
+}

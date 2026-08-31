@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerost.dev/schemas/application-manifest.schema.json",
+  "title": "AEROST Application Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "application_id",
+    "profile_version",
+    "source",
+    "requirements",
+    "runtime_fault_policy",
+    "controlled_scenarios",
+    "manual_requirements_scenarios",
+    "manual_closure_scenarios",
+    "input_domain",
+    "mutation_profile",
+    "air_artifact_name"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "AEROST-APPLICATION-MANIFEST-0.2"
+    },
+    "application_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requirements": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_fault_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "controlled_scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "manual_requirements_scenarios": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manual_closure_scenarios": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "air_artifact_name": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+\\.air\\.json$"
+    },
+    "mutation_profile": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

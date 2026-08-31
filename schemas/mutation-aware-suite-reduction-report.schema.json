@@ -1,0 +1,340 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AEROST Mutation-Aware Assurance Suite Reduction Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_version",
+    "program_id",
+    "synthesis_run_id",
+    "reduction_run_id",
+    "algorithm",
+    "input_summary",
+    "output_summary",
+    "mcdc_summary",
+    "mutation_summary",
+    "selection_trace",
+    "uncovered_obligations",
+    "claim_boundary",
+    "deterministic",
+    "passed"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "AEROST-MUTATION-AWARE-SUITE-REDUCTION-REPORT-0.1"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "program_id": {
+      "type": "string",
+      "pattern": "[A-Za-z0-9._-]+"
+    },
+    "synthesis_run_id": {
+      "type": "string",
+      "pattern": "[A-Za-z0-9._-]+"
+    },
+    "reduction_run_id": {
+      "type": "string",
+      "pattern": "[A-Za-z0-9._-]+"
+    },
+    "algorithm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version",
+        "selection",
+        "tie_breaking"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "selection": {
+          "type": "string"
+        },
+        "tie_breaking": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "input_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenarios",
+        "cycles",
+        "obligations",
+        "required_obligation_witness_slots",
+        "controlled_mutants",
+        "total_required_slots"
+      ],
+      "properties": {
+        "scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "obligations": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "required_obligation_witness_slots": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "controlled_mutants": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "total_required_slots": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "output_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selected_scenarios",
+        "selected_cycles",
+        "covered_obligations",
+        "covered_obligation_witness_slots",
+        "killed_mutants",
+        "scenario_reduction_percent",
+        "cycle_reduction_percent"
+      ],
+      "properties": {
+        "selected_scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "selected_cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "covered_obligations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "covered_obligation_witness_slots": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "killed_mutants": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "scenario_reduction_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cycle_reduction_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "mcdc_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "obligations",
+        "required_witnesses_per_obligation",
+        "witness_counts"
+      ],
+      "properties": {
+        "obligations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required_witnesses_per_obligation": {
+          "type": "integer",
+          "const": 2
+        },
+        "witness_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "mutation_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "killed",
+        "total",
+        "score_percent",
+        "surviving",
+        "selected_detection_cases"
+      ],
+      "properties": {
+        "killed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "score_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "surviving": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "MUT-[A-Za-z0-9._-]+"
+          }
+        },
+        "selected_detection_cases": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "scenario_id",
+                "cycle"
+              ],
+              "properties": {
+                "scenario_id": {
+                  "type": "string",
+                  "pattern": "SYN-[A-Za-z0-9._-]+"
+                },
+                "cycle": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "selection_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "selection_index",
+          "scenario_id",
+          "cycle_count",
+          "gain",
+          "obligation_gain",
+          "mutation_gain",
+          "newly_covered_obligations",
+          "newly_killed_mutants",
+          "covered_obligation_witness_slots_after_selection",
+          "killed_mutants_after_selection"
+        ],
+        "properties": {
+          "selection_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "scenario_id": {
+            "type": "string",
+            "pattern": "SYN-[A-Za-z0-9._-]+"
+          },
+          "cycle_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "gain": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "obligation_gain": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "mutation_gain": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "newly_covered_obligations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "OBL-[A-Za-z0-9._-]+"
+            }
+          },
+          "newly_killed_mutants": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "MUT-[A-Za-z0-9._-]+"
+            }
+          },
+          "covered_obligation_witness_slots_after_selection": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "killed_mutants_after_selection": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "uncovered_obligations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "OBL-[A-Za-z0-9._-]+"
+      }
+    },
+    "claim_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "global_minimum_claimed",
+        "mutation_scope"
+      ],
+      "properties": {
+        "global_minimum_claimed": {
+          "type": "boolean"
+        },
+        "mutation_scope": {
+          "type": "string"
+        },
+        "mutation_profile_driven": {
+          "type": "boolean"
+        },
+        "operators": {
+          "type": "object"
+        }
+      }
+    },
+    "deterministic": {
+      "type": "boolean"
+    },
+    "passed": {
+      "type": "boolean"
+    }
+  }
+}

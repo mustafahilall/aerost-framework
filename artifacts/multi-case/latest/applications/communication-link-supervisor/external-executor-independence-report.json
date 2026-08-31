@@ -1,0 +1,24 @@
+{
+  "application_specific_logic_detected": false,
+  "application_specific_tokens": [],
+  "executor_path": "tools/external_air_executor.py",
+  "executor_sha256": "e6f13dde3b5d1070e9d42308e10e12b870d00af8a58953380a38cbd55f381adc",
+  "forbidden_project_references": [],
+  "imported_roots": [
+    "__future__",
+    "argparse",
+    "copy",
+    "dataclasses",
+    "json",
+    "pathlib",
+    "sys",
+    "typing"
+  ],
+  "imports_project_executor": false,
+  "passed": true,
+  "profile_version": "ASCP-0.2",
+  "schema_version": "AEROST-SCHEMA-0.2",
+  "separate_process": true,
+  "standard_library_only": true,
+  "unexpected_import_roots": []
+}

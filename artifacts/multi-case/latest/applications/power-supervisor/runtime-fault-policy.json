@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "AEROST-SCHEMA-0.2",
+  "program": "PowerSupervisor",
+  "runtime_fault_policy": {
+    "normal_commit_inhibited": true,
+    "retained_assignments": [
+      {
+        "target": "BlockingFaultLatched",
+        "value": true
+      }
+    ],
+    "output_assignments": [
+      {
+        "target": "PayloadPermit",
+        "value": false
+      },
+      {
+        "target": "ShedNonessentialLoads",
+        "value": true
+      },
+      {
+        "target": "IsolateBatteryA",
+        "value": false
+      },
+      {
+        "target": "IsolateBatteryB",
+        "value": false
+      },
+      {
+        "target": "ReturnToHomeRequest",
+        "value": false
+      },
+      {
+        "target": "ImmediateLandingRequest",
+        "value": false
+      },
+      {
+        "target": "MissionProgressionPermit",
+        "value": false
+      },
+      {
+        "target": "BlockingPowerFault",
+        "value": true
+      },
+      {
+        "target": "SupervisorState",
+        "from_state": "State"
+      }
+    ],
+    "diagnostic": "AEROST-RUNTIME-BLOCKING-FAULT"
+  },
+  "diagnostic_policy": {
+    "state_transition": "AEROST-STATE-TRANSITION",
+    "latched_flags": [
+      {
+        "state_variable": "BlockingFaultLatched",
+        "active_value": true,
+        "diagnostic": "AEROST-BLOCKING-FAULT-LATCHED"
+      }
+    ]
+  },
+  "assurance_obligations": {
+    "reset_paths": [
+      {
+        "id": "PWR-RESET-RECOVERY-PENDING",
+        "subject_ids": [
+          "State",
+          "BlockingFaultLatched"
+        ],
+        "requirements": [
+          "PWR-HLR-011",
+          "PWR-HLR-012"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "RECOVERY_PENDING"
+          ],
+          "to_value": "NORMAL",
+          "retained_assignments": [
+            {
+              "target": "BlockingFaultLatched",
+              "value": false
+            }
+          ]
+        },
+        "description": "Authorize reset from RECOVERY_PENDING to NORMAL and clear the blocking latch."
+      },
+      {
+        "id": "PWR-RESET-LOCKOUT",
+        "subject_ids": [
+          "State",
+          "BlockingFaultLatched"
+        ],
+        "requirements": [
+          "PWR-HLR-011",
+          "PWR-HLR-012"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "LOCKOUT"
+          ],
+          "to_value": "NORMAL",
+          "retained_assignments": [
+            {
+              "target": "BlockingFaultLatched",
+              "value": false
+            }
+          ]
+        },
+        "description": "Authorize reset from LOCKOUT to NORMAL and clear the blocking latch."
+      }
+    ],
+    "recovery_paths": [
+      {
+        "id": "PWR-RECOVERY-DEGRADED",
+        "subject_ids": [
+          "State"
+        ],
+        "requirements": [
+          "PWR-HLR-011",
+          "PWR-HLR-012"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "DEGRADED"
+          ],
+          "to_value": "RECOVERY_PENDING",
+          "retained_assignments": []
+        },
+        "description": "Enter RECOVERY_PENDING from DEGRADED under stable recovery conditions."
+      },
+      {
+        "id": "PWR-RECOVERY-CRITICAL",
+        "subject_ids": [
+          "State"
+        ],
+        "requirements": [
+          "PWR-HLR-011",
+          "PWR-HLR-012"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "CRITICAL"
+          ],
+          "to_value": "RECOVERY_PENDING",
+          "retained_assignments": []
+        },
+        "description": "Enter RECOVERY_PENDING from CRITICAL under stable recovery conditions."
+      }
+    ]
+  }
+}

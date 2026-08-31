@@ -1,0 +1,16 @@
+{
+  "air_sha256": "a81649ef735aed18e3d7040e1c2cbf086acd2bd0781bbd570007daa811da8e29",
+  "domain_id": "AEROST-DOMAIN-POWER-SUPERVISOR-0.1",
+  "domain_sha256": "aff5009849444247d4f53c42915d9d06eb959d7e6d98595f661e0462c0109772",
+  "estimated_full_state_transition_evaluations": 2097152,
+  "input_count": 14,
+  "input_vector_count": 16384,
+  "passed": true,
+  "program_id": "AIR-PROG-E1DC8CAED523",
+  "schema_version": "AEROST-INPUT-DOMAIN-VALIDATION-0.1",
+  "search_bounds": {
+    "maximum_reachable_states": 128,
+    "maximum_sequence_depth": 8,
+    "maximum_transition_evaluations": 3000000
+  }
+}

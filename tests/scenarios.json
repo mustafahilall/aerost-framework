@@ -1,0 +1,1350 @@
+{
+  "scenarios": [
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "INITIALIZING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "INITIALIZING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": false,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-STARTUP-WAIT-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "PWR-HLR-001"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": true,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": false,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-STARTUP-READY-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "PWR-HLR-001"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-STARTUP-A-INDEPENDENCE-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "PWR-HLR-001"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": true,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": false,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-STARTUP-B-INDEPENDENCE-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "PWR-HLR-001"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-STARTUP-ESSENTIAL-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "PWR-HLR-001"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "ENERGY_CONSERVATION"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "ENERGY_CONSERVATION"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": true,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        },
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": true,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": false,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-RESERVE-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-003"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "ENERGY_CONSERVATION"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "ENERGY_CONSERVATION"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": true
+          }
+        }
+      ],
+      "id": "TEST-PWR-RETURN-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-004"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": true,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-BUS-CRITICAL-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-005",
+        "PWR-HLR-015"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": true,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-SOURCE-A-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-006"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": true,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-SOURCE-B-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-007"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "CRITICAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "CRITICAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-DUAL-CRITICAL-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-002",
+        "PWR-HLR-008"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "LOCKOUT"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": false,
+            "BatteryBHealthy": false,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-DUAL-LOCKOUT-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-002",
+        "PWR-HLR-008"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": true,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-PAYLOAD-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-009"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "DEGRADED"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": true,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        },
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "RECOVERY_PENDING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        },
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": true,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": false,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": true,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-CONTACTOR-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-010",
+        "PWR-HLR-011",
+        "PWR-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": true,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": false,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        },
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": true,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": true,
+            "InitializationComplete": true,
+            "InputSetValid": false,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-INVALID-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-013",
+        "PWR-HLR-014"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "blocking_runtime_fault": true,
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": true,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-RUNTIME-001",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "PWR-HLR-014"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "RECOVERY_PENDING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        },
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": true,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": false,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": true,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-CRITICAL-RECOVERY-001",
+      "initial_state": {
+        "BlockingFaultLatched": true,
+        "State": "CRITICAL"
+      },
+      "requirements": [
+        "PWR-HLR-011",
+        "PWR-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": true,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": false,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": true,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-LOCKOUT-RECOVERY-001",
+      "initial_state": {
+        "BlockingFaultLatched": true,
+        "State": "LOCKOUT"
+      },
+      "requirements": [
+        "PWR-HLR-011",
+        "PWR-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "RECOVERY_PENDING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-RECOVERY-RESET-FALSE-001",
+      "initial_state": {
+        "BlockingFaultLatched": true,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": [
+        "PWR-HLR-011",
+        "PWR-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "RECOVERY_PENDING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": true,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-RECOVERY-STABLE-FALSE-001",
+      "initial_state": {
+        "BlockingFaultLatched": true,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": [
+        "PWR-HLR-011",
+        "PWR-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "RECOVERY_PENDING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": true,
+            "ReturnEnergyInsufficient": true
+          }
+        }
+      ],
+      "id": "TEST-PWR-RECOVERY-RETURN-TRUE-001",
+      "initial_state": {
+        "BlockingFaultLatched": true,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": [
+        "PWR-HLR-011",
+        "PWR-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": true,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "RECOVERY_PENDING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": false,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": true,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": true,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-PWR-RECOVERY-ESSENTIAL-FALSE-001",
+      "initial_state": {
+        "BlockingFaultLatched": true,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": [
+        "PWR-HLR-011",
+        "PWR-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "INITIALIZING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": false,
+              "PayloadPermit": false,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": true,
+              "SupervisorState": "INITIALIZING"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": false,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-OUTPUT-DEFAULTS",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "EXEC-REQ-OUTPUT-DEFAULTS"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "BlockingFaultLatched": false,
+              "State": "NORMAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingPowerFault": false,
+              "ImmediateLandingRequest": false,
+              "IsolateBatteryA": false,
+              "IsolateBatteryB": false,
+              "MissionProgressionPermit": true,
+              "PayloadPermit": true,
+              "ReturnToHomeRequest": false,
+              "ShedNonessentialLoads": false,
+              "SupervisorState": "NORMAL"
+            }
+          },
+          "inputs": {
+            "BatteryAHealthy": true,
+            "BatteryBHealthy": true,
+            "ContactorMismatchPersisted": false,
+            "EssentialPowerAvailable": true,
+            "FlightPhaseLanding": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "MainBusCritical": false,
+            "MainBusWarningPersisted": false,
+            "PayloadOvercurrent": false,
+            "RecoveryStable": false,
+            "ReserveEnergyLow": false,
+            "ResetAuthorized": false,
+            "ReturnEnergyInsufficient": false
+          }
+        }
+      ],
+      "id": "TEST-GENERIC-EXECUTION",
+      "initial_state": {
+        "BlockingFaultLatched": false,
+        "State": "NORMAL"
+      },
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ]
+    }
+  ],
+  "schema_version": "AEROST-SCHEMA-0.2"
+}

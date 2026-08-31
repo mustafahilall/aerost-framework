@@ -1,0 +1,30 @@
+{
+  "$schema": "../../../schemas/input-domain.schema.json",
+  "schema_version": "AEROST-INPUT-DOMAIN-0.1",
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-FAF49B35395C",
+  "domain_id": "AEROST-DOMAIN-COMMUNICATION-LINK-SUPERVISOR-0.1",
+  "enumeration": {
+    "strategy": "cartesian",
+    "ordering": "air-declaration-order",
+    "maximum_input_vectors": 1024
+  },
+  "search_bounds": {
+    "maximum_sequence_depth": 8,
+    "maximum_reachable_states": 64,
+    "maximum_transition_evaluations": 100000
+  },
+  "initial_state_policy": "air_initializers",
+  "inputs": [
+    {"name":"InputSetValid","type":"BOOL","values":[false,true]},
+    {"name":"InitializationComplete","type":"BOOL","values":[false,true]},
+    {"name":"PrimaryLinkAvailable","type":"BOOL","values":[false,true]},
+    {"name":"SecondaryLinkAvailable","type":"BOOL","values":[false,true]},
+    {"name":"LinkQualityDegraded","type":"BOOL","values":[false,true]},
+    {"name":"LinkLossPersisted","type":"BOOL","values":[false,true]},
+    {"name":"RecoveryStable","type":"BOOL","values":[false,true]},
+    {"name":"ResetAuthorized","type":"BOOL","values":[false,true]},
+    {"name":"CommandChannelAuthenticated","type":"BOOL","values":[false,true]}
+  ],
+  "constraints": []
+}

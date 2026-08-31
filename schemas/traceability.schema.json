@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "air_to_backend": {
+      "type": "object"
+    },
+    "complete": {
+      "type": "boolean"
+    },
+    "requirement_to_source": {
+      "type": "object"
+    },
+    "requirement_to_test": {
+      "type": "object"
+    },
+    "source_to_air": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "requirement_to_source",
+    "source_to_air",
+    "air_to_backend",
+    "requirement_to_test",
+    "complete"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "algorithm": {
+      "additionalProperties": false,
+      "properties": {
+        "exploration": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "reduction": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "exploration",
+        "reduction"
+      ],
+      "type": "object"
+    },
+    "bounds": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_explored_states": {
+          "minimum": 1,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "maximum_sequence_depth": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "maximum_transition_evaluations": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "maximum_sequence_depth",
+        "maximum_explored_states",
+        "maximum_transition_evaluations"
+      ],
+      "type": "object"
+    },
+    "deterministic": {
+      "type": "boolean"
+    },
+    "obligation_summary": {
+      "additionalProperties": false,
+      "properties": {
+        "covered": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "reachable": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "total": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "uncovered": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unreachable_within_bound": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "unresolved_due_to_resource_limit": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "total",
+        "reachable",
+        "covered",
+        "uncovered",
+        "unreachable_within_bound",
+        "unresolved_due_to_resource_limit"
+      ],
+      "type": "object"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "program_id": {
+      "pattern": "[A-Za-z0-9._-]+",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "AEROST-SYNTHESIS-REPORT-0.1",
+      "type": "string"
+    },
+    "search_summary": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_sequences": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "states_explored": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "transitions_explored": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "search_complete": {
+          "type": "boolean"
+        },
+        "termination_reason": {
+          "enum": [
+            "reachable-frontier-exhausted",
+            "bounded-depth-exhausted",
+            "state-limit-reached",
+            "transition-limit-reached"
+          ]
+        },
+        "state_limit_reached": {
+          "type": "boolean"
+        },
+        "transition_limit_reached": {
+          "type": "boolean"
+        },
+        "depth_frontier_remaining": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "states_explored",
+        "transitions_explored",
+        "candidate_sequences",
+        "search_complete",
+        "termination_reason",
+        "state_limit_reached",
+        "transition_limit_reached",
+        "depth_frontier_remaining"
+      ],
+      "type": "object"
+    },
+    "suite_summary": {
+      "additionalProperties": false,
+      "properties": {
+        "covered_obligations": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "selected_cycles": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "selected_scenarios": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "selected_scenarios",
+        "selected_cycles",
+        "covered_obligations"
+      ],
+      "type": "object"
+    },
+    "synthesis_run_id": {
+      "pattern": "[A-Za-z0-9._-]+",
+      "type": "string"
+    },
+    "uncovered_obligations": {
+      "items": {
+        "pattern": "OBL-[A-Za-z0-9._-]+",
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_version",
+    "program_id",
+    "synthesis_run_id",
+    "algorithm",
+    "bounds",
+    "obligation_summary",
+    "search_summary",
+    "suite_summary",
+    "uncovered_obligations",
+    "deterministic",
+    "passed"
+  ],
+  "title": "AEROST Assurance Test Synthesis Report",
+  "type": "object"
+}

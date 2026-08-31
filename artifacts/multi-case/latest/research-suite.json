@@ -1,0 +1,9 @@
+{
+  "schema_version": "AEROST-RESEARCH-SUITE-0.1",
+  "suite_id": "aerost-research-baseline",
+  "profile_version": "ASCP-0.2",
+  "applications": [
+    "applications/power-supervisor.application.json",
+    "applications/communication-link-supervisor.application.json"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "application_specific_logic_detected": {
+      "type": "boolean"
+    },
+    "application_specific_tokens": {
+      "type": "array"
+    },
+    "executor_path": {
+      "type": "string"
+    },
+    "executor_sha256": {
+      "pattern": "[0-9a-f]{64}",
+      "type": "string"
+    },
+    "forbidden_project_references": {
+      "type": "array"
+    },
+    "imported_roots": {
+      "type": "array"
+    },
+    "imports_project_executor": {
+      "type": "boolean"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "separate_process": {
+      "type": "boolean"
+    },
+    "standard_library_only": {
+      "type": "boolean"
+    },
+    "unexpected_import_roots": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_version",
+    "executor_path",
+    "executor_sha256",
+    "separate_process",
+    "standard_library_only",
+    "imported_roots",
+    "unexpected_import_roots",
+    "imports_project_executor",
+    "forbidden_project_references",
+    "application_specific_logic_detected",
+    "application_specific_tokens",
+    "passed"
+  ],
+  "type": "object"
+}

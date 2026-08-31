@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AEROST Assurance Suite Reduction Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_version",
+    "program_id",
+    "synthesis_run_id",
+    "reduction_run_id",
+    "algorithm",
+    "input_summary",
+    "output_summary",
+    "mcdc_summary",
+    "selection_trace",
+    "uncovered_obligations",
+    "deterministic",
+    "passed"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "AEROST-SUITE-REDUCTION-REPORT-0.1"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "program_id": {
+      "type": "string",
+      "pattern": "[A-Za-z0-9._-]+"
+    },
+    "synthesis_run_id": {
+      "type": "string",
+      "pattern": "[A-Za-z0-9._-]+"
+    },
+    "reduction_run_id": {
+      "type": "string",
+      "pattern": "[A-Za-z0-9._-]+"
+    },
+    "algorithm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version",
+        "selection",
+        "tie_breaking"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "selection": {
+          "type": "string"
+        },
+        "tie_breaking": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "input_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenarios",
+        "cycles",
+        "obligations",
+        "required_witness_slots"
+      ],
+      "properties": {
+        "scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "obligations": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "required_witness_slots": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "output_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selected_scenarios",
+        "selected_cycles",
+        "covered_obligations",
+        "covered_witness_slots",
+        "scenario_reduction_percent",
+        "cycle_reduction_percent"
+      ],
+      "properties": {
+        "selected_scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "selected_cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "covered_obligations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "covered_witness_slots": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "scenario_reduction_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cycle_reduction_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "mcdc_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "obligations",
+        "required_witnesses_per_obligation",
+        "witness_counts",
+        "missing_witnesses"
+      ],
+      "properties": {
+        "obligations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required_witnesses_per_obligation": {
+          "type": "integer",
+          "const": 2
+        },
+        "witness_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "missing_witnesses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "OBL-[A-Za-z0-9._-]+"
+          }
+        }
+      }
+    },
+    "selection_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "selection_index",
+          "scenario_id",
+          "cycle_count",
+          "gain",
+          "newly_covered_obligations",
+          "covered_witness_slots_after_selection"
+        ],
+        "properties": {
+          "selection_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "scenario_id": {
+            "type": "string",
+            "pattern": "SYN-[A-Za-z0-9._-]+"
+          },
+          "cycle_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "gain": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "newly_covered_obligations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "OBL-[A-Za-z0-9._-]+"
+            }
+          },
+          "covered_witness_slots_after_selection": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "uncovered_obligations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "OBL-[A-Za-z0-9._-]+"
+      }
+    },
+    "deterministic": {
+      "type": "boolean"
+    },
+    "passed": {
+      "type": "boolean"
+    }
+  }
+}

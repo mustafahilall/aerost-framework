@@ -1,0 +1,217 @@
+TYPE SupervisorState :
+(
+    INITIALIZING,
+    NORMAL,
+    ENERGY_CONSERVATION,
+    DEGRADED,
+    CRITICAL,
+    RECOVERY_PENDING,
+    LOCKOUT
+);
+END_TYPE
+
+PROGRAM PowerSupervisor
+VAR_INPUT
+    InputSetValid, InitializationComplete : BOOL;
+    BatteryAHealthy, BatteryBHealthy : BOOL;
+    EssentialPowerAvailable : BOOL;
+    MainBusWarningPersisted, MainBusCritical : BOOL;
+    ReserveEnergyLow, ReturnEnergyInsufficient : BOOL;
+    ContactorMismatchPersisted, RecoveryStable : BOOL;
+    ResetAuthorized, PayloadOvercurrent : BOOL;
+    FlightPhaseLanding : BOOL;
+END_VAR
+
+VAR_OUTPUT
+    PayloadPermit, ShedNonessentialLoads : BOOL;
+    IsolateBatteryA, IsolateBatteryB : BOOL;
+    ReturnToHomeRequest, ImmediateLandingRequest : BOOL;
+    MissionProgressionPermit, BlockingPowerFault : BOOL;
+    SupervisorState : SupervisorState;
+END_VAR
+
+VAR_STATE
+    State : SupervisorState := INITIALIZING;
+    BlockingFaultLatched : BOOL := FALSE;
+END_VAR
+
+TRANSITION_STAGE
+(*@req=PWR-HLR-013,PWR-HLR-014 test=TEST-PWR-INVALID-001,TEST-PWR-RUNTIME-001 claim-critical mutate=invalid-guard*)
+IF InputSetValid THEN
+    CASE State OF
+        INITIALIZING:
+            (*@req=PWR-HLR-001 test=TEST-PWR-STARTUP-WAIT-001,TEST-PWR-STARTUP-READY-001 claim-critical mcdc*)
+            IF InitializationComplete AND
+               (BatteryAHealthy OR BatteryBHealthy) AND
+               EssentialPowerAvailable THEN
+                State := NORMAL;
+            ELSIF InitializationComplete THEN
+                State := LOCKOUT;
+            END_IF;
+
+        NORMAL:
+            (*@req=PWR-HLR-002,PWR-HLR-008 test=TEST-PWR-DUAL-CRITICAL-001,TEST-PWR-DUAL-LOCKOUT-001 claim-critical mcdc mutate=dual-source-operator*)
+            IF NOT BatteryAHealthy AND NOT BatteryBHealthy THEN
+                IF EssentialPowerAvailable THEN
+                    State := CRITICAL;
+                ELSE
+                    State := LOCKOUT;
+                END_IF;
+            (*@req=PWR-HLR-005 test=TEST-PWR-BUS-CRITICAL-001 claim-critical mutate=critical-condition,critical-target*)
+            ELSIF MainBusCritical THEN
+                State := CRITICAL;
+            (*@req=PWR-HLR-004 test=TEST-PWR-RETURN-001*)
+            ELSIF ReturnEnergyInsufficient THEN
+                State := ENERGY_CONSERVATION;
+            (*@req=PWR-HLR-006,PWR-HLR-007,PWR-HLR-010 test=TEST-PWR-SOURCE-A-001,TEST-PWR-SOURCE-B-001,TEST-PWR-CONTACTOR-001*)
+            ELSIF ContactorMismatchPersisted OR MainBusWarningPersisted OR
+                  NOT BatteryAHealthy OR NOT BatteryBHealthy THEN
+                State := DEGRADED;
+            (*@req=PWR-HLR-003 test=TEST-PWR-RESERVE-001*)
+            ELSIF ReserveEnergyLow THEN
+                State := ENERGY_CONSERVATION;
+            END_IF;
+
+        ENERGY_CONSERVATION:
+            IF NOT BatteryAHealthy AND NOT BatteryBHealthy THEN
+                IF EssentialPowerAvailable THEN
+                    State := CRITICAL;
+                ELSE
+                    State := LOCKOUT;
+                END_IF;
+            ELSIF MainBusCritical THEN
+                State := CRITICAL;
+            ELSIF ContactorMismatchPersisted OR MainBusWarningPersisted OR
+                  NOT BatteryAHealthy OR NOT BatteryBHealthy THEN
+                State := DEGRADED;
+            ELSIF NOT ReserveEnergyLow AND NOT ReturnEnergyInsufficient THEN
+                State := NORMAL;
+            END_IF;
+
+        DEGRADED:
+            IF NOT BatteryAHealthy AND NOT BatteryBHealthy THEN
+                IF EssentialPowerAvailable THEN
+                    State := CRITICAL;
+                ELSE
+                    State := LOCKOUT;
+                END_IF;
+            ELSIF MainBusCritical OR ReturnEnergyInsufficient THEN
+                State := CRITICAL;
+            ELSIF RecoveryStable AND NOT ContactorMismatchPersisted AND
+                  NOT MainBusWarningPersisted AND
+                  (BatteryAHealthy OR BatteryBHealthy) AND
+                  EssentialPowerAvailable THEN
+                State := RECOVERY_PENDING;
+            END_IF;
+
+        CRITICAL:
+            IF NOT BatteryAHealthy AND NOT BatteryBHealthy AND
+               NOT EssentialPowerAvailable THEN
+                State := LOCKOUT;
+            ELSIF RecoveryStable AND NOT MainBusCritical AND
+                  NOT ContactorMismatchPersisted AND
+                  NOT MainBusWarningPersisted AND
+                  NOT ReturnEnergyInsufficient AND
+                  (BatteryAHealthy OR BatteryBHealthy) AND
+                  EssentialPowerAvailable THEN
+                State := RECOVERY_PENDING;
+            END_IF;
+
+        RECOVERY_PENDING:
+            IF NOT BatteryAHealthy AND NOT BatteryBHealthy THEN
+                IF EssentialPowerAvailable THEN
+                    State := CRITICAL;
+                ELSE
+                    State := LOCKOUT;
+                END_IF;
+            ELSIF MainBusCritical THEN
+                State := CRITICAL;
+            ELSIF ContactorMismatchPersisted OR MainBusWarningPersisted OR
+                  NOT BatteryAHealthy OR NOT BatteryBHealthy THEN
+                State := DEGRADED;
+            (*@req=PWR-HLR-011,PWR-HLR-012 test=TEST-PWR-RECOVERY-001 claim-critical mutate=weaken-recovery*)
+            ELSIF ResetAuthorized AND RecoveryStable AND
+                  NOT ReturnEnergyInsufficient AND
+                  EssentialPowerAvailable THEN
+                State := NORMAL;
+                BlockingFaultLatched := FALSE;
+            END_IF;
+
+        LOCKOUT:
+            IF ResetAuthorized AND RecoveryStable AND
+               NOT MainBusCritical AND
+               NOT ContactorMismatchPersisted AND
+               NOT MainBusWarningPersisted AND
+               NOT ReturnEnergyInsufficient AND
+               (BatteryAHealthy OR BatteryBHealthy) AND
+               EssentialPowerAvailable THEN
+                State := NORMAL;
+                BlockingFaultLatched := FALSE;
+            END_IF;
+    END_CASE;
+ELSE
+    BlockingFaultLatched := TRUE;
+END_IF;
+
+(*@req=PWR-HLR-010,PWR-HLR-014,PWR-HLR-015 test=TEST-PWR-CONTACTOR-001,TEST-PWR-BUS-CRITICAL-001 claim-critical*)
+IF ContactorMismatchPersisted OR State = CRITICAL OR State = LOCKOUT THEN
+    BlockingFaultLatched := TRUE;
+END_IF;
+
+OUTPUT_STAGE
+(*@req=EXEC-REQ-OUTPUT-DEFAULTS test=TEST-OUTPUT-DEFAULTS mutate=payload-default*)
+PayloadPermit := FALSE;
+ShedNonessentialLoads := TRUE;
+IsolateBatteryA := FALSE;
+IsolateBatteryB := FALSE;
+ReturnToHomeRequest := FALSE;
+ImmediateLandingRequest := FALSE;
+MissionProgressionPermit := FALSE;
+BlockingPowerFault := BlockingFaultLatched;
+SupervisorState := State;
+
+CASE State OF
+    INITIALIZING:
+        PayloadPermit := FALSE;
+    NORMAL:
+        PayloadPermit := TRUE;
+        ShedNonessentialLoads := FALSE;
+        MissionProgressionPermit := TRUE;
+    ENERGY_CONSERVATION:
+        ReturnToHomeRequest := ReturnEnergyInsufficient;
+    DEGRADED:
+        ReturnToHomeRequest := TRUE;
+        (*@req=PWR-HLR-006,PWR-HLR-007 test=TEST-PWR-SOURCE-A-001,TEST-PWR-SOURCE-B-001 mutate=swap-isolation*)
+        IsolateBatteryA := NOT BatteryAHealthy AND BatteryBHealthy;
+        IsolateBatteryB := NOT BatteryBHealthy AND BatteryAHealthy;
+    (*@req=PWR-HLR-005,PWR-HLR-014 test=TEST-PWR-BUS-CRITICAL-001 claim-critical mutate=critical-output-delete*)
+    CRITICAL:
+        BlockingPowerFault := TRUE;
+        ReturnToHomeRequest := TRUE;
+        ImmediateLandingRequest := TRUE;
+    RECOVERY_PENDING:
+        BlockingPowerFault := TRUE;
+    LOCKOUT:
+        BlockingPowerFault := TRUE;
+        ImmediateLandingRequest := TRUE;
+END_CASE;
+
+(*@req=PWR-HLR-013,PWR-HLR-014 test=TEST-PWR-INVALID-001 claim-critical mutate=invalid-output-guard*)
+IF NOT InputSetValid THEN
+    PayloadPermit := FALSE;
+    ShedNonessentialLoads := TRUE;
+    MissionProgressionPermit := FALSE;
+    IsolateBatteryA := FALSE;
+    IsolateBatteryB := FALSE;
+    BlockingPowerFault := TRUE;
+    ReturnToHomeRequest := NOT FlightPhaseLanding;
+    ImmediateLandingRequest := FlightPhaseLanding OR NOT EssentialPowerAvailable;
+END_IF;
+
+(*@req=PWR-HLR-009 test=TEST-PWR-PAYLOAD-001*)
+IF PayloadOvercurrent THEN
+    PayloadPermit := FALSE;
+    ShedNonessentialLoads := TRUE;
+END_IF;
+
+END_PROGRAM

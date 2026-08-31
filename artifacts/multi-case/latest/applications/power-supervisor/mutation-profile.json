@@ -1,0 +1,136 @@
+{
+  "schema_version": "AEROST-MUTATION-PROFILE-0.1",
+  "application_id": "power-supervisor",
+  "profile_version": "ASCP-0.2",
+  "mutations": [
+    {
+      "id": "MUT-DUAL-SOURCE-OPERATOR",
+      "operator": "dual-source-operator",
+      "description": "Replace the dual-source AND condition with OR.",
+      "operation": {
+        "kind": "replace-decision-binary-operator",
+        "selector": {
+          "mutation_tag": "dual-source-operator",
+          "stage": "transition"
+        },
+        "from": "AND",
+        "to": "OR",
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-CRITICAL-CONDITION",
+      "operator": "critical-condition",
+      "description": "Negate the selected critical transition condition.",
+      "operation": {
+        "kind": "negate-decision-expression",
+        "selector": {
+          "mutation_tag": "critical-condition",
+          "stage": "transition"
+        },
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-CRITICAL-TARGET",
+      "operator": "critical-target",
+      "description": "Redirect the selected CRITICAL transition target to NORMAL.",
+      "operation": {
+        "kind": "replace-state-target-in-decision-body",
+        "selector": {
+          "mutation_tag": "critical-target",
+          "stage": "transition"
+        },
+        "target": "State",
+        "from": "CRITICAL",
+        "to": "NORMAL",
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-CRITICAL-OUTPUT-DELETE",
+      "operator": "critical-output-delete",
+      "description": "Suppress explicit immediate-landing outputs in critical modes.",
+      "operation": {
+        "kind": "set-assignment-boolean",
+        "selector": {
+          "target": "ImmediateLandingRequest",
+          "expression_kind": "bool",
+          "expression_value": true,
+          "stage": "output"
+        },
+        "value": false,
+        "match": "at-least-one"
+      }
+    },
+    {
+      "id": "MUT-PAYLOAD-DEFAULT",
+      "operator": "payload-default",
+      "description": "Suppress all nonessential-load shedding assignments.",
+      "operation": {
+        "kind": "set-assignment-boolean",
+        "selector": {
+          "target": "ShedNonessentialLoads",
+          "stage": "output"
+        },
+        "value": false,
+        "match": "at-least-one"
+      }
+    },
+    {
+      "id": "MUT-INVALID-OUTPUT-GUARD",
+      "operator": "invalid-output-guard",
+      "description": "Disable the invalid-input conservative output branch.",
+      "operation": {
+        "kind": "replace-decision-expression",
+        "selector": {
+          "mutation_tag": "invalid-output-guard",
+          "stage": "output"
+        },
+        "replacement": {
+          "kind": "bool",
+          "value": false
+        },
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-WEAKEN-RECOVERY",
+      "operator": "weaken-recovery",
+      "description": "Reduce the recovery guard to ResetAuthorized alone.",
+      "operation": {
+        "kind": "replace-decision-expression",
+        "selector": {
+          "mutation_tag": "weaken-recovery",
+          "stage": "transition"
+        },
+        "replacement": {
+          "kind": "name",
+          "value": "ResetAuthorized"
+        },
+        "match": "exactly-one"
+      }
+    },
+    {
+      "id": "MUT-SWAP-ISOLATION",
+      "operator": "swap-isolation",
+      "description": "Swap Battery A and Battery B isolation expressions.",
+      "operation": {
+        "kind": "swap-assignment-expressions",
+        "left_selector": {
+          "target": "IsolateBatteryA",
+          "case_value": "DEGRADED",
+          "stage": "output",
+          "expression_kind": "binary"
+        },
+        "right_selector": {
+          "target": "IsolateBatteryB",
+          "case_value": "DEGRADED",
+          "stage": "output",
+          "expression_kind": "binary"
+        }
+      }
+    }
+  ],
+  "manual_suite_gate": true
+}

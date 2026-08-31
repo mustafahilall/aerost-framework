@@ -1,0 +1,834 @@
+{
+  "scenarios": [
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "INITIALIZING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "INITIALIZING",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": false,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-STARTUP-WAIT-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "LINK-HLR-001"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "NOMINAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": true,
+              "DegradedLinkIndication": false,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": true,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "NOMINAL",
+              "UsePrimaryLink": true,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": false
+          }
+        }
+      ],
+      "id": "TEST-LINK-STARTUP-PRIMARY-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "LINK-HLR-001",
+        "LINK-HLR-002"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "NOMINAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": true,
+              "DegradedLinkIndication": false,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": true,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "NOMINAL",
+              "UsePrimaryLink": true,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": false,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-STARTUP-SECONDARY-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "LINK-HLR-001",
+        "LINK-HLR-003"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "LOCKOUT"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": true,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "LOCKOUT",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": false,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": false
+          }
+        }
+      ],
+      "id": "TEST-LINK-STARTUP-LOCKOUT-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "LINK-HLR-001",
+        "LINK-HLR-008",
+        "LINK-HLR-014"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": true,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": true,
+              "SupervisorState": "DEGRADED",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": true
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": false,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-PRIMARY-FAILOVER-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": true,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": true,
+              "SupervisorState": "DEGRADED",
+              "UsePrimaryLink": true,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": true,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-QUALITY-DEGRADED-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "DEGRADED"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": true,
+              "SupervisorState": "DEGRADED",
+              "UsePrimaryLink": true,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": false,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-AUTH-LOSS-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "LOST_LINK"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": true,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": true,
+              "SupervisorState": "LOST_LINK",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": true,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-LOSS-PERSISTED-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "LOST_LINK"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": true,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": true,
+              "SupervisorState": "LOST_LINK",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": false,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": false
+          }
+        }
+      ],
+      "id": "TEST-LINK-BOTH-UNAVAILABLE-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "RECOVERY_PENDING",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": true,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        },
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "NOMINAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": true,
+              "DegradedLinkIndication": false,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": true,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "NOMINAL",
+              "UsePrimaryLink": true,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": true,
+            "ResetAuthorized": true,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-DEGRADED-RECOVERY-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "DEGRADED"
+      },
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "RECOVERY_PENDING",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": true,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-LOST-RECOVERY-001",
+      "initial_state": {
+        "LinkFaultLatched": true,
+        "State": "LOST_LINK"
+      },
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "NOMINAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": true,
+              "DegradedLinkIndication": false,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": true,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "NOMINAL",
+              "UsePrimaryLink": true,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": true,
+            "ResetAuthorized": true,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-RECOVERY-RESET-001",
+      "initial_state": {
+        "LinkFaultLatched": true,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "RECOVERY_PENDING",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": true,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-RECOVERY-NO-RESET-001",
+      "initial_state": {
+        "LinkFaultLatched": true,
+        "State": "RECOVERY_PENDING"
+      },
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "RECOVERY_PENDING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "RECOVERY_PENDING",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": true,
+            "ResetAuthorized": true,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-LOCKOUT-RECOVERY-001",
+      "initial_state": {
+        "LinkFaultLatched": true,
+        "State": "LOCKOUT"
+      },
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "NOMINAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": true,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": true,
+              "SupervisorState": "NOMINAL",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": false,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-INVALID-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "blocking_runtime_fault": true,
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": true,
+              "State": "NOMINAL"
+            },
+            "normal_commit_inhibited": true,
+            "outputs": {
+              "BlockingLinkFault": true,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": true,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": true,
+              "SupervisorState": "NOMINAL",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-RUNTIME-001",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "LINK-HLR-012"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "INITIALIZING"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": false,
+              "DegradedLinkIndication": true,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": false,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "INITIALIZING",
+              "UsePrimaryLink": false,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": false,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-OUTPUT-DEFAULTS",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "INITIALIZING"
+      },
+      "requirements": [
+        "EXEC-REQ-OUTPUT-DEFAULTS"
+      ]
+    },
+    {
+      "cycles": [
+        {
+          "expected": {
+            "committed_state": {
+              "LinkFaultLatched": false,
+              "State": "NOMINAL"
+            },
+            "normal_commit_inhibited": false,
+            "outputs": {
+              "BlockingLinkFault": false,
+              "CommandPermit": true,
+              "DegradedLinkIndication": false,
+              "LostLinkProcedureRequest": false,
+              "MissionProgressionPermit": true,
+              "ReturnToHomeRequest": false,
+              "SupervisorState": "NOMINAL",
+              "UsePrimaryLink": true,
+              "UseSecondaryLink": false
+            }
+          },
+          "inputs": {
+            "CommandChannelAuthenticated": true,
+            "InitializationComplete": true,
+            "InputSetValid": true,
+            "LinkLossPersisted": false,
+            "LinkQualityDegraded": false,
+            "PrimaryLinkAvailable": true,
+            "RecoveryStable": false,
+            "ResetAuthorized": false,
+            "SecondaryLinkAvailable": true
+          }
+        }
+      ],
+      "id": "TEST-LINK-GENERIC-EXECUTION",
+      "initial_state": {
+        "LinkFaultLatched": false,
+        "State": "NOMINAL"
+      },
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ]
+    }
+  ]
+}

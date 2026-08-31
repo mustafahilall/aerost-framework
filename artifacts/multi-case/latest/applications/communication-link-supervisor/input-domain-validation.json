@@ -1,0 +1,16 @@
+{
+  "air_sha256": "41a572c8fdf905546d59c5872e96ab2a30578598ad5c52bbba28a72a3f8af443",
+  "domain_id": "AEROST-DOMAIN-COMMUNICATION-LINK-SUPERVISOR-0.1",
+  "domain_sha256": "25814cda2b30aff44b66787338ab3d6b6f4660e832744d7bd587ab748f202805",
+  "estimated_full_state_transition_evaluations": 32768,
+  "input_count": 9,
+  "input_vector_count": 512,
+  "passed": true,
+  "program_id": "AIR-PROG-FAF49B35395C",
+  "schema_version": "AEROST-INPUT-DOMAIN-VALIDATION-0.1",
+  "search_bounds": {
+    "maximum_reachable_states": 64,
+    "maximum_sequence_depth": 8,
+    "maximum_transition_evaluations": 100000
+  }
+}

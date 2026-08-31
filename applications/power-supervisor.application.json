@@ -1,0 +1,17 @@
+{
+  "schema_version": "AEROST-APPLICATION-MANIFEST-0.2",
+  "application_id": "power-supervisor",
+  "profile_version": "ASCP-0.2",
+  "source": "examples/power-supervisor/source/power-supervisor.ascp",
+  "requirements": "examples/power-supervisor/requirements/requirements.json",
+  "runtime_fault_policy": "examples/power-supervisor/policies/runtime-fault-policy.json",
+  "controlled_scenarios": [
+    "tests/scenarios.json",
+    "tests/coverage-closure-scenarios.json"
+  ],
+  "manual_requirements_scenarios": "tests/scenarios.json",
+  "manual_closure_scenarios": "tests/coverage-closure-scenarios.json",
+  "input_domain": "tests/input-domains/power-supervisor-input-domain.json",
+  "air_artifact_name": "power-supervisor.air.json",
+  "mutation_profile": "examples/power-supervisor/mutations/mutation-profile.json"
+}

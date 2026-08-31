@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "origin": {
+      "const": "automatic-assurance-test-synthesis",
+      "type": "string"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "program_id": {
+      "pattern": "[A-Za-z0-9._-]+",
+      "type": "string"
+    },
+    "scenarios": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "cycles": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "blocking_runtime_fault": {
+                  "type": "boolean"
+                },
+                "expected": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "committed_state": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    },
+                    "normal_commit_inhibited": {
+                      "type": "boolean"
+                    },
+                    "outputs": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "committed_state",
+                    "outputs",
+                    "normal_commit_inhibited"
+                  ],
+                  "type": "object"
+                },
+                "inputs": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "obligation_hits": {
+                  "items": {
+                    "pattern": "OBL-[A-Za-z0-9._-]+",
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "inputs",
+                "expected",
+                "obligation_hits"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "id": {
+            "pattern": "SYN-[A-Za-z0-9._-]+",
+            "type": "string"
+          },
+          "initial_state": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "requirements": {
+            "items": {
+              "pattern": "[A-Za-z0-9._-]+",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "target_obligations": {
+            "items": {
+              "pattern": "OBL-[A-Za-z0-9._-]+",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "requirements",
+          "target_obligations",
+          "initial_state",
+          "cycles"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "AEROST-SYNTHESIZED-SCENARIOS-0.1",
+      "type": "string"
+    },
+    "synthesis_run_id": {
+      "pattern": "[A-Za-z0-9._-]+",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_version",
+    "program_id",
+    "synthesis_run_id",
+    "origin",
+    "scenarios"
+  ],
+  "title": "AEROST Synthesized Scenarios",
+  "type": "object"
+}

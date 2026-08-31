@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "cycles": {
+      "minItems": 1,
+      "type": "array"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_version",
+    "cycles"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,1012 @@
+{
+  "acceptance_passed": true,
+  "claim_boundary": {
+    "bounded_completeness_claimed": true,
+    "global_minimum_claimed": false,
+    "mutation_profile_driven": true,
+    "mutation_scope": "8 application-profile-controlled non-equivalent AIR mutants executed with the external AIR executor"
+  },
+  "comparison_run_id": "COMPARE-RUN-F00EA88730B9",
+  "comparisons": [
+    {
+      "baseline": "manual-requirements",
+      "candidate": "manual-closure",
+      "cycle_change_percent": 315.789474,
+      "cycle_delta": 60,
+      "mcdc_delta": 3,
+      "mutation_kill_delta": 0,
+      "obligation_coverage_delta": 39,
+      "scenario_change_percent": 161.111111,
+      "scenario_delta": 29
+    },
+    {
+      "baseline": "manual-closure",
+      "candidate": "automatic-unreduced",
+      "cycle_change_percent": 434.177215,
+      "cycle_delta": 343,
+      "mcdc_delta": 0,
+      "mutation_kill_delta": 2,
+      "obligation_coverage_delta": 0,
+      "scenario_change_percent": 363.829787,
+      "scenario_delta": 171
+    },
+    {
+      "baseline": "manual-closure",
+      "candidate": "automatic-obligation-reduced",
+      "cycle_change_percent": -24.050633,
+      "cycle_delta": -19,
+      "mcdc_delta": 0,
+      "mutation_kill_delta": -2,
+      "obligation_coverage_delta": 0,
+      "scenario_change_percent": -38.297872,
+      "scenario_delta": -18
+    },
+    {
+      "baseline": "manual-closure",
+      "candidate": "automatic-mutation-aware-reduced",
+      "cycle_change_percent": -15.189873,
+      "cycle_delta": -12,
+      "mcdc_delta": 0,
+      "mutation_kill_delta": 2,
+      "obligation_coverage_delta": 0,
+      "scenario_change_percent": -31.914894,
+      "scenario_delta": -15
+    },
+    {
+      "baseline": "automatic-unreduced",
+      "candidate": "automatic-obligation-reduced",
+      "cycle_change_percent": -85.781991,
+      "cycle_delta": -362,
+      "mcdc_delta": 0,
+      "mutation_kill_delta": -4,
+      "obligation_coverage_delta": 0,
+      "scenario_change_percent": -86.697248,
+      "scenario_delta": -189
+    },
+    {
+      "baseline": "automatic-unreduced",
+      "candidate": "automatic-mutation-aware-reduced",
+      "cycle_change_percent": -84.123223,
+      "cycle_delta": -355,
+      "mcdc_delta": 0,
+      "mutation_kill_delta": 0,
+      "obligation_coverage_delta": 0,
+      "scenario_change_percent": -85.321101,
+      "scenario_delta": -186
+    },
+    {
+      "baseline": "automatic-obligation-reduced",
+      "candidate": "automatic-mutation-aware-reduced",
+      "cycle_change_percent": 11.666667,
+      "cycle_delta": 7,
+      "mcdc_delta": 0,
+      "mutation_kill_delta": 4,
+      "obligation_coverage_delta": 0,
+      "scenario_change_percent": 10.344828,
+      "scenario_delta": 3
+    }
+  ],
+  "deterministic": true,
+  "final_automatic_complete": true,
+  "manual_suite_gate": false,
+  "manual_suite_gate_passed": true,
+  "passed": true,
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-FAF49B35395C",
+  "replay_passed": true,
+  "schema_version": "AEROST-ASSURANCE-SUITE-COMPARISON-0.2",
+  "suite_count": 5,
+  "suites": [
+    {
+      "cycle_count": 19,
+      "fault_reset_recovery": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mcdc": {
+        "complete": false,
+        "covered": 4,
+        "total": 7
+      },
+      "mutation": {
+        "killed": 6,
+        "records": [
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-INVALID-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-GUARD",
+            "operator": "invalid-guard"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-LOSS-PERSISTED-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-LINK-OPERATOR",
+            "operator": "lost-link-operator"
+          },
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-RECOVERY-ENTRY-GUARD",
+            "operator": "recovery-entry-guard"
+          },
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-WEAKEN-LINK-RECOVERY",
+            "operator": "weaken-link-recovery"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-STARTUP-WAIT-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-COMMAND-DEFAULT",
+            "operator": "command-default"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-PRIMARY-FAILOVER-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-SWAP-LINK-SELECTION",
+            "operator": "swap-link-selection"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-LOSS-PERSISTED-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-PROCEDURE-DELETE",
+            "operator": "lost-procedure-delete"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-INVALID-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+            "operator": "invalid-output-guard"
+          }
+        ],
+        "score_percent": 75.0,
+        "surviving": [
+          "MUT-RECOVERY-ENTRY-GUARD",
+          "MUT-WEAKEN-LINK-RECOVERY"
+        ],
+        "total": 8
+      },
+      "name": "manual-requirements",
+      "obligations": {
+        "by_kind": {
+          "CASE_ARM_REACHED": {
+            "covered": 12,
+            "percent": 100.0,
+            "total": 12
+          },
+          "CONDITION_FALSE": {
+            "covered": 26,
+            "percent": 61.904762,
+            "total": 42
+          },
+          "CONDITION_TRUE": {
+            "covered": 31,
+            "percent": 73.809524,
+            "total": 42
+          },
+          "CONSERVATIVE_OUTPUT_APPLIED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "DECISION_FALSE": {
+            "covered": 11,
+            "percent": 78.571429,
+            "total": 14
+          },
+          "DECISION_TRUE": {
+            "covered": 11,
+            "percent": 78.571429,
+            "total": 14
+          },
+          "FAULT_POLICY_ACTIVATED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "MCDC_PAIR": {
+            "covered": 4,
+            "percent": 57.142857,
+            "total": 7
+          },
+          "NORMAL_COMMIT_INHIBITED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "RECOVERY_PATH_EXECUTED": {
+            "covered": 3,
+            "percent": 100.0,
+            "total": 3
+          },
+          "REQUIREMENT_EXERCISED": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "RESET_PATH_EXECUTED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "STATEMENT_REACHED": {
+            "covered": 56,
+            "percent": 94.915254,
+            "total": 59
+          }
+        },
+        "covered": 172,
+        "percent": 81.516588,
+        "total": 211,
+        "uncovered_count": 39,
+        "uncovered_ids": [
+          "OBL-COND-AIR-COND-07D709DB7F51-FALSE",
+          "OBL-COND-AIR-COND-15CC65FC0325-FALSE",
+          "OBL-COND-AIR-COND-198A1B1EE4CF-FALSE",
+          "OBL-COND-AIR-COND-28BAD0606931-FALSE",
+          "OBL-COND-AIR-COND-324E98A1F836-TRUE",
+          "OBL-COND-AIR-COND-32A566D26462-FALSE",
+          "OBL-COND-AIR-COND-38A77753C9BB-TRUE",
+          "OBL-COND-AIR-COND-39E43926C012-FALSE",
+          "OBL-COND-AIR-COND-3BDDB32D00D8-FALSE",
+          "OBL-COND-AIR-COND-441C1085C0BC-FALSE",
+          "OBL-COND-AIR-COND-48160B62BAEF-TRUE",
+          "OBL-COND-AIR-COND-569BA6F8A5A4-TRUE",
+          "OBL-COND-AIR-COND-5740B33F484E-TRUE",
+          "OBL-COND-AIR-COND-5A5880ACA2D4-TRUE",
+          "OBL-COND-AIR-COND-816F5A87C37C-TRUE",
+          "OBL-COND-AIR-COND-8A22B1F9BCF6-TRUE",
+          "OBL-COND-AIR-COND-9197056085FE-FALSE",
+          "OBL-COND-AIR-COND-B72FED13362D-FALSE",
+          "OBL-COND-AIR-COND-B856C7AB9AF6-FALSE",
+          "OBL-COND-AIR-COND-BED7779F4424-FALSE",
+          "OBL-COND-AIR-COND-CAE388844A15-TRUE",
+          "OBL-COND-AIR-COND-CF3B9050C31B-FALSE",
+          "OBL-COND-AIR-COND-D115437E2970-TRUE",
+          "OBL-COND-AIR-COND-E3E3882462AC-FALSE",
+          "OBL-COND-AIR-COND-E43A0D3C92E1-TRUE",
+          "OBL-COND-AIR-COND-E4D08AF310FC-FALSE",
+          "OBL-COND-AIR-COND-E82911A939C0-FALSE",
+          "OBL-DEC-AIR-DEC-080D6C64B501-TRUE",
+          "OBL-DEC-AIR-DEC-78827340A084-FALSE",
+          "OBL-DEC-AIR-DEC-9DEE36C5AD49-FALSE",
+          "OBL-DEC-AIR-DEC-C15397ED3F0A-TRUE",
+          "OBL-DEC-AIR-DEC-C4B7B27E0075-FALSE",
+          "OBL-DEC-AIR-DEC-CAB019D5C1A2-TRUE",
+          "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7CE862BD5FCD",
+          "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-BED7779F4424",
+          "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-793843FC2D65",
+          "OBL-STMT-AIR-STMT-412CB814D6AB",
+          "OBL-STMT-AIR-STMT-94E73C63A6B1",
+          "OBL-STMT-AIR-STMT-D18352A49A33"
+        ]
+      },
+      "origin": "manually authored requirements suite",
+      "replay_passed": true,
+      "requirements": {
+        "complete": true,
+        "covered": 14,
+        "total": 14
+      },
+      "scenario_count": 18
+    },
+    {
+      "cycle_count": 79,
+      "fault_reset_recovery": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mcdc": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mutation": {
+        "killed": 6,
+        "records": [
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-INVALID-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-GUARD",
+            "operator": "invalid-guard"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-LOSS-PERSISTED-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-LINK-OPERATOR",
+            "operator": "lost-link-operator"
+          },
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-RECOVERY-ENTRY-GUARD",
+            "operator": "recovery-entry-guard"
+          },
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-WEAKEN-LINK-RECOVERY",
+            "operator": "weaken-link-recovery"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-STARTUP-WAIT-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-COMMAND-DEFAULT",
+            "operator": "command-default"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-PRIMARY-FAILOVER-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-SWAP-LINK-SELECTION",
+            "operator": "swap-link-selection"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-LOSS-PERSISTED-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-PROCEDURE-DELETE",
+            "operator": "lost-procedure-delete"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "TEST-LINK-INVALID-001"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+            "operator": "invalid-output-guard"
+          }
+        ],
+        "score_percent": 75.0,
+        "surviving": [
+          "MUT-RECOVERY-ENTRY-GUARD",
+          "MUT-WEAKEN-LINK-RECOVERY"
+        ],
+        "total": 8
+      },
+      "name": "manual-closure",
+      "obligations": {
+        "by_kind": {
+          "CASE_ARM_REACHED": {
+            "covered": 12,
+            "percent": 100.0,
+            "total": 12
+          },
+          "CONDITION_FALSE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONDITION_TRUE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONSERVATIVE_OUTPUT_APPLIED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "DECISION_FALSE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "DECISION_TRUE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "FAULT_POLICY_ACTIVATED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "MCDC_PAIR": {
+            "covered": 7,
+            "percent": 100.0,
+            "total": 7
+          },
+          "NORMAL_COMMIT_INHIBITED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "RECOVERY_PATH_EXECUTED": {
+            "covered": 3,
+            "percent": 100.0,
+            "total": 3
+          },
+          "REQUIREMENT_EXERCISED": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "RESET_PATH_EXECUTED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "STATEMENT_REACHED": {
+            "covered": 59,
+            "percent": 100.0,
+            "total": 59
+          }
+        },
+        "covered": 211,
+        "percent": 100.0,
+        "total": 211,
+        "uncovered_count": 0,
+        "uncovered_ids": []
+      },
+      "origin": "manual requirements plus coverage-closure supplement",
+      "replay_passed": true,
+      "requirements": {
+        "complete": true,
+        "covered": 14,
+        "total": 14
+      },
+      "scenario_count": 47
+    },
+    {
+      "cycle_count": 422,
+      "fault_reset_recovery": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mcdc": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mutation": {
+        "killed": 8,
+        "records": [
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "SYN-0C824AC5736A"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-GUARD",
+            "operator": "invalid-guard"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-LINK-OPERATOR",
+            "operator": "lost-link-operator"
+          },
+          {
+            "first_detection": {
+              "cycle": 2,
+              "scenario_id": "SYN-A0DEE8309CFE"
+            },
+            "killed": true,
+            "mutant_id": "MUT-RECOVERY-ENTRY-GUARD",
+            "operator": "recovery-entry-guard"
+          },
+          {
+            "first_detection": {
+              "cycle": 2,
+              "scenario_id": "SYN-BC724870AAFC"
+            },
+            "killed": true,
+            "mutant_id": "MUT-WEAKEN-LINK-RECOVERY",
+            "operator": "weaken-link-recovery"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "SYN-02E3C384AF4B"
+            },
+            "killed": true,
+            "mutant_id": "MUT-COMMAND-DEFAULT",
+            "operator": "command-default"
+          },
+          {
+            "first_detection": {
+              "cycle": 2,
+              "scenario_id": "SYN-03EDD922107B"
+            },
+            "killed": true,
+            "mutant_id": "MUT-SWAP-LINK-SELECTION",
+            "operator": "swap-link-selection"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-PROCEDURE-DELETE",
+            "operator": "lost-procedure-delete"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "SYN-0C824AC5736A"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+            "operator": "invalid-output-guard"
+          }
+        ],
+        "score_percent": 100.0,
+        "surviving": [],
+        "total": 8
+      },
+      "name": "automatic-unreduced",
+      "obligations": {
+        "by_kind": {
+          "CASE_ARM_REACHED": {
+            "covered": 12,
+            "percent": 100.0,
+            "total": 12
+          },
+          "CONDITION_FALSE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONDITION_TRUE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONSERVATIVE_OUTPUT_APPLIED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "DECISION_FALSE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "DECISION_TRUE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "FAULT_POLICY_ACTIVATED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "MCDC_PAIR": {
+            "covered": 7,
+            "percent": 100.0,
+            "total": 7
+          },
+          "NORMAL_COMMIT_INHIBITED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "RECOVERY_PATH_EXECUTED": {
+            "covered": 3,
+            "percent": 100.0,
+            "total": 3
+          },
+          "REQUIREMENT_EXERCISED": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "RESET_PATH_EXECUTED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "STATEMENT_REACHED": {
+            "covered": 59,
+            "percent": 100.0,
+            "total": 59
+          }
+        },
+        "covered": 211,
+        "percent": 100.0,
+        "total": 211,
+        "uncovered_count": 0,
+        "uncovered_ids": []
+      },
+      "origin": "bounded BFS per-obligation witness suite",
+      "replay_passed": true,
+      "requirements": {
+        "complete": true,
+        "covered": 14,
+        "total": 14
+      },
+      "scenario_count": 218
+    },
+    {
+      "cycle_count": 60,
+      "fault_reset_recovery": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mcdc": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mutation": {
+        "killed": 4,
+        "records": [
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-INVALID-GUARD",
+            "operator": "invalid-guard"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-LINK-OPERATOR",
+            "operator": "lost-link-operator"
+          },
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-RECOVERY-ENTRY-GUARD",
+            "operator": "recovery-entry-guard"
+          },
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-WEAKEN-LINK-RECOVERY",
+            "operator": "weaken-link-recovery"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-COMMAND-DEFAULT",
+            "operator": "command-default"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0C8788465C61"
+            },
+            "killed": true,
+            "mutant_id": "MUT-SWAP-LINK-SELECTION",
+            "operator": "swap-link-selection"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-PROCEDURE-DELETE",
+            "operator": "lost-procedure-delete"
+          },
+          {
+            "first_detection": null,
+            "killed": false,
+            "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+            "operator": "invalid-output-guard"
+          }
+        ],
+        "score_percent": 50.0,
+        "surviving": [
+          "MUT-INVALID-GUARD",
+          "MUT-RECOVERY-ENTRY-GUARD",
+          "MUT-WEAKEN-LINK-RECOVERY",
+          "MUT-INVALID-OUTPUT-GUARD"
+        ],
+        "total": 8
+      },
+      "name": "automatic-obligation-reduced",
+      "obligations": {
+        "by_kind": {
+          "CASE_ARM_REACHED": {
+            "covered": 12,
+            "percent": 100.0,
+            "total": 12
+          },
+          "CONDITION_FALSE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONDITION_TRUE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONSERVATIVE_OUTPUT_APPLIED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "DECISION_FALSE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "DECISION_TRUE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "FAULT_POLICY_ACTIVATED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "MCDC_PAIR": {
+            "covered": 7,
+            "percent": 100.0,
+            "total": 7
+          },
+          "NORMAL_COMMIT_INHIBITED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "RECOVERY_PATH_EXECUTED": {
+            "covered": 3,
+            "percent": 100.0,
+            "total": 3
+          },
+          "REQUIREMENT_EXERCISED": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "RESET_PATH_EXECUTED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "STATEMENT_REACHED": {
+            "covered": 59,
+            "percent": 100.0,
+            "total": 59
+          }
+        },
+        "covered": 211,
+        "percent": 100.0,
+        "total": 211,
+        "uncovered_count": 0,
+        "uncovered_ids": []
+      },
+      "origin": "deterministic obligation-preserving greedy multicover suite",
+      "replay_passed": true,
+      "requirements": {
+        "complete": true,
+        "covered": 14,
+        "total": 14
+      },
+      "scenario_count": 29
+    },
+    {
+      "cycle_count": 67,
+      "fault_reset_recovery": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mcdc": {
+        "complete": true,
+        "covered": 7,
+        "total": 7
+      },
+      "mutation": {
+        "killed": 8,
+        "records": [
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "SYN-0C824AC5736A"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-GUARD",
+            "operator": "invalid-guard"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-LINK-OPERATOR",
+            "operator": "lost-link-operator"
+          },
+          {
+            "first_detection": {
+              "cycle": 2,
+              "scenario_id": "SYN-A0DEE8309CFE"
+            },
+            "killed": true,
+            "mutant_id": "MUT-RECOVERY-ENTRY-GUARD",
+            "operator": "recovery-entry-guard"
+          },
+          {
+            "first_detection": {
+              "cycle": 2,
+              "scenario_id": "SYN-BC724870AAFC"
+            },
+            "killed": true,
+            "mutant_id": "MUT-WEAKEN-LINK-RECOVERY",
+            "operator": "weaken-link-recovery"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-COMMAND-DEFAULT",
+            "operator": "command-default"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0C8788465C61"
+            },
+            "killed": true,
+            "mutant_id": "MUT-SWAP-LINK-SELECTION",
+            "operator": "swap-link-selection"
+          },
+          {
+            "first_detection": {
+              "cycle": 1,
+              "scenario_id": "SYN-0356A8F55DA3"
+            },
+            "killed": true,
+            "mutant_id": "MUT-LOST-PROCEDURE-DELETE",
+            "operator": "lost-procedure-delete"
+          },
+          {
+            "first_detection": {
+              "cycle": 0,
+              "scenario_id": "SYN-0C824AC5736A"
+            },
+            "killed": true,
+            "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+            "operator": "invalid-output-guard"
+          }
+        ],
+        "score_percent": 100.0,
+        "surviving": [],
+        "total": 8
+      },
+      "name": "automatic-mutation-aware-reduced",
+      "obligations": {
+        "by_kind": {
+          "CASE_ARM_REACHED": {
+            "covered": 12,
+            "percent": 100.0,
+            "total": 12
+          },
+          "CONDITION_FALSE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONDITION_TRUE": {
+            "covered": 42,
+            "percent": 100.0,
+            "total": 42
+          },
+          "CONSERVATIVE_OUTPUT_APPLIED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "DECISION_FALSE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "DECISION_TRUE": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "FAULT_POLICY_ACTIVATED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "MCDC_PAIR": {
+            "covered": 7,
+            "percent": 100.0,
+            "total": 7
+          },
+          "NORMAL_COMMIT_INHIBITED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "RECOVERY_PATH_EXECUTED": {
+            "covered": 3,
+            "percent": 100.0,
+            "total": 3
+          },
+          "REQUIREMENT_EXERCISED": {
+            "covered": 14,
+            "percent": 100.0,
+            "total": 14
+          },
+          "RESET_PATH_EXECUTED": {
+            "covered": 1,
+            "percent": 100.0,
+            "total": 1
+          },
+          "STATEMENT_REACHED": {
+            "covered": 59,
+            "percent": 100.0,
+            "total": 59
+          }
+        },
+        "covered": 211,
+        "percent": 100.0,
+        "total": 211,
+        "uncovered_count": 0,
+        "uncovered_ids": []
+      },
+      "origin": "deterministic obligation-and-mutation-preserving greedy multicover suite",
+      "replay_passed": true,
+      "requirements": {
+        "complete": true,
+        "covered": 14,
+        "total": 14
+      },
+      "scenario_count": 32
+    }
+  ],
+  "tool": {
+    "name": "aerost-assurance-suite-comparison",
+    "version": "0.2.0"
+  }
+}

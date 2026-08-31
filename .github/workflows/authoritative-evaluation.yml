@@ -1,0 +1,29 @@
+name: AEROST authoritative evaluation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  authoritative:
+    runs-on: windows-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.97.1"
+      - name: Run authoritative two-case evaluation
+        shell: powershell
+        run: ./scripts/run-evaluation.ps1
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: aerost-authoritative-evidence
+          path: artifacts/multi-case/latest
+          if-no-files-found: error

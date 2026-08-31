@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "complete": {
+      "type": "boolean"
+    },
+    "conditions_analyzed": {
+      "type": "integer"
+    },
+    "independence_pairs_found": {
+      "type": "integer"
+    },
+    "independence_pairs_required": {
+      "type": "integer"
+    },
+    "selected_decisions": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "selected_decisions",
+    "conditions_analyzed",
+    "independence_pairs_found",
+    "independence_pairs_required",
+    "complete"
+  ],
+  "type": "object"
+}

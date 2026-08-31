@@ -1,0 +1,43 @@
+{
+  "algorithm": {
+    "exploration": "bounded breadth-first retained-state exploration",
+    "name": "aerost-bounded-assurance-bfs",
+    "reduction": "none; unreduced per-obligation witness suite",
+    "version": "0.1.0"
+  },
+  "bounds": {
+    "maximum_explored_states": 64,
+    "maximum_sequence_depth": 8,
+    "maximum_transition_evaluations": 100000
+  },
+  "deterministic": true,
+  "obligation_summary": {
+    "covered": 211,
+    "reachable": 211,
+    "total": 211,
+    "uncovered": 0,
+    "unreachable_within_bound": 0,
+    "unresolved_due_to_resource_limit": 0
+  },
+  "passed": true,
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-FAF49B35395C",
+  "schema_version": "AEROST-SYNTHESIS-REPORT-0.1",
+  "search_summary": {
+    "candidate_sequences": 218,
+    "depth_frontier_remaining": false,
+    "search_complete": true,
+    "state_limit_reached": false,
+    "states_explored": 10,
+    "termination_reason": "reachable-frontier-exhausted",
+    "transition_limit_reached": false,
+    "transitions_explored": 5130
+  },
+  "suite_summary": {
+    "covered_obligations": 211,
+    "selected_cycles": 422,
+    "selected_scenarios": 218
+  },
+  "synthesis_run_id": "SYNTH-RUN-095B45F09511",
+  "uncovered_obligations": []
+}

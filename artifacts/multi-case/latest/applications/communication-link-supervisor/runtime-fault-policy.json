@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "AEROST-SCHEMA-0.2",
+  "program": "CommunicationLinkSupervisor",
+  "runtime_fault_policy": {
+    "normal_commit_inhibited": true,
+    "retained_assignments": [
+      {
+        "target": "LinkFaultLatched",
+        "value": true
+      }
+    ],
+    "output_assignments": [
+      {
+        "target": "CommandPermit",
+        "value": false
+      },
+      {
+        "target": "UsePrimaryLink",
+        "value": false
+      },
+      {
+        "target": "UseSecondaryLink",
+        "value": false
+      },
+      {
+        "target": "DegradedLinkIndication",
+        "value": true
+      },
+      {
+        "target": "LostLinkProcedureRequest",
+        "value": true
+      },
+      {
+        "target": "ReturnToHomeRequest",
+        "value": true
+      },
+      {
+        "target": "MissionProgressionPermit",
+        "value": false
+      },
+      {
+        "target": "BlockingLinkFault",
+        "value": true
+      },
+      {
+        "target": "SupervisorState",
+        "from_state": "State"
+      }
+    ],
+    "diagnostic": "AEROST-RUNTIME-BLOCKING-FAULT"
+  },
+  "diagnostic_policy": {
+    "state_transition": "AEROST-STATE-TRANSITION",
+    "latched_flags": [
+      {
+        "state_variable": "LinkFaultLatched",
+        "active_value": true,
+        "diagnostic": "AEROST-LINK-FAULT-LATCHED"
+      }
+    ]
+  },
+  "assurance_obligations": {
+    "reset_paths": [
+      {
+        "id": "LINK-RESET-RECOVERY-PENDING",
+        "subject_ids": [
+          "State",
+          "LinkFaultLatched"
+        ],
+        "requirements": [
+          "LINK-HLR-010"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "RECOVERY_PENDING"
+          ],
+          "to_value": "NOMINAL",
+          "retained_assignments": [
+            {
+              "target": "LinkFaultLatched",
+              "value": false
+            }
+          ]
+        },
+        "description": "Authorize reset from RECOVERY_PENDING to NOMINAL and clear the link-fault latch."
+      }
+    ],
+    "recovery_paths": [
+      {
+        "id": "LINK-RECOVERY-DEGRADED",
+        "subject_ids": [
+          "State"
+        ],
+        "requirements": [
+          "LINK-HLR-008",
+          "LINK-HLR-009"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "DEGRADED"
+          ],
+          "to_value": "RECOVERY_PENDING",
+          "retained_assignments": []
+        },
+        "description": "Enter RECOVERY_PENDING from DEGRADED under stable link conditions."
+      },
+      {
+        "id": "LINK-RECOVERY-LOST-LINK",
+        "subject_ids": [
+          "State"
+        ],
+        "requirements": [
+          "LINK-HLR-008",
+          "LINK-HLR-009"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "LOST_LINK"
+          ],
+          "to_value": "RECOVERY_PENDING",
+          "retained_assignments": []
+        },
+        "description": "Enter RECOVERY_PENDING from LOST_LINK under stable link conditions."
+      },
+      {
+        "id": "LINK-RECOVERY-LOCKOUT",
+        "subject_ids": [
+          "State"
+        ],
+        "requirements": [
+          "LINK-HLR-008",
+          "LINK-HLR-009"
+        ],
+        "attributes": {
+          "state_variable": "State",
+          "from_values": [
+            "LOCKOUT"
+          ],
+          "to_value": "RECOVERY_PENDING",
+          "retained_assignments": []
+        },
+        "description": "Enter RECOVERY_PENDING from LOCKOUT under authorized stable link conditions."
+      }
+    ]
+  }
+}

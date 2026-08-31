@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "measurement_scope",
+    "controlled_paths",
+    "samples_per_path",
+    "warmup_per_path",
+    "total_samples",
+    "aggregate",
+    "worst_observed_path",
+    "paths",
+    "interpretation",
+    "build_profile"
+  ],
+  "properties": {
+    "measurement_scope": {"type": "string"},
+    "controlled_paths": {"type": "integer", "minimum": 1},
+    "samples_per_path": {"type": "integer", "minimum": 1},
+    "warmup_per_path": {"type": "integer", "minimum": 0},
+    "total_samples": {"type": "integer", "minimum": 1},
+    "aggregate": {"$ref": "#/$defs/statistics"},
+    "worst_observed_path": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scenario_id", "cycle", "maximum_ns"],
+      "properties": {
+        "scenario_id": {"type": "string"},
+        "cycle": {"type": "integer", "minimum": 0},
+        "maximum_ns": {"type": "integer", "minimum": 0}
+      }
+    },
+    "paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scenario_id", "cycle", "samples", "minimum_ns", "median_ns", "mean_ns", "p95_ns", "p99_ns", "maximum_ns"],
+        "properties": {
+          "scenario_id": {"type": "string"},
+          "cycle": {"type": "integer", "minimum": 0},
+          "samples": {"type": "integer", "minimum": 1},
+          "minimum_ns": {"type": "integer", "minimum": 0},
+          "median_ns": {"type": "integer", "minimum": 0},
+          "mean_ns": {"type": "number", "minimum": 0},
+          "p95_ns": {"type": "integer", "minimum": 0},
+          "p99_ns": {"type": "integer", "minimum": 0},
+          "maximum_ns": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "interpretation": {"type": "string"},
+    "build_profile": {"const": "release"}
+  },
+  "$defs": {
+    "statistics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_ns", "median_ns", "mean_ns", "p95_ns", "p99_ns", "maximum_ns"],
+      "properties": {
+        "minimum_ns": {"type": "integer", "minimum": 0},
+        "median_ns": {"type": "integer", "minimum": 0},
+        "mean_ns": {"type": "number", "minimum": 0},
+        "p95_ns": {"type": "integer", "minimum": 0},
+        "p99_ns": {"type": "integer", "minimum": 0},
+        "maximum_ns": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

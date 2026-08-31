@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerost.dev/schemas/application-case-validation-summary.schema.json",
+  "title": "AEROST Application Case Validation Summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tool_version",
+    "profile_version",
+    "application",
+    "validation_scope",
+    "core",
+    "bounded_input_domain",
+    "automatic_test_synthesis",
+    "obligation_only_reduction",
+    "mutation_aware_reduction",
+    "assurance_suite_comparison",
+    "final_automatic_suite",
+    "schema_validation",
+    "passed"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "AEROST-APPLICATION-CASE-VALIDATION-0.2"
+    },
+    "tool_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "application": {
+      "type": "object"
+    },
+    "validation_scope": {
+      "type": "object"
+    },
+    "core": {
+      "type": "object",
+      "required": [
+        "controlled_scenarios",
+        "executed_cycles",
+        "three_way_equivalent_cycles",
+        "three_way_mismatch_count",
+        "passed"
+      ],
+      "properties": {
+        "controlled_scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "executed_cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "three_way_equivalent_cycles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "three_way_mismatch_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "bounded_input_domain": {
+      "type": "object"
+    },
+    "automatic_test_synthesis": {
+      "type": "object"
+    },
+    "obligation_only_reduction": {
+      "type": "object"
+    },
+    "mutation_aware_reduction": {
+      "type": "object"
+    },
+    "assurance_suite_comparison": {
+      "type": "object"
+    },
+    "final_automatic_suite": {
+      "type": "object"
+    },
+    "schema_validation": {
+      "type": "object",
+      "required": [
+        "all_valid",
+        "records"
+      ],
+      "properties": {
+        "all_valid": {
+          "type": "boolean"
+        },
+        "records": {
+          "type": "array"
+        }
+      }
+    },
+    "passed": {
+      "type": "boolean"
+    }
+  }
+}

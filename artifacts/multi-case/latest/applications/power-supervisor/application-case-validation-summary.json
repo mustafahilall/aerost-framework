@@ -1,0 +1,2114 @@
+{
+  "application": {
+    "air_artifact": "power-supervisor.air.json",
+    "id": "power-supervisor",
+    "input_domain": "tests/input-domains/power-supervisor-input-domain.json",
+    "manifest": "applications/power-supervisor.application.json",
+    "manifest_sha256": "e6e2b457db0bad9c46e1df1e2962eed743d3126d6bc6c84bfe228e2a4d0d69ae",
+    "mutation_profile": "examples/power-supervisor/mutations/mutation-profile.json",
+    "profile_version": "ASCP-0.2",
+    "requirements": "examples/power-supervisor/requirements/requirements.json",
+    "runtime_fault_policy": "examples/power-supervisor/policies/runtime-fault-policy.json",
+    "source": "examples/power-supervisor/source/power-supervisor.ascp"
+  },
+  "assurance_suite_comparison": {
+    "acceptance_passed": true,
+    "claim_boundary": {
+      "bounded_completeness_claimed": true,
+      "global_minimum_claimed": false,
+      "mutation_profile_driven": true,
+      "mutation_scope": "8 application-profile-controlled non-equivalent AIR mutants executed with the external AIR executor"
+    },
+    "comparisons": [
+      {
+        "baseline": "manual-requirements",
+        "candidate": "manual-closure",
+        "cycle_change_percent": 82.758621,
+        "cycle_delta": 24,
+        "mcdc_delta": 0,
+        "mutation_kill_delta": 0,
+        "obligation_coverage_delta": 87,
+        "scenario_change_percent": 100.0,
+        "scenario_delta": 24
+      },
+      {
+        "baseline": "manual-closure",
+        "candidate": "automatic-unreduced",
+        "cycle_change_percent": 1358.490566,
+        "cycle_delta": 720,
+        "mcdc_delta": 0,
+        "mutation_kill_delta": 0,
+        "obligation_coverage_delta": 0,
+        "scenario_change_percent": 593.75,
+        "scenario_delta": 285
+      },
+      {
+        "baseline": "manual-closure",
+        "candidate": "automatic-obligation-reduced",
+        "cycle_change_percent": 167.924528,
+        "cycle_delta": 89,
+        "mcdc_delta": 0,
+        "mutation_kill_delta": -1,
+        "obligation_coverage_delta": 0,
+        "scenario_change_percent": 18.75,
+        "scenario_delta": 9
+      },
+      {
+        "baseline": "manual-closure",
+        "candidate": "automatic-mutation-aware-reduced",
+        "cycle_change_percent": 175.471698,
+        "cycle_delta": 93,
+        "mcdc_delta": 0,
+        "mutation_kill_delta": 0,
+        "obligation_coverage_delta": 0,
+        "scenario_change_percent": 20.833333,
+        "scenario_delta": 10
+      },
+      {
+        "baseline": "automatic-unreduced",
+        "candidate": "automatic-obligation-reduced",
+        "cycle_change_percent": -81.630013,
+        "cycle_delta": -631,
+        "mcdc_delta": 0,
+        "mutation_kill_delta": -1,
+        "obligation_coverage_delta": 0,
+        "scenario_change_percent": -82.882883,
+        "scenario_delta": -276
+      },
+      {
+        "baseline": "automatic-unreduced",
+        "candidate": "automatic-mutation-aware-reduced",
+        "cycle_change_percent": -81.112549,
+        "cycle_delta": -627,
+        "mcdc_delta": 0,
+        "mutation_kill_delta": 0,
+        "obligation_coverage_delta": 0,
+        "scenario_change_percent": -82.582583,
+        "scenario_delta": -275
+      },
+      {
+        "baseline": "automatic-obligation-reduced",
+        "candidate": "automatic-mutation-aware-reduced",
+        "cycle_change_percent": 2.816901,
+        "cycle_delta": 4,
+        "mcdc_delta": 0,
+        "mutation_kill_delta": 1,
+        "obligation_coverage_delta": 0,
+        "scenario_change_percent": 1.754386,
+        "scenario_delta": 1
+      }
+    ],
+    "final_automatic_complete": true,
+    "manual_suite_gate": true,
+    "manual_suite_gate_passed": true,
+    "passed": true,
+    "replay_passed": true,
+    "suite_count": 5,
+    "suites": [
+      {
+        "cycle_count": 29,
+        "fault_reset_recovery": {
+          "complete": true,
+          "covered": 7,
+          "total": 7
+        },
+        "mcdc": {
+          "complete": true,
+          "covered": 6,
+          "total": 6
+        },
+        "mutation": {
+          "killed": 8,
+          "records": [
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-SOURCE-A-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-DUAL-SOURCE-OPERATOR",
+              "operator": "dual-source-operator"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-RESERVE-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-CONDITION",
+              "operator": "critical-condition"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-BUS-CRITICAL-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-TARGET",
+              "operator": "critical-target"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-STARTUP-A-INDEPENDENCE-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-OUTPUT-DELETE",
+              "operator": "critical-output-delete"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-STARTUP-WAIT-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-PAYLOAD-DEFAULT",
+              "operator": "payload-default"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-INVALID-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+              "operator": "invalid-output-guard"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-RECOVERY-STABLE-FALSE-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-WEAKEN-RECOVERY",
+              "operator": "weaken-recovery"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-SOURCE-A-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-SWAP-ISOLATION",
+              "operator": "swap-isolation"
+            }
+          ],
+          "score_percent": 100.0,
+          "surviving": [],
+          "total": 8
+        },
+        "name": "manual-requirements",
+        "obligations": {
+          "by_kind": {
+            "CASE_ARM_REACHED": {
+              "covered": 14,
+              "percent": 100.0,
+              "total": 14
+            },
+            "CONDITION_FALSE": {
+              "covered": 46,
+              "percent": 62.162162,
+              "total": 74
+            },
+            "CONDITION_TRUE": {
+              "covered": 49,
+              "percent": 66.216216,
+              "total": 74
+            },
+            "CONSERVATIVE_OUTPUT_APPLIED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "DECISION_FALSE": {
+              "covered": 22,
+              "percent": 75.862069,
+              "total": 29
+            },
+            "DECISION_TRUE": {
+              "covered": 17,
+              "percent": 58.62069,
+              "total": 29
+            },
+            "FAULT_POLICY_ACTIVATED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "MCDC_PAIR": {
+              "covered": 6,
+              "percent": 100.0,
+              "total": 6
+            },
+            "NORMAL_COMMIT_INHIBITED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "RECOVERY_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "REQUIREMENT_EXERCISED": {
+              "covered": 15,
+              "percent": 100.0,
+              "total": 15
+            },
+            "RESET_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "STATEMENT_REACHED": {
+              "covered": 64,
+              "percent": 81.012658,
+              "total": 79
+            }
+          },
+          "covered": 240,
+          "percent": 73.394495,
+          "total": 327,
+          "uncovered_count": 87,
+          "uncovered_ids": [
+            "OBL-COND-AIR-COND-00908D0AC570-TRUE",
+            "OBL-COND-AIR-COND-1342E8B61A2A-TRUE",
+            "OBL-COND-AIR-COND-144BC0B8AB3F-FALSE",
+            "OBL-COND-AIR-COND-14721A8DD0AF-FALSE",
+            "OBL-COND-AIR-COND-15F32731B053-FALSE",
+            "OBL-COND-AIR-COND-160BD1733874-FALSE",
+            "OBL-COND-AIR-COND-160BD1733874-TRUE",
+            "OBL-COND-AIR-COND-2C0CE59B2B64-FALSE",
+            "OBL-COND-AIR-COND-2D0D9A9B15DB-FALSE",
+            "OBL-COND-AIR-COND-2F99F25465C8-TRUE",
+            "OBL-COND-AIR-COND-36B0D097C415-TRUE",
+            "OBL-COND-AIR-COND-3BDC2757859D-FALSE",
+            "OBL-COND-AIR-COND-40809FD7BD8C-FALSE",
+            "OBL-COND-AIR-COND-418210273076-FALSE",
+            "OBL-COND-AIR-COND-50A7117E5BB5-TRUE",
+            "OBL-COND-AIR-COND-592BFC643C74-TRUE",
+            "OBL-COND-AIR-COND-5B282D6B19D0-FALSE",
+            "OBL-COND-AIR-COND-5B282D6B19D0-TRUE",
+            "OBL-COND-AIR-COND-66F919A4468C-TRUE",
+            "OBL-COND-AIR-COND-679C2BD98047-TRUE",
+            "OBL-COND-AIR-COND-6FC64088584E-FALSE",
+            "OBL-COND-AIR-COND-741536FE89BA-FALSE",
+            "OBL-COND-AIR-COND-7475F8D3D8FD-FALSE",
+            "OBL-COND-AIR-COND-79C6E960DBD5-FALSE",
+            "OBL-COND-AIR-COND-7E3F9A986A6A-TRUE",
+            "OBL-COND-AIR-COND-817FF4A2CA56-TRUE",
+            "OBL-COND-AIR-COND-83F3B5EB4933-FALSE",
+            "OBL-COND-AIR-COND-97DBB6731217-FALSE",
+            "OBL-COND-AIR-COND-9C40B9684FA7-TRUE",
+            "OBL-COND-AIR-COND-A47FB4F62113-FALSE",
+            "OBL-COND-AIR-COND-A60A2BD8F2FD-FALSE",
+            "OBL-COND-AIR-COND-B3AB2C8B1E72-TRUE",
+            "OBL-COND-AIR-COND-B75BA1081948-FALSE",
+            "OBL-COND-AIR-COND-BA77AC6CEF43-TRUE",
+            "OBL-COND-AIR-COND-BABD48A64B79-TRUE",
+            "OBL-COND-AIR-COND-BB61825D52A7-TRUE",
+            "OBL-COND-AIR-COND-BC1A60139F1A-TRUE",
+            "OBL-COND-AIR-COND-C14F85047E54-TRUE",
+            "OBL-COND-AIR-COND-C9A77B0A56A4-TRUE",
+            "OBL-COND-AIR-COND-CC11C4447B85-FALSE",
+            "OBL-COND-AIR-COND-D2D9B19380C7-TRUE",
+            "OBL-COND-AIR-COND-D3BFA46CC2AB-FALSE",
+            "OBL-COND-AIR-COND-DC2862148359-FALSE",
+            "OBL-COND-AIR-COND-E13100E69473-TRUE",
+            "OBL-COND-AIR-COND-E3220C881F3F-FALSE",
+            "OBL-COND-AIR-COND-E627EE416F1A-FALSE",
+            "OBL-COND-AIR-COND-E9CE4594367D-FALSE",
+            "OBL-COND-AIR-COND-EE98B9F464DC-FALSE",
+            "OBL-COND-AIR-COND-F4060203942C-TRUE",
+            "OBL-COND-AIR-COND-FA89E0B9D778-FALSE",
+            "OBL-COND-AIR-COND-FB54F2EE1373-FALSE",
+            "OBL-COND-AIR-COND-FB54F2EE1373-TRUE",
+            "OBL-COND-AIR-COND-FC4C836BC163-TRUE",
+            "OBL-DEC-AIR-DEC-0D2B6D2854BB-FALSE",
+            "OBL-DEC-AIR-DEC-2A128CF8D3BB-TRUE",
+            "OBL-DEC-AIR-DEC-2BF8D2D61B9A-TRUE",
+            "OBL-DEC-AIR-DEC-3769441570C5-FALSE",
+            "OBL-DEC-AIR-DEC-40B6217C7A61-TRUE",
+            "OBL-DEC-AIR-DEC-4F304D4EE080-FALSE",
+            "OBL-DEC-AIR-DEC-4F304D4EE080-TRUE",
+            "OBL-DEC-AIR-DEC-602C491CE204-FALSE",
+            "OBL-DEC-AIR-DEC-865460DD81C4-FALSE",
+            "OBL-DEC-AIR-DEC-93A18B494A46-TRUE",
+            "OBL-DEC-AIR-DEC-9A422B741657-TRUE",
+            "OBL-DEC-AIR-DEC-9BBFBE456C16-FALSE",
+            "OBL-DEC-AIR-DEC-9BBFBE456C16-TRUE",
+            "OBL-DEC-AIR-DEC-9F38AA8D783B-FALSE",
+            "OBL-DEC-AIR-DEC-9F38AA8D783B-TRUE",
+            "OBL-DEC-AIR-DEC-A01E6CFC8F35-TRUE",
+            "OBL-DEC-AIR-DEC-BB5E24035C0C-TRUE",
+            "OBL-DEC-AIR-DEC-E154C6B87FFB-TRUE",
+            "OBL-DEC-AIR-DEC-F26BBA9634D5-TRUE",
+            "OBL-STMT-AIR-STMT-138B96328901",
+            "OBL-STMT-AIR-STMT-22037CE76C48",
+            "OBL-STMT-AIR-STMT-2682265396A7",
+            "OBL-STMT-AIR-STMT-2695352AEE34",
+            "OBL-STMT-AIR-STMT-2B029DE35DDA",
+            "OBL-STMT-AIR-STMT-324860089FA3",
+            "OBL-STMT-AIR-STMT-38804274281F",
+            "OBL-STMT-AIR-STMT-502BF6714318",
+            "OBL-STMT-AIR-STMT-742539D6F747",
+            "OBL-STMT-AIR-STMT-806A417F5C3F",
+            "OBL-STMT-AIR-STMT-94E73C63A6B1",
+            "OBL-STMT-AIR-STMT-A648EBCC4774",
+            "OBL-STMT-AIR-STMT-B7A45416CCD0",
+            "OBL-STMT-AIR-STMT-C3992B293712",
+            "OBL-STMT-AIR-STMT-FCC6F3D279F7"
+          ]
+        },
+        "origin": "manually authored requirements suite",
+        "replay_passed": true,
+        "requirements": {
+          "complete": true,
+          "covered": 15,
+          "total": 15
+        },
+        "scenario_count": 24
+      },
+      {
+        "cycle_count": 53,
+        "fault_reset_recovery": {
+          "complete": true,
+          "covered": 7,
+          "total": 7
+        },
+        "mcdc": {
+          "complete": true,
+          "covered": 6,
+          "total": 6
+        },
+        "mutation": {
+          "killed": 8,
+          "records": [
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-SOURCE-A-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-DUAL-SOURCE-OPERATOR",
+              "operator": "dual-source-operator"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-RESERVE-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-CONDITION",
+              "operator": "critical-condition"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-BUS-CRITICAL-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-TARGET",
+              "operator": "critical-target"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-STARTUP-A-INDEPENDENCE-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-OUTPUT-DELETE",
+              "operator": "critical-output-delete"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-STARTUP-WAIT-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-PAYLOAD-DEFAULT",
+              "operator": "payload-default"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-INVALID-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+              "operator": "invalid-output-guard"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-RECOVERY-STABLE-FALSE-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-WEAKEN-RECOVERY",
+              "operator": "weaken-recovery"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "TEST-PWR-SOURCE-A-001"
+              },
+              "killed": true,
+              "mutant_id": "MUT-SWAP-ISOLATION",
+              "operator": "swap-isolation"
+            }
+          ],
+          "score_percent": 100.0,
+          "surviving": [],
+          "total": 8
+        },
+        "name": "manual-closure",
+        "obligations": {
+          "by_kind": {
+            "CASE_ARM_REACHED": {
+              "covered": 14,
+              "percent": 100.0,
+              "total": 14
+            },
+            "CONDITION_FALSE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONDITION_TRUE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONSERVATIVE_OUTPUT_APPLIED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "DECISION_FALSE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "DECISION_TRUE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "FAULT_POLICY_ACTIVATED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "MCDC_PAIR": {
+              "covered": 6,
+              "percent": 100.0,
+              "total": 6
+            },
+            "NORMAL_COMMIT_INHIBITED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "RECOVERY_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "REQUIREMENT_EXERCISED": {
+              "covered": 15,
+              "percent": 100.0,
+              "total": 15
+            },
+            "RESET_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "STATEMENT_REACHED": {
+              "covered": 79,
+              "percent": 100.0,
+              "total": 79
+            }
+          },
+          "covered": 327,
+          "percent": 100.0,
+          "total": 327,
+          "uncovered_count": 0,
+          "uncovered_ids": []
+        },
+        "origin": "manual requirements plus coverage-closure supplement",
+        "replay_passed": true,
+        "requirements": {
+          "complete": true,
+          "covered": 15,
+          "total": 15
+        },
+        "scenario_count": 48
+      },
+      {
+        "cycle_count": 773,
+        "fault_reset_recovery": {
+          "complete": true,
+          "covered": 7,
+          "total": 7
+        },
+        "mcdc": {
+          "complete": true,
+          "covered": 6,
+          "total": 6
+        },
+        "mutation": {
+          "killed": 8,
+          "records": [
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-0586C993C4AE"
+              },
+              "killed": true,
+              "mutant_id": "MUT-DUAL-SOURCE-OPERATOR",
+              "operator": "dual-source-operator"
+            },
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-0586C993C4AE"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-CONDITION",
+              "operator": "critical-condition"
+            },
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-373151231CD9"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-TARGET",
+              "operator": "critical-target"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-0003E9E484D2"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-OUTPUT-DELETE",
+              "operator": "critical-output-delete"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-0003E9E484D2"
+              },
+              "killed": true,
+              "mutant_id": "MUT-PAYLOAD-DEFAULT",
+              "operator": "payload-default"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-00D6ACE56083"
+              },
+              "killed": true,
+              "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+              "operator": "invalid-output-guard"
+            },
+            {
+              "first_detection": {
+                "cycle": 3,
+                "scenario_id": "SYN-247575E69D0B"
+              },
+              "killed": true,
+              "mutant_id": "MUT-WEAKEN-RECOVERY",
+              "operator": "weaken-recovery"
+            },
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-0586C993C4AE"
+              },
+              "killed": true,
+              "mutant_id": "MUT-SWAP-ISOLATION",
+              "operator": "swap-isolation"
+            }
+          ],
+          "score_percent": 100.0,
+          "surviving": [],
+          "total": 8
+        },
+        "name": "automatic-unreduced",
+        "obligations": {
+          "by_kind": {
+            "CASE_ARM_REACHED": {
+              "covered": 14,
+              "percent": 100.0,
+              "total": 14
+            },
+            "CONDITION_FALSE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONDITION_TRUE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONSERVATIVE_OUTPUT_APPLIED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "DECISION_FALSE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "DECISION_TRUE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "FAULT_POLICY_ACTIVATED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "MCDC_PAIR": {
+              "covered": 6,
+              "percent": 100.0,
+              "total": 6
+            },
+            "NORMAL_COMMIT_INHIBITED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "RECOVERY_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "REQUIREMENT_EXERCISED": {
+              "covered": 15,
+              "percent": 100.0,
+              "total": 15
+            },
+            "RESET_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "STATEMENT_REACHED": {
+              "covered": 79,
+              "percent": 100.0,
+              "total": 79
+            }
+          },
+          "covered": 327,
+          "percent": 100.0,
+          "total": 327,
+          "uncovered_count": 0,
+          "uncovered_ids": []
+        },
+        "origin": "bounded BFS per-obligation witness suite",
+        "replay_passed": true,
+        "requirements": {
+          "complete": true,
+          "covered": 15,
+          "total": 15
+        },
+        "scenario_count": 333
+      },
+      {
+        "cycle_count": 142,
+        "fault_reset_recovery": {
+          "complete": true,
+          "covered": 7,
+          "total": 7
+        },
+        "mcdc": {
+          "complete": true,
+          "covered": 6,
+          "total": 6
+        },
+        "mutation": {
+          "killed": 7,
+          "records": [
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-0C365CC489A9"
+              },
+              "killed": true,
+              "mutant_id": "MUT-DUAL-SOURCE-OPERATOR",
+              "operator": "dual-source-operator"
+            },
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-0C365CC489A9"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-CONDITION",
+              "operator": "critical-condition"
+            },
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-373151231CD9"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-TARGET",
+              "operator": "critical-target"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-0003E9E484D2"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-OUTPUT-DELETE",
+              "operator": "critical-output-delete"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-0003E9E484D2"
+              },
+              "killed": true,
+              "mutant_id": "MUT-PAYLOAD-DEFAULT",
+              "operator": "payload-default"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-1BAF28554C82"
+              },
+              "killed": true,
+              "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+              "operator": "invalid-output-guard"
+            },
+            {
+              "first_detection": null,
+              "killed": false,
+              "mutant_id": "MUT-WEAKEN-RECOVERY",
+              "operator": "weaken-recovery"
+            },
+            {
+              "first_detection": {
+                "cycle": 2,
+                "scenario_id": "SYN-0C4D76DABD7D"
+              },
+              "killed": true,
+              "mutant_id": "MUT-SWAP-ISOLATION",
+              "operator": "swap-isolation"
+            }
+          ],
+          "score_percent": 87.5,
+          "surviving": [
+            "MUT-WEAKEN-RECOVERY"
+          ],
+          "total": 8
+        },
+        "name": "automatic-obligation-reduced",
+        "obligations": {
+          "by_kind": {
+            "CASE_ARM_REACHED": {
+              "covered": 14,
+              "percent": 100.0,
+              "total": 14
+            },
+            "CONDITION_FALSE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONDITION_TRUE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONSERVATIVE_OUTPUT_APPLIED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "DECISION_FALSE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "DECISION_TRUE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "FAULT_POLICY_ACTIVATED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "MCDC_PAIR": {
+              "covered": 6,
+              "percent": 100.0,
+              "total": 6
+            },
+            "NORMAL_COMMIT_INHIBITED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "RECOVERY_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "REQUIREMENT_EXERCISED": {
+              "covered": 15,
+              "percent": 100.0,
+              "total": 15
+            },
+            "RESET_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "STATEMENT_REACHED": {
+              "covered": 79,
+              "percent": 100.0,
+              "total": 79
+            }
+          },
+          "covered": 327,
+          "percent": 100.0,
+          "total": 327,
+          "uncovered_count": 0,
+          "uncovered_ids": []
+        },
+        "origin": "deterministic obligation-preserving greedy multicover suite",
+        "replay_passed": true,
+        "requirements": {
+          "complete": true,
+          "covered": 15,
+          "total": 15
+        },
+        "scenario_count": 57
+      },
+      {
+        "cycle_count": 146,
+        "fault_reset_recovery": {
+          "complete": true,
+          "covered": 7,
+          "total": 7
+        },
+        "mcdc": {
+          "complete": true,
+          "covered": 6,
+          "total": 6
+        },
+        "mutation": {
+          "killed": 8,
+          "records": [
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-0C365CC489A9"
+              },
+              "killed": true,
+              "mutant_id": "MUT-DUAL-SOURCE-OPERATOR",
+              "operator": "dual-source-operator"
+            },
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-0C365CC489A9"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-CONDITION",
+              "operator": "critical-condition"
+            },
+            {
+              "first_detection": {
+                "cycle": 1,
+                "scenario_id": "SYN-373151231CD9"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-TARGET",
+              "operator": "critical-target"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-0003E9E484D2"
+              },
+              "killed": true,
+              "mutant_id": "MUT-CRITICAL-OUTPUT-DELETE",
+              "operator": "critical-output-delete"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-0003E9E484D2"
+              },
+              "killed": true,
+              "mutant_id": "MUT-PAYLOAD-DEFAULT",
+              "operator": "payload-default"
+            },
+            {
+              "first_detection": {
+                "cycle": 0,
+                "scenario_id": "SYN-1BAF28554C82"
+              },
+              "killed": true,
+              "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+              "operator": "invalid-output-guard"
+            },
+            {
+              "first_detection": {
+                "cycle": 3,
+                "scenario_id": "SYN-247575E69D0B"
+              },
+              "killed": true,
+              "mutant_id": "MUT-WEAKEN-RECOVERY",
+              "operator": "weaken-recovery"
+            },
+            {
+              "first_detection": {
+                "cycle": 2,
+                "scenario_id": "SYN-0C4D76DABD7D"
+              },
+              "killed": true,
+              "mutant_id": "MUT-SWAP-ISOLATION",
+              "operator": "swap-isolation"
+            }
+          ],
+          "score_percent": 100.0,
+          "surviving": [],
+          "total": 8
+        },
+        "name": "automatic-mutation-aware-reduced",
+        "obligations": {
+          "by_kind": {
+            "CASE_ARM_REACHED": {
+              "covered": 14,
+              "percent": 100.0,
+              "total": 14
+            },
+            "CONDITION_FALSE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONDITION_TRUE": {
+              "covered": 74,
+              "percent": 100.0,
+              "total": 74
+            },
+            "CONSERVATIVE_OUTPUT_APPLIED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "DECISION_FALSE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "DECISION_TRUE": {
+              "covered": 29,
+              "percent": 100.0,
+              "total": 29
+            },
+            "FAULT_POLICY_ACTIVATED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "MCDC_PAIR": {
+              "covered": 6,
+              "percent": 100.0,
+              "total": 6
+            },
+            "NORMAL_COMMIT_INHIBITED": {
+              "covered": 1,
+              "percent": 100.0,
+              "total": 1
+            },
+            "RECOVERY_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "REQUIREMENT_EXERCISED": {
+              "covered": 15,
+              "percent": 100.0,
+              "total": 15
+            },
+            "RESET_PATH_EXECUTED": {
+              "covered": 2,
+              "percent": 100.0,
+              "total": 2
+            },
+            "STATEMENT_REACHED": {
+              "covered": 79,
+              "percent": 100.0,
+              "total": 79
+            }
+          },
+          "covered": 327,
+          "percent": 100.0,
+          "total": 327,
+          "uncovered_count": 0,
+          "uncovered_ids": []
+        },
+        "origin": "deterministic obligation-and-mutation-preserving greedy multicover suite",
+        "replay_passed": true,
+        "requirements": {
+          "complete": true,
+          "covered": 15,
+          "total": 15
+        },
+        "scenario_count": 58
+      }
+    ]
+  },
+  "automatic_test_synthesis": {
+    "obligation_summary": {
+      "covered": 327,
+      "reachable": 327,
+      "total": 327,
+      "uncovered": 0,
+      "unreachable_within_bound": 0,
+      "unresolved_due_to_resource_limit": 0
+    },
+    "passed": true,
+    "search_summary": {
+      "candidate_sequences": 333,
+      "depth_frontier_remaining": false,
+      "search_complete": true,
+      "state_limit_reached": false,
+      "states_explored": 12,
+      "termination_reason": "reachable-frontier-exhausted",
+      "transition_limit_reached": false,
+      "transitions_explored": 196620
+    },
+    "suite_summary": {
+      "covered_obligations": 327,
+      "selected_cycles": 773,
+      "selected_scenarios": 333
+    }
+  },
+  "bounded_input_domain": {
+    "air_sha256": "a81649ef735aed18e3d7040e1c2cbf086acd2bd0781bbd570007daa811da8e29",
+    "domain_id": "AEROST-DOMAIN-POWER-SUPERVISOR-0.1",
+    "domain_sha256": "aff5009849444247d4f53c42915d9d06eb959d7e6d98595f661e0462c0109772",
+    "estimated_full_state_transition_evaluations": 2097152,
+    "input_count": 14,
+    "input_vector_count": 16384,
+    "passed": true,
+    "program_id": "AIR-PROG-E1DC8CAED523",
+    "schema_version": "AEROST-INPUT-DOMAIN-VALIDATION-0.1",
+    "search_bounds": {
+      "maximum_reachable_states": 128,
+      "maximum_sequence_depth": 8,
+      "maximum_transition_evaluations": 3000000
+    }
+  },
+  "core": {
+    "backend_independence": true,
+    "controlled_scenarios": 48,
+    "coverage_complete": true,
+    "executed_cycles": 53,
+    "expressive_adequacy_percent": 100.0,
+    "external_executor_independence": true,
+    "mcdc_complete": true,
+    "passed": true,
+    "three_way_equivalent_cycles": 53,
+    "three_way_mismatch_count": 0,
+    "traceability_complete": true
+  },
+  "final_automatic_suite": {
+    "complete": true,
+    "cycle_count": 146,
+    "mcdc": {
+      "complete": true,
+      "covered": 6,
+      "total": 6
+    },
+    "mutation": {
+      "killed": 8,
+      "records": [
+        {
+          "first_detection": {
+            "cycle": 1,
+            "scenario_id": "SYN-0C365CC489A9"
+          },
+          "killed": true,
+          "mutant_id": "MUT-DUAL-SOURCE-OPERATOR",
+          "operator": "dual-source-operator"
+        },
+        {
+          "first_detection": {
+            "cycle": 1,
+            "scenario_id": "SYN-0C365CC489A9"
+          },
+          "killed": true,
+          "mutant_id": "MUT-CRITICAL-CONDITION",
+          "operator": "critical-condition"
+        },
+        {
+          "first_detection": {
+            "cycle": 1,
+            "scenario_id": "SYN-373151231CD9"
+          },
+          "killed": true,
+          "mutant_id": "MUT-CRITICAL-TARGET",
+          "operator": "critical-target"
+        },
+        {
+          "first_detection": {
+            "cycle": 0,
+            "scenario_id": "SYN-0003E9E484D2"
+          },
+          "killed": true,
+          "mutant_id": "MUT-CRITICAL-OUTPUT-DELETE",
+          "operator": "critical-output-delete"
+        },
+        {
+          "first_detection": {
+            "cycle": 0,
+            "scenario_id": "SYN-0003E9E484D2"
+          },
+          "killed": true,
+          "mutant_id": "MUT-PAYLOAD-DEFAULT",
+          "operator": "payload-default"
+        },
+        {
+          "first_detection": {
+            "cycle": 0,
+            "scenario_id": "SYN-1BAF28554C82"
+          },
+          "killed": true,
+          "mutant_id": "MUT-INVALID-OUTPUT-GUARD",
+          "operator": "invalid-output-guard"
+        },
+        {
+          "first_detection": {
+            "cycle": 3,
+            "scenario_id": "SYN-247575E69D0B"
+          },
+          "killed": true,
+          "mutant_id": "MUT-WEAKEN-RECOVERY",
+          "operator": "weaken-recovery"
+        },
+        {
+          "first_detection": {
+            "cycle": 2,
+            "scenario_id": "SYN-0C4D76DABD7D"
+          },
+          "killed": true,
+          "mutant_id": "MUT-SWAP-ISOLATION",
+          "operator": "swap-isolation"
+        }
+      ],
+      "score_percent": 100.0,
+      "surviving": [],
+      "total": 8
+    },
+    "obligations": {
+      "by_kind": {
+        "CASE_ARM_REACHED": {
+          "covered": 14,
+          "percent": 100.0,
+          "total": 14
+        },
+        "CONDITION_FALSE": {
+          "covered": 74,
+          "percent": 100.0,
+          "total": 74
+        },
+        "CONDITION_TRUE": {
+          "covered": 74,
+          "percent": 100.0,
+          "total": 74
+        },
+        "CONSERVATIVE_OUTPUT_APPLIED": {
+          "covered": 1,
+          "percent": 100.0,
+          "total": 1
+        },
+        "DECISION_FALSE": {
+          "covered": 29,
+          "percent": 100.0,
+          "total": 29
+        },
+        "DECISION_TRUE": {
+          "covered": 29,
+          "percent": 100.0,
+          "total": 29
+        },
+        "FAULT_POLICY_ACTIVATED": {
+          "covered": 1,
+          "percent": 100.0,
+          "total": 1
+        },
+        "MCDC_PAIR": {
+          "covered": 6,
+          "percent": 100.0,
+          "total": 6
+        },
+        "NORMAL_COMMIT_INHIBITED": {
+          "covered": 1,
+          "percent": 100.0,
+          "total": 1
+        },
+        "RECOVERY_PATH_EXECUTED": {
+          "covered": 2,
+          "percent": 100.0,
+          "total": 2
+        },
+        "REQUIREMENT_EXERCISED": {
+          "covered": 15,
+          "percent": 100.0,
+          "total": 15
+        },
+        "RESET_PATH_EXECUTED": {
+          "covered": 2,
+          "percent": 100.0,
+          "total": 2
+        },
+        "STATEMENT_REACHED": {
+          "covered": 79,
+          "percent": 100.0,
+          "total": 79
+        }
+      },
+      "covered": 327,
+      "percent": 100.0,
+      "total": 327,
+      "uncovered_count": 0,
+      "uncovered_ids": []
+    },
+    "scenario_count": 58
+  },
+  "mutation_aware_reduction": {
+    "claim_boundary": {
+      "global_minimum_claimed": false,
+      "mutation_profile_driven": true,
+      "mutation_scope": "8 application-profile-controlled non-equivalent AIR mutants",
+      "operators": {
+        "MUT-CRITICAL-CONDITION": "critical-condition",
+        "MUT-CRITICAL-OUTPUT-DELETE": "critical-output-delete",
+        "MUT-CRITICAL-TARGET": "critical-target",
+        "MUT-DUAL-SOURCE-OPERATOR": "dual-source-operator",
+        "MUT-INVALID-OUTPUT-GUARD": "invalid-output-guard",
+        "MUT-PAYLOAD-DEFAULT": "payload-default",
+        "MUT-SWAP-ISOLATION": "swap-isolation",
+        "MUT-WEAKEN-RECOVERY": "weaken-recovery"
+      }
+    },
+    "input_summary": {
+      "controlled_mutants": 8,
+      "cycles": 773,
+      "obligations": 327,
+      "required_obligation_witness_slots": 333,
+      "scenarios": 333,
+      "total_required_slots": 341
+    },
+    "mcdc_summary": {
+      "obligations": 6,
+      "required_witnesses_per_obligation": 2,
+      "witness_counts": {
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-14A07CAD6C04": 2,
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-63B49803733D": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-46486C3E7B4D": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-933AFAC55E2F": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-B1E7AF6F9325": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-D765DACDD027": 2
+      }
+    },
+    "mutation_summary": {
+      "killed": 8,
+      "score_percent": 100.0,
+      "selected_detection_cases": {
+        "MUT-CRITICAL-CONDITION": [
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C365CC489A9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C4D76DABD7D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0E2ECCCF9903"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0F047A7CA9E0"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-13886C225834"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-1F8ED227BA87"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-244BE428F182"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-24F720B8BE86"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-26CED2847590"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-2D29D79B7A2B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-373151231CD9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-4E02B97273C3"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-5469BB47BDD9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-5B31D4D86864"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-75238302328D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-7A019ED87C6B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-7E944758FC88"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-8CABF7DD6305"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-9A7FF2A60357-B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-B4897F0CB05A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-C6BA600A601E-B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-CB45FE850445"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-D9E709D59A16"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-EF088AB10A6F"
+          }
+        ],
+        "MUT-CRITICAL-OUTPUT-DELETE": [
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-0003E9E484D2"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-00FA109B760D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C9DFCFDACDB"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-0E2ECCCF9903"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-0F047A7CA9E0"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-0FFF0F64DF07"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-1321A07D7DFC"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-13886C225834"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-1F2698D2FA4B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-20D0F32CA111"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-244BE428F182"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-245A3ED2CB0E"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-247575E69D0B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-2579DA4A25D6"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-26CED2847590"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-319C578185C7-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-34CFCBE968B2"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-373151231CD9"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-3CAA6A6002B2"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-3D0203E37376-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-3DDACA4879A7"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-526C6C9D9471"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-537FAE95F2EE"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-63DF634F15D4"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-6C7059696D41-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-6ED048416B27"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-7A019ED87C6B"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-8CABF7DD6305"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-96066F95DAC0-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-BB0425B82ADB"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-CD6B3E1F07FA"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-DE669046EC72"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-E77D32BEF7D9-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-F79E6A709609"
+          }
+        ],
+        "MUT-CRITICAL-TARGET": [
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-373151231CD9"
+          }
+        ],
+        "MUT-DUAL-SOURCE-OPERATOR": [
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C365CC489A9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C4D76DABD7D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0E2ECCCF9903"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0F047A7CA9E0"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-13886C225834"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-244BE428F182"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-24F720B8BE86"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-26CED2847590"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-2D29D79B7A2B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-373151231CD9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-4E02B97273C3"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-5469BB47BDD9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-75238302328D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-7A019ED87C6B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-7E944758FC88"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-8CABF7DD6305"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-9A7FF2A60357-B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-B4897F0CB05A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-C6BA600A601E-B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-CB45FE850445"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-D9E709D59A16"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-EF088AB10A6F"
+          }
+        ],
+        "MUT-INVALID-OUTPUT-GUARD": [
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-1BAF28554C82"
+          }
+        ],
+        "MUT-PAYLOAD-DEFAULT": [
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-0003E9E484D2"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-00FA109B760D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C365CC489A9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C4D76DABD7D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0C9DFCFDACDB"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0E2ECCCF9903"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0F047A7CA9E0"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-0FFF0F64DF07"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-1321A07D7DFC"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-13886C225834"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-1BAF28554C82"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-1F2698D2FA4B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-20D0F32CA111"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-244BE428F182"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-245A3ED2CB0E"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-247575E69D0B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-24F720B8BE86"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-2579DA4A25D6"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-26CED2847590"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-2D29D79B7A2B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-319C578185C7-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-34CFCBE968B2"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-373151231CD9"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-37A7AF5A52FA"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-3CAA6A6002B2"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-3D0203E37376-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-3DDACA4879A7"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-4E02B97273C3"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-526C6C9D9471"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-537FAE95F2EE"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-5469BB47BDD9"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-5B31D4D86864"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-63DF634F15D4"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-6C7059696D41-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-6ED048416B27"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-75238302328D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-7A019ED87C6B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-7E944758FC88"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-8CABF7DD6305"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-951447C49BD7-A"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-96066F95DAC0-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-9A7FF2A60357-B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-B4897F0CB05A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-BB0425B82ADB"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-C6BA600A601E-B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-CB45FE850445"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-CD6B3E1F07FA"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-D9E709D59A16"
+          },
+          {
+            "cycle": 0,
+            "scenario_id": "SYN-DE669046EC72"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-E77D32BEF7D9-A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-EF088AB10A6F"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-F79E6A709609"
+          }
+        ],
+        "MUT-SWAP-ISOLATION": [
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-0C4D76DABD7D"
+          },
+          {
+            "cycle": 3,
+            "scenario_id": "SYN-0C9DFCFDACDB"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-0F047A7CA9E0"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-13886C225834"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-24F720B8BE86"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-26CED2847590"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-2D29D79B7A2B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-4E02B97273C3"
+          },
+          {
+            "cycle": 3,
+            "scenario_id": "SYN-526C6C9D9471"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-75238302328D"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-8CABF7DD6305"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-9A7FF2A60357-B"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-B4897F0CB05A"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-C6BA600A601E-B"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-CB45FE850445"
+          },
+          {
+            "cycle": 3,
+            "scenario_id": "SYN-CD6B3E1F07FA"
+          },
+          {
+            "cycle": 2,
+            "scenario_id": "SYN-D9E709D59A16"
+          },
+          {
+            "cycle": 1,
+            "scenario_id": "SYN-EF088AB10A6F"
+          }
+        ],
+        "MUT-WEAKEN-RECOVERY": [
+          {
+            "cycle": 3,
+            "scenario_id": "SYN-247575E69D0B"
+          }
+        ]
+      },
+      "surviving": [],
+      "total": 8
+    },
+    "output_summary": {
+      "covered_obligation_witness_slots": 333,
+      "covered_obligations": 327,
+      "cycle_reduction_percent": 81.112549,
+      "killed_mutants": 8,
+      "scenario_reduction_percent": 82.582583,
+      "selected_cycles": 146,
+      "selected_scenarios": 58
+    },
+    "passed": true
+  },
+  "obligation_only_reduction": {
+    "input_summary": {
+      "cycles": 773,
+      "obligations": 327,
+      "required_witness_slots": 333,
+      "scenarios": 333
+    },
+    "mcdc_summary": {
+      "missing_witnesses": [],
+      "obligations": 6,
+      "required_witnesses_per_obligation": 2,
+      "witness_counts": {
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-14A07CAD6C04": 2,
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-63B49803733D": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-46486C3E7B4D": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-933AFAC55E2F": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-B1E7AF6F9325": 2,
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-D765DACDD027": 2
+      }
+    },
+    "output_summary": {
+      "covered_obligations": 327,
+      "covered_witness_slots": 333,
+      "cycle_reduction_percent": 81.630013,
+      "scenario_reduction_percent": 82.882883,
+      "selected_cycles": 142,
+      "selected_scenarios": 57
+    },
+    "passed": true
+  },
+  "passed": true,
+  "profile_version": "ASCP-0.2",
+  "schema_validation": {
+    "all_valid": true,
+    "records": [
+      {
+        "artifact": "application-manifest.json",
+        "errors": [],
+        "schema": "application-manifest.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "mutation-profile.json",
+        "errors": [],
+        "schema": "mutation-profile.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "runtime-fault-policy.json",
+        "errors": [],
+        "schema": "runtime-fault-policy.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "power-supervisor.air.json",
+        "errors": [],
+        "schema": "air.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "controlled-input-domain.json",
+        "errors": [],
+        "schema": "input-domain.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "input-domain-validation.json",
+        "errors": [],
+        "schema": "input-domain-validation.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "assurance-obligations.json",
+        "errors": [],
+        "schema": "assurance-obligations.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "synthesized-scenarios.json",
+        "errors": [],
+        "schema": "synthesized-scenarios.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "synthesis-report.json",
+        "errors": [],
+        "schema": "synthesis-report.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "obligation-reduced-scenarios.json",
+        "errors": [],
+        "schema": "synthesized-scenarios.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "suite-reduction-report.json",
+        "errors": [],
+        "schema": "suite-reduction-report.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "mutation-aware-reduced-scenarios.json",
+        "errors": [],
+        "schema": "synthesized-scenarios.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "mutation-aware-suite-reduction-report.json",
+        "errors": [],
+        "schema": "mutation-aware-suite-reduction-report.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "assurance-suite-comparison.json",
+        "errors": [],
+        "schema": "assurance-suite-comparison.schema.json",
+        "valid": true
+      },
+      {
+        "artifact": "application-case-validation-summary.json",
+        "errors": [],
+        "schema": "application-case-validation-summary.schema.json",
+        "valid": true
+      }
+    ]
+  },
+  "schema_version": "AEROST-APPLICATION-CASE-VALIDATION-0.2",
+  "tool_version": "AEROST-TOOL-RESEARCH-BASELINE",
+  "validation_scope": {
+    "authoritative_reproducibility_included": false,
+    "description": "case-study implementation, three-path core execution, bounded synthesis, obligation-only reduction, profile-driven mutation-aware reduction, and five-suite comparison",
+    "generated_backend_compiled_and_executed": true,
+    "mutation_aware_evaluation_included": true
+  }
+}

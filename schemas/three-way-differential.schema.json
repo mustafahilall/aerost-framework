@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "equivalent_cycles": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "executed_cycles": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "execution_path_count": {
+      "const": 3,
+      "type": "integer"
+    },
+    "execution_paths": {
+      "maxItems": 3,
+      "minItems": 3,
+      "type": "array"
+    },
+    "mismatch_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "mismatches": {
+      "type": "array"
+    },
+    "pairwise": {
+      "type": "object"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_version",
+    "execution_paths",
+    "execution_path_count",
+    "executed_cycles",
+    "equivalent_cycles",
+    "mismatch_count",
+    "pairwise",
+    "mismatches",
+    "passed"
+  ],
+  "type": "object"
+}

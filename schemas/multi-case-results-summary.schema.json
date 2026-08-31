@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerost.dev/schemas/multi-case-results-summary.schema.json",
+  "title": "AEROST Multi-Case Results Summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tool_version",
+    "profile_version",
+    "suite_id",
+    "authoritative_full_pipeline",
+    "assembly_validation_mode",
+    "application_count",
+    "applications",
+    "aggregate",
+    "reproducibility",
+    "passed"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "AEROST-MULTI-CASE-RESULTS-0.1"
+    },
+    "tool_version": {
+      "type": "string"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "suite_id": {
+      "type": "string"
+    },
+    "authoritative_full_pipeline": {
+      "type": "boolean"
+    },
+    "assembly_validation_mode": {
+      "type": "boolean"
+    },
+    "application_count": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "applications": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object"
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "controlled_scenarios",
+        "executed_cycles",
+        "equivalent_cycles",
+        "assurance_obligations_covered",
+        "assurance_obligations_total",
+        "selected_mcdc_covered",
+        "selected_mcdc_total",
+        "controlled_mutants_killed",
+        "controlled_mutants_total",
+        "final_automatic_scenarios",
+        "final_automatic_cycles"
+      ],
+      "properties": {
+        "controlled_scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "executed_cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "equivalent_cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "assurance_obligations_covered": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "assurance_obligations_total": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "selected_mcdc_covered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "selected_mcdc_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "controlled_mutants_killed": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "controlled_mutants_total": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "final_automatic_scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "final_automatic_cycles": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "reproducibility": {
+      "type": "object"
+    },
+    "passed": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "AEROST-SCHEMA-0.2",
+  "requirements": [
+    {"id":"PWR-HLR-001","text":"After reset, remain in INITIALIZING until initialization, validity, source usability, and essential-power conditions permit NORMAL operation."},
+    {"id":"PWR-HLR-002","text":"Do not permit mission progression when neither source is usable."},
+    {"id":"PWR-HLR-003","text":"When reserve energy is low, enter ENERGY_CONSERVATION and remove payload permission."},
+    {"id":"PWR-HLR-004","text":"When return energy is insufficient, request return to home or a more conservative action."},
+    {"id":"PWR-HLR-005","text":"When the main bus is critical, request immediate landing and nonessential-load shedding in the same logical cycle."},
+    {"id":"PWR-HLR-006","text":"For a Battery A failure with Battery B usable, isolate only Battery A."},
+    {"id":"PWR-HLR-007","text":"For a Battery B failure with Battery A usable, isolate only Battery B."},
+    {"id":"PWR-HLR-008","text":"For dual-source unavailability, enter CRITICAL when essential power remains and LOCKOUT otherwise."},
+    {"id":"PWR-HLR-009","text":"On payload overcurrent, remove payload permission and shed nonessential loads."},
+    {"id":"PWR-HLR-010","text":"A persisted contactor mismatch shall latch a blocking fault and inhibit automatic return to NORMAL."},
+    {"id":"PWR-HLR-011","text":"DEGRADED, CRITICAL, and LOCKOUT shall not transition directly to NORMAL without recovery staging or authorization."},
+    {"id":"PWR-HLR-012","text":"Return to NORMAL shall require stable recovery and authorized reset where declared."},
+    {"id":"PWR-HLR-013","text":"Invalid or stale required inputs shall invoke the conservative input-invalid policy."},
+    {"id":"PWR-HLR-014","text":"A blocking runtime fault shall inhibit normal commit and invoke the fault-output policy."},
+    {"id":"PWR-HLR-015","text":"State transitions and blocking faults shall produce bounded diagnostic identities."},
+    {"id":"EXEC-REQ-OUTPUT-DEFAULTS","text":"Every output shall receive an unconditional deterministic default before conditional output logic."},
+    {"id":"ASCP-REQ-GENERIC-EXECUTION","text":"Every supported executable statement shall be represented in AIR and executable by the reference interpreter and generated backend."},
+    {"id":"BUILD-REQ-001","text":"Identical controlled source, tool version, and configuration shall produce byte-identical authoritative artifacts."}
+  ]
+}

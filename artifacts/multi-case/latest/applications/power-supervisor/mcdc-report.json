@@ -1,0 +1,171 @@
+{
+  "complete": true,
+  "conditions_analyzed": 6,
+  "decisions": [
+    {
+      "conditions": [
+        "AIR-COND-46486C3E7B4D",
+        "AIR-COND-B1E7AF6F9325",
+        "AIR-COND-933AFAC55E2F",
+        "AIR-COND-D765DACDD027"
+      ],
+      "decision_id": "AIR-DEC-A2A44279A13D",
+      "pairs": [
+        {
+          "a": {
+            "conditions": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-PWR-STARTUP-WAIT-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-PWR-STARTUP-READY-001"
+          },
+          "condition_id": "AIR-COND-46486C3E7B4D"
+        },
+        {
+          "a": {
+            "conditions": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-PWR-STARTUP-READY-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-PWR-STARTUP-A-INDEPENDENCE-001"
+          },
+          "condition_id": "AIR-COND-B1E7AF6F9325"
+        },
+        {
+          "a": {
+            "conditions": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-PWR-STARTUP-A-INDEPENDENCE-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              false,
+              true,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-PWR-STARTUP-B-INDEPENDENCE-001"
+          },
+          "condition_id": "AIR-COND-933AFAC55E2F"
+        },
+        {
+          "a": {
+            "conditions": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-PWR-STARTUP-READY-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-PWR-STARTUP-ESSENTIAL-001"
+          },
+          "condition_id": "AIR-COND-D765DACDD027"
+        }
+      ]
+    },
+    {
+      "conditions": [
+        "AIR-COND-63B49803733D",
+        "AIR-COND-14A07CAD6C04"
+      ],
+      "decision_id": "AIR-DEC-8C1AAF3C5949",
+      "pairs": [
+        {
+          "a": {
+            "conditions": [
+              false,
+              true
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-PWR-SOURCE-B-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-PWR-DUAL-CRITICAL-001"
+          },
+          "condition_id": "AIR-COND-63B49803733D"
+        },
+        {
+          "a": {
+            "conditions": [
+              true,
+              false
+            ],
+            "cycle": 0,
+            "result": false,
+            "scenario": "TEST-PWR-SOURCE-A-001"
+          },
+          "b": {
+            "conditions": [
+              true,
+              true
+            ],
+            "cycle": 0,
+            "result": true,
+            "scenario": "TEST-PWR-DUAL-CRITICAL-001"
+          },
+          "condition_id": "AIR-COND-14A07CAD6C04"
+        }
+      ]
+    }
+  ],
+  "independence_pairs_found": 6,
+  "independence_pairs_required": 6,
+  "selected_decisions": 2
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "artifacts": {
+      "type": "array"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "[0-9a-f]{64}",
+      "type": "string"
+    },
+    "tool_version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tool_version",
+    "profile_version",
+    "schema_version",
+    "source_sha256",
+    "artifacts"
+  ],
+  "type": "object"
+}

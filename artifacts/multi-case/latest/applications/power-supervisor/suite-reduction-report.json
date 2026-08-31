@@ -1,0 +1,894 @@
+{
+  "algorithm": {
+    "name": "aerost-deterministic-greedy-multicover",
+    "selection": "maximum remaining witness-slot gain",
+    "tie_breaking": [
+      "minimum cycle count",
+      "lexicographically smallest scenario id"
+    ],
+    "version": "0.1.0"
+  },
+  "deterministic": true,
+  "input_summary": {
+    "cycles": 773,
+    "obligations": 327,
+    "required_witness_slots": 333,
+    "scenarios": 333
+  },
+  "mcdc_summary": {
+    "missing_witnesses": [],
+    "obligations": 6,
+    "required_witnesses_per_obligation": 2,
+    "witness_counts": {
+      "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-14A07CAD6C04": 2,
+      "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-63B49803733D": 2,
+      "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-46486C3E7B4D": 2,
+      "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-933AFAC55E2F": 2,
+      "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-B1E7AF6F9325": 2,
+      "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-D765DACDD027": 2
+    }
+  },
+  "output_summary": {
+    "covered_obligations": 327,
+    "covered_witness_slots": 333,
+    "cycle_reduction_percent": 81.630013,
+    "scenario_reduction_percent": 82.882883,
+    "selected_cycles": 142,
+    "selected_scenarios": 57
+  },
+  "passed": true,
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-E1DC8CAED523",
+  "reduction_run_id": "REDUCE-RUN-0DF9AD8FFDF5",
+  "schema_version": "AEROST-SUITE-REDUCTION-REPORT-0.1",
+  "selection_trace": [
+    {
+      "covered_witness_slots_after_selection": 103,
+      "cycle_count": 4,
+      "gain": 103,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-0C65CCF090C2",
+        "OBL-CASE-AIR-CASEARM-17316AC42461",
+        "OBL-CASE-AIR-CASEARM-17348B966D74",
+        "OBL-CASE-AIR-CASEARM-ACE74C54455A",
+        "OBL-CASE-AIR-CASEARM-CE063C63AB93",
+        "OBL-CASE-AIR-CASEARM-F44F0EA89CF2",
+        "OBL-CASE-AIR-CASEARM-F6051AB75266",
+        "OBL-COND-AIR-COND-1342E8B61A2A-FALSE",
+        "OBL-COND-AIR-COND-144BC0B8AB3F-FALSE",
+        "OBL-COND-AIR-COND-14A07CAD6C04-TRUE",
+        "OBL-COND-AIR-COND-21E225A519E1-FALSE",
+        "OBL-COND-AIR-COND-21E225A519E1-TRUE",
+        "OBL-COND-AIR-COND-2F99F25465C8-FALSE",
+        "OBL-COND-AIR-COND-3AFC47255EBC-FALSE",
+        "OBL-COND-AIR-COND-40809FD7BD8C-TRUE",
+        "OBL-COND-AIR-COND-46486C3E7B4D-TRUE",
+        "OBL-COND-AIR-COND-48A098CCEFFC-TRUE",
+        "OBL-COND-AIR-COND-4C5A67F31175-TRUE",
+        "OBL-COND-AIR-COND-50A7117E5BB5-FALSE",
+        "OBL-COND-AIR-COND-592BFC643C74-FALSE",
+        "OBL-COND-AIR-COND-5A81CE40A399-TRUE",
+        "OBL-COND-AIR-COND-63B49803733D-TRUE",
+        "OBL-COND-AIR-COND-6FC64088584E-TRUE",
+        "OBL-COND-AIR-COND-741536FE89BA-TRUE",
+        "OBL-COND-AIR-COND-75BCDA7E7E54-FALSE",
+        "OBL-COND-AIR-COND-79C6E960DBD5-TRUE",
+        "OBL-COND-AIR-COND-8A52A49CD6CF-TRUE",
+        "OBL-COND-AIR-COND-8B529D83F7A1-FALSE",
+        "OBL-COND-AIR-COND-933AFAC55E2F-TRUE",
+        "OBL-COND-AIR-COND-A3A3B37A7589-FALSE",
+        "OBL-COND-AIR-COND-A47FB4F62113-TRUE",
+        "OBL-COND-AIR-COND-B1E7AF6F9325-FALSE",
+        "OBL-COND-AIR-COND-B3AB2C8B1E72-FALSE",
+        "OBL-COND-AIR-COND-BB61825D52A7-FALSE",
+        "OBL-COND-AIR-COND-C9A77B0A56A4-FALSE",
+        "OBL-COND-AIR-COND-D3BFA46CC2AB-TRUE",
+        "OBL-COND-AIR-COND-D765DACDD027-TRUE",
+        "OBL-COND-AIR-COND-E13100E69473-TRUE",
+        "OBL-COND-AIR-COND-EE98B9F464DC-TRUE",
+        "OBL-COND-AIR-COND-EFE56C86C850-TRUE",
+        "OBL-COND-AIR-COND-F4060203942C-FALSE",
+        "OBL-COND-AIR-COND-FAFFD9146AC0-TRUE",
+        "OBL-COND-AIR-COND-FC4C836BC163-FALSE",
+        "OBL-DEC-AIR-DEC-0AE9E0F52239-FALSE",
+        "OBL-DEC-AIR-DEC-0AE9E0F52239-TRUE",
+        "OBL-DEC-AIR-DEC-0CEBB87E5827-TRUE",
+        "OBL-DEC-AIR-DEC-2A128CF8D3BB-FALSE",
+        "OBL-DEC-AIR-DEC-865460DD81C4-TRUE",
+        "OBL-DEC-AIR-DEC-8C1AAF3C5949-TRUE",
+        "OBL-DEC-AIR-DEC-93A18B494A46-FALSE",
+        "OBL-DEC-AIR-DEC-A2A44279A13D-TRUE",
+        "OBL-DEC-AIR-DEC-B12405B9C306-FALSE",
+        "OBL-DEC-AIR-DEC-BB5E24035C0C-FALSE",
+        "OBL-DEC-AIR-DEC-DF6B93D358C8-FALSE",
+        "OBL-DEC-AIR-DEC-EB272A2D98BB-TRUE",
+        "OBL-DEC-AIR-DEC-F26BBA9634D5-FALSE",
+        "OBL-DEC-AIR-DEC-FD89DC1C5ADD-TRUE",
+        "OBL-RECOVERY-PWR-RECOVERY-CRITICAL",
+        "OBL-REQ-PWR-HLR-001",
+        "OBL-REQ-PWR-HLR-002",
+        "OBL-REQ-PWR-HLR-005",
+        "OBL-REQ-PWR-HLR-008",
+        "OBL-REQ-PWR-HLR-009",
+        "OBL-REQ-PWR-HLR-010",
+        "OBL-REQ-PWR-HLR-011",
+        "OBL-REQ-PWR-HLR-012",
+        "OBL-REQ-PWR-HLR-013",
+        "OBL-REQ-PWR-HLR-014",
+        "OBL-REQ-PWR-HLR-015",
+        "OBL-RESET-PWR-RESET-RECOVERY-PENDING",
+        "OBL-STMT-AIR-STMT-029FD17D66EA",
+        "OBL-STMT-AIR-STMT-0603DAD4493D",
+        "OBL-STMT-AIR-STMT-22EA36CE7782",
+        "OBL-STMT-AIR-STMT-33396C3EF0F2",
+        "OBL-STMT-AIR-STMT-39F8E8639950",
+        "OBL-STMT-AIR-STMT-3A8D9B1590D7",
+        "OBL-STMT-AIR-STMT-3C3A46196002",
+        "OBL-STMT-AIR-STMT-4852C2496F28",
+        "OBL-STMT-AIR-STMT-49A6537C2F51",
+        "OBL-STMT-AIR-STMT-53159465EEC7",
+        "OBL-STMT-AIR-STMT-55E6AE17D2D3",
+        "OBL-STMT-AIR-STMT-63250DD6E3B2",
+        "OBL-STMT-AIR-STMT-6F7682246674",
+        "OBL-STMT-AIR-STMT-73145824122F",
+        "OBL-STMT-AIR-STMT-77E05FA86735",
+        "OBL-STMT-AIR-STMT-80CDAC22F297",
+        "OBL-STMT-AIR-STMT-84CF0E9E7908",
+        "OBL-STMT-AIR-STMT-89CEA56742DD",
+        "OBL-STMT-AIR-STMT-9F20ED2E03E8",
+        "OBL-STMT-AIR-STMT-A218C155F879",
+        "OBL-STMT-AIR-STMT-A2C5E796C1C9",
+        "OBL-STMT-AIR-STMT-A7916E79B9DE",
+        "OBL-STMT-AIR-STMT-B196FBA75D16",
+        "OBL-STMT-AIR-STMT-BC40D66589B3",
+        "OBL-STMT-AIR-STMT-BCA1050F6F69",
+        "OBL-STMT-AIR-STMT-BCE73FB5DDAD",
+        "OBL-STMT-AIR-STMT-D0CA7CC162F7",
+        "OBL-STMT-AIR-STMT-D79FB6C6FBA5",
+        "OBL-STMT-AIR-STMT-DD5316804F59",
+        "OBL-STMT-AIR-STMT-DF1C16A6A5C0",
+        "OBL-STMT-AIR-STMT-E87BE3D9122E",
+        "OBL-STMT-AIR-STMT-EAED9383D904",
+        "OBL-STMT-AIR-STMT-FF1C6D4C2F66"
+      ],
+      "scenario_id": "SYN-63DF634F15D4",
+      "selection_index": 1
+    },
+    {
+      "covered_witness_slots_after_selection": 139,
+      "cycle_count": 3,
+      "gain": 36,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-A638FEAAFDF4",
+        "OBL-CASE-AIR-CASEARM-F494399BCEFC",
+        "OBL-COND-AIR-COND-0E4BEDA3E54F-FALSE",
+        "OBL-COND-AIR-COND-14A07CAD6C04-FALSE",
+        "OBL-COND-AIR-COND-15F32731B053-TRUE",
+        "OBL-COND-AIR-COND-3BDC2757859D-TRUE",
+        "OBL-COND-AIR-COND-69E1E0C7E3C9-FALSE",
+        "OBL-COND-AIR-COND-817FF4A2CA56-TRUE",
+        "OBL-COND-AIR-COND-83F3B5EB4933-TRUE",
+        "OBL-COND-AIR-COND-8BBE51FE9300-FALSE",
+        "OBL-COND-AIR-COND-9C40B9684FA7-FALSE",
+        "OBL-COND-AIR-COND-A9AACEB02838-TRUE",
+        "OBL-COND-AIR-COND-BA77AC6CEF43-FALSE",
+        "OBL-COND-AIR-COND-C14F85047E54-FALSE",
+        "OBL-COND-AIR-COND-CC86694FC691-FALSE",
+        "OBL-COND-AIR-COND-D2D9B19380C7-FALSE",
+        "OBL-COND-AIR-COND-DC2862148359-FALSE",
+        "OBL-COND-AIR-COND-E627EE416F1A-TRUE",
+        "OBL-COND-AIR-COND-E9CE4594367D-TRUE",
+        "OBL-DEC-AIR-DEC-0D2B6D2854BB-TRUE",
+        "OBL-DEC-AIR-DEC-2BF8D2D61B9A-FALSE",
+        "OBL-DEC-AIR-DEC-47BA8AADEC39-FALSE",
+        "OBL-DEC-AIR-DEC-8C1AAF3C5949-FALSE",
+        "OBL-DEC-AIR-DEC-A4965EA0089C-FALSE",
+        "OBL-DEC-AIR-DEC-CA16FEDC06F6-TRUE",
+        "OBL-DEC-AIR-DEC-E154C6B87FFB-FALSE",
+        "OBL-RECOVERY-PWR-RECOVERY-DEGRADED",
+        "OBL-REQ-PWR-HLR-004",
+        "OBL-REQ-PWR-HLR-006",
+        "OBL-REQ-PWR-HLR-007",
+        "OBL-STMT-AIR-STMT-0992AE421B6B",
+        "OBL-STMT-AIR-STMT-363BB5F7BABB",
+        "OBL-STMT-AIR-STMT-B5D2E3D5D648",
+        "OBL-STMT-AIR-STMT-C5DFEB3D124D",
+        "OBL-STMT-AIR-STMT-E2A1F642F5D8",
+        "OBL-STMT-AIR-STMT-E79B42D9F9AB"
+      ],
+      "scenario_id": "SYN-75238302328D",
+      "selection_index": 2
+    },
+    {
+      "covered_witness_slots_after_selection": 164,
+      "cycle_count": 2,
+      "gain": 25,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-46F1F30D749B",
+        "OBL-CASE-AIR-CASEARM-A6408568CED8",
+        "OBL-COND-AIR-COND-14721A8DD0AF-TRUE",
+        "OBL-COND-AIR-COND-2C0CE59B2B64-TRUE",
+        "OBL-COND-AIR-COND-2D0D9A9B15DB-TRUE",
+        "OBL-COND-AIR-COND-418210273076-TRUE",
+        "OBL-COND-AIR-COND-7475F8D3D8FD-TRUE",
+        "OBL-COND-AIR-COND-75BCDA7E7E54-TRUE",
+        "OBL-COND-AIR-COND-824107AE33E7-TRUE",
+        "OBL-COND-AIR-COND-933AFAC55E2F-FALSE",
+        "OBL-COND-AIR-COND-97DBB6731217-TRUE",
+        "OBL-COND-AIR-COND-CC11C4447B85-TRUE",
+        "OBL-COND-AIR-COND-D765DACDD027-FALSE",
+        "OBL-COND-AIR-COND-E3220C881F3F-TRUE",
+        "OBL-COND-AIR-COND-FA89E0B9D778-FALSE",
+        "OBL-DEC-AIR-DEC-3769441570C5-TRUE",
+        "OBL-DEC-AIR-DEC-A2A44279A13D-FALSE",
+        "OBL-DEC-AIR-DEC-BBC0832C9670-TRUE",
+        "OBL-RESET-PWR-RESET-LOCKOUT",
+        "OBL-STMT-AIR-STMT-005040901B77",
+        "OBL-STMT-AIR-STMT-6D50A2C7A880",
+        "OBL-STMT-AIR-STMT-8FBA964424C9",
+        "OBL-STMT-AIR-STMT-A9758B660C0C",
+        "OBL-STMT-AIR-STMT-C5D5741BE9B0",
+        "OBL-STMT-AIR-STMT-E7022F914D29"
+      ],
+      "scenario_id": "SYN-1321A07D7DFC",
+      "selection_index": 3
+    },
+    {
+      "covered_witness_slots_after_selection": 185,
+      "cycle_count": 3,
+      "gain": 21,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-A693C2BFC2F0",
+        "OBL-CASE-AIR-CASEARM-D9DD6A18D30F",
+        "OBL-COND-AIR-COND-00908D0AC570-FALSE",
+        "OBL-COND-AIR-COND-36B0D097C415-FALSE",
+        "OBL-COND-AIR-COND-66F919A4468C-FALSE",
+        "OBL-COND-AIR-COND-679C2BD98047-FALSE",
+        "OBL-COND-AIR-COND-7E3F9A986A6A-FALSE",
+        "OBL-COND-AIR-COND-A60A2BD8F2FD-TRUE",
+        "OBL-COND-AIR-COND-B75BA1081948-TRUE",
+        "OBL-COND-AIR-COND-BABD48A64B79-FALSE",
+        "OBL-COND-AIR-COND-BC1A60139F1A-FALSE",
+        "OBL-COND-AIR-COND-CC86694FC691-TRUE",
+        "OBL-DEC-AIR-DEC-40B6217C7A61-FALSE",
+        "OBL-DEC-AIR-DEC-602C491CE204-TRUE",
+        "OBL-DEC-AIR-DEC-9A422B741657-FALSE",
+        "OBL-DEC-AIR-DEC-A01E6CFC8F35-FALSE",
+        "OBL-DEC-AIR-DEC-A4965EA0089C-TRUE",
+        "OBL-STMT-AIR-STMT-1CB70230AF67",
+        "OBL-STMT-AIR-STMT-4FDB5B749A90",
+        "OBL-STMT-AIR-STMT-601550396FEE",
+        "OBL-STMT-AIR-STMT-EFFC6318F22A"
+      ],
+      "scenario_id": "SYN-0C365CC489A9",
+      "selection_index": 4
+    },
+    {
+      "covered_witness_slots_after_selection": 204,
+      "cycle_count": 1,
+      "gain": 19,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-11FF2A79BAEC",
+        "OBL-COND-AIR-COND-8B529D83F7A1-TRUE",
+        "OBL-COND-AIR-COND-A3A3B37A7589-TRUE",
+        "OBL-COND-AIR-COND-EFE56C86C850-FALSE",
+        "OBL-DEC-AIR-DEC-B12405B9C306-TRUE",
+        "OBL-DEC-AIR-DEC-DF6B93D358C8-TRUE",
+        "OBL-DEC-AIR-DEC-EB272A2D98BB-FALSE",
+        "OBL-STMT-AIR-STMT-01D476F0FDE3",
+        "OBL-STMT-AIR-STMT-073DB8810B0E",
+        "OBL-STMT-AIR-STMT-22DB7E868852",
+        "OBL-STMT-AIR-STMT-5C48844DF386",
+        "OBL-STMT-AIR-STMT-61651B39CDB1",
+        "OBL-STMT-AIR-STMT-67D0F41981FD",
+        "OBL-STMT-AIR-STMT-82C7DCC99C3A",
+        "OBL-STMT-AIR-STMT-A340B58A2404",
+        "OBL-STMT-AIR-STMT-A35A91CC01C4",
+        "OBL-STMT-AIR-STMT-B3B2BA12518A",
+        "OBL-STMT-AIR-STMT-E745A7945A20",
+        "OBL-STMT-AIR-STMT-F00E2F162F63"
+      ],
+      "scenario_id": "SYN-1BAF28554C82",
+      "selection_index": 5
+    },
+    {
+      "covered_witness_slots_after_selection": 212,
+      "cycle_count": 3,
+      "gain": 8,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-144BC0B8AB3F-TRUE",
+        "OBL-COND-AIR-COND-40809FD7BD8C-FALSE",
+        "OBL-COND-AIR-COND-BB61825D52A7-TRUE",
+        "OBL-COND-AIR-COND-C9A77B0A56A4-TRUE",
+        "OBL-COND-AIR-COND-D3BFA46CC2AB-FALSE",
+        "OBL-COND-AIR-COND-E13100E69473-FALSE",
+        "OBL-COND-AIR-COND-EE98B9F464DC-FALSE",
+        "OBL-DEC-AIR-DEC-865460DD81C4-FALSE"
+      ],
+      "scenario_id": "SYN-BB0425B82ADB",
+      "selection_index": 6
+    },
+    {
+      "covered_witness_slots_after_selection": 219,
+      "cycle_count": 2,
+      "gain": 7,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-2C0CE59B2B64-FALSE",
+        "OBL-COND-AIR-COND-2D0D9A9B15DB-FALSE",
+        "OBL-COND-AIR-COND-3AFC47255EBC-TRUE",
+        "OBL-COND-AIR-COND-418210273076-FALSE",
+        "OBL-COND-AIR-COND-7475F8D3D8FD-FALSE",
+        "OBL-COND-AIR-COND-E3220C881F3F-FALSE",
+        "OBL-DEC-AIR-DEC-3769441570C5-FALSE"
+      ],
+      "scenario_id": "SYN-537FAE95F2EE",
+      "selection_index": 7
+    },
+    {
+      "covered_witness_slots_after_selection": 226,
+      "cycle_count": 2,
+      "gain": 7,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-63B49803733D-FALSE",
+        "OBL-COND-AIR-COND-995C9A8B876E-TRUE",
+        "OBL-COND-AIR-COND-A9AACEB02838-FALSE",
+        "OBL-DEC-AIR-DEC-CA16FEDC06F6-FALSE",
+        "OBL-DEC-AIR-DEC-D12F80732D65-TRUE",
+        "OBL-REQ-PWR-HLR-003",
+        "OBL-STMT-AIR-STMT-448508E90F1C"
+      ],
+      "scenario_id": "SYN-5B31D4D86864",
+      "selection_index": 8
+    },
+    {
+      "covered_witness_slots_after_selection": 233,
+      "cycle_count": 3,
+      "gain": 7,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-00908D0AC570-TRUE",
+        "OBL-COND-AIR-COND-5B282D6B19D0-FALSE",
+        "OBL-COND-AIR-COND-66F919A4468C-TRUE",
+        "OBL-DEC-AIR-DEC-9A422B741657-TRUE",
+        "OBL-DEC-AIR-DEC-9BBFBE456C16-FALSE",
+        "OBL-STMT-AIR-STMT-2B029DE35DDA",
+        "OBL-STMT-AIR-STMT-324860089FA3"
+      ],
+      "scenario_id": "SYN-0E2ECCCF9903",
+      "selection_index": 9
+    },
+    {
+      "covered_witness_slots_after_selection": 240,
+      "cycle_count": 3,
+      "gain": 7,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-15F32731B053-FALSE",
+        "OBL-COND-AIR-COND-817FF4A2CA56-FALSE",
+        "OBL-COND-AIR-COND-83F3B5EB4933-FALSE",
+        "OBL-COND-AIR-COND-C14F85047E54-TRUE",
+        "OBL-COND-AIR-COND-DC2862148359-TRUE",
+        "OBL-COND-AIR-COND-E9CE4594367D-FALSE",
+        "OBL-DEC-AIR-DEC-0D2B6D2854BB-FALSE"
+      ],
+      "scenario_id": "SYN-2D29D79B7A2B",
+      "selection_index": 10
+    },
+    {
+      "covered_witness_slots_after_selection": 247,
+      "cycle_count": 4,
+      "gain": 7,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-1342E8B61A2A-TRUE",
+        "OBL-COND-AIR-COND-160BD1733874-FALSE",
+        "OBL-COND-AIR-COND-FC4C836BC163-TRUE",
+        "OBL-DEC-AIR-DEC-2A128CF8D3BB-TRUE",
+        "OBL-DEC-AIR-DEC-4F304D4EE080-FALSE",
+        "OBL-STMT-AIR-STMT-38804274281F",
+        "OBL-STMT-AIR-STMT-806A417F5C3F"
+      ],
+      "scenario_id": "SYN-00FA109B760D",
+      "selection_index": 11
+    },
+    {
+      "covered_witness_slots_after_selection": 252,
+      "cycle_count": 3,
+      "gain": 5,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-FB54F2EE1373-TRUE",
+        "OBL-DEC-AIR-DEC-9F38AA8D783B-TRUE",
+        "OBL-DEC-AIR-DEC-E154C6B87FFB-TRUE",
+        "OBL-STMT-AIR-STMT-742539D6F747",
+        "OBL-STMT-AIR-STMT-B7A45416CCD0"
+      ],
+      "scenario_id": "SYN-0F047A7CA9E0",
+      "selection_index": 12
+    },
+    {
+      "covered_witness_slots_after_selection": 257,
+      "cycle_count": 4,
+      "gain": 5,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-48A098CCEFFC-FALSE",
+        "OBL-COND-AIR-COND-4C5A67F31175-FALSE",
+        "OBL-COND-AIR-COND-8A52A49CD6CF-FALSE",
+        "OBL-COND-AIR-COND-FAFFD9146AC0-FALSE",
+        "OBL-DEC-AIR-DEC-0CEBB87E5827-FALSE"
+      ],
+      "scenario_id": "SYN-2579DA4A25D6",
+      "selection_index": 13
+    },
+    {
+      "covered_witness_slots_after_selection": 261,
+      "cycle_count": 1,
+      "gain": 4,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-46486C3E7B4D-FALSE",
+        "OBL-COND-AIR-COND-824107AE33E7-FALSE",
+        "OBL-COND-AIR-COND-B1E7AF6F9325-TRUE",
+        "OBL-DEC-AIR-DEC-BBC0832C9670-FALSE"
+      ],
+      "scenario_id": "SYN-37A7AF5A52FA",
+      "selection_index": 14
+    },
+    {
+      "covered_witness_slots_after_selection": 265,
+      "cycle_count": 2,
+      "gain": 4,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-5A81CE40A399-FALSE",
+        "OBL-DEC-AIR-DEC-FD89DC1C5ADD-FALSE",
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-63B49803733D",
+        "OBL-STMT-AIR-STMT-5F2EDC425EF8"
+      ],
+      "scenario_id": "SYN-319C578185C7-A",
+      "selection_index": 15
+    },
+    {
+      "covered_witness_slots_after_selection": 269,
+      "cycle_count": 3,
+      "gain": 4,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-36B0D097C415-TRUE",
+        "OBL-COND-AIR-COND-BABD48A64B79-TRUE",
+        "OBL-DEC-AIR-DEC-40B6217C7A61-TRUE",
+        "OBL-STMT-AIR-STMT-94E73C63A6B1"
+      ],
+      "scenario_id": "SYN-B4897F0CB05A",
+      "selection_index": 16
+    },
+    {
+      "covered_witness_slots_after_selection": 273,
+      "cycle_count": 4,
+      "gain": 4,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-2F99F25465C8-TRUE",
+        "OBL-COND-AIR-COND-F4060203942C-TRUE",
+        "OBL-DEC-AIR-DEC-93A18B494A46-TRUE",
+        "OBL-STMT-AIR-STMT-138B96328901"
+      ],
+      "scenario_id": "SYN-526C6C9D9471",
+      "selection_index": 17
+    },
+    {
+      "covered_witness_slots_after_selection": 276,
+      "cycle_count": 1,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COMMIT-INHIBITED-AEROST-FAULT-POLICY-72D40F0A07F2",
+        "OBL-CONSERVATIVE-OUTPUT-AEROST-FAULT-POLICY-72D40F0A07F2",
+        "OBL-FAULT-AEROST-FAULT-POLICY-72D40F0A07F2"
+      ],
+      "scenario_id": "SYN-09724A575DF0",
+      "selection_index": 18
+    },
+    {
+      "covered_witness_slots_after_selection": 279,
+      "cycle_count": 2,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-0E4BEDA3E54F-TRUE",
+        "OBL-DEC-AIR-DEC-47BA8AADEC39-TRUE",
+        "OBL-STMT-AIR-STMT-3C7AB5CB87EA"
+      ],
+      "scenario_id": "SYN-373151231CD9",
+      "selection_index": 19
+    },
+    {
+      "covered_witness_slots_after_selection": 282,
+      "cycle_count": 3,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-FB54F2EE1373-FALSE",
+        "OBL-DEC-AIR-DEC-9F38AA8D783B-FALSE",
+        "OBL-STMT-AIR-STMT-C3992B293712"
+      ],
+      "scenario_id": "SYN-13886C225834",
+      "selection_index": 20
+    },
+    {
+      "covered_witness_slots_after_selection": 285,
+      "cycle_count": 3,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-5B282D6B19D0-TRUE",
+        "OBL-DEC-AIR-DEC-9BBFBE456C16-TRUE",
+        "OBL-STMT-AIR-STMT-502BF6714318"
+      ],
+      "scenario_id": "SYN-244BE428F182",
+      "selection_index": 21
+    },
+    {
+      "covered_witness_slots_after_selection": 288,
+      "cycle_count": 3,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-BA77AC6CEF43-TRUE",
+        "OBL-DEC-AIR-DEC-2BF8D2D61B9A-TRUE",
+        "OBL-STMT-AIR-STMT-FCC6F3D279F7"
+      ],
+      "scenario_id": "SYN-26CED2847590",
+      "selection_index": 22
+    },
+    {
+      "covered_witness_slots_after_selection": 291,
+      "cycle_count": 3,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-BC1A60139F1A-TRUE",
+        "OBL-DEC-AIR-DEC-A01E6CFC8F35-TRUE",
+        "OBL-STMT-AIR-STMT-A648EBCC4774"
+      ],
+      "scenario_id": "SYN-7A019ED87C6B",
+      "selection_index": 23
+    },
+    {
+      "covered_witness_slots_after_selection": 294,
+      "cycle_count": 4,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-50A7117E5BB5-TRUE",
+        "OBL-DEC-AIR-DEC-F26BBA9634D5-TRUE",
+        "OBL-STMT-AIR-STMT-22037CE76C48"
+      ],
+      "scenario_id": "SYN-20D0F32CA111",
+      "selection_index": 24
+    },
+    {
+      "covered_witness_slots_after_selection": 297,
+      "cycle_count": 4,
+      "gain": 3,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-160BD1733874-TRUE",
+        "OBL-DEC-AIR-DEC-4F304D4EE080-TRUE",
+        "OBL-STMT-AIR-STMT-2695352AEE34"
+      ],
+      "scenario_id": "SYN-6ED048416B27",
+      "selection_index": 25
+    },
+    {
+      "covered_witness_slots_after_selection": 299,
+      "cycle_count": 2,
+      "gain": 2,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-995C9A8B876E-FALSE",
+        "OBL-DEC-AIR-DEC-D12F80732D65-FALSE"
+      ],
+      "scenario_id": "SYN-1F8ED227BA87",
+      "selection_index": 26
+    },
+    {
+      "covered_witness_slots_after_selection": 301,
+      "cycle_count": 2,
+      "gain": 2,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-8BBE51FE9300-TRUE",
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-63B49803733D"
+      ],
+      "scenario_id": "SYN-9A7FF2A60357-B",
+      "selection_index": 27
+    },
+    {
+      "covered_witness_slots_after_selection": 303,
+      "cycle_count": 3,
+      "gain": 2,
+      "newly_covered_obligations": [
+        "OBL-DEC-AIR-DEC-BB5E24035C0C-TRUE",
+        "OBL-STMT-AIR-STMT-2682265396A7"
+      ],
+      "scenario_id": "SYN-3DDACA4879A7",
+      "selection_index": 28
+    },
+    {
+      "covered_witness_slots_after_selection": 305,
+      "cycle_count": 3,
+      "gain": 2,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-A60A2BD8F2FD-FALSE",
+        "OBL-DEC-AIR-DEC-602C491CE204-FALSE"
+      ],
+      "scenario_id": "SYN-5469BB47BDD9",
+      "selection_index": 29
+    },
+    {
+      "covered_witness_slots_after_selection": 306,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-D765DACDD027"
+      ],
+      "scenario_id": "SYN-1A24C6FEA9B4-B",
+      "selection_index": 30
+    },
+    {
+      "covered_witness_slots_after_selection": 307,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-B1E7AF6F9325"
+      ],
+      "scenario_id": "SYN-3D0203E37376-A",
+      "selection_index": 31
+    },
+    {
+      "covered_witness_slots_after_selection": 308,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-933AFAC55E2F"
+      ],
+      "scenario_id": "SYN-683608CDA0C7-B",
+      "selection_index": 32
+    },
+    {
+      "covered_witness_slots_after_selection": 309,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-D765DACDD027"
+      ],
+      "scenario_id": "SYN-6C7059696D41-A",
+      "selection_index": 33
+    },
+    {
+      "covered_witness_slots_after_selection": 310,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-B1E7AF6F9325"
+      ],
+      "scenario_id": "SYN-874FC6467968-B",
+      "selection_index": 34
+    },
+    {
+      "covered_witness_slots_after_selection": 311,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-46486C3E7B4D"
+      ],
+      "scenario_id": "SYN-89ED35CFF8BE-B",
+      "selection_index": 35
+    },
+    {
+      "covered_witness_slots_after_selection": 312,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-46486C3E7B4D"
+      ],
+      "scenario_id": "SYN-951447C49BD7-A",
+      "selection_index": 36
+    },
+    {
+      "covered_witness_slots_after_selection": 313,
+      "cycle_count": 1,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-A2A44279A13D-AIR-COND-933AFAC55E2F"
+      ],
+      "scenario_id": "SYN-96066F95DAC0-A",
+      "selection_index": 37
+    },
+    {
+      "covered_witness_slots_after_selection": 314,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-97DBB6731217-FALSE"
+      ],
+      "scenario_id": "SYN-0003E9E484D2",
+      "selection_index": 38
+    },
+    {
+      "covered_witness_slots_after_selection": 315,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-CC11C4447B85-FALSE"
+      ],
+      "scenario_id": "SYN-0FFF0F64DF07",
+      "selection_index": 39
+    },
+    {
+      "covered_witness_slots_after_selection": 316,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-69E1E0C7E3C9-TRUE"
+      ],
+      "scenario_id": "SYN-24F720B8BE86",
+      "selection_index": 40
+    },
+    {
+      "covered_witness_slots_after_selection": 317,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-14721A8DD0AF-FALSE"
+      ],
+      "scenario_id": "SYN-3CAA6A6002B2",
+      "selection_index": 41
+    },
+    {
+      "covered_witness_slots_after_selection": 318,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-14A07CAD6C04"
+      ],
+      "scenario_id": "SYN-C6BA600A601E-B",
+      "selection_index": 42
+    },
+    {
+      "covered_witness_slots_after_selection": 319,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-FA89E0B9D778-TRUE"
+      ],
+      "scenario_id": "SYN-DE669046EC72",
+      "selection_index": 43
+    },
+    {
+      "covered_witness_slots_after_selection": 320,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-8C1AAF3C5949-AIR-COND-14A07CAD6C04"
+      ],
+      "scenario_id": "SYN-E77D32BEF7D9-A",
+      "selection_index": 44
+    },
+    {
+      "covered_witness_slots_after_selection": 321,
+      "cycle_count": 2,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-9C40B9684FA7-TRUE"
+      ],
+      "scenario_id": "SYN-EF088AB10A6F",
+      "selection_index": 45
+    },
+    {
+      "covered_witness_slots_after_selection": 322,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-679C2BD98047-TRUE"
+      ],
+      "scenario_id": "SYN-0C4D76DABD7D",
+      "selection_index": 46
+    },
+    {
+      "covered_witness_slots_after_selection": 323,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-A47FB4F62113-FALSE"
+      ],
+      "scenario_id": "SYN-1F2698D2FA4B",
+      "selection_index": 47
+    },
+    {
+      "covered_witness_slots_after_selection": 324,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-741536FE89BA-FALSE"
+      ],
+      "scenario_id": "SYN-245A3ED2CB0E",
+      "selection_index": 48
+    },
+    {
+      "covered_witness_slots_after_selection": 325,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-6FC64088584E-FALSE"
+      ],
+      "scenario_id": "SYN-34CFCBE968B2",
+      "selection_index": 49
+    },
+    {
+      "covered_witness_slots_after_selection": 326,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-3BDC2757859D-FALSE"
+      ],
+      "scenario_id": "SYN-4E02B97273C3",
+      "selection_index": 50
+    },
+    {
+      "covered_witness_slots_after_selection": 327,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-B75BA1081948-FALSE"
+      ],
+      "scenario_id": "SYN-7E944758FC88",
+      "selection_index": 51
+    },
+    {
+      "covered_witness_slots_after_selection": 328,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-D2D9B19380C7-TRUE"
+      ],
+      "scenario_id": "SYN-8CABF7DD6305",
+      "selection_index": 52
+    },
+    {
+      "covered_witness_slots_after_selection": 329,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-E627EE416F1A-FALSE"
+      ],
+      "scenario_id": "SYN-CB45FE850445",
+      "selection_index": 53
+    },
+    {
+      "covered_witness_slots_after_selection": 330,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-7E3F9A986A6A-TRUE"
+      ],
+      "scenario_id": "SYN-D9E709D59A16",
+      "selection_index": 54
+    },
+    {
+      "covered_witness_slots_after_selection": 331,
+      "cycle_count": 3,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-79C6E960DBD5-FALSE"
+      ],
+      "scenario_id": "SYN-F79E6A709609",
+      "selection_index": 55
+    },
+    {
+      "covered_witness_slots_after_selection": 332,
+      "cycle_count": 4,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-B3AB2C8B1E72-TRUE"
+      ],
+      "scenario_id": "SYN-0C9DFCFDACDB",
+      "selection_index": 56
+    },
+    {
+      "covered_witness_slots_after_selection": 333,
+      "cycle_count": 4,
+      "gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-592BFC643C74-TRUE"
+      ],
+      "scenario_id": "SYN-CD6B3E1F07FA",
+      "selection_index": 57
+    }
+  ],
+  "synthesis_run_id": "SYNTH-RUN-56B9D26ABBC1",
+  "uncovered_obligations": []
+}

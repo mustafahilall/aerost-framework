@@ -1,0 +1,167 @@
+TYPE CommunicationLinkState :
+(
+    INITIALIZING,
+    NOMINAL,
+    DEGRADED,
+    LOST_LINK,
+    RECOVERY_PENDING,
+    LOCKOUT
+);
+END_TYPE
+
+PROGRAM CommunicationLinkSupervisor
+VAR_INPUT
+    InputSetValid, InitializationComplete : BOOL;
+    PrimaryLinkAvailable, SecondaryLinkAvailable : BOOL;
+    LinkQualityDegraded, LinkLossPersisted : BOOL;
+    RecoveryStable, ResetAuthorized : BOOL;
+    CommandChannelAuthenticated : BOOL;
+END_VAR
+
+VAR_OUTPUT
+    CommandPermit, UsePrimaryLink, UseSecondaryLink : BOOL;
+    DegradedLinkIndication, LostLinkProcedureRequest : BOOL;
+    ReturnToHomeRequest, MissionProgressionPermit : BOOL;
+    BlockingLinkFault : BOOL;
+    SupervisorState : CommunicationLinkState;
+END_VAR
+
+VAR_STATE
+    State : CommunicationLinkState := INITIALIZING;
+    LinkFaultLatched : BOOL := FALSE;
+END_VAR
+
+TRANSITION_STAGE
+(*@req=LINK-HLR-011,LINK-HLR-012 test=TEST-LINK-INVALID-001,TEST-LINK-RUNTIME-001 claim-critical mutate=invalid-guard*)
+IF InputSetValid THEN
+    CASE State OF
+        INITIALIZING:
+            (*@req=LINK-HLR-001 test=TEST-LINK-STARTUP-WAIT-001,TEST-LINK-STARTUP-PRIMARY-001,TEST-LINK-STARTUP-SECONDARY-001 claim-critical mcdc*)
+            IF InitializationComplete AND
+               CommandChannelAuthenticated AND
+               (PrimaryLinkAvailable OR SecondaryLinkAvailable) THEN
+                State := NOMINAL;
+            ELSIF InitializationComplete THEN
+                State := LOCKOUT;
+            END_IF;
+
+        NOMINAL:
+            (*@req=LINK-HLR-005,LINK-HLR-007,LINK-HLR-013 test=TEST-LINK-LOSS-PERSISTED-001,TEST-LINK-BOTH-UNAVAILABLE-001 claim-critical mcdc mutate=lost-link-operator*)
+            IF LinkLossPersisted OR
+               (NOT PrimaryLinkAvailable AND NOT SecondaryLinkAvailable) THEN
+                State := LOST_LINK;
+            (*@req=LINK-HLR-004,LINK-HLR-006 test=TEST-LINK-PRIMARY-FAILOVER-001,TEST-LINK-QUALITY-DEGRADED-001,TEST-LINK-AUTH-LOSS-001 claim-critical*)
+            ELSIF LinkQualityDegraded OR
+                  NOT PrimaryLinkAvailable OR
+                  NOT SecondaryLinkAvailable OR
+                  NOT CommandChannelAuthenticated THEN
+                State := DEGRADED;
+            END_IF;
+
+        DEGRADED:
+            IF LinkLossPersisted OR
+               (NOT PrimaryLinkAvailable AND NOT SecondaryLinkAvailable) THEN
+                State := LOST_LINK;
+            (*@req=LINK-HLR-008,LINK-HLR-009 test=TEST-LINK-DEGRADED-RECOVERY-001 claim-critical mutate=recovery-entry-guard*)
+            ELSIF RecoveryStable AND
+                  PrimaryLinkAvailable AND SecondaryLinkAvailable AND
+                  CommandChannelAuthenticated AND
+                  NOT LinkQualityDegraded THEN
+                State := RECOVERY_PENDING;
+            END_IF;
+
+        LOST_LINK:
+            (*@req=LINK-HLR-008,LINK-HLR-009 test=TEST-LINK-LOST-RECOVERY-001 claim-critical*)
+            IF RecoveryStable AND
+               (PrimaryLinkAvailable OR SecondaryLinkAvailable) AND
+               CommandChannelAuthenticated THEN
+                State := RECOVERY_PENDING;
+            END_IF;
+
+        RECOVERY_PENDING:
+            IF LinkLossPersisted OR
+               (NOT PrimaryLinkAvailable AND NOT SecondaryLinkAvailable) THEN
+                State := LOST_LINK;
+            ELSIF LinkQualityDegraded OR
+                  NOT PrimaryLinkAvailable OR
+                  NOT SecondaryLinkAvailable OR
+                  NOT CommandChannelAuthenticated THEN
+                State := DEGRADED;
+            (*@req=LINK-HLR-008,LINK-HLR-009,LINK-HLR-010 test=TEST-LINK-RECOVERY-RESET-001,TEST-LINK-RECOVERY-NO-RESET-001 claim-critical mutate=weaken-link-recovery*)
+            ELSIF ResetAuthorized AND RecoveryStable THEN
+                State := NOMINAL;
+                LinkFaultLatched := FALSE;
+            END_IF;
+
+        LOCKOUT:
+            (*@req=LINK-HLR-008,LINK-HLR-009,LINK-HLR-010 test=TEST-LINK-LOCKOUT-RECOVERY-001 claim-critical*)
+            IF ResetAuthorized AND RecoveryStable AND
+               (PrimaryLinkAvailable OR SecondaryLinkAvailable) AND
+               CommandChannelAuthenticated THEN
+                State := RECOVERY_PENDING;
+            END_IF;
+    END_CASE;
+ELSE
+    LinkFaultLatched := TRUE;
+END_IF;
+
+(*@req=LINK-HLR-005,LINK-HLR-013,LINK-HLR-014 test=TEST-LINK-LOSS-PERSISTED-001,TEST-LINK-BOTH-UNAVAILABLE-001 claim-critical*)
+IF State = LOST_LINK OR State = LOCKOUT THEN
+    LinkFaultLatched := TRUE;
+END_IF;
+
+OUTPUT_STAGE
+(*@req=EXEC-REQ-OUTPUT-DEFAULTS test=TEST-LINK-OUTPUT-DEFAULTS mutate=command-default*)
+CommandPermit := FALSE;
+UsePrimaryLink := FALSE;
+UseSecondaryLink := FALSE;
+DegradedLinkIndication := TRUE;
+LostLinkProcedureRequest := FALSE;
+ReturnToHomeRequest := FALSE;
+MissionProgressionPermit := FALSE;
+BlockingLinkFault := LinkFaultLatched;
+SupervisorState := State;
+
+CASE State OF
+    INITIALIZING:
+        DegradedLinkIndication := TRUE;
+    (*@req=LINK-HLR-002,LINK-HLR-006 test=TEST-LINK-STARTUP-PRIMARY-001*)
+    NOMINAL:
+        CommandPermit := TRUE;
+        UsePrimaryLink := TRUE;
+        DegradedLinkIndication := FALSE;
+        MissionProgressionPermit := TRUE;
+    (*@req=LINK-HLR-003,LINK-HLR-004,LINK-HLR-006 test=TEST-LINK-PRIMARY-FAILOVER-001,TEST-LINK-QUALITY-DEGRADED-001 mutate=swap-link-selection*)
+    DEGRADED:
+        CommandPermit := CommandChannelAuthenticated AND
+                         (PrimaryLinkAvailable OR SecondaryLinkAvailable);
+        UsePrimaryLink := PrimaryLinkAvailable;
+        UseSecondaryLink := NOT PrimaryLinkAvailable AND SecondaryLinkAvailable;
+        DegradedLinkIndication := TRUE;
+        ReturnToHomeRequest := TRUE;
+    (*@req=LINK-HLR-005,LINK-HLR-007,LINK-HLR-014 test=TEST-LINK-LOSS-PERSISTED-001 claim-critical mutate=lost-procedure-delete*)
+    LOST_LINK:
+        BlockingLinkFault := TRUE;
+        LostLinkProcedureRequest := TRUE;
+        ReturnToHomeRequest := TRUE;
+    RECOVERY_PENDING:
+        BlockingLinkFault := TRUE;
+        DegradedLinkIndication := TRUE;
+    LOCKOUT:
+        BlockingLinkFault := TRUE;
+        LostLinkProcedureRequest := TRUE;
+END_CASE;
+
+(*@req=LINK-HLR-011,LINK-HLR-012 test=TEST-LINK-INVALID-001 claim-critical mutate=invalid-output-guard*)
+IF NOT InputSetValid THEN
+    CommandPermit := FALSE;
+    UsePrimaryLink := FALSE;
+    UseSecondaryLink := FALSE;
+    DegradedLinkIndication := TRUE;
+    LostLinkProcedureRequest := TRUE;
+    ReturnToHomeRequest := TRUE;
+    MissionProgressionPermit := FALSE;
+    BlockingLinkFault := TRUE;
+END_IF;
+
+END_PROGRAM

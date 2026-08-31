@@ -1,0 +1,3893 @@
+{
+  "profile_version": "ASCP-0.2",
+  "program": {
+    "inputs": [
+      {
+        "initializer": null,
+        "name": "InputSetValid",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 234,
+          "end_column": 50,
+          "end_line": 14,
+          "line": 14,
+          "start": 189
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "InitializationComplete",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 234,
+          "end_column": 50,
+          "end_line": 14,
+          "line": 14,
+          "start": 189
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "PrimaryLinkAvailable",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 291,
+          "end_column": 57,
+          "end_line": 15,
+          "line": 15,
+          "start": 239
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "SecondaryLinkAvailable",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 291,
+          "end_column": 57,
+          "end_line": 15,
+          "line": 15,
+          "start": 239
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "LinkQualityDegraded",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 342,
+          "end_column": 51,
+          "end_line": 16,
+          "line": 16,
+          "start": 296
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "LinkLossPersisted",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 342,
+          "end_column": 51,
+          "end_line": 16,
+          "line": 16,
+          "start": 296
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "RecoveryStable",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 386,
+          "end_column": 44,
+          "end_line": 17,
+          "line": 17,
+          "start": 347
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "ResetAuthorized",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 386,
+          "end_column": 44,
+          "end_line": 17,
+          "line": 17,
+          "start": 347
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "CommandChannelAuthenticated",
+        "section": "input",
+        "span": {
+          "column": 5,
+          "end": 426,
+          "end_column": 40,
+          "end_line": 18,
+          "line": 18,
+          "start": 391
+        },
+        "type": "BOOL"
+      }
+    ],
+    "name": "CommunicationLinkSupervisor",
+    "output_stage": [
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [
+            "command-default"
+          ],
+          "requirements": [
+            "EXEC-REQ-OUTPUT-DEFAULTS"
+          ],
+          "tests": [
+            "TEST-LINK-OUTPUT-DEFAULTS"
+          ]
+        },
+        "expression": {
+          "kind": "bool",
+          "span": {
+            "column": 18,
+            "end": 4568,
+            "end_column": 23,
+            "end_line": 115,
+            "line": 115,
+            "start": 4563
+          },
+          "type": "BOOL",
+          "value": false
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4569,
+          "end_column": 24,
+          "end_line": 115,
+          "line": 115,
+          "start": 4546
+        },
+        "target": "CommandPermit"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "bool",
+          "span": {
+            "column": 19,
+            "end": 4593,
+            "end_column": 24,
+            "end_line": 116,
+            "line": 116,
+            "start": 4588
+          },
+          "type": "BOOL",
+          "value": false
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4594,
+          "end_column": 25,
+          "end_line": 116,
+          "line": 116,
+          "start": 4570
+        },
+        "target": "UsePrimaryLink"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "bool",
+          "span": {
+            "column": 21,
+            "end": 4620,
+            "end_column": 26,
+            "end_line": 117,
+            "line": 117,
+            "start": 4615
+          },
+          "type": "BOOL",
+          "value": false
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4621,
+          "end_column": 27,
+          "end_line": 117,
+          "line": 117,
+          "start": 4595
+        },
+        "target": "UseSecondaryLink"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "bool",
+          "span": {
+            "column": 27,
+            "end": 4652,
+            "end_column": 31,
+            "end_line": 118,
+            "line": 118,
+            "start": 4648
+          },
+          "type": "BOOL",
+          "value": true
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4653,
+          "end_column": 32,
+          "end_line": 118,
+          "line": 118,
+          "start": 4622
+        },
+        "target": "DegradedLinkIndication"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "bool",
+          "span": {
+            "column": 29,
+            "end": 4687,
+            "end_column": 34,
+            "end_line": 119,
+            "line": 119,
+            "start": 4682
+          },
+          "type": "BOOL",
+          "value": false
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4688,
+          "end_column": 35,
+          "end_line": 119,
+          "line": 119,
+          "start": 4654
+        },
+        "target": "LostLinkProcedureRequest"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "bool",
+          "span": {
+            "column": 24,
+            "end": 4717,
+            "end_column": 29,
+            "end_line": 120,
+            "line": 120,
+            "start": 4712
+          },
+          "type": "BOOL",
+          "value": false
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4718,
+          "end_column": 30,
+          "end_line": 120,
+          "line": 120,
+          "start": 4689
+        },
+        "target": "ReturnToHomeRequest"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "bool",
+          "span": {
+            "column": 29,
+            "end": 4752,
+            "end_column": 34,
+            "end_line": 121,
+            "line": 121,
+            "start": 4747
+          },
+          "type": "BOOL",
+          "value": false
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4753,
+          "end_column": 35,
+          "end_line": 121,
+          "line": 121,
+          "start": 4719
+        },
+        "target": "MissionProgressionPermit"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "name",
+          "span": {
+            "column": 22,
+            "end": 4791,
+            "end_column": 38,
+            "end_line": 122,
+            "line": 122,
+            "start": 4775
+          },
+          "type": "BOOL",
+          "value": "LinkFaultLatched"
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4792,
+          "end_column": 39,
+          "end_line": 122,
+          "line": 122,
+          "start": 4754
+        },
+        "target": "BlockingLinkFault"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "expression": {
+          "kind": "name",
+          "span": {
+            "column": 20,
+            "end": 4817,
+            "end_column": 25,
+            "end_line": 123,
+            "line": 123,
+            "start": 4812
+          },
+          "type": "CommunicationLinkState",
+          "value": "State"
+        },
+        "kind": "assign",
+        "span": {
+          "column": 1,
+          "end": 4818,
+          "end_column": 26,
+          "end_line": 123,
+          "line": 123,
+          "start": 4793
+        },
+        "target": "SupervisorState"
+      },
+      {
+        "annotation": {
+          "claim_critical": false,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [],
+          "tests": []
+        },
+        "arms": [
+          {
+            "annotation": {
+              "claim_critical": false,
+              "mcdc": false,
+              "mutation_tags": [],
+              "requirements": [],
+              "tests": []
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 35,
+                    "end": 4890,
+                    "end_column": 39,
+                    "end_line": 127,
+                    "line": 127,
+                    "start": 4886
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 4891,
+                  "end_column": 40,
+                  "end_line": 127,
+                  "line": 127,
+                  "start": 4860
+                },
+                "target": "DegradedLinkIndication"
+              }
+            ],
+            "value": "INITIALIZING"
+          },
+          {
+            "annotation": {
+              "claim_critical": false,
+              "mcdc": false,
+              "mutation_tags": [],
+              "requirements": [
+                "LINK-HLR-002",
+                "LINK-HLR-006"
+              ],
+              "tests": [
+                "TEST-LINK-STARTUP-PRIMARY-001"
+              ]
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-002",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-STARTUP-PRIMARY-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 26,
+                    "end": 5008,
+                    "end_column": 30,
+                    "end_line": 130,
+                    "line": 130,
+                    "start": 5004
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5009,
+                  "end_column": 31,
+                  "end_line": 130,
+                  "line": 130,
+                  "start": 4987
+                },
+                "target": "CommandPermit"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-002",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-STARTUP-PRIMARY-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 27,
+                    "end": 5040,
+                    "end_column": 31,
+                    "end_line": 131,
+                    "line": 131,
+                    "start": 5036
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5041,
+                  "end_column": 32,
+                  "end_line": 131,
+                  "line": 131,
+                  "start": 5018
+                },
+                "target": "UsePrimaryLink"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-002",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-STARTUP-PRIMARY-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 35,
+                    "end": 5081,
+                    "end_column": 40,
+                    "end_line": 132,
+                    "line": 132,
+                    "start": 5076
+                  },
+                  "type": "BOOL",
+                  "value": false
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5082,
+                  "end_column": 41,
+                  "end_line": 132,
+                  "line": 132,
+                  "start": 5050
+                },
+                "target": "DegradedLinkIndication"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-002",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-STARTUP-PRIMARY-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 37,
+                    "end": 5123,
+                    "end_column": 41,
+                    "end_line": 133,
+                    "line": 133,
+                    "start": 5119
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5124,
+                  "end_column": 42,
+                  "end_line": 133,
+                  "line": 133,
+                  "start": 5091
+                },
+                "target": "MissionProgressionPermit"
+              }
+            ],
+            "value": "NOMINAL"
+          },
+          {
+            "annotation": {
+              "claim_critical": false,
+              "mcdc": false,
+              "mutation_tags": [
+                "swap-link-selection"
+              ],
+              "requirements": [
+                "LINK-HLR-003",
+                "LINK-HLR-004",
+                "LINK-HLR-006"
+              ],
+              "tests": [
+                "TEST-LINK-PRIMARY-FAILOVER-001",
+                "TEST-LINK-QUALITY-DEGRADED-001"
+              ]
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-003",
+                    "LINK-HLR-004",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-PRIMARY-FAILOVER-001",
+                    "TEST-LINK-QUALITY-DEGRADED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "binary",
+                  "left": {
+                    "kind": "name",
+                    "span": {
+                      "column": 26,
+                      "end": 5337,
+                      "end_column": 53,
+                      "end_line": 136,
+                      "line": 136,
+                      "start": 5310
+                    },
+                    "type": "BOOL",
+                    "value": "CommandChannelAuthenticated"
+                  },
+                  "operator": "AND",
+                  "right": {
+                    "kind": "binary",
+                    "left": {
+                      "kind": "name",
+                      "span": {
+                        "column": 27,
+                        "end": 5388,
+                        "end_column": 47,
+                        "end_line": 137,
+                        "line": 137,
+                        "start": 5368
+                      },
+                      "type": "BOOL",
+                      "value": "PrimaryLinkAvailable"
+                    },
+                    "operator": "OR",
+                    "right": {
+                      "kind": "name",
+                      "span": {
+                        "column": 51,
+                        "end": 5414,
+                        "end_column": 73,
+                        "end_line": 137,
+                        "line": 137,
+                        "start": 5392
+                      },
+                      "type": "BOOL",
+                      "value": "SecondaryLinkAvailable"
+                    },
+                    "span": {
+                      "column": 26,
+                      "end": 5415,
+                      "end_column": 74,
+                      "end_line": 137,
+                      "line": 137,
+                      "start": 5367
+                    },
+                    "type": "BOOL"
+                  },
+                  "span": {
+                    "column": 26,
+                    "end": 5415,
+                    "end_column": 74,
+                    "end_line": 137,
+                    "line": 136,
+                    "start": 5310
+                  },
+                  "type": "BOOL"
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5416,
+                  "end_column": 75,
+                  "end_line": 137,
+                  "line": 136,
+                  "start": 5293
+                },
+                "target": "CommandPermit"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-003",
+                    "LINK-HLR-004",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-PRIMARY-FAILOVER-001",
+                    "TEST-LINK-QUALITY-DEGRADED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "name",
+                  "span": {
+                    "column": 27,
+                    "end": 5463,
+                    "end_column": 47,
+                    "end_line": 138,
+                    "line": 138,
+                    "start": 5443
+                  },
+                  "type": "BOOL",
+                  "value": "PrimaryLinkAvailable"
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5464,
+                  "end_column": 48,
+                  "end_line": 138,
+                  "line": 138,
+                  "start": 5425
+                },
+                "target": "UsePrimaryLink"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-003",
+                    "LINK-HLR-004",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-PRIMARY-FAILOVER-001",
+                    "TEST-LINK-QUALITY-DEGRADED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "binary",
+                  "left": {
+                    "kind": "unary",
+                    "operand": {
+                      "kind": "name",
+                      "span": {
+                        "column": 33,
+                        "end": 5517,
+                        "end_column": 53,
+                        "end_line": 139,
+                        "line": 139,
+                        "start": 5497
+                      },
+                      "type": "BOOL",
+                      "value": "PrimaryLinkAvailable"
+                    },
+                    "operator": "NOT",
+                    "span": {
+                      "column": 29,
+                      "end": 5517,
+                      "end_column": 53,
+                      "end_line": 139,
+                      "line": 139,
+                      "start": 5493
+                    },
+                    "type": "BOOL"
+                  },
+                  "operator": "AND",
+                  "right": {
+                    "kind": "name",
+                    "span": {
+                      "column": 58,
+                      "end": 5544,
+                      "end_column": 80,
+                      "end_line": 139,
+                      "line": 139,
+                      "start": 5522
+                    },
+                    "type": "BOOL",
+                    "value": "SecondaryLinkAvailable"
+                  },
+                  "span": {
+                    "column": 29,
+                    "end": 5544,
+                    "end_column": 80,
+                    "end_line": 139,
+                    "line": 139,
+                    "start": 5493
+                  },
+                  "type": "BOOL"
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5545,
+                  "end_column": 81,
+                  "end_line": 139,
+                  "line": 139,
+                  "start": 5473
+                },
+                "target": "UseSecondaryLink"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-003",
+                    "LINK-HLR-004",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-PRIMARY-FAILOVER-001",
+                    "TEST-LINK-QUALITY-DEGRADED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 35,
+                    "end": 5584,
+                    "end_column": 39,
+                    "end_line": 140,
+                    "line": 140,
+                    "start": 5580
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5585,
+                  "end_column": 40,
+                  "end_line": 140,
+                  "line": 140,
+                  "start": 5554
+                },
+                "target": "DegradedLinkIndication"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-003",
+                    "LINK-HLR-004",
+                    "LINK-HLR-006"
+                  ],
+                  "tests": [
+                    "TEST-LINK-PRIMARY-FAILOVER-001",
+                    "TEST-LINK-QUALITY-DEGRADED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 32,
+                    "end": 5621,
+                    "end_column": 36,
+                    "end_line": 141,
+                    "line": 141,
+                    "start": 5617
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5622,
+                  "end_column": 37,
+                  "end_line": 141,
+                  "line": 141,
+                  "start": 5594
+                },
+                "target": "ReturnToHomeRequest"
+              }
+            ],
+            "value": "DEGRADED"
+          },
+          {
+            "annotation": {
+              "claim_critical": true,
+              "mcdc": false,
+              "mutation_tags": [
+                "lost-procedure-delete"
+              ],
+              "requirements": [
+                "LINK-HLR-005",
+                "LINK-HLR-007",
+                "LINK-HLR-014"
+              ],
+              "tests": [
+                "TEST-LINK-LOSS-PERSISTED-001"
+              ]
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-005",
+                    "LINK-HLR-007",
+                    "LINK-HLR-014"
+                  ],
+                  "tests": [
+                    "TEST-LINK-LOSS-PERSISTED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 30,
+                    "end": 5801,
+                    "end_column": 34,
+                    "end_line": 144,
+                    "line": 144,
+                    "start": 5797
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5802,
+                  "end_column": 35,
+                  "end_line": 144,
+                  "line": 144,
+                  "start": 5776
+                },
+                "target": "BlockingLinkFault"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-005",
+                    "LINK-HLR-007",
+                    "LINK-HLR-014"
+                  ],
+                  "tests": [
+                    "TEST-LINK-LOSS-PERSISTED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 37,
+                    "end": 5843,
+                    "end_column": 41,
+                    "end_line": 145,
+                    "line": 145,
+                    "start": 5839
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5844,
+                  "end_column": 42,
+                  "end_line": 145,
+                  "line": 145,
+                  "start": 5811
+                },
+                "target": "LostLinkProcedureRequest"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [
+                    "LINK-HLR-005",
+                    "LINK-HLR-007",
+                    "LINK-HLR-014"
+                  ],
+                  "tests": [
+                    "TEST-LINK-LOSS-PERSISTED-001"
+                  ]
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 32,
+                    "end": 5880,
+                    "end_column": 36,
+                    "end_line": 146,
+                    "line": 146,
+                    "start": 5876
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5881,
+                  "end_column": 37,
+                  "end_line": 146,
+                  "line": 146,
+                  "start": 5853
+                },
+                "target": "ReturnToHomeRequest"
+              }
+            ],
+            "value": "LOST_LINK"
+          },
+          {
+            "annotation": {
+              "claim_critical": false,
+              "mcdc": false,
+              "mutation_tags": [],
+              "requirements": [],
+              "tests": []
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 30,
+                    "end": 5937,
+                    "end_column": 34,
+                    "end_line": 148,
+                    "line": 148,
+                    "start": 5933
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5938,
+                  "end_column": 35,
+                  "end_line": 148,
+                  "line": 148,
+                  "start": 5912
+                },
+                "target": "BlockingLinkFault"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 35,
+                    "end": 5977,
+                    "end_column": 39,
+                    "end_line": 149,
+                    "line": 149,
+                    "start": 5973
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 5978,
+                  "end_column": 40,
+                  "end_line": 149,
+                  "line": 149,
+                  "start": 5947
+                },
+                "target": "DegradedLinkIndication"
+              }
+            ],
+            "value": "RECOVERY_PENDING"
+          },
+          {
+            "annotation": {
+              "claim_critical": false,
+              "mcdc": false,
+              "mutation_tags": [],
+              "requirements": [],
+              "tests": []
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 30,
+                    "end": 6025,
+                    "end_column": 34,
+                    "end_line": 151,
+                    "line": 151,
+                    "start": 6021
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 6026,
+                  "end_column": 35,
+                  "end_line": 151,
+                  "line": 151,
+                  "start": 6000
+                },
+                "target": "BlockingLinkFault"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 37,
+                    "end": 6067,
+                    "end_column": 41,
+                    "end_line": 152,
+                    "line": 152,
+                    "start": 6063
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 9,
+                  "end": 6068,
+                  "end_column": 42,
+                  "end_line": 152,
+                  "line": 152,
+                  "start": 6035
+                },
+                "target": "LostLinkProcedureRequest"
+              }
+            ],
+            "value": "LOCKOUT"
+          }
+        ],
+        "kind": "case",
+        "selector": {
+          "kind": "name",
+          "span": {
+            "column": 6,
+            "end": 4830,
+            "end_column": 11,
+            "end_line": 125,
+            "line": 125,
+            "start": 4825
+          },
+          "type": "CommunicationLinkState",
+          "value": "State"
+        },
+        "span": {
+          "column": 1,
+          "end": 6077,
+          "end_column": 9,
+          "end_line": 153,
+          "line": 125,
+          "start": 4820
+        }
+      },
+      {
+        "annotation": {
+          "claim_critical": true,
+          "mcdc": false,
+          "mutation_tags": [
+            "invalid-output-guard"
+          ],
+          "requirements": [
+            "LINK-HLR-011",
+            "LINK-HLR-012"
+          ],
+          "tests": [
+            "TEST-LINK-INVALID-001"
+          ]
+        },
+        "branches": [
+          {
+            "annotation": {
+              "claim_critical": true,
+              "mcdc": false,
+              "mutation_tags": [
+                "invalid-output-guard"
+              ],
+              "requirements": [
+                "LINK-HLR-011",
+                "LINK-HLR-012"
+              ],
+              "tests": [
+                "TEST-LINK-INVALID-001"
+              ]
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 22,
+                    "end": 6237,
+                    "end_column": 27,
+                    "end_line": 157,
+                    "line": 157,
+                    "start": 6232
+                  },
+                  "type": "BOOL",
+                  "value": false
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6238,
+                  "end_column": 28,
+                  "end_line": 157,
+                  "line": 157,
+                  "start": 6215
+                },
+                "target": "CommandPermit"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 23,
+                    "end": 6266,
+                    "end_column": 28,
+                    "end_line": 158,
+                    "line": 158,
+                    "start": 6261
+                  },
+                  "type": "BOOL",
+                  "value": false
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6267,
+                  "end_column": 29,
+                  "end_line": 158,
+                  "line": 158,
+                  "start": 6243
+                },
+                "target": "UsePrimaryLink"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 25,
+                    "end": 6297,
+                    "end_column": 30,
+                    "end_line": 159,
+                    "line": 159,
+                    "start": 6292
+                  },
+                  "type": "BOOL",
+                  "value": false
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6298,
+                  "end_column": 31,
+                  "end_line": 159,
+                  "line": 159,
+                  "start": 6272
+                },
+                "target": "UseSecondaryLink"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 31,
+                    "end": 6333,
+                    "end_column": 35,
+                    "end_line": 160,
+                    "line": 160,
+                    "start": 6329
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6334,
+                  "end_column": 36,
+                  "end_line": 160,
+                  "line": 160,
+                  "start": 6303
+                },
+                "target": "DegradedLinkIndication"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 33,
+                    "end": 6371,
+                    "end_column": 37,
+                    "end_line": 161,
+                    "line": 161,
+                    "start": 6367
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6372,
+                  "end_column": 38,
+                  "end_line": 161,
+                  "line": 161,
+                  "start": 6339
+                },
+                "target": "LostLinkProcedureRequest"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 28,
+                    "end": 6404,
+                    "end_column": 32,
+                    "end_line": 162,
+                    "line": 162,
+                    "start": 6400
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6405,
+                  "end_column": 33,
+                  "end_line": 162,
+                  "line": 162,
+                  "start": 6377
+                },
+                "target": "ReturnToHomeRequest"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 33,
+                    "end": 6443,
+                    "end_column": 38,
+                    "end_line": 163,
+                    "line": 163,
+                    "start": 6438
+                  },
+                  "type": "BOOL",
+                  "value": false
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6444,
+                  "end_column": 39,
+                  "end_line": 163,
+                  "line": 163,
+                  "start": 6410
+                },
+                "target": "MissionProgressionPermit"
+              },
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 26,
+                    "end": 6474,
+                    "end_column": 30,
+                    "end_line": 164,
+                    "line": 164,
+                    "start": 6470
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 6475,
+                  "end_column": 31,
+                  "end_line": 164,
+                  "line": 164,
+                  "start": 6449
+                },
+                "target": "BlockingLinkFault"
+              }
+            ],
+            "condition": {
+              "kind": "unary",
+              "operand": {
+                "kind": "name",
+                "span": {
+                  "column": 8,
+                  "end": 6205,
+                  "end_column": 21,
+                  "end_line": 156,
+                  "line": 156,
+                  "start": 6192
+                },
+                "type": "BOOL",
+                "value": "InputSetValid"
+              },
+              "operator": "NOT",
+              "span": {
+                "column": 4,
+                "end": 6205,
+                "end_column": 21,
+                "end_line": 156,
+                "line": 156,
+                "start": 6188
+              },
+              "type": "BOOL"
+            }
+          }
+        ],
+        "else_body": [],
+        "kind": "if",
+        "span": {
+          "column": 1,
+          "end": 6482,
+          "end_column": 7,
+          "end_line": 165,
+          "line": 156,
+          "start": 6185
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "initializer": null,
+        "name": "CommandPermit",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 506,
+          "end_column": 60,
+          "end_line": 22,
+          "line": 22,
+          "start": 451
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "UsePrimaryLink",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 506,
+          "end_column": 60,
+          "end_line": 22,
+          "line": 22,
+          "start": 451
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "UseSecondaryLink",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 506,
+          "end_column": 60,
+          "end_line": 22,
+          "line": 22,
+          "start": 451
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "DegradedLinkIndication",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 567,
+          "end_column": 61,
+          "end_line": 23,
+          "line": 23,
+          "start": 511
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "LostLinkProcedureRequest",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 567,
+          "end_column": 61,
+          "end_line": 23,
+          "line": 23,
+          "start": 511
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "ReturnToHomeRequest",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 625,
+          "end_column": 58,
+          "end_line": 24,
+          "line": 24,
+          "start": 572
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "MissionProgressionPermit",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 625,
+          "end_column": 58,
+          "end_line": 24,
+          "line": 24,
+          "start": 572
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "BlockingLinkFault",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 655,
+          "end_column": 30,
+          "end_line": 25,
+          "line": 25,
+          "start": 630
+        },
+        "type": "BOOL"
+      },
+      {
+        "initializer": null,
+        "name": "SupervisorState",
+        "section": "output",
+        "span": {
+          "column": 5,
+          "end": 701,
+          "end_column": 46,
+          "end_line": 26,
+          "line": 26,
+          "start": 660
+        },
+        "type": "CommunicationLinkState"
+      }
+    ],
+    "states": [
+      {
+        "initializer": {
+          "kind": "name",
+          "span": {
+            "column": 39,
+            "end": 771,
+            "end_column": 51,
+            "end_line": 30,
+            "line": 30,
+            "start": 759
+          },
+          "type": "CommunicationLinkState",
+          "value": "INITIALIZING"
+        },
+        "name": "State",
+        "section": "state",
+        "span": {
+          "column": 5,
+          "end": 772,
+          "end_column": 52,
+          "end_line": 30,
+          "line": 30,
+          "start": 725
+        },
+        "type": "CommunicationLinkState"
+      },
+      {
+        "initializer": {
+          "kind": "bool",
+          "span": {
+            "column": 32,
+            "end": 809,
+            "end_column": 37,
+            "end_line": 31,
+            "line": 31,
+            "start": 804
+          },
+          "type": "BOOL",
+          "value": false
+        },
+        "name": "LinkFaultLatched",
+        "section": "state",
+        "span": {
+          "column": 5,
+          "end": 810,
+          "end_column": 38,
+          "end_line": 31,
+          "line": 31,
+          "start": 777
+        },
+        "type": "BOOL"
+      }
+    ],
+    "transition_stage": [
+      {
+        "annotation": {
+          "claim_critical": true,
+          "mcdc": false,
+          "mutation_tags": [
+            "invalid-guard"
+          ],
+          "requirements": [
+            "LINK-HLR-011",
+            "LINK-HLR-012"
+          ],
+          "tests": [
+            "TEST-LINK-INVALID-001",
+            "TEST-LINK-RUNTIME-001"
+          ]
+        },
+        "branches": [
+          {
+            "annotation": {
+              "claim_critical": true,
+              "mcdc": false,
+              "mutation_tags": [
+                "invalid-guard"
+              ],
+              "requirements": [
+                "LINK-HLR-011",
+                "LINK-HLR-012"
+              ],
+              "tests": [
+                "TEST-LINK-INVALID-001",
+                "TEST-LINK-RUNTIME-001"
+              ]
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "arms": [
+                  {
+                    "annotation": {
+                      "claim_critical": false,
+                      "mcdc": false,
+                      "mutation_tags": [],
+                      "requirements": [],
+                      "tests": []
+                    },
+                    "body": [
+                      {
+                        "annotation": {
+                          "claim_critical": true,
+                          "mcdc": true,
+                          "mutation_tags": [],
+                          "requirements": [
+                            "LINK-HLR-001"
+                          ],
+                          "tests": [
+                            "TEST-LINK-STARTUP-WAIT-001",
+                            "TEST-LINK-STARTUP-PRIMARY-001",
+                            "TEST-LINK-STARTUP-SECONDARY-001"
+                          ]
+                        },
+                        "branches": [
+                          {
+                            "annotation": {
+                              "claim_critical": true,
+                              "mcdc": true,
+                              "mutation_tags": [],
+                              "requirements": [
+                                "LINK-HLR-001"
+                              ],
+                              "tests": [
+                                "TEST-LINK-STARTUP-WAIT-001",
+                                "TEST-LINK-STARTUP-PRIMARY-001",
+                                "TEST-LINK-STARTUP-SECONDARY-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 1357,
+                                    "end_column": 33,
+                                    "end_line": 43,
+                                    "line": 43,
+                                    "start": 1350
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "NOMINAL"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 1358,
+                                  "end_column": 34,
+                                  "end_line": 43,
+                                  "line": 43,
+                                  "start": 1341
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 16,
+                                    "end": 1204,
+                                    "end_column": 38,
+                                    "end_line": 40,
+                                    "line": 40,
+                                    "start": 1182
+                                  },
+                                  "type": "BOOL",
+                                  "value": "InitializationComplete"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 16,
+                                    "end": 1251,
+                                    "end_column": 43,
+                                    "end_line": 41,
+                                    "line": 41,
+                                    "start": 1224
+                                  },
+                                  "type": "BOOL",
+                                  "value": "CommandChannelAuthenticated"
+                                },
+                                "span": {
+                                  "column": 16,
+                                  "end": 1251,
+                                  "end_column": 43,
+                                  "end_line": 41,
+                                  "line": 40,
+                                  "start": 1182
+                                },
+                                "type": "BOOL"
+                              },
+                              "operator": "AND",
+                              "right": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 17,
+                                    "end": 1292,
+                                    "end_column": 37,
+                                    "end_line": 42,
+                                    "line": 42,
+                                    "start": 1272
+                                  },
+                                  "type": "BOOL",
+                                  "value": "PrimaryLinkAvailable"
+                                },
+                                "operator": "OR",
+                                "right": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 41,
+                                    "end": 1318,
+                                    "end_column": 63,
+                                    "end_line": 42,
+                                    "line": 42,
+                                    "start": 1296
+                                  },
+                                  "type": "BOOL",
+                                  "value": "SecondaryLinkAvailable"
+                                },
+                                "span": {
+                                  "column": 16,
+                                  "end": 1319,
+                                  "end_column": 64,
+                                  "end_line": 42,
+                                  "line": 42,
+                                  "start": 1271
+                                },
+                                "type": "BOOL"
+                              },
+                              "span": {
+                                "column": 16,
+                                "end": 1319,
+                                "end_column": 64,
+                                "end_line": 42,
+                                "line": 40,
+                                "start": 1182
+                              },
+                              "type": "BOOL"
+                            }
+                          },
+                          {
+                            "annotation": {
+                              "claim_critical": false,
+                              "mcdc": false,
+                              "mutation_tags": [],
+                              "requirements": [
+                                "LINK-HLR-001"
+                              ],
+                              "tests": [
+                                "TEST-LINK-STARTUP-WAIT-001",
+                                "TEST-LINK-STARTUP-PRIMARY-001",
+                                "TEST-LINK-STARTUP-SECONDARY-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 1437,
+                                    "end_column": 33,
+                                    "end_line": 45,
+                                    "line": 45,
+                                    "start": 1430
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "LOCKOUT"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 1438,
+                                  "end_column": 34,
+                                  "end_line": 45,
+                                  "line": 45,
+                                  "start": 1421
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "name",
+                              "span": {
+                                "column": 19,
+                                "end": 1399,
+                                "end_column": 41,
+                                "end_line": 44,
+                                "line": 44,
+                                "start": 1377
+                              },
+                              "type": "BOOL",
+                              "value": "InitializationComplete"
+                            }
+                          }
+                        ],
+                        "else_body": [],
+                        "kind": "if",
+                        "span": {
+                          "column": 13,
+                          "end": 1457,
+                          "end_column": 19,
+                          "end_line": 46,
+                          "line": 40,
+                          "start": 1179
+                        }
+                      }
+                    ],
+                    "value": "INITIALIZING"
+                  },
+                  {
+                    "annotation": {
+                      "claim_critical": false,
+                      "mcdc": false,
+                      "mutation_tags": [],
+                      "requirements": [],
+                      "tests": []
+                    },
+                    "body": [
+                      {
+                        "annotation": {
+                          "claim_critical": true,
+                          "mcdc": true,
+                          "mutation_tags": [
+                            "lost-link-operator"
+                          ],
+                          "requirements": [
+                            "LINK-HLR-005",
+                            "LINK-HLR-007",
+                            "LINK-HLR-013"
+                          ],
+                          "tests": [
+                            "TEST-LINK-LOSS-PERSISTED-001",
+                            "TEST-LINK-BOTH-UNAVAILABLE-001"
+                          ]
+                        },
+                        "branches": [
+                          {
+                            "annotation": {
+                              "claim_critical": true,
+                              "mcdc": true,
+                              "mutation_tags": [
+                                "lost-link-operator"
+                              ],
+                              "requirements": [
+                                "LINK-HLR-005",
+                                "LINK-HLR-007",
+                                "LINK-HLR-013"
+                              ],
+                              "tests": [
+                                "TEST-LINK-LOSS-PERSISTED-001",
+                                "TEST-LINK-BOTH-UNAVAILABLE-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 1796,
+                                    "end_column": 35,
+                                    "end_line": 52,
+                                    "line": 52,
+                                    "start": 1787
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "LOST_LINK"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 1797,
+                                  "end_column": 36,
+                                  "end_line": 52,
+                                  "line": 52,
+                                  "start": 1778
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "name",
+                                "span": {
+                                  "column": 16,
+                                  "end": 1680,
+                                  "end_column": 33,
+                                  "end_line": 50,
+                                  "line": 50,
+                                  "start": 1663
+                                },
+                                "type": "BOOL",
+                                "value": "LinkLossPersisted"
+                              },
+                              "operator": "OR",
+                              "right": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 21,
+                                      "end": 1724,
+                                      "end_column": 41,
+                                      "end_line": 51,
+                                      "line": 51,
+                                      "start": 1704
+                                    },
+                                    "type": "BOOL",
+                                    "value": "PrimaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 17,
+                                    "end": 1724,
+                                    "end_column": 41,
+                                    "end_line": 51,
+                                    "line": 51,
+                                    "start": 1700
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 50,
+                                      "end": 1755,
+                                      "end_column": 72,
+                                      "end_line": 51,
+                                      "line": 51,
+                                      "start": 1733
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 46,
+                                    "end": 1755,
+                                    "end_column": 72,
+                                    "end_line": 51,
+                                    "line": 51,
+                                    "start": 1729
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "span": {
+                                  "column": 16,
+                                  "end": 1756,
+                                  "end_column": 73,
+                                  "end_line": 51,
+                                  "line": 51,
+                                  "start": 1699
+                                },
+                                "type": "BOOL"
+                              },
+                              "span": {
+                                "column": 16,
+                                "end": 1756,
+                                "end_column": 73,
+                                "end_line": 51,
+                                "line": 50,
+                                "start": 1663
+                              },
+                              "type": "BOOL"
+                            }
+                          },
+                          {
+                            "annotation": {
+                              "claim_critical": true,
+                              "mcdc": false,
+                              "mutation_tags": [],
+                              "requirements": [
+                                "LINK-HLR-004",
+                                "LINK-HLR-006"
+                              ],
+                              "tests": [
+                                "TEST-LINK-PRIMARY-FAILOVER-001",
+                                "TEST-LINK-QUALITY-DEGRADED-001",
+                                "TEST-LINK-AUTH-LOSS-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 2174,
+                                    "end_column": 34,
+                                    "end_line": 58,
+                                    "line": 58,
+                                    "start": 2166
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "DEGRADED"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 2175,
+                                  "end_column": 35,
+                                  "end_line": 58,
+                                  "line": 58,
+                                  "start": 2157
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "binary",
+                                  "left": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 19,
+                                      "end": 1988,
+                                      "end_column": 38,
+                                      "end_line": 54,
+                                      "line": 54,
+                                      "start": 1969
+                                    },
+                                    "type": "BOOL",
+                                    "value": "LinkQualityDegraded"
+                                  },
+                                  "operator": "OR",
+                                  "right": {
+                                    "kind": "unary",
+                                    "operand": {
+                                      "kind": "name",
+                                      "span": {
+                                        "column": 23,
+                                        "end": 2034,
+                                        "end_column": 43,
+                                        "end_line": 55,
+                                        "line": 55,
+                                        "start": 2014
+                                      },
+                                      "type": "BOOL",
+                                      "value": "PrimaryLinkAvailable"
+                                    },
+                                    "operator": "NOT",
+                                    "span": {
+                                      "column": 19,
+                                      "end": 2034,
+                                      "end_column": 43,
+                                      "end_line": 55,
+                                      "line": 55,
+                                      "start": 2010
+                                    },
+                                    "type": "BOOL"
+                                  },
+                                  "span": {
+                                    "column": 19,
+                                    "end": 2034,
+                                    "end_column": 43,
+                                    "end_line": 55,
+                                    "line": 54,
+                                    "start": 1969
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "operator": "OR",
+                                "right": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 23,
+                                      "end": 2082,
+                                      "end_column": 45,
+                                      "end_line": 56,
+                                      "line": 56,
+                                      "start": 2060
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 19,
+                                    "end": 2082,
+                                    "end_column": 45,
+                                    "end_line": 56,
+                                    "line": 56,
+                                    "start": 2056
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "span": {
+                                  "column": 19,
+                                  "end": 2082,
+                                  "end_column": 45,
+                                  "end_line": 56,
+                                  "line": 54,
+                                  "start": 1969
+                                },
+                                "type": "BOOL"
+                              },
+                              "operator": "OR",
+                              "right": {
+                                "kind": "unary",
+                                "operand": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 23,
+                                    "end": 2135,
+                                    "end_column": 50,
+                                    "end_line": 57,
+                                    "line": 57,
+                                    "start": 2108
+                                  },
+                                  "type": "BOOL",
+                                  "value": "CommandChannelAuthenticated"
+                                },
+                                "operator": "NOT",
+                                "span": {
+                                  "column": 19,
+                                  "end": 2135,
+                                  "end_column": 50,
+                                  "end_line": 57,
+                                  "line": 57,
+                                  "start": 2104
+                                },
+                                "type": "BOOL"
+                              },
+                              "span": {
+                                "column": 19,
+                                "end": 2135,
+                                "end_column": 50,
+                                "end_line": 57,
+                                "line": 54,
+                                "start": 1969
+                              },
+                              "type": "BOOL"
+                            }
+                          }
+                        ],
+                        "else_body": [],
+                        "kind": "if",
+                        "span": {
+                          "column": 13,
+                          "end": 2194,
+                          "end_column": 19,
+                          "end_line": 59,
+                          "line": 50,
+                          "start": 1660
+                        }
+                      }
+                    ],
+                    "value": "NOMINAL"
+                  },
+                  {
+                    "annotation": {
+                      "claim_critical": false,
+                      "mcdc": false,
+                      "mutation_tags": [],
+                      "requirements": [],
+                      "tests": []
+                    },
+                    "body": [
+                      {
+                        "annotation": {
+                          "claim_critical": false,
+                          "mcdc": false,
+                          "mutation_tags": [],
+                          "requirements": [],
+                          "tests": []
+                        },
+                        "branches": [
+                          {
+                            "annotation": {
+                              "claim_critical": false,
+                              "mcdc": false,
+                              "mutation_tags": [],
+                              "requirements": [],
+                              "tests": []
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 2363,
+                                    "end_column": 35,
+                                    "end_line": 64,
+                                    "line": 64,
+                                    "start": 2354
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "LOST_LINK"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 2364,
+                                  "end_column": 36,
+                                  "end_line": 64,
+                                  "line": 64,
+                                  "start": 2345
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "name",
+                                "span": {
+                                  "column": 16,
+                                  "end": 2247,
+                                  "end_column": 33,
+                                  "end_line": 62,
+                                  "line": 62,
+                                  "start": 2230
+                                },
+                                "type": "BOOL",
+                                "value": "LinkLossPersisted"
+                              },
+                              "operator": "OR",
+                              "right": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 21,
+                                      "end": 2291,
+                                      "end_column": 41,
+                                      "end_line": 63,
+                                      "line": 63,
+                                      "start": 2271
+                                    },
+                                    "type": "BOOL",
+                                    "value": "PrimaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 17,
+                                    "end": 2291,
+                                    "end_column": 41,
+                                    "end_line": 63,
+                                    "line": 63,
+                                    "start": 2267
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 50,
+                                      "end": 2322,
+                                      "end_column": 72,
+                                      "end_line": 63,
+                                      "line": 63,
+                                      "start": 2300
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 46,
+                                    "end": 2322,
+                                    "end_column": 72,
+                                    "end_line": 63,
+                                    "line": 63,
+                                    "start": 2296
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "span": {
+                                  "column": 16,
+                                  "end": 2323,
+                                  "end_column": 73,
+                                  "end_line": 63,
+                                  "line": 63,
+                                  "start": 2266
+                                },
+                                "type": "BOOL"
+                              },
+                              "span": {
+                                "column": 16,
+                                "end": 2323,
+                                "end_column": 73,
+                                "end_line": 63,
+                                "line": 62,
+                                "start": 2230
+                              },
+                              "type": "BOOL"
+                            }
+                          },
+                          {
+                            "annotation": {
+                              "claim_critical": true,
+                              "mcdc": false,
+                              "mutation_tags": [
+                                "recovery-entry-guard"
+                              ],
+                              "requirements": [
+                                "LINK-HLR-008",
+                                "LINK-HLR-009"
+                              ],
+                              "tests": [
+                                "TEST-LINK-DEGRADED-RECOVERY-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 2737,
+                                    "end_column": 42,
+                                    "end_line": 70,
+                                    "line": 70,
+                                    "start": 2721
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "RECOVERY_PENDING"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 2738,
+                                  "end_column": 43,
+                                  "end_line": 70,
+                                  "line": 70,
+                                  "start": 2712
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "binary",
+                                  "left": {
+                                    "kind": "binary",
+                                    "left": {
+                                      "kind": "name",
+                                      "span": {
+                                        "column": 19,
+                                        "end": 2524,
+                                        "end_column": 33,
+                                        "end_line": 66,
+                                        "line": 66,
+                                        "start": 2510
+                                      },
+                                      "type": "BOOL",
+                                      "value": "RecoveryStable"
+                                    },
+                                    "operator": "AND",
+                                    "right": {
+                                      "kind": "name",
+                                      "span": {
+                                        "column": 19,
+                                        "end": 2567,
+                                        "end_column": 39,
+                                        "end_line": 67,
+                                        "line": 67,
+                                        "start": 2547
+                                      },
+                                      "type": "BOOL",
+                                      "value": "PrimaryLinkAvailable"
+                                    },
+                                    "span": {
+                                      "column": 19,
+                                      "end": 2567,
+                                      "end_column": 39,
+                                      "end_line": 67,
+                                      "line": 66,
+                                      "start": 2510
+                                    },
+                                    "type": "BOOL"
+                                  },
+                                  "operator": "AND",
+                                  "right": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 44,
+                                      "end": 2594,
+                                      "end_column": 66,
+                                      "end_line": 67,
+                                      "line": 67,
+                                      "start": 2572
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "span": {
+                                    "column": 19,
+                                    "end": 2594,
+                                    "end_column": 66,
+                                    "end_line": 67,
+                                    "line": 66,
+                                    "start": 2510
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 19,
+                                    "end": 2644,
+                                    "end_column": 46,
+                                    "end_line": 68,
+                                    "line": 68,
+                                    "start": 2617
+                                  },
+                                  "type": "BOOL",
+                                  "value": "CommandChannelAuthenticated"
+                                },
+                                "span": {
+                                  "column": 19,
+                                  "end": 2644,
+                                  "end_column": 46,
+                                  "end_line": 68,
+                                  "line": 66,
+                                  "start": 2510
+                                },
+                                "type": "BOOL"
+                              },
+                              "operator": "AND",
+                              "right": {
+                                "kind": "unary",
+                                "operand": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 23,
+                                    "end": 2690,
+                                    "end_column": 42,
+                                    "end_line": 69,
+                                    "line": 69,
+                                    "start": 2671
+                                  },
+                                  "type": "BOOL",
+                                  "value": "LinkQualityDegraded"
+                                },
+                                "operator": "NOT",
+                                "span": {
+                                  "column": 19,
+                                  "end": 2690,
+                                  "end_column": 42,
+                                  "end_line": 69,
+                                  "line": 69,
+                                  "start": 2667
+                                },
+                                "type": "BOOL"
+                              },
+                              "span": {
+                                "column": 19,
+                                "end": 2690,
+                                "end_column": 42,
+                                "end_line": 69,
+                                "line": 66,
+                                "start": 2510
+                              },
+                              "type": "BOOL"
+                            }
+                          }
+                        ],
+                        "else_body": [],
+                        "kind": "if",
+                        "span": {
+                          "column": 13,
+                          "end": 2757,
+                          "end_column": 19,
+                          "end_line": 71,
+                          "line": 62,
+                          "start": 2227
+                        }
+                      }
+                    ],
+                    "value": "DEGRADED"
+                  },
+                  {
+                    "annotation": {
+                      "claim_critical": false,
+                      "mcdc": false,
+                      "mutation_tags": [],
+                      "requirements": [],
+                      "tests": []
+                    },
+                    "body": [
+                      {
+                        "annotation": {
+                          "claim_critical": true,
+                          "mcdc": false,
+                          "mutation_tags": [],
+                          "requirements": [
+                            "LINK-HLR-008",
+                            "LINK-HLR-009"
+                          ],
+                          "tests": [
+                            "TEST-LINK-LOST-RECOVERY-001"
+                          ]
+                        },
+                        "branches": [
+                          {
+                            "annotation": {
+                              "claim_critical": true,
+                              "mcdc": false,
+                              "mutation_tags": [],
+                              "requirements": [
+                                "LINK-HLR-008",
+                                "LINK-HLR-009"
+                              ],
+                              "tests": [
+                                "TEST-LINK-LOST-RECOVERY-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 3065,
+                                    "end_column": 42,
+                                    "end_line": 78,
+                                    "line": 78,
+                                    "start": 3049
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "RECOVERY_PENDING"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 3066,
+                                  "end_column": 43,
+                                  "end_line": 78,
+                                  "line": 78,
+                                  "start": 3040
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 16,
+                                    "end": 2903,
+                                    "end_column": 30,
+                                    "end_line": 75,
+                                    "line": 75,
+                                    "start": 2889
+                                  },
+                                  "type": "BOOL",
+                                  "value": "RecoveryStable"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                  "kind": "binary",
+                                  "left": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 17,
+                                      "end": 2944,
+                                      "end_column": 37,
+                                      "end_line": 76,
+                                      "line": 76,
+                                      "start": 2924
+                                    },
+                                    "type": "BOOL",
+                                    "value": "PrimaryLinkAvailable"
+                                  },
+                                  "operator": "OR",
+                                  "right": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 41,
+                                      "end": 2970,
+                                      "end_column": 63,
+                                      "end_line": 76,
+                                      "line": 76,
+                                      "start": 2948
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "span": {
+                                    "column": 16,
+                                    "end": 2971,
+                                    "end_column": 64,
+                                    "end_line": 76,
+                                    "line": 76,
+                                    "start": 2923
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "span": {
+                                  "column": 16,
+                                  "end": 2971,
+                                  "end_column": 64,
+                                  "end_line": 76,
+                                  "line": 75,
+                                  "start": 2889
+                                },
+                                "type": "BOOL"
+                              },
+                              "operator": "AND",
+                              "right": {
+                                "kind": "name",
+                                "span": {
+                                  "column": 16,
+                                  "end": 3018,
+                                  "end_column": 43,
+                                  "end_line": 77,
+                                  "line": 77,
+                                  "start": 2991
+                                },
+                                "type": "BOOL",
+                                "value": "CommandChannelAuthenticated"
+                              },
+                              "span": {
+                                "column": 16,
+                                "end": 3018,
+                                "end_column": 43,
+                                "end_line": 77,
+                                "line": 75,
+                                "start": 2889
+                              },
+                              "type": "BOOL"
+                            }
+                          }
+                        ],
+                        "else_body": [],
+                        "kind": "if",
+                        "span": {
+                          "column": 13,
+                          "end": 3085,
+                          "end_column": 19,
+                          "end_line": 79,
+                          "line": 75,
+                          "start": 2886
+                        }
+                      }
+                    ],
+                    "value": "LOST_LINK"
+                  },
+                  {
+                    "annotation": {
+                      "claim_critical": false,
+                      "mcdc": false,
+                      "mutation_tags": [],
+                      "requirements": [],
+                      "tests": []
+                    },
+                    "body": [
+                      {
+                        "annotation": {
+                          "claim_critical": false,
+                          "mcdc": false,
+                          "mutation_tags": [],
+                          "requirements": [],
+                          "tests": []
+                        },
+                        "branches": [
+                          {
+                            "annotation": {
+                              "claim_critical": false,
+                              "mcdc": false,
+                              "mutation_tags": [],
+                              "requirements": [],
+                              "tests": []
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 3262,
+                                    "end_column": 35,
+                                    "end_line": 84,
+                                    "line": 84,
+                                    "start": 3253
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "LOST_LINK"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 3263,
+                                  "end_column": 36,
+                                  "end_line": 84,
+                                  "line": 84,
+                                  "start": 3244
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "name",
+                                "span": {
+                                  "column": 16,
+                                  "end": 3146,
+                                  "end_column": 33,
+                                  "end_line": 82,
+                                  "line": 82,
+                                  "start": 3129
+                                },
+                                "type": "BOOL",
+                                "value": "LinkLossPersisted"
+                              },
+                              "operator": "OR",
+                              "right": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 21,
+                                      "end": 3190,
+                                      "end_column": 41,
+                                      "end_line": 83,
+                                      "line": 83,
+                                      "start": 3170
+                                    },
+                                    "type": "BOOL",
+                                    "value": "PrimaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 17,
+                                    "end": 3190,
+                                    "end_column": 41,
+                                    "end_line": 83,
+                                    "line": 83,
+                                    "start": 3166
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 50,
+                                      "end": 3221,
+                                      "end_column": 72,
+                                      "end_line": 83,
+                                      "line": 83,
+                                      "start": 3199
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 46,
+                                    "end": 3221,
+                                    "end_column": 72,
+                                    "end_line": 83,
+                                    "line": 83,
+                                    "start": 3195
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "span": {
+                                  "column": 16,
+                                  "end": 3222,
+                                  "end_column": 73,
+                                  "end_line": 83,
+                                  "line": 83,
+                                  "start": 3165
+                                },
+                                "type": "BOOL"
+                              },
+                              "span": {
+                                "column": 16,
+                                "end": 3222,
+                                "end_column": 73,
+                                "end_line": 83,
+                                "line": 82,
+                                "start": 3129
+                              },
+                              "type": "BOOL"
+                            }
+                          },
+                          {
+                            "annotation": {
+                              "claim_critical": false,
+                              "mcdc": false,
+                              "mutation_tags": [],
+                              "requirements": [],
+                              "tests": []
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 3487,
+                                    "end_column": 34,
+                                    "end_line": 89,
+                                    "line": 89,
+                                    "start": 3479
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "DEGRADED"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 3488,
+                                  "end_column": 35,
+                                  "end_line": 89,
+                                  "line": 89,
+                                  "start": 3470
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "binary",
+                                  "left": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 19,
+                                      "end": 3301,
+                                      "end_column": 38,
+                                      "end_line": 85,
+                                      "line": 85,
+                                      "start": 3282
+                                    },
+                                    "type": "BOOL",
+                                    "value": "LinkQualityDegraded"
+                                  },
+                                  "operator": "OR",
+                                  "right": {
+                                    "kind": "unary",
+                                    "operand": {
+                                      "kind": "name",
+                                      "span": {
+                                        "column": 23,
+                                        "end": 3347,
+                                        "end_column": 43,
+                                        "end_line": 86,
+                                        "line": 86,
+                                        "start": 3327
+                                      },
+                                      "type": "BOOL",
+                                      "value": "PrimaryLinkAvailable"
+                                    },
+                                    "operator": "NOT",
+                                    "span": {
+                                      "column": 19,
+                                      "end": 3347,
+                                      "end_column": 43,
+                                      "end_line": 86,
+                                      "line": 86,
+                                      "start": 3323
+                                    },
+                                    "type": "BOOL"
+                                  },
+                                  "span": {
+                                    "column": 19,
+                                    "end": 3347,
+                                    "end_column": 43,
+                                    "end_line": 86,
+                                    "line": 85,
+                                    "start": 3282
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "operator": "OR",
+                                "right": {
+                                  "kind": "unary",
+                                  "operand": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 23,
+                                      "end": 3395,
+                                      "end_column": 45,
+                                      "end_line": 87,
+                                      "line": 87,
+                                      "start": 3373
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "operator": "NOT",
+                                  "span": {
+                                    "column": 19,
+                                    "end": 3395,
+                                    "end_column": 45,
+                                    "end_line": 87,
+                                    "line": 87,
+                                    "start": 3369
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "span": {
+                                  "column": 19,
+                                  "end": 3395,
+                                  "end_column": 45,
+                                  "end_line": 87,
+                                  "line": 85,
+                                  "start": 3282
+                                },
+                                "type": "BOOL"
+                              },
+                              "operator": "OR",
+                              "right": {
+                                "kind": "unary",
+                                "operand": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 23,
+                                    "end": 3448,
+                                    "end_column": 50,
+                                    "end_line": 88,
+                                    "line": 88,
+                                    "start": 3421
+                                  },
+                                  "type": "BOOL",
+                                  "value": "CommandChannelAuthenticated"
+                                },
+                                "operator": "NOT",
+                                "span": {
+                                  "column": 19,
+                                  "end": 3448,
+                                  "end_column": 50,
+                                  "end_line": 88,
+                                  "line": 88,
+                                  "start": 3417
+                                },
+                                "type": "BOOL"
+                              },
+                              "span": {
+                                "column": 19,
+                                "end": 3448,
+                                "end_column": 50,
+                                "end_line": 88,
+                                "line": 85,
+                                "start": 3282
+                              },
+                              "type": "BOOL"
+                            }
+                          },
+                          {
+                            "annotation": {
+                              "claim_critical": true,
+                              "mcdc": false,
+                              "mutation_tags": [
+                                "weaken-link-recovery"
+                              ],
+                              "requirements": [
+                                "LINK-HLR-008",
+                                "LINK-HLR-009",
+                                "LINK-HLR-010"
+                              ],
+                              "tests": [
+                                "TEST-LINK-RECOVERY-RESET-001",
+                                "TEST-LINK-RECOVERY-NO-RESET-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 3748,
+                                    "end_column": 33,
+                                    "end_line": 92,
+                                    "line": 92,
+                                    "start": 3741
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "NOMINAL"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 3749,
+                                  "end_column": 34,
+                                  "end_line": 92,
+                                  "line": 92,
+                                  "start": 3732
+                                },
+                                "target": "State"
+                              },
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "bool",
+                                  "span": {
+                                    "column": 37,
+                                    "end": 3791,
+                                    "end_column": 42,
+                                    "end_line": 93,
+                                    "line": 93,
+                                    "start": 3786
+                                  },
+                                  "type": "BOOL",
+                                  "value": false
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 3792,
+                                  "end_column": 43,
+                                  "end_line": 93,
+                                  "line": 93,
+                                  "start": 3766
+                                },
+                                "target": "LinkFaultLatched"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "name",
+                                "span": {
+                                  "column": 19,
+                                  "end": 3691,
+                                  "end_column": 34,
+                                  "end_line": 91,
+                                  "line": 91,
+                                  "start": 3676
+                                },
+                                "type": "BOOL",
+                                "value": "ResetAuthorized"
+                              },
+                              "operator": "AND",
+                              "right": {
+                                "kind": "name",
+                                "span": {
+                                  "column": 39,
+                                  "end": 3710,
+                                  "end_column": 53,
+                                  "end_line": 91,
+                                  "line": 91,
+                                  "start": 3696
+                                },
+                                "type": "BOOL",
+                                "value": "RecoveryStable"
+                              },
+                              "span": {
+                                "column": 19,
+                                "end": 3710,
+                                "end_column": 53,
+                                "end_line": 91,
+                                "line": 91,
+                                "start": 3676
+                              },
+                              "type": "BOOL"
+                            }
+                          }
+                        ],
+                        "else_body": [],
+                        "kind": "if",
+                        "span": {
+                          "column": 13,
+                          "end": 3811,
+                          "end_column": 19,
+                          "end_line": 94,
+                          "line": 82,
+                          "start": 3126
+                        }
+                      }
+                    ],
+                    "value": "RECOVERY_PENDING"
+                  },
+                  {
+                    "annotation": {
+                      "claim_critical": false,
+                      "mcdc": false,
+                      "mutation_tags": [],
+                      "requirements": [],
+                      "tests": []
+                    },
+                    "body": [
+                      {
+                        "annotation": {
+                          "claim_critical": true,
+                          "mcdc": false,
+                          "mutation_tags": [],
+                          "requirements": [
+                            "LINK-HLR-008",
+                            "LINK-HLR-009",
+                            "LINK-HLR-010"
+                          ],
+                          "tests": [
+                            "TEST-LINK-LOCKOUT-RECOVERY-001"
+                          ]
+                        },
+                        "branches": [
+                          {
+                            "annotation": {
+                              "claim_critical": true,
+                              "mcdc": false,
+                              "mutation_tags": [],
+                              "requirements": [
+                                "LINK-HLR-008",
+                                "LINK-HLR-009",
+                                "LINK-HLR-010"
+                              ],
+                              "tests": [
+                                "TEST-LINK-LOCKOUT-RECOVERY-001"
+                              ]
+                            },
+                            "body": [
+                              {
+                                "annotation": {
+                                  "claim_critical": false,
+                                  "mcdc": false,
+                                  "mutation_tags": [],
+                                  "requirements": [],
+                                  "tests": []
+                                },
+                                "expression": {
+                                  "kind": "name",
+                                  "span": {
+                                    "column": 26,
+                                    "end": 4153,
+                                    "end_column": 42,
+                                    "end_line": 101,
+                                    "line": 101,
+                                    "start": 4137
+                                  },
+                                  "type": "CommunicationLinkState",
+                                  "value": "RECOVERY_PENDING"
+                                },
+                                "kind": "assign",
+                                "span": {
+                                  "column": 17,
+                                  "end": 4154,
+                                  "end_column": 43,
+                                  "end_line": 101,
+                                  "line": 101,
+                                  "start": 4128
+                                },
+                                "target": "State"
+                              }
+                            ],
+                            "condition": {
+                              "kind": "binary",
+                              "left": {
+                                "kind": "binary",
+                                "left": {
+                                  "kind": "binary",
+                                  "left": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 16,
+                                      "end": 3972,
+                                      "end_column": 31,
+                                      "end_line": 98,
+                                      "line": 98,
+                                      "start": 3957
+                                    },
+                                    "type": "BOOL",
+                                    "value": "ResetAuthorized"
+                                  },
+                                  "operator": "AND",
+                                  "right": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 36,
+                                      "end": 3991,
+                                      "end_column": 50,
+                                      "end_line": 98,
+                                      "line": 98,
+                                      "start": 3977
+                                    },
+                                    "type": "BOOL",
+                                    "value": "RecoveryStable"
+                                  },
+                                  "span": {
+                                    "column": 16,
+                                    "end": 3991,
+                                    "end_column": 50,
+                                    "end_line": 98,
+                                    "line": 98,
+                                    "start": 3957
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                  "kind": "binary",
+                                  "left": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 17,
+                                      "end": 4032,
+                                      "end_column": 37,
+                                      "end_line": 99,
+                                      "line": 99,
+                                      "start": 4012
+                                    },
+                                    "type": "BOOL",
+                                    "value": "PrimaryLinkAvailable"
+                                  },
+                                  "operator": "OR",
+                                  "right": {
+                                    "kind": "name",
+                                    "span": {
+                                      "column": 41,
+                                      "end": 4058,
+                                      "end_column": 63,
+                                      "end_line": 99,
+                                      "line": 99,
+                                      "start": 4036
+                                    },
+                                    "type": "BOOL",
+                                    "value": "SecondaryLinkAvailable"
+                                  },
+                                  "span": {
+                                    "column": 16,
+                                    "end": 4059,
+                                    "end_column": 64,
+                                    "end_line": 99,
+                                    "line": 99,
+                                    "start": 4011
+                                  },
+                                  "type": "BOOL"
+                                },
+                                "span": {
+                                  "column": 16,
+                                  "end": 4059,
+                                  "end_column": 64,
+                                  "end_line": 99,
+                                  "line": 98,
+                                  "start": 3957
+                                },
+                                "type": "BOOL"
+                              },
+                              "operator": "AND",
+                              "right": {
+                                "kind": "name",
+                                "span": {
+                                  "column": 16,
+                                  "end": 4106,
+                                  "end_column": 43,
+                                  "end_line": 100,
+                                  "line": 100,
+                                  "start": 4079
+                                },
+                                "type": "BOOL",
+                                "value": "CommandChannelAuthenticated"
+                              },
+                              "span": {
+                                "column": 16,
+                                "end": 4106,
+                                "end_column": 43,
+                                "end_line": 100,
+                                "line": 98,
+                                "start": 3957
+                              },
+                              "type": "BOOL"
+                            }
+                          }
+                        ],
+                        "else_body": [],
+                        "kind": "if",
+                        "span": {
+                          "column": 13,
+                          "end": 4173,
+                          "end_column": 19,
+                          "end_line": 102,
+                          "line": 98,
+                          "start": 3954
+                        }
+                      }
+                    ],
+                    "value": "LOCKOUT"
+                  }
+                ],
+                "kind": "case",
+                "selector": {
+                  "kind": "name",
+                  "span": {
+                    "column": 10,
+                    "end": 993,
+                    "end_column": 15,
+                    "end_line": 37,
+                    "line": 37,
+                    "start": 988
+                  },
+                  "type": "CommunicationLinkState",
+                  "value": "State"
+                },
+                "span": {
+                  "column": 5,
+                  "end": 4187,
+                  "end_column": 13,
+                  "end_line": 103,
+                  "line": 37,
+                  "start": 983
+                }
+              }
+            ],
+            "condition": {
+              "kind": "name",
+              "span": {
+                "column": 4,
+                "end": 973,
+                "end_column": 17,
+                "end_line": 36,
+                "line": 36,
+                "start": 960
+              },
+              "type": "BOOL",
+              "value": "InputSetValid"
+            }
+          }
+        ],
+        "else_body": [
+          {
+            "annotation": {
+              "claim_critical": false,
+              "mcdc": false,
+              "mutation_tags": [],
+              "requirements": [],
+              "tests": []
+            },
+            "expression": {
+              "kind": "bool",
+              "span": {
+                "column": 25,
+                "end": 4222,
+                "end_column": 29,
+                "end_line": 105,
+                "line": 105,
+                "start": 4218
+              },
+              "type": "BOOL",
+              "value": true
+            },
+            "kind": "assign",
+            "span": {
+              "column": 5,
+              "end": 4223,
+              "end_column": 30,
+              "end_line": 105,
+              "line": 105,
+              "start": 4198
+            },
+            "target": "LinkFaultLatched"
+          }
+        ],
+        "kind": "if",
+        "span": {
+          "column": 1,
+          "end": 4230,
+          "end_column": 7,
+          "end_line": 106,
+          "line": 36,
+          "start": 957
+        }
+      },
+      {
+        "annotation": {
+          "claim_critical": true,
+          "mcdc": false,
+          "mutation_tags": [],
+          "requirements": [
+            "LINK-HLR-005",
+            "LINK-HLR-013",
+            "LINK-HLR-014"
+          ],
+          "tests": [
+            "TEST-LINK-LOSS-PERSISTED-001",
+            "TEST-LINK-BOTH-UNAVAILABLE-001"
+          ]
+        },
+        "branches": [
+          {
+            "annotation": {
+              "claim_critical": true,
+              "mcdc": false,
+              "mutation_tags": [],
+              "requirements": [
+                "LINK-HLR-005",
+                "LINK-HLR-013",
+                "LINK-HLR-014"
+              ],
+              "tests": [
+                "TEST-LINK-LOSS-PERSISTED-001",
+                "TEST-LINK-BOTH-UNAVAILABLE-001"
+              ]
+            },
+            "body": [
+              {
+                "annotation": {
+                  "claim_critical": false,
+                  "mcdc": false,
+                  "mutation_tags": [],
+                  "requirements": [],
+                  "tests": []
+                },
+                "expression": {
+                  "kind": "bool",
+                  "span": {
+                    "column": 25,
+                    "end": 4434,
+                    "end_column": 29,
+                    "end_line": 110,
+                    "line": 110,
+                    "start": 4430
+                  },
+                  "type": "BOOL",
+                  "value": true
+                },
+                "kind": "assign",
+                "span": {
+                  "column": 5,
+                  "end": 4435,
+                  "end_column": 30,
+                  "end_line": 110,
+                  "line": 110,
+                  "start": 4410
+                },
+                "target": "LinkFaultLatched"
+              }
+            ],
+            "condition": {
+              "kind": "binary",
+              "left": {
+                "kind": "binary",
+                "left": {
+                  "kind": "name",
+                  "span": {
+                    "column": 4,
+                    "end": 4369,
+                    "end_column": 9,
+                    "end_line": 109,
+                    "line": 109,
+                    "start": 4364
+                  },
+                  "type": "CommunicationLinkState",
+                  "value": "State"
+                },
+                "operator": "EQ",
+                "right": {
+                  "kind": "name",
+                  "span": {
+                    "column": 12,
+                    "end": 4381,
+                    "end_column": 21,
+                    "end_line": 109,
+                    "line": 109,
+                    "start": 4372
+                  },
+                  "type": "CommunicationLinkState",
+                  "value": "LOST_LINK"
+                },
+                "span": {
+                  "column": 4,
+                  "end": 4381,
+                  "end_column": 21,
+                  "end_line": 109,
+                  "line": 109,
+                  "start": 4364
+                },
+                "type": "BOOL"
+              },
+              "operator": "OR",
+              "right": {
+                "kind": "binary",
+                "left": {
+                  "kind": "name",
+                  "span": {
+                    "column": 25,
+                    "end": 4390,
+                    "end_column": 30,
+                    "end_line": 109,
+                    "line": 109,
+                    "start": 4385
+                  },
+                  "type": "CommunicationLinkState",
+                  "value": "State"
+                },
+                "operator": "EQ",
+                "right": {
+                  "kind": "name",
+                  "span": {
+                    "column": 33,
+                    "end": 4400,
+                    "end_column": 40,
+                    "end_line": 109,
+                    "line": 109,
+                    "start": 4393
+                  },
+                  "type": "CommunicationLinkState",
+                  "value": "LOCKOUT"
+                },
+                "span": {
+                  "column": 25,
+                  "end": 4400,
+                  "end_column": 40,
+                  "end_line": 109,
+                  "line": 109,
+                  "start": 4385
+                },
+                "type": "BOOL"
+              },
+              "span": {
+                "column": 4,
+                "end": 4400,
+                "end_column": 40,
+                "end_line": 109,
+                "line": 109,
+                "start": 4364
+              },
+              "type": "BOOL"
+            }
+          }
+        ],
+        "else_body": [],
+        "kind": "if",
+        "span": {
+          "column": 1,
+          "end": 4442,
+          "end_column": 7,
+          "end_line": 111,
+          "line": 109,
+          "start": 4361
+        }
+      }
+    ],
+    "types": [
+      {
+        "name": "CommunicationLinkState",
+        "span": {
+          "column": 1,
+          "end": 127,
+          "end_column": 2,
+          "end_line": 9,
+          "line": 1,
+          "start": 0
+        },
+        "values": [
+          "INITIALIZING",
+          "NOMINAL",
+          "DEGRADED",
+          "LOST_LINK",
+          "RECOVERY_PENDING",
+          "LOCKOUT"
+        ]
+      }
+    ]
+  },
+  "schema_version": "AEROST-SCHEMA-0.2"
+}

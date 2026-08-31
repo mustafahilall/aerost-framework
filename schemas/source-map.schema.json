@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "profile_version", "program_id", "mappings"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "profile_version": {"type": "string"},
+    "program_id": {"type": "string", "pattern": "AIR-PROG-[A-F0-9]{12}"},
+    "mappings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "air_id", "generated_block", "span", "requirements", "tests"],
+        "properties": {
+          "source_id": {"type": "string", "pattern": "ASCP-SRC-(STMT|DEC|COND)-[A-F0-9]{12}"},
+          "air_id": {"type": "string", "pattern": "AIR-(STMT|DEC|COND)-[A-F0-9]{12}"},
+          "generated_block": {"type": "string", "pattern": "RUST-[0-9]{5}"},
+          "span": {"type": "object"},
+          "requirements": {"type": "array", "items": {"type": "string"}},
+          "tests": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

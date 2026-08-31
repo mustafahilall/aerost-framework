@@ -1,0 +1,4025 @@
+{
+  "generated_by": "AEROST-OBLIGATION-EXTRACTOR-0.1.0",
+  "obligations": [
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-48AD42CC4969",
+        "case_value": "INITIALIZING",
+        "semantic_event_id": "AIR-STMT-48AD42CC4969::INITIALIZING"
+      },
+      "description": "Reach CASE arm INITIALIZING of AIR-STMT-48AD42CC4969.",
+      "id": "OBL-CASE-AIR-CASEARM-23739F55D41F",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-23739F55D41F",
+        "AIR-STMT-48AD42CC4969"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-48AD42CC4969",
+        "case_value": "DEGRADED",
+        "semantic_event_id": "AIR-STMT-48AD42CC4969::DEGRADED"
+      },
+      "description": "Reach CASE arm DEGRADED of AIR-STMT-48AD42CC4969.",
+      "id": "OBL-CASE-AIR-CASEARM-3210100F6FEE",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-3210100F6FEE",
+        "AIR-STMT-48AD42CC4969"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-7FE4FD402DDD",
+        "case_value": "LOCKOUT",
+        "semantic_event_id": "AIR-STMT-7FE4FD402DDD::LOCKOUT"
+      },
+      "description": "Reach CASE arm LOCKOUT of AIR-STMT-7FE4FD402DDD.",
+      "id": "OBL-CASE-AIR-CASEARM-38926EFE3202",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-38926EFE3202",
+        "AIR-STMT-7FE4FD402DDD"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-7FE4FD402DDD",
+        "case_value": "LOST_LINK",
+        "semantic_event_id": "AIR-STMT-7FE4FD402DDD::LOST_LINK"
+      },
+      "description": "Reach CASE arm LOST_LINK of AIR-STMT-7FE4FD402DDD.",
+      "id": "OBL-CASE-AIR-CASEARM-4DE54E35330D",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-4DE54E35330D",
+        "AIR-STMT-7FE4FD402DDD"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-7FE4FD402DDD",
+        "case_value": "DEGRADED",
+        "semantic_event_id": "AIR-STMT-7FE4FD402DDD::DEGRADED"
+      },
+      "description": "Reach CASE arm DEGRADED of AIR-STMT-7FE4FD402DDD.",
+      "id": "OBL-CASE-AIR-CASEARM-5314E37D9039",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-5314E37D9039",
+        "AIR-STMT-7FE4FD402DDD"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-48AD42CC4969",
+        "case_value": "LOST_LINK",
+        "semantic_event_id": "AIR-STMT-48AD42CC4969::LOST_LINK"
+      },
+      "description": "Reach CASE arm LOST_LINK of AIR-STMT-48AD42CC4969.",
+      "id": "OBL-CASE-AIR-CASEARM-A57D1D16839D",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-A57D1D16839D",
+        "AIR-STMT-48AD42CC4969"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-48AD42CC4969",
+        "case_value": "RECOVERY_PENDING",
+        "semantic_event_id": "AIR-STMT-48AD42CC4969::RECOVERY_PENDING"
+      },
+      "description": "Reach CASE arm RECOVERY_PENDING of AIR-STMT-48AD42CC4969.",
+      "id": "OBL-CASE-AIR-CASEARM-A6A75BD70C12",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-A6A75BD70C12",
+        "AIR-STMT-48AD42CC4969"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-7FE4FD402DDD",
+        "case_value": "NOMINAL",
+        "semantic_event_id": "AIR-STMT-7FE4FD402DDD::NOMINAL"
+      },
+      "description": "Reach CASE arm NOMINAL of AIR-STMT-7FE4FD402DDD.",
+      "id": "OBL-CASE-AIR-CASEARM-AA72EE6244F5",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-AA72EE6244F5",
+        "AIR-STMT-7FE4FD402DDD"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-7FE4FD402DDD",
+        "case_value": "RECOVERY_PENDING",
+        "semantic_event_id": "AIR-STMT-7FE4FD402DDD::RECOVERY_PENDING"
+      },
+      "description": "Reach CASE arm RECOVERY_PENDING of AIR-STMT-7FE4FD402DDD.",
+      "id": "OBL-CASE-AIR-CASEARM-AD5707966716",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-AD5707966716",
+        "AIR-STMT-7FE4FD402DDD"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-48AD42CC4969",
+        "case_value": "LOCKOUT",
+        "semantic_event_id": "AIR-STMT-48AD42CC4969::LOCKOUT"
+      },
+      "description": "Reach CASE arm LOCKOUT of AIR-STMT-48AD42CC4969.",
+      "id": "OBL-CASE-AIR-CASEARM-AF4E32DEF0C2",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-AF4E32DEF0C2",
+        "AIR-STMT-48AD42CC4969"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-7FE4FD402DDD",
+        "case_value": "INITIALIZING",
+        "semantic_event_id": "AIR-STMT-7FE4FD402DDD::INITIALIZING"
+      },
+      "description": "Reach CASE arm INITIALIZING of AIR-STMT-7FE4FD402DDD.",
+      "id": "OBL-CASE-AIR-CASEARM-C303ECB4F360",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-C303ECB4F360",
+        "AIR-STMT-7FE4FD402DDD"
+      ]
+    },
+    {
+      "attributes": {
+        "case_statement_id": "AIR-STMT-48AD42CC4969",
+        "case_value": "NOMINAL",
+        "semantic_event_id": "AIR-STMT-48AD42CC4969::NOMINAL"
+      },
+      "description": "Reach CASE arm NOMINAL of AIR-STMT-48AD42CC4969.",
+      "id": "OBL-CASE-AIR-CASEARM-CAEFC1E115B8",
+      "kind": "CASE_ARM_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-CASEARM-CAEFC1E115B8",
+        "AIR-STMT-48AD42CC4969"
+      ]
+    },
+    {
+      "attributes": {
+        "required_value": true
+      },
+      "description": "Observe inhibited normal commit under fault policy AEROST-FAULT-POLICY-698FFF3460AB.",
+      "id": "OBL-COMMIT-INHIBITED-AEROST-FAULT-POLICY-698FFF3460AB",
+      "kind": "NORMAL_COMMIT_INHIBITED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [],
+      "subject_ids": [
+        "AEROST-FAULT-POLICY-698FFF3460AB"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E8E90B8FBB1D",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-01D9F1A011F4 to false in decision AIR-DEC-E8E90B8FBB1D.",
+      "id": "OBL-COND-AIR-COND-01D9F1A011F4-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-01D9F1A011F4",
+        "AIR-DEC-E8E90B8FBB1D"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E8E90B8FBB1D",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-01D9F1A011F4 to true in decision AIR-DEC-E8E90B8FBB1D.",
+      "id": "OBL-COND-AIR-COND-01D9F1A011F4-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-01D9F1A011F4",
+        "AIR-DEC-E8E90B8FBB1D"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-057158D99548 to false in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-057158D99548-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-057158D99548",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-057158D99548 to true in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-057158D99548-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-057158D99548",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-07D709DB7F51 to false in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-07D709DB7F51-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-07D709DB7F51",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-07D709DB7F51 to true in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-07D709DB7F51-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-07D709DB7F51",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-03AE84856B0F",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-1144A3531C95 to false in decision AIR-DEC-03AE84856B0F.",
+      "id": "OBL-COND-AIR-COND-1144A3531C95-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-COND-1144A3531C95",
+        "AIR-DEC-03AE84856B0F"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-03AE84856B0F",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-1144A3531C95 to true in decision AIR-DEC-03AE84856B0F.",
+      "id": "OBL-COND-AIR-COND-1144A3531C95-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-COND-1144A3531C95",
+        "AIR-DEC-03AE84856B0F"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-15CC65FC0325 to false in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-15CC65FC0325-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-15CC65FC0325",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-15CC65FC0325 to true in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-15CC65FC0325-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-15CC65FC0325",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-18C272CB4C29 to false in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-18C272CB4C29-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-18C272CB4C29",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-18C272CB4C29 to true in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-18C272CB4C29-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-18C272CB4C29",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-198A1B1EE4CF to false in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-198A1B1EE4CF-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-198A1B1EE4CF",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-198A1B1EE4CF to true in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-198A1B1EE4CF-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-198A1B1EE4CF",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-28BAD0606931 to false in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-28BAD0606931-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-28BAD0606931",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-28BAD0606931 to true in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-28BAD0606931-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-28BAD0606931",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-03AE84856B0F",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-28DB73F26FB0 to false in decision AIR-DEC-03AE84856B0F.",
+      "id": "OBL-COND-AIR-COND-28DB73F26FB0-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-COND-28DB73F26FB0",
+        "AIR-DEC-03AE84856B0F"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-03AE84856B0F",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-28DB73F26FB0 to true in decision AIR-DEC-03AE84856B0F.",
+      "id": "OBL-COND-AIR-COND-28DB73F26FB0-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-COND-28DB73F26FB0",
+        "AIR-DEC-03AE84856B0F"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-324E98A1F836 to false in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-324E98A1F836-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-324E98A1F836",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-324E98A1F836 to true in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-324E98A1F836-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-324E98A1F836",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-32A566D26462 to false in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-32A566D26462-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-32A566D26462",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-32A566D26462 to true in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-32A566D26462-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-32A566D26462",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-080D6C64B501",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-38A77753C9BB to false in decision AIR-DEC-080D6C64B501.",
+      "id": "OBL-COND-AIR-COND-38A77753C9BB-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-38A77753C9BB",
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-080D6C64B501",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-38A77753C9BB to true in decision AIR-DEC-080D6C64B501.",
+      "id": "OBL-COND-AIR-COND-38A77753C9BB-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-38A77753C9BB",
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E8E90B8FBB1D",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-39E43926C012 to false in decision AIR-DEC-E8E90B8FBB1D.",
+      "id": "OBL-COND-AIR-COND-39E43926C012-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-39E43926C012",
+        "AIR-DEC-E8E90B8FBB1D"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E8E90B8FBB1D",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-39E43926C012 to true in decision AIR-DEC-E8E90B8FBB1D.",
+      "id": "OBL-COND-AIR-COND-39E43926C012-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-39E43926C012",
+        "AIR-DEC-E8E90B8FBB1D"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-3BDDB32D00D8 to false in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-3BDDB32D00D8-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-3BDDB32D00D8",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-3BDDB32D00D8 to true in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-3BDDB32D00D8-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-3BDDB32D00D8",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-4089AB0D6750 to false in decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-COND-AIR-COND-4089AB0D6750-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-4089AB0D6750",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-4089AB0D6750 to true in decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-COND-AIR-COND-4089AB0D6750-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-4089AB0D6750",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-441C1085C0BC to false in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-441C1085C0BC-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-441C1085C0BC",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-441C1085C0BC to true in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-441C1085C0BC-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-441C1085C0BC",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C15397ED3F0A",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-48160B62BAEF to false in decision AIR-DEC-C15397ED3F0A.",
+      "id": "OBL-COND-AIR-COND-48160B62BAEF-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-48160B62BAEF",
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C15397ED3F0A",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-48160B62BAEF to true in decision AIR-DEC-C15397ED3F0A.",
+      "id": "OBL-COND-AIR-COND-48160B62BAEF-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-48160B62BAEF",
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-52B17750FFC7 to false in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-52B17750FFC7-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-52B17750FFC7",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-52B17750FFC7 to true in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-52B17750FFC7-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-52B17750FFC7",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-569BA6F8A5A4 to false in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-569BA6F8A5A4-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-569BA6F8A5A4",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-569BA6F8A5A4 to true in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-569BA6F8A5A4-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-569BA6F8A5A4",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C15397ED3F0A",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-5740B33F484E to false in decision AIR-DEC-C15397ED3F0A.",
+      "id": "OBL-COND-AIR-COND-5740B33F484E-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-5740B33F484E",
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C15397ED3F0A",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-5740B33F484E to true in decision AIR-DEC-C15397ED3F0A.",
+      "id": "OBL-COND-AIR-COND-5740B33F484E-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-5740B33F484E",
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-5A5880ACA2D4 to false in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-5A5880ACA2D4-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-5A5880ACA2D4",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-5A5880ACA2D4 to true in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-5A5880ACA2D4-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-5A5880ACA2D4",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-64F15C3C5A02 to false in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-64F15C3C5A02-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-64F15C3C5A02",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-64F15C3C5A02 to true in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-64F15C3C5A02-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-64F15C3C5A02",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-BF704A123803",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-71AF59F91436 to false in decision AIR-DEC-BF704A123803.",
+      "id": "OBL-COND-AIR-COND-71AF59F91436-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-71AF59F91436",
+        "AIR-DEC-BF704A123803"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-BF704A123803",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-71AF59F91436 to true in decision AIR-DEC-BF704A123803.",
+      "id": "OBL-COND-AIR-COND-71AF59F91436-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-71AF59F91436",
+        "AIR-DEC-BF704A123803"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-7320AD49DCC7 to false in decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-COND-AIR-COND-7320AD49DCC7-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-7320AD49DCC7",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-7320AD49DCC7 to true in decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-COND-AIR-COND-7320AD49DCC7-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-7320AD49DCC7",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-793843FC2D65 to false in decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-COND-AIR-COND-793843FC2D65-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-793843FC2D65",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-793843FC2D65 to true in decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-COND-AIR-COND-793843FC2D65-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-793843FC2D65",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-7CE862BD5FCD to false in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-7CE862BD5FCD-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-7CE862BD5FCD",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-7CE862BD5FCD to true in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-7CE862BD5FCD-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-7CE862BD5FCD",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-7E9750C7D61B to false in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-7E9750C7D61B-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-7E9750C7D61B",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-7E9750C7D61B to true in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-7E9750C7D61B-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-7E9750C7D61B",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-080D6C64B501",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-816F5A87C37C to false in decision AIR-DEC-080D6C64B501.",
+      "id": "OBL-COND-AIR-COND-816F5A87C37C-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-816F5A87C37C",
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-080D6C64B501",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-816F5A87C37C to true in decision AIR-DEC-080D6C64B501.",
+      "id": "OBL-COND-AIR-COND-816F5A87C37C-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-816F5A87C37C",
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-8A22B1F9BCF6 to false in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-8A22B1F9BCF6-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-8A22B1F9BCF6",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CD85FB02EB72",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-8A22B1F9BCF6 to true in decision AIR-DEC-CD85FB02EB72.",
+      "id": "OBL-COND-AIR-COND-8A22B1F9BCF6-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-COND-8A22B1F9BCF6",
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-9197056085FE to false in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-9197056085FE-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-9197056085FE",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-9197056085FE to true in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-9197056085FE-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-9197056085FE",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-7E345C4AF44F",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-944024658FE0 to false in decision AIR-DEC-7E345C4AF44F.",
+      "id": "OBL-COND-AIR-COND-944024658FE0-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-944024658FE0",
+        "AIR-DEC-7E345C4AF44F"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-7E345C4AF44F",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-944024658FE0 to true in decision AIR-DEC-7E345C4AF44F.",
+      "id": "OBL-COND-AIR-COND-944024658FE0-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-944024658FE0",
+        "AIR-DEC-7E345C4AF44F"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-B72FED13362D to false in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-B72FED13362D-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-B72FED13362D",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-B72FED13362D to true in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-B72FED13362D-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-B72FED13362D",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-B856C7AB9AF6 to false in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-B856C7AB9AF6-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-B856C7AB9AF6",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C4B7B27E0075",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-B856C7AB9AF6 to true in decision AIR-DEC-C4B7B27E0075.",
+      "id": "OBL-COND-AIR-COND-B856C7AB9AF6-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-B856C7AB9AF6",
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-BED7779F4424 to false in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-BED7779F4424-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-BED7779F4424",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-BED7779F4424 to true in decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-COND-AIR-COND-BED7779F4424-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-BED7779F4424",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-3C4E9EBBECBB",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-C55DA00B442B to false in decision AIR-DEC-3C4E9EBBECBB.",
+      "id": "OBL-COND-AIR-COND-C55DA00B442B-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-C55DA00B442B",
+        "AIR-DEC-3C4E9EBBECBB"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-3C4E9EBBECBB",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-C55DA00B442B to true in decision AIR-DEC-3C4E9EBBECBB.",
+      "id": "OBL-COND-AIR-COND-C55DA00B442B-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-C55DA00B442B",
+        "AIR-DEC-3C4E9EBBECBB"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-CAE388844A15 to false in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-CAE388844A15-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-CAE388844A15",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-CAB019D5C1A2",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-CAE388844A15 to true in decision AIR-DEC-CAB019D5C1A2.",
+      "id": "OBL-COND-AIR-COND-CAE388844A15-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-CAE388844A15",
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-CF3B9050C31B to false in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-CF3B9050C31B-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-CF3B9050C31B",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-CF3B9050C31B to true in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-CF3B9050C31B-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-CF3B9050C31B",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-080D6C64B501",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-D115437E2970 to false in decision AIR-DEC-080D6C64B501.",
+      "id": "OBL-COND-AIR-COND-D115437E2970-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-D115437E2970",
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-080D6C64B501",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-D115437E2970 to true in decision AIR-DEC-080D6C64B501.",
+      "id": "OBL-COND-AIR-COND-D115437E2970-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-D115437E2970",
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-E3E3882462AC to false in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-E3E3882462AC-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-E3E3882462AC",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-E3E3882462AC to true in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-E3E3882462AC-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-E3E3882462AC",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C15397ED3F0A",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-E43A0D3C92E1 to false in decision AIR-DEC-C15397ED3F0A.",
+      "id": "OBL-COND-AIR-COND-E43A0D3C92E1-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-E43A0D3C92E1",
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-C15397ED3F0A",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-E43A0D3C92E1 to true in decision AIR-DEC-C15397ED3F0A.",
+      "id": "OBL-COND-AIR-COND-E43A0D3C92E1-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-COND-E43A0D3C92E1",
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-E4D08AF310FC to false in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-E4D08AF310FC-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-E4D08AF310FC",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-78827340A084",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-E4D08AF310FC to true in decision AIR-DEC-78827340A084.",
+      "id": "OBL-COND-AIR-COND-E4D08AF310FC-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-COND-E4D08AF310FC",
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": false
+      },
+      "description": "Evaluate atomic condition AIR-COND-E82911A939C0 to false in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-E82911A939C0-FALSE",
+      "kind": "CONDITION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-E82911A939C0",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "decision_id": "AIR-DEC-9DEE36C5AD49",
+        "required_value": true
+      },
+      "description": "Evaluate atomic condition AIR-COND-E82911A939C0 to true in decision AIR-DEC-9DEE36C5AD49.",
+      "id": "OBL-COND-AIR-COND-E82911A939C0-TRUE",
+      "kind": "CONDITION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-COND-E82911A939C0",
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "expected_output_assignments": [
+          {
+            "target": "CommandPermit",
+            "value": false
+          },
+          {
+            "target": "UsePrimaryLink",
+            "value": false
+          },
+          {
+            "target": "UseSecondaryLink",
+            "value": false
+          },
+          {
+            "target": "DegradedLinkIndication",
+            "value": true
+          },
+          {
+            "target": "LostLinkProcedureRequest",
+            "value": true
+          },
+          {
+            "target": "ReturnToHomeRequest",
+            "value": true
+          },
+          {
+            "target": "MissionProgressionPermit",
+            "value": false
+          },
+          {
+            "target": "BlockingLinkFault",
+            "value": true
+          },
+          {
+            "from_state": "State",
+            "target": "SupervisorState"
+          }
+        ],
+        "expected_retained_assignments": [
+          {
+            "target": "LinkFaultLatched",
+            "value": true
+          }
+        ]
+      },
+      "description": "Apply the declared conservative outputs of fault policy AEROST-FAULT-POLICY-698FFF3460AB.",
+      "id": "OBL-CONSERVATIVE-OUTPUT-AEROST-FAULT-POLICY-698FFF3460AB",
+      "kind": "CONSERVATIVE_OUTPUT_APPLIED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [],
+      "subject_ids": [
+        "AEROST-FAULT-POLICY-698FFF3460AB"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-1144A3531C95",
+          "AIR-COND-28DB73F26FB0"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-03AE84856B0F"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-03AE84856B0F to false.",
+      "id": "OBL-DEC-AIR-DEC-03AE84856B0F-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-DEC-03AE84856B0F"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-1144A3531C95",
+          "AIR-COND-28DB73F26FB0"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-03AE84856B0F"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-03AE84856B0F to true.",
+      "id": "OBL-DEC-AIR-DEC-03AE84856B0F-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-DEC-03AE84856B0F"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-38A77753C9BB",
+          "AIR-COND-816F5A87C37C",
+          "AIR-COND-D115437E2970"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-080D6C64B501"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-080D6C64B501 to false.",
+      "id": "OBL-DEC-AIR-DEC-080D6C64B501-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-38A77753C9BB",
+          "AIR-COND-816F5A87C37C",
+          "AIR-COND-D115437E2970"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-080D6C64B501"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-080D6C64B501 to true.",
+      "id": "OBL-DEC-AIR-DEC-080D6C64B501-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-080D6C64B501"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-C55DA00B442B"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-3C4E9EBBECBB"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-3C4E9EBBECBB to false.",
+      "id": "OBL-DEC-AIR-DEC-3C4E9EBBECBB-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-DEC-3C4E9EBBECBB"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-C55DA00B442B"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-3C4E9EBBECBB"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-3C4E9EBBECBB to true.",
+      "id": "OBL-DEC-AIR-DEC-3C4E9EBBECBB-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-DEC-3C4E9EBBECBB"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-15CC65FC0325",
+          "AIR-COND-9197056085FE",
+          "AIR-COND-CF3B9050C31B",
+          "AIR-COND-E3E3882462AC",
+          "AIR-COND-E4D08AF310FC"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-78827340A084"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-78827340A084 to false.",
+      "id": "OBL-DEC-AIR-DEC-78827340A084-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-15CC65FC0325",
+          "AIR-COND-9197056085FE",
+          "AIR-COND-CF3B9050C31B",
+          "AIR-COND-E3E3882462AC",
+          "AIR-COND-E4D08AF310FC"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-78827340A084"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-78827340A084 to true.",
+      "id": "OBL-DEC-AIR-DEC-78827340A084-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-DEC-78827340A084"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-944024658FE0"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-7E345C4AF44F"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-7E345C4AF44F to false.",
+      "id": "OBL-DEC-AIR-DEC-7E345C4AF44F-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-7E345C4AF44F"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-944024658FE0"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-7E345C4AF44F"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-7E345C4AF44F to true.",
+      "id": "OBL-DEC-AIR-DEC-7E345C4AF44F-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-7E345C4AF44F"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-28BAD0606931",
+          "AIR-COND-32A566D26462",
+          "AIR-COND-3BDDB32D00D8",
+          "AIR-COND-441C1085C0BC",
+          "AIR-COND-E82911A939C0"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-9DEE36C5AD49"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-9DEE36C5AD49 to false.",
+      "id": "OBL-DEC-AIR-DEC-9DEE36C5AD49-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-28BAD0606931",
+          "AIR-COND-32A566D26462",
+          "AIR-COND-3BDDB32D00D8",
+          "AIR-COND-441C1085C0BC",
+          "AIR-COND-E82911A939C0"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-9DEE36C5AD49"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-9DEE36C5AD49 to true.",
+      "id": "OBL-DEC-AIR-DEC-9DEE36C5AD49-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-DEC-9DEE36C5AD49"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-71AF59F91436"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-BF704A123803"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-BF704A123803 to false.",
+      "id": "OBL-DEC-AIR-DEC-BF704A123803-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-BF704A123803"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-71AF59F91436"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-BF704A123803"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-BF704A123803 to true.",
+      "id": "OBL-DEC-AIR-DEC-BF704A123803-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-BF704A123803"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-48160B62BAEF",
+          "AIR-COND-5740B33F484E",
+          "AIR-COND-E43A0D3C92E1"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-C15397ED3F0A"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-C15397ED3F0A to false.",
+      "id": "OBL-DEC-AIR-DEC-C15397ED3F0A-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-48160B62BAEF",
+          "AIR-COND-5740B33F484E",
+          "AIR-COND-E43A0D3C92E1"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-C15397ED3F0A"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-C15397ED3F0A to true.",
+      "id": "OBL-DEC-AIR-DEC-C15397ED3F0A-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-C15397ED3F0A"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-07D709DB7F51",
+          "AIR-COND-198A1B1EE4CF",
+          "AIR-COND-B72FED13362D",
+          "AIR-COND-B856C7AB9AF6"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-C4B7B27E0075"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-C4B7B27E0075 to false.",
+      "id": "OBL-DEC-AIR-DEC-C4B7B27E0075-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-07D709DB7F51",
+          "AIR-COND-198A1B1EE4CF",
+          "AIR-COND-B72FED13362D",
+          "AIR-COND-B856C7AB9AF6"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-C4B7B27E0075"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-C4B7B27E0075 to true.",
+      "id": "OBL-DEC-AIR-DEC-C4B7B27E0075-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-DEC-C4B7B27E0075"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-324E98A1F836",
+          "AIR-COND-569BA6F8A5A4",
+          "AIR-COND-5A5880ACA2D4",
+          "AIR-COND-CAE388844A15"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-CAB019D5C1A2"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-CAB019D5C1A2 to false.",
+      "id": "OBL-DEC-AIR-DEC-CAB019D5C1A2-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-324E98A1F836",
+          "AIR-COND-569BA6F8A5A4",
+          "AIR-COND-5A5880ACA2D4",
+          "AIR-COND-CAE388844A15"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-CAB019D5C1A2"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-CAB019D5C1A2 to true.",
+      "id": "OBL-DEC-AIR-DEC-CAB019D5C1A2-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-DEC-CAB019D5C1A2"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-057158D99548",
+          "AIR-COND-18C272CB4C29",
+          "AIR-COND-52B17750FFC7",
+          "AIR-COND-8A22B1F9BCF6"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-CD85FB02EB72"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-CD85FB02EB72 to false.",
+      "id": "OBL-DEC-AIR-DEC-CD85FB02EB72-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-057158D99548",
+          "AIR-COND-18C272CB4C29",
+          "AIR-COND-52B17750FFC7",
+          "AIR-COND-8A22B1F9BCF6"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-CD85FB02EB72"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-CD85FB02EB72 to true.",
+      "id": "OBL-DEC-AIR-DEC-CD85FB02EB72-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-DEC-CD85FB02EB72"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-64F15C3C5A02",
+          "AIR-COND-7CE862BD5FCD",
+          "AIR-COND-7E9750C7D61B",
+          "AIR-COND-BED7779F4424"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": true,
+        "source_id": "ASCP-SRC-DEC-E11528F772D0"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-E11528F772D0 to false.",
+      "id": "OBL-DEC-AIR-DEC-E11528F772D0-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-64F15C3C5A02",
+          "AIR-COND-7CE862BD5FCD",
+          "AIR-COND-7E9750C7D61B",
+          "AIR-COND-BED7779F4424"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": true,
+        "source_id": "ASCP-SRC-DEC-E11528F772D0"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-E11528F772D0 to true.",
+      "id": "OBL-DEC-AIR-DEC-E11528F772D0-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-01D9F1A011F4",
+          "AIR-COND-39E43926C012"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-E8E90B8FBB1D"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-E8E90B8FBB1D to false.",
+      "id": "OBL-DEC-AIR-DEC-E8E90B8FBB1D-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-DEC-E8E90B8FBB1D"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-01D9F1A011F4",
+          "AIR-COND-39E43926C012"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": false,
+        "source_id": "ASCP-SRC-DEC-E8E90B8FBB1D"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-E8E90B8FBB1D to true.",
+      "id": "OBL-DEC-AIR-DEC-E8E90B8FBB1D-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-DEC-E8E90B8FBB1D"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-4089AB0D6750",
+          "AIR-COND-7320AD49DCC7",
+          "AIR-COND-793843FC2D65"
+        ],
+        "required_outcome": false,
+        "selected_for_mcdc": true,
+        "source_id": "ASCP-SRC-DEC-F15FB827C5C1"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-F15FB827C5C1 to false.",
+      "id": "OBL-DEC-AIR-DEC-F15FB827C5C1-FALSE",
+      "kind": "DECISION_FALSE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_ids": [
+          "AIR-COND-4089AB0D6750",
+          "AIR-COND-7320AD49DCC7",
+          "AIR-COND-793843FC2D65"
+        ],
+        "required_outcome": true,
+        "selected_for_mcdc": true,
+        "source_id": "ASCP-SRC-DEC-F15FB827C5C1"
+      },
+      "description": "Evaluate AIR decision AIR-DEC-F15FB827C5C1 to true.",
+      "id": "OBL-DEC-AIR-DEC-F15FB827C5C1-TRUE",
+      "kind": "DECISION_TRUE",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "diagnostic": "AEROST-RUNTIME-BLOCKING-FAULT",
+        "normal_commit_inhibited": true,
+        "output_assignments": [
+          {
+            "target": "CommandPermit",
+            "value": false
+          },
+          {
+            "target": "UsePrimaryLink",
+            "value": false
+          },
+          {
+            "target": "UseSecondaryLink",
+            "value": false
+          },
+          {
+            "target": "DegradedLinkIndication",
+            "value": true
+          },
+          {
+            "target": "LostLinkProcedureRequest",
+            "value": true
+          },
+          {
+            "target": "ReturnToHomeRequest",
+            "value": true
+          },
+          {
+            "target": "MissionProgressionPermit",
+            "value": false
+          },
+          {
+            "target": "BlockingLinkFault",
+            "value": true
+          },
+          {
+            "from_state": "State",
+            "target": "SupervisorState"
+          }
+        ],
+        "retained_assignments": [
+          {
+            "target": "LinkFaultLatched",
+            "value": true
+          }
+        ]
+      },
+      "description": "Activate declared runtime fault policy AEROST-FAULT-POLICY-698FFF3460AB.",
+      "id": "OBL-FAULT-AEROST-FAULT-POLICY-698FFF3460AB",
+      "kind": "FAULT_POLICY_ACTIVATED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [],
+      "subject_ids": [
+        "AEROST-FAULT-POLICY-698FFF3460AB"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_id": "AIR-COND-64F15C3C5A02",
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "other_condition_ids": [
+          "AIR-COND-7CE862BD5FCD",
+          "AIR-COND-7E9750C7D61B",
+          "AIR-COND-BED7779F4424"
+        ]
+      },
+      "description": "Demonstrate the independent effect of AIR-COND-64F15C3C5A02 on decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-64F15C3C5A02",
+      "kind": "MCDC_PAIR",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-64F15C3C5A02",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_id": "AIR-COND-7CE862BD5FCD",
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "other_condition_ids": [
+          "AIR-COND-64F15C3C5A02",
+          "AIR-COND-7E9750C7D61B",
+          "AIR-COND-BED7779F4424"
+        ]
+      },
+      "description": "Demonstrate the independent effect of AIR-COND-7CE862BD5FCD on decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7CE862BD5FCD",
+      "kind": "MCDC_PAIR",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-7CE862BD5FCD",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_id": "AIR-COND-7E9750C7D61B",
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "other_condition_ids": [
+          "AIR-COND-64F15C3C5A02",
+          "AIR-COND-7CE862BD5FCD",
+          "AIR-COND-BED7779F4424"
+        ]
+      },
+      "description": "Demonstrate the independent effect of AIR-COND-7E9750C7D61B on decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7E9750C7D61B",
+      "kind": "MCDC_PAIR",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-7E9750C7D61B",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_id": "AIR-COND-BED7779F4424",
+        "decision_id": "AIR-DEC-E11528F772D0",
+        "other_condition_ids": [
+          "AIR-COND-64F15C3C5A02",
+          "AIR-COND-7CE862BD5FCD",
+          "AIR-COND-7E9750C7D61B"
+        ]
+      },
+      "description": "Demonstrate the independent effect of AIR-COND-BED7779F4424 on decision AIR-DEC-E11528F772D0.",
+      "id": "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-BED7779F4424",
+      "kind": "MCDC_PAIR",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-COND-BED7779F4424",
+        "AIR-DEC-E11528F772D0"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_id": "AIR-COND-4089AB0D6750",
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "other_condition_ids": [
+          "AIR-COND-7320AD49DCC7",
+          "AIR-COND-793843FC2D65"
+        ]
+      },
+      "description": "Demonstrate the independent effect of AIR-COND-4089AB0D6750 on decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-4089AB0D6750",
+      "kind": "MCDC_PAIR",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-4089AB0D6750",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_id": "AIR-COND-7320AD49DCC7",
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "other_condition_ids": [
+          "AIR-COND-4089AB0D6750",
+          "AIR-COND-793843FC2D65"
+        ]
+      },
+      "description": "Demonstrate the independent effect of AIR-COND-7320AD49DCC7 on decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-7320AD49DCC7",
+      "kind": "MCDC_PAIR",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-7320AD49DCC7",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "condition_id": "AIR-COND-793843FC2D65",
+        "decision_id": "AIR-DEC-F15FB827C5C1",
+        "other_condition_ids": [
+          "AIR-COND-4089AB0D6750",
+          "AIR-COND-7320AD49DCC7"
+        ]
+      },
+      "description": "Demonstrate the independent effect of AIR-COND-793843FC2D65 on decision AIR-DEC-F15FB827C5C1.",
+      "id": "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-793843FC2D65",
+      "kind": "MCDC_PAIR",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-COND-793843FC2D65",
+        "AIR-DEC-F15FB827C5C1"
+      ]
+    },
+    {
+      "attributes": {
+        "from_values": [
+          "DEGRADED"
+        ],
+        "retained_assignments": [],
+        "state_variable": "State",
+        "to_value": "RECOVERY_PENDING"
+      },
+      "description": "Enter RECOVERY_PENDING from DEGRADED under stable link conditions.",
+      "id": "OBL-RECOVERY-LINK-RECOVERY-DEGRADED",
+      "kind": "RECOVERY_PATH_EXECUTED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "State"
+      ]
+    },
+    {
+      "attributes": {
+        "from_values": [
+          "LOCKOUT"
+        ],
+        "retained_assignments": [],
+        "state_variable": "State",
+        "to_value": "RECOVERY_PENDING"
+      },
+      "description": "Enter RECOVERY_PENDING from LOCKOUT under authorized stable link conditions.",
+      "id": "OBL-RECOVERY-LINK-RECOVERY-LOCKOUT",
+      "kind": "RECOVERY_PATH_EXECUTED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "State"
+      ]
+    },
+    {
+      "attributes": {
+        "from_values": [
+          "LOST_LINK"
+        ],
+        "retained_assignments": [],
+        "state_variable": "State",
+        "to_value": "RECOVERY_PENDING"
+      },
+      "description": "Enter RECOVERY_PENDING from LOST_LINK under stable link conditions.",
+      "id": "OBL-RECOVERY-LINK-RECOVERY-LOST-LINK",
+      "kind": "RECOVERY_PATH_EXECUTED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "State"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-001.",
+      "id": "OBL-REQ-LINK-HLR-001",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "LINK-HLR-001"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-002.",
+      "id": "OBL-REQ-LINK-HLR-002",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-002"
+      ],
+      "subject_ids": [
+        "LINK-HLR-002"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-003.",
+      "id": "OBL-REQ-LINK-HLR-003",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-003"
+      ],
+      "subject_ids": [
+        "LINK-HLR-003"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-004.",
+      "id": "OBL-REQ-LINK-HLR-004",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004"
+      ],
+      "subject_ids": [
+        "LINK-HLR-004"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-005.",
+      "id": "OBL-REQ-LINK-HLR-005",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005"
+      ],
+      "subject_ids": [
+        "LINK-HLR-005"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-006.",
+      "id": "OBL-REQ-LINK-HLR-006",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "LINK-HLR-006"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-007.",
+      "id": "OBL-REQ-LINK-HLR-007",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-007"
+      ],
+      "subject_ids": [
+        "LINK-HLR-007"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-008.",
+      "id": "OBL-REQ-LINK-HLR-008",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008"
+      ],
+      "subject_ids": [
+        "LINK-HLR-008"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-009.",
+      "id": "OBL-REQ-LINK-HLR-009",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "LINK-HLR-009"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-010.",
+      "id": "OBL-REQ-LINK-HLR-010",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "LINK-HLR-010"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-011.",
+      "id": "OBL-REQ-LINK-HLR-011",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011"
+      ],
+      "subject_ids": [
+        "LINK-HLR-011"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-012.",
+      "id": "OBL-REQ-LINK-HLR-012",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "LINK-HLR-012"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-013.",
+      "id": "OBL-REQ-LINK-HLR-013",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "LINK-HLR-013"
+      ]
+    },
+    {
+      "attributes": {},
+      "description": "Exercise controlled requirement root LINK-HLR-014.",
+      "id": "OBL-REQ-LINK-HLR-014",
+      "kind": "REQUIREMENT_EXERCISED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "LINK-HLR-014"
+      ]
+    },
+    {
+      "attributes": {
+        "from_values": [
+          "RECOVERY_PENDING"
+        ],
+        "retained_assignments": [
+          {
+            "target": "LinkFaultLatched",
+            "value": false
+          }
+        ],
+        "state_variable": "State",
+        "to_value": "NOMINAL"
+      },
+      "description": "Authorize reset from RECOVERY_PENDING to NOMINAL and clear the link-fault latch.",
+      "id": "OBL-RESET-LINK-RESET-RECOVERY-PENDING",
+      "kind": "RESET_PATH_EXECUTED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "LinkFaultLatched",
+        "State"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-029FD17D66EA",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-029FD17D66EA.",
+      "id": "OBL-STMT-AIR-STMT-029FD17D66EA",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-029FD17D66EA"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-082E6D18F5E4",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-082E6D18F5E4.",
+      "id": "OBL-STMT-AIR-STMT-082E6D18F5E4",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-082E6D18F5E4"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-0BD1DE8869A3",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-0BD1DE8869A3.",
+      "id": "OBL-STMT-AIR-STMT-0BD1DE8869A3",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-0BD1DE8869A3"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-115F523F0F94",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-115F523F0F94.",
+      "id": "OBL-STMT-AIR-STMT-115F523F0F94",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-115F523F0F94"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-14393895584B",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-14393895584B.",
+      "id": "OBL-STMT-AIR-STMT-14393895584B",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-STMT-14393895584B"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-1A656E3E8CF7",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-1A656E3E8CF7.",
+      "id": "OBL-STMT-AIR-STMT-1A656E3E8CF7",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-STMT-1A656E3E8CF7"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-1D79B159A9EB",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-1D79B159A9EB.",
+      "id": "OBL-STMT-AIR-STMT-1D79B159A9EB",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-STMT-1D79B159A9EB"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-2FCFC820C326",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-2FCFC820C326.",
+      "id": "OBL-STMT-AIR-STMT-2FCFC820C326",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-2FCFC820C326"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-363BB5F7BABB",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-363BB5F7BABB.",
+      "id": "OBL-STMT-AIR-STMT-363BB5F7BABB",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-363BB5F7BABB"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-38E622DEB1D6",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-38E622DEB1D6.",
+      "id": "OBL-STMT-AIR-STMT-38E622DEB1D6",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-38E622DEB1D6"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-39F8E8639950",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-39F8E8639950.",
+      "id": "OBL-STMT-AIR-STMT-39F8E8639950",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-39F8E8639950"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-3A8D9B1590D7",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-3A8D9B1590D7.",
+      "id": "OBL-STMT-AIR-STMT-3A8D9B1590D7",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-STMT-3A8D9B1590D7"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-3C3A46196002",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-3C3A46196002.",
+      "id": "OBL-STMT-AIR-STMT-3C3A46196002",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-3C3A46196002"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-412CB814D6AB",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-412CB814D6AB.",
+      "id": "OBL-STMT-AIR-STMT-412CB814D6AB",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-412CB814D6AB"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-414DE608629A",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-414DE608629A.",
+      "id": "OBL-STMT-AIR-STMT-414DE608629A",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-STMT-414DE608629A"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-485408464A38",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-485408464A38.",
+      "id": "OBL-STMT-AIR-STMT-485408464A38",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-STMT-485408464A38"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "case",
+        "source_id": "ASCP-SRC-STMT-48AD42CC4969",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-48AD42CC4969.",
+      "id": "OBL-STMT-AIR-STMT-48AD42CC4969",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-48AD42CC4969"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-52D3D83A6B1A",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-52D3D83A6B1A.",
+      "id": "OBL-STMT-AIR-STMT-52D3D83A6B1A",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-52D3D83A6B1A"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-56C257A8ED2F",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-56C257A8ED2F.",
+      "id": "OBL-STMT-AIR-STMT-56C257A8ED2F",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-STMT-56C257A8ED2F"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-63250DD6E3B2",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-63250DD6E3B2.",
+      "id": "OBL-STMT-AIR-STMT-63250DD6E3B2",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-63250DD6E3B2"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-6501D1DD4935",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-6501D1DD4935.",
+      "id": "OBL-STMT-AIR-STMT-6501D1DD4935",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-6501D1DD4935"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-69E1B6FD8A70",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-69E1B6FD8A70.",
+      "id": "OBL-STMT-AIR-STMT-69E1B6FD8A70",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-69E1B6FD8A70"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-6D50A2C7A880",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-6D50A2C7A880.",
+      "id": "OBL-STMT-AIR-STMT-6D50A2C7A880",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-STMT-6D50A2C7A880"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-767D388028B1",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-767D388028B1.",
+      "id": "OBL-STMT-AIR-STMT-767D388028B1",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-STMT-767D388028B1"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-794114E2D92B",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-794114E2D92B.",
+      "id": "OBL-STMT-AIR-STMT-794114E2D92B",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-794114E2D92B"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-7980321B634C",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-7980321B634C.",
+      "id": "OBL-STMT-AIR-STMT-7980321B634C",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-7980321B634C"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-7E9943E265E4",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-7E9943E265E4.",
+      "id": "OBL-STMT-AIR-STMT-7E9943E265E4",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-7E9943E265E4"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-7F61268DFDAA",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-7F61268DFDAA.",
+      "id": "OBL-STMT-AIR-STMT-7F61268DFDAA",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-7F61268DFDAA"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "case",
+        "source_id": "ASCP-SRC-STMT-7FE4FD402DDD",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-7FE4FD402DDD.",
+      "id": "OBL-STMT-AIR-STMT-7FE4FD402DDD",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-7FE4FD402DDD"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-82C7DCC99C3A",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-82C7DCC99C3A.",
+      "id": "OBL-STMT-AIR-STMT-82C7DCC99C3A",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-82C7DCC99C3A"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-858AECC5C883",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-858AECC5C883.",
+      "id": "OBL-STMT-AIR-STMT-858AECC5C883",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-858AECC5C883"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-8747F897C058",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-8747F897C058.",
+      "id": "OBL-STMT-AIR-STMT-8747F897C058",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-STMT-8747F897C058"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-88790EE5C92A",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-88790EE5C92A.",
+      "id": "OBL-STMT-AIR-STMT-88790EE5C92A",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-88790EE5C92A"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-88B97ACB290A",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-88B97ACB290A.",
+      "id": "OBL-STMT-AIR-STMT-88B97ACB290A",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-88B97ACB290A"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-8C6ADF7B028D",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-8C6ADF7B028D.",
+      "id": "OBL-STMT-AIR-STMT-8C6ADF7B028D",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-8C6ADF7B028D"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-93079F21BA07",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-93079F21BA07.",
+      "id": "OBL-STMT-AIR-STMT-93079F21BA07",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-93079F21BA07"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-9351A2ED74F5",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-9351A2ED74F5.",
+      "id": "OBL-STMT-AIR-STMT-9351A2ED74F5",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-9351A2ED74F5"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-94A658201069",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-94A658201069.",
+      "id": "OBL-STMT-AIR-STMT-94A658201069",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "subject_ids": [
+        "AIR-STMT-94A658201069"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-94E73C63A6B1",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-94E73C63A6B1.",
+      "id": "OBL-STMT-AIR-STMT-94E73C63A6B1",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-94E73C63A6B1"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-94E7C31BC9A9",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-94E7C31BC9A9.",
+      "id": "OBL-STMT-AIR-STMT-94E7C31BC9A9",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-94E7C31BC9A9"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-99435E75414B",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-99435E75414B.",
+      "id": "OBL-STMT-AIR-STMT-99435E75414B",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "subject_ids": [
+        "AIR-STMT-99435E75414B"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-A72BEC58DCCD",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-A72BEC58DCCD.",
+      "id": "OBL-STMT-AIR-STMT-A72BEC58DCCD",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "subject_ids": [
+        "AIR-STMT-A72BEC58DCCD"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-A93938A69075",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-A93938A69075.",
+      "id": "OBL-STMT-AIR-STMT-A93938A69075",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-A93938A69075"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-A9D3D2D2DF01",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-A9D3D2D2DF01.",
+      "id": "OBL-STMT-AIR-STMT-A9D3D2D2DF01",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-A9D3D2D2DF01"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "if",
+        "source_id": "ASCP-SRC-STMT-AC5A8184A44E",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-AC5A8184A44E.",
+      "id": "OBL-STMT-AIR-STMT-AC5A8184A44E",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-AC5A8184A44E"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-B42D768495B4",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-B42D768495B4.",
+      "id": "OBL-STMT-AIR-STMT-B42D768495B4",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-B42D768495B4"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-B5D2E3D5D648",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-B5D2E3D5D648.",
+      "id": "OBL-STMT-AIR-STMT-B5D2E3D5D648",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-STMT-B5D2E3D5D648"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-C5DFEB3D124D",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-C5DFEB3D124D.",
+      "id": "OBL-STMT-AIR-STMT-C5DFEB3D124D",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-C5DFEB3D124D"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-C9718E3467B7",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-C9718E3467B7.",
+      "id": "OBL-STMT-AIR-STMT-C9718E3467B7",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-C9718E3467B7"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-C9E2D8A022F0",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-C9E2D8A022F0.",
+      "id": "OBL-STMT-AIR-STMT-C9E2D8A022F0",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "subject_ids": [
+        "AIR-STMT-C9E2D8A022F0"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-D18352A49A33",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-D18352A49A33.",
+      "id": "OBL-STMT-AIR-STMT-D18352A49A33",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-D18352A49A33"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-D2B8560811F4",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-D2B8560811F4.",
+      "id": "OBL-STMT-AIR-STMT-D2B8560811F4",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-STMT-D2B8560811F4"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-D794F39C615E",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-D794F39C615E.",
+      "id": "OBL-STMT-AIR-STMT-D794F39C615E",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-D794F39C615E"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-E1EB5BEBC18A",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-E1EB5BEBC18A.",
+      "id": "OBL-STMT-AIR-STMT-E1EB5BEBC18A",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-E1EB5BEBC18A"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-E339B90EFC08",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-E339B90EFC08.",
+      "id": "OBL-STMT-AIR-STMT-E339B90EFC08",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "EXEC-REQ-OUTPUT-DEFAULTS"
+      ],
+      "subject_ids": [
+        "AIR-STMT-E339B90EFC08"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-E8FB0D862FC7",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-E8FB0D862FC7.",
+      "id": "OBL-STMT-AIR-STMT-E8FB0D862FC7",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "subject_ids": [
+        "AIR-STMT-E8FB0D862FC7"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-EAED9383D904",
+        "stage": "transition"
+      },
+      "description": "Reach AIR statement AIR-STMT-EAED9383D904.",
+      "id": "OBL-STMT-AIR-STMT-EAED9383D904",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "subject_ids": [
+        "AIR-STMT-EAED9383D904"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-F1D9BC0787E8",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-F1D9BC0787E8.",
+      "id": "OBL-STMT-AIR-STMT-F1D9BC0787E8",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "subject_ids": [
+        "AIR-STMT-F1D9BC0787E8"
+      ]
+    },
+    {
+      "attributes": {
+        "air_kind": "assign",
+        "source_id": "ASCP-SRC-STMT-FAE0764112FF",
+        "stage": "output"
+      },
+      "description": "Reach AIR statement AIR-STMT-FAE0764112FF.",
+      "id": "OBL-STMT-AIR-STMT-FAE0764112FF",
+      "kind": "STATEMENT_REACHED",
+      "reachable_status": "UNKNOWN",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "subject_ids": [
+        "AIR-STMT-FAE0764112FF"
+      ]
+    }
+  ],
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-FAF49B35395C",
+  "schema_version": "AEROST-ASSURANCE-OBLIGATIONS-0.1",
+  "source_air_sha256": "41a572c8fdf905546d59c5872e96ab2a30578598ad5c52bbba28a72a3f8af443"
+}

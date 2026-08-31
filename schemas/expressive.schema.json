@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "complete": {
+      "type": "boolean"
+    },
+    "implemented_requirements": {
+      "type": "integer"
+    },
+    "percent": {
+      "type": "number"
+    },
+    "represented_in_profile": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "implemented_requirements",
+    "represented_in_profile",
+    "percent",
+    "complete"
+  ],
+  "type": "object"
+}

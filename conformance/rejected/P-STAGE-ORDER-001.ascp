@@ -1,0 +1,15 @@
+PROGRAM RejectedStageOrder
+VAR_INPUT
+    Valid : BOOL;
+END_VAR
+VAR_OUTPUT
+    Permit : BOOL;
+END_VAR
+VAR_STATE
+    Seen : BOOL := FALSE;
+END_VAR
+OUTPUT_STAGE
+Permit := Seen;
+TRANSITION_STAGE
+Seen := Valid;
+END_PROGRAM

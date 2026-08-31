@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "generated_from_air",
+    "separate_cargo_crate",
+    "compiled",
+    "forbidden_reference_calls",
+    "reference_executor_called",
+    "source_map_complete",
+    "unmapped_air_ids",
+    "passed"
+  ],
+  "properties": {
+    "generated_from_air": {"const": true},
+    "separate_cargo_crate": {"const": true},
+    "compiled": {"type": "boolean"},
+    "forbidden_reference_calls": {"type": "array", "items": {"type": "string"}},
+    "reference_executor_called": {"const": false},
+    "source_map_complete": {"const": true},
+    "unmapped_air_ids": {"type": "array", "maxItems": 0},
+    "passed": {"const": true}
+  },
+  "additionalProperties": false
+}

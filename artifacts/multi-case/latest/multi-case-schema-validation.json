@@ -1,0 +1,23 @@
+{
+  "all_valid": true,
+  "records": [
+    {
+      "artifact": "research-suite.json",
+      "errors": [],
+      "schema": "research-suite.schema.json",
+      "valid": true
+    },
+    {
+      "artifact": "multi-case-results-summary.json",
+      "errors": [],
+      "schema": "multi-case-results-summary.schema.json",
+      "valid": true
+    },
+    {
+      "artifact": "multi-case-reproducibility.json",
+      "errors": [],
+      "schema": "multi-case-reproducibility.schema.json",
+      "valid": true
+    }
+  ]
+}

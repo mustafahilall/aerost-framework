@@ -1,0 +1,110 @@
+name: AEROST validation
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.97.1"
+      - name: Release hygiene
+        shell: python
+        run: |
+          import pathlib
+          import subprocess
+
+          tracked = subprocess.check_output(["git", "ls-files"], text=True).splitlines()
+          forbidden_prefixes = (
+              ".tmp/",
+              "paper/",
+              "validation/",
+              "docs/architecture/",
+              "docs/assurance/",
+              "docs/baselines/",
+              "docs/compiler/",
+              "docs/experiments/",
+              "docs/requirements/",
+              "docs/runtime/",
+          )
+          forbidden_files = {
+              "AGENTS.md",
+              "README_FIRST_TR.md",
+              "PROJECT_COMPLETION_REPORT.md",
+              "PHASES-COMPLETION-MATRIX.md",
+              "NAMING_AND_BASELINE_POLICY.md",
+              "VALIDATION_STATUS.md",
+          }
+          bad_paths = [
+              path for path in tracked
+              if path in forbidden_files or path.startswith(forbidden_prefixes)
+          ]
+          if bad_paths:
+              raise SystemExit("Forbidden release paths: " + ", ".join(bad_paths))
+
+          disallowed_codepoints = {
+              0x00C7, 0x00E7,
+              0x011E, 0x011F,
+              0x0130, 0x0131,
+              0x00D6, 0x00F6,
+              0x015E, 0x015F,
+              0x00DC, 0x00FC,
+          }
+          bad_text = []
+          for name in tracked:
+              path = pathlib.Path(name)
+              try:
+                  text = path.read_text(encoding="utf-8")
+              except (UnicodeDecodeError, OSError):
+                  continue
+              if any(ord(char) in disallowed_codepoints for char in text):
+                  bad_text.append(name)
+          if bad_text:
+              raise SystemExit("Language-hygiene check failed: " + ", ".join(bad_text))
+      - name: Stage canonical power evidence for unit-test fixtures
+        shell: bash
+        run: |
+          mkdir -p artifacts/latest
+          cp -R artifacts/multi-case/latest/applications/power-supervisor/. artifacts/latest/
+      - name: Python syntax
+        run: python -m compileall -q tools
+      - name: Python validation suite
+        env:
+          PYTHONPATH: tools
+        run: |
+          python -m unittest -v \
+            tools/test_aerost_tool.py \
+            tools/test_external_air_executor.py \
+            tools/test_assurance_obligations.py \
+            tools/test_input_domain_validator.py \
+            tools/test_assurance_test_synthesizer.py \
+            tools/test_assurance_suite_reducer.py \
+            tools/test_mutation_aware_suite_reducer.py \
+            tools/test_compare_assurance_suites.py \
+            tools/test_authoritative_assurance_pipeline.py \
+            tools/test_application_manifest.py \
+            tools/test_communication_link_case.py \
+            tools/test_application_mutations.py \
+            tools/test_multi_case_assurance.py \
+            tools/test_research_baseline_hardening.py
+      - name: Multi-case assembly validation
+        env:
+          PYTHONPATH: tools
+        run: |
+          python tools/multi_case_assurance_pipeline.py \
+            --root . \
+            --suite applications/research-suite.json \
+            --output "${RUNNER_TEMP}/aerost-multi-case"

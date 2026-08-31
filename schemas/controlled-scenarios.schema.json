@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["scenarios"],
+  "properties": {
+    "scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "requirements", "initial_state", "cycles"],
+        "properties": {
+          "id": {"type": "string"},
+          "requirements": {"type": "array", "items": {"type": "string"}},
+          "initial_state": {"type": "object"},
+          "cycles": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["inputs", "expected"],
+              "properties": {
+                "inputs": {"type": "object"},
+                "blocking_runtime_fault": {"type": "boolean"},
+                "expected": {
+                  "type": "object",
+                  "required": ["committed_state", "outputs", "normal_commit_inhibited"],
+                  "properties": {
+                    "committed_state": {"type": "object"},
+                    "outputs": {"type": "object"},
+                    "normal_commit_inhibited": {"type": "boolean"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

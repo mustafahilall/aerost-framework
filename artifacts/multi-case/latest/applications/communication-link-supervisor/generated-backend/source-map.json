@@ -1,0 +1,2390 @@
+{
+  "mappings": [
+    {
+      "air_id": "AIR-STMT-AC5A8184A44E",
+      "generated_block": "RUST-00001",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-AC5A8184A44E",
+      "span": {
+        "column": 1,
+        "end": 4230,
+        "end_column": 7,
+        "end_line": 106,
+        "line": 36,
+        "start": 957
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-BF704A123803",
+      "generated_block": "RUST-00002",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-DEC-BF704A123803",
+      "span": {
+        "column": 4,
+        "end": 973,
+        "end_column": 17,
+        "end_line": 36,
+        "line": 36,
+        "start": 960
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-71AF59F91436",
+      "generated_block": "RUST-00003",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-71AF59F91436",
+      "span": {
+        "column": 4,
+        "end": 973,
+        "end_column": 17,
+        "end_line": 36,
+        "line": 36,
+        "start": 960
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-7FE4FD402DDD",
+      "generated_block": "RUST-00004",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-7FE4FD402DDD",
+      "span": {
+        "column": 5,
+        "end": 4187,
+        "end_column": 13,
+        "end_line": 103,
+        "line": 37,
+        "start": 983
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-8747F897C058",
+      "generated_block": "RUST-00005",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-STMT-8747F897C058",
+      "span": {
+        "column": 13,
+        "end": 1457,
+        "end_column": 19,
+        "end_line": 46,
+        "line": 40,
+        "start": 1179
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-E11528F772D0",
+      "generated_block": "RUST-00006",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-DEC-E11528F772D0",
+      "span": {
+        "column": 16,
+        "end": 1319,
+        "end_column": 64,
+        "end_line": 42,
+        "line": 40,
+        "start": 1182
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-7CE862BD5FCD",
+      "generated_block": "RUST-00007",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-COND-7CE862BD5FCD",
+      "span": {
+        "column": 16,
+        "end": 1204,
+        "end_column": 38,
+        "end_line": 40,
+        "line": 40,
+        "start": 1182
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-BED7779F4424",
+      "generated_block": "RUST-00008",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-COND-BED7779F4424",
+      "span": {
+        "column": 16,
+        "end": 1251,
+        "end_column": 43,
+        "end_line": 41,
+        "line": 41,
+        "start": 1224
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-64F15C3C5A02",
+      "generated_block": "RUST-00009",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-COND-64F15C3C5A02",
+      "span": {
+        "column": 17,
+        "end": 1292,
+        "end_column": 37,
+        "end_line": 42,
+        "line": 42,
+        "start": 1272
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-7E9750C7D61B",
+      "generated_block": "RUST-00010",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-COND-7E9750C7D61B",
+      "span": {
+        "column": 41,
+        "end": 1318,
+        "end_column": 63,
+        "end_line": 42,
+        "line": 42,
+        "start": 1296
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-94A658201069",
+      "generated_block": "RUST-00011",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-STMT-94A658201069",
+      "span": {
+        "column": 17,
+        "end": 1358,
+        "end_column": 34,
+        "end_line": 43,
+        "line": 43,
+        "start": 1341
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-3C4E9EBBECBB",
+      "generated_block": "RUST-00012",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-DEC-3C4E9EBBECBB",
+      "span": {
+        "column": 19,
+        "end": 1399,
+        "end_column": 41,
+        "end_line": 44,
+        "line": 44,
+        "start": 1377
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-C55DA00B442B",
+      "generated_block": "RUST-00013",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-COND-C55DA00B442B",
+      "span": {
+        "column": 19,
+        "end": 1399,
+        "end_column": 41,
+        "end_line": 44,
+        "line": 44,
+        "start": 1377
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-6D50A2C7A880",
+      "generated_block": "RUST-00014",
+      "requirements": [
+        "LINK-HLR-001"
+      ],
+      "source_id": "ASCP-SRC-STMT-6D50A2C7A880",
+      "span": {
+        "column": 17,
+        "end": 1438,
+        "end_column": 34,
+        "end_line": 45,
+        "line": 45,
+        "start": 1421
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-WAIT-001",
+        "TEST-LINK-STARTUP-PRIMARY-001",
+        "TEST-LINK-STARTUP-SECONDARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-767D388028B1",
+      "generated_block": "RUST-00015",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "source_id": "ASCP-SRC-STMT-767D388028B1",
+      "span": {
+        "column": 13,
+        "end": 2194,
+        "end_column": 19,
+        "end_line": 59,
+        "line": 50,
+        "start": 1660
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-F15FB827C5C1",
+      "generated_block": "RUST-00016",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "source_id": "ASCP-SRC-DEC-F15FB827C5C1",
+      "span": {
+        "column": 16,
+        "end": 1756,
+        "end_column": 73,
+        "end_line": 51,
+        "line": 50,
+        "start": 1663
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-4089AB0D6750",
+      "generated_block": "RUST-00017",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "source_id": "ASCP-SRC-COND-4089AB0D6750",
+      "span": {
+        "column": 16,
+        "end": 1680,
+        "end_column": 33,
+        "end_line": 50,
+        "line": 50,
+        "start": 1663
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-793843FC2D65",
+      "generated_block": "RUST-00018",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "source_id": "ASCP-SRC-COND-793843FC2D65",
+      "span": {
+        "column": 17,
+        "end": 1724,
+        "end_column": 41,
+        "end_line": 51,
+        "line": 51,
+        "start": 1700
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-7320AD49DCC7",
+      "generated_block": "RUST-00019",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "source_id": "ASCP-SRC-COND-7320AD49DCC7",
+      "span": {
+        "column": 46,
+        "end": 1755,
+        "end_column": 72,
+        "end_line": 51,
+        "line": 51,
+        "start": 1729
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-99435E75414B",
+      "generated_block": "RUST-00020",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-013"
+      ],
+      "source_id": "ASCP-SRC-STMT-99435E75414B",
+      "span": {
+        "column": 17,
+        "end": 1797,
+        "end_column": 36,
+        "end_line": 52,
+        "line": 52,
+        "start": 1778
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-CD85FB02EB72",
+      "generated_block": "RUST-00021",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-DEC-CD85FB02EB72",
+      "span": {
+        "column": 19,
+        "end": 2135,
+        "end_column": 50,
+        "end_line": 57,
+        "line": 54,
+        "start": 1969
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001",
+        "TEST-LINK-AUTH-LOSS-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-18C272CB4C29",
+      "generated_block": "RUST-00022",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-COND-18C272CB4C29",
+      "span": {
+        "column": 19,
+        "end": 1988,
+        "end_column": 38,
+        "end_line": 54,
+        "line": 54,
+        "start": 1969
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001",
+        "TEST-LINK-AUTH-LOSS-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-057158D99548",
+      "generated_block": "RUST-00023",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-COND-057158D99548",
+      "span": {
+        "column": 19,
+        "end": 2034,
+        "end_column": 43,
+        "end_line": 55,
+        "line": 55,
+        "start": 2010
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001",
+        "TEST-LINK-AUTH-LOSS-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-8A22B1F9BCF6",
+      "generated_block": "RUST-00024",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-COND-8A22B1F9BCF6",
+      "span": {
+        "column": 19,
+        "end": 2082,
+        "end_column": 45,
+        "end_line": 56,
+        "line": 56,
+        "start": 2056
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001",
+        "TEST-LINK-AUTH-LOSS-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-52B17750FFC7",
+      "generated_block": "RUST-00025",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-COND-52B17750FFC7",
+      "span": {
+        "column": 19,
+        "end": 2135,
+        "end_column": 50,
+        "end_line": 57,
+        "line": 57,
+        "start": 2104
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001",
+        "TEST-LINK-AUTH-LOSS-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-363BB5F7BABB",
+      "generated_block": "RUST-00026",
+      "requirements": [
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-363BB5F7BABB",
+      "span": {
+        "column": 17,
+        "end": 2175,
+        "end_column": 35,
+        "end_line": 58,
+        "line": 58,
+        "start": 2157
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001",
+        "TEST-LINK-AUTH-LOSS-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-858AECC5C883",
+      "generated_block": "RUST-00027",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-858AECC5C883",
+      "span": {
+        "column": 13,
+        "end": 2757,
+        "end_column": 19,
+        "end_line": 71,
+        "line": 62,
+        "start": 2227
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-C15397ED3F0A",
+      "generated_block": "RUST-00028",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-DEC-C15397ED3F0A",
+      "span": {
+        "column": 16,
+        "end": 2323,
+        "end_column": 73,
+        "end_line": 63,
+        "line": 62,
+        "start": 2230
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-5740B33F484E",
+      "generated_block": "RUST-00029",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-5740B33F484E",
+      "span": {
+        "column": 16,
+        "end": 2247,
+        "end_column": 33,
+        "end_line": 62,
+        "line": 62,
+        "start": 2230
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-E43A0D3C92E1",
+      "generated_block": "RUST-00030",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-E43A0D3C92E1",
+      "span": {
+        "column": 17,
+        "end": 2291,
+        "end_column": 41,
+        "end_line": 63,
+        "line": 63,
+        "start": 2267
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-48160B62BAEF",
+      "generated_block": "RUST-00031",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-48160B62BAEF",
+      "span": {
+        "column": 46,
+        "end": 2322,
+        "end_column": 72,
+        "end_line": 63,
+        "line": 63,
+        "start": 2296
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-D18352A49A33",
+      "generated_block": "RUST-00032",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-D18352A49A33",
+      "span": {
+        "column": 17,
+        "end": 2364,
+        "end_column": 36,
+        "end_line": 64,
+        "line": 64,
+        "start": 2345
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-78827340A084",
+      "generated_block": "RUST-00033",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-DEC-78827340A084",
+      "span": {
+        "column": 19,
+        "end": 2690,
+        "end_column": 42,
+        "end_line": 69,
+        "line": 66,
+        "start": 2510
+      },
+      "tests": [
+        "TEST-LINK-DEGRADED-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-9197056085FE",
+      "generated_block": "RUST-00034",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-9197056085FE",
+      "span": {
+        "column": 19,
+        "end": 2524,
+        "end_column": 33,
+        "end_line": 66,
+        "line": 66,
+        "start": 2510
+      },
+      "tests": [
+        "TEST-LINK-DEGRADED-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-E3E3882462AC",
+      "generated_block": "RUST-00035",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-E3E3882462AC",
+      "span": {
+        "column": 19,
+        "end": 2567,
+        "end_column": 39,
+        "end_line": 67,
+        "line": 67,
+        "start": 2547
+      },
+      "tests": [
+        "TEST-LINK-DEGRADED-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-CF3B9050C31B",
+      "generated_block": "RUST-00036",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-CF3B9050C31B",
+      "span": {
+        "column": 44,
+        "end": 2594,
+        "end_column": 66,
+        "end_line": 67,
+        "line": 67,
+        "start": 2572
+      },
+      "tests": [
+        "TEST-LINK-DEGRADED-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-15CC65FC0325",
+      "generated_block": "RUST-00037",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-15CC65FC0325",
+      "span": {
+        "column": 19,
+        "end": 2644,
+        "end_column": 46,
+        "end_line": 68,
+        "line": 68,
+        "start": 2617
+      },
+      "tests": [
+        "TEST-LINK-DEGRADED-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-E4D08AF310FC",
+      "generated_block": "RUST-00038",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-E4D08AF310FC",
+      "span": {
+        "column": 19,
+        "end": 2690,
+        "end_column": 42,
+        "end_line": 69,
+        "line": 69,
+        "start": 2667
+      },
+      "tests": [
+        "TEST-LINK-DEGRADED-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-B5D2E3D5D648",
+      "generated_block": "RUST-00039",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-STMT-B5D2E3D5D648",
+      "span": {
+        "column": 17,
+        "end": 2738,
+        "end_column": 43,
+        "end_line": 70,
+        "line": 70,
+        "start": 2712
+      },
+      "tests": [
+        "TEST-LINK-DEGRADED-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-485408464A38",
+      "generated_block": "RUST-00040",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-STMT-485408464A38",
+      "span": {
+        "column": 13,
+        "end": 3085,
+        "end_column": 19,
+        "end_line": 79,
+        "line": 75,
+        "start": 2886
+      },
+      "tests": [
+        "TEST-LINK-LOST-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-C4B7B27E0075",
+      "generated_block": "RUST-00041",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-DEC-C4B7B27E0075",
+      "span": {
+        "column": 16,
+        "end": 3018,
+        "end_column": 43,
+        "end_line": 77,
+        "line": 75,
+        "start": 2889
+      },
+      "tests": [
+        "TEST-LINK-LOST-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-B72FED13362D",
+      "generated_block": "RUST-00042",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-B72FED13362D",
+      "span": {
+        "column": 16,
+        "end": 2903,
+        "end_column": 30,
+        "end_line": 75,
+        "line": 75,
+        "start": 2889
+      },
+      "tests": [
+        "TEST-LINK-LOST-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-07D709DB7F51",
+      "generated_block": "RUST-00043",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-07D709DB7F51",
+      "span": {
+        "column": 17,
+        "end": 2944,
+        "end_column": 37,
+        "end_line": 76,
+        "line": 76,
+        "start": 2924
+      },
+      "tests": [
+        "TEST-LINK-LOST-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-198A1B1EE4CF",
+      "generated_block": "RUST-00044",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-198A1B1EE4CF",
+      "span": {
+        "column": 41,
+        "end": 2970,
+        "end_column": 63,
+        "end_line": 76,
+        "line": 76,
+        "start": 2948
+      },
+      "tests": [
+        "TEST-LINK-LOST-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-B856C7AB9AF6",
+      "generated_block": "RUST-00045",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-COND-B856C7AB9AF6",
+      "span": {
+        "column": 16,
+        "end": 3018,
+        "end_column": 43,
+        "end_line": 77,
+        "line": 77,
+        "start": 2991
+      },
+      "tests": [
+        "TEST-LINK-LOST-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-EAED9383D904",
+      "generated_block": "RUST-00046",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009"
+      ],
+      "source_id": "ASCP-SRC-STMT-EAED9383D904",
+      "span": {
+        "column": 17,
+        "end": 3066,
+        "end_column": 43,
+        "end_line": 78,
+        "line": 78,
+        "start": 3040
+      },
+      "tests": [
+        "TEST-LINK-LOST-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-7980321B634C",
+      "generated_block": "RUST-00047",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-7980321B634C",
+      "span": {
+        "column": 13,
+        "end": 3811,
+        "end_column": 19,
+        "end_line": 94,
+        "line": 82,
+        "start": 3126
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-080D6C64B501",
+      "generated_block": "RUST-00048",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-DEC-080D6C64B501",
+      "span": {
+        "column": 16,
+        "end": 3222,
+        "end_column": 73,
+        "end_line": 83,
+        "line": 82,
+        "start": 3129
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-38A77753C9BB",
+      "generated_block": "RUST-00049",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-38A77753C9BB",
+      "span": {
+        "column": 16,
+        "end": 3146,
+        "end_column": 33,
+        "end_line": 82,
+        "line": 82,
+        "start": 3129
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-816F5A87C37C",
+      "generated_block": "RUST-00050",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-816F5A87C37C",
+      "span": {
+        "column": 17,
+        "end": 3190,
+        "end_column": 41,
+        "end_line": 83,
+        "line": 83,
+        "start": 3166
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-D115437E2970",
+      "generated_block": "RUST-00051",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-D115437E2970",
+      "span": {
+        "column": 46,
+        "end": 3221,
+        "end_column": 72,
+        "end_line": 83,
+        "line": 83,
+        "start": 3195
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-412CB814D6AB",
+      "generated_block": "RUST-00052",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-412CB814D6AB",
+      "span": {
+        "column": 17,
+        "end": 3263,
+        "end_column": 36,
+        "end_line": 84,
+        "line": 84,
+        "start": 3244
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-CAB019D5C1A2",
+      "generated_block": "RUST-00053",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-DEC-CAB019D5C1A2",
+      "span": {
+        "column": 19,
+        "end": 3448,
+        "end_column": 50,
+        "end_line": 88,
+        "line": 85,
+        "start": 3282
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-569BA6F8A5A4",
+      "generated_block": "RUST-00054",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-569BA6F8A5A4",
+      "span": {
+        "column": 19,
+        "end": 3301,
+        "end_column": 38,
+        "end_line": 85,
+        "line": 85,
+        "start": 3282
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-CAE388844A15",
+      "generated_block": "RUST-00055",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-CAE388844A15",
+      "span": {
+        "column": 19,
+        "end": 3347,
+        "end_column": 43,
+        "end_line": 86,
+        "line": 86,
+        "start": 3323
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-5A5880ACA2D4",
+      "generated_block": "RUST-00056",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-5A5880ACA2D4",
+      "span": {
+        "column": 19,
+        "end": 3395,
+        "end_column": 45,
+        "end_line": 87,
+        "line": 87,
+        "start": 3369
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-324E98A1F836",
+      "generated_block": "RUST-00057",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-324E98A1F836",
+      "span": {
+        "column": 19,
+        "end": 3448,
+        "end_column": 50,
+        "end_line": 88,
+        "line": 88,
+        "start": 3417
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-94E73C63A6B1",
+      "generated_block": "RUST-00058",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-94E73C63A6B1",
+      "span": {
+        "column": 17,
+        "end": 3488,
+        "end_column": 35,
+        "end_line": 89,
+        "line": 89,
+        "start": 3470
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-E8E90B8FBB1D",
+      "generated_block": "RUST-00059",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-DEC-E8E90B8FBB1D",
+      "span": {
+        "column": 19,
+        "end": 3710,
+        "end_column": 53,
+        "end_line": 91,
+        "line": 91,
+        "start": 3676
+      },
+      "tests": [
+        "TEST-LINK-RECOVERY-RESET-001",
+        "TEST-LINK-RECOVERY-NO-RESET-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-01D9F1A011F4",
+      "generated_block": "RUST-00060",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-COND-01D9F1A011F4",
+      "span": {
+        "column": 19,
+        "end": 3691,
+        "end_column": 34,
+        "end_line": 91,
+        "line": 91,
+        "start": 3676
+      },
+      "tests": [
+        "TEST-LINK-RECOVERY-RESET-001",
+        "TEST-LINK-RECOVERY-NO-RESET-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-39E43926C012",
+      "generated_block": "RUST-00061",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-COND-39E43926C012",
+      "span": {
+        "column": 39,
+        "end": 3710,
+        "end_column": 53,
+        "end_line": 91,
+        "line": 91,
+        "start": 3696
+      },
+      "tests": [
+        "TEST-LINK-RECOVERY-RESET-001",
+        "TEST-LINK-RECOVERY-NO-RESET-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-D2B8560811F4",
+      "generated_block": "RUST-00062",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-STMT-D2B8560811F4",
+      "span": {
+        "column": 17,
+        "end": 3749,
+        "end_column": 34,
+        "end_line": 92,
+        "line": 92,
+        "start": 3732
+      },
+      "tests": [
+        "TEST-LINK-RECOVERY-RESET-001",
+        "TEST-LINK-RECOVERY-NO-RESET-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-E8FB0D862FC7",
+      "generated_block": "RUST-00063",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-STMT-E8FB0D862FC7",
+      "span": {
+        "column": 17,
+        "end": 3792,
+        "end_column": 43,
+        "end_line": 93,
+        "line": 93,
+        "start": 3766
+      },
+      "tests": [
+        "TEST-LINK-RECOVERY-RESET-001",
+        "TEST-LINK-RECOVERY-NO-RESET-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-56C257A8ED2F",
+      "generated_block": "RUST-00064",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-STMT-56C257A8ED2F",
+      "span": {
+        "column": 13,
+        "end": 4173,
+        "end_column": 19,
+        "end_line": 102,
+        "line": 98,
+        "start": 3954
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-9DEE36C5AD49",
+      "generated_block": "RUST-00065",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-DEC-9DEE36C5AD49",
+      "span": {
+        "column": 16,
+        "end": 4106,
+        "end_column": 43,
+        "end_line": 100,
+        "line": 98,
+        "start": 3957
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-3BDDB32D00D8",
+      "generated_block": "RUST-00066",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-COND-3BDDB32D00D8",
+      "span": {
+        "column": 16,
+        "end": 3972,
+        "end_column": 31,
+        "end_line": 98,
+        "line": 98,
+        "start": 3957
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-441C1085C0BC",
+      "generated_block": "RUST-00067",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-COND-441C1085C0BC",
+      "span": {
+        "column": 36,
+        "end": 3991,
+        "end_column": 50,
+        "end_line": 98,
+        "line": 98,
+        "start": 3977
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-28BAD0606931",
+      "generated_block": "RUST-00068",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-COND-28BAD0606931",
+      "span": {
+        "column": 17,
+        "end": 4032,
+        "end_column": 37,
+        "end_line": 99,
+        "line": 99,
+        "start": 4012
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-E82911A939C0",
+      "generated_block": "RUST-00069",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-COND-E82911A939C0",
+      "span": {
+        "column": 41,
+        "end": 4058,
+        "end_column": 63,
+        "end_line": 99,
+        "line": 99,
+        "start": 4036
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-32A566D26462",
+      "generated_block": "RUST-00070",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-COND-32A566D26462",
+      "span": {
+        "column": 16,
+        "end": 4106,
+        "end_column": 43,
+        "end_line": 100,
+        "line": 100,
+        "start": 4079
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-414DE608629A",
+      "generated_block": "RUST-00071",
+      "requirements": [
+        "LINK-HLR-008",
+        "LINK-HLR-009",
+        "LINK-HLR-010"
+      ],
+      "source_id": "ASCP-SRC-STMT-414DE608629A",
+      "span": {
+        "column": 17,
+        "end": 4154,
+        "end_column": 43,
+        "end_line": 101,
+        "line": 101,
+        "start": 4128
+      },
+      "tests": [
+        "TEST-LINK-LOCKOUT-RECOVERY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-C9718E3467B7",
+      "generated_block": "RUST-00072",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-C9718E3467B7",
+      "span": {
+        "column": 5,
+        "end": 4223,
+        "end_column": 30,
+        "end_line": 105,
+        "line": 105,
+        "start": 4198
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001",
+        "TEST-LINK-RUNTIME-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-14393895584B",
+      "generated_block": "RUST-00073",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-STMT-14393895584B",
+      "span": {
+        "column": 1,
+        "end": 4442,
+        "end_column": 7,
+        "end_line": 111,
+        "line": 109,
+        "start": 4361
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-03AE84856B0F",
+      "generated_block": "RUST-00074",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-DEC-03AE84856B0F",
+      "span": {
+        "column": 4,
+        "end": 4400,
+        "end_column": 40,
+        "end_line": 109,
+        "line": 109,
+        "start": 4364
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-1144A3531C95",
+      "generated_block": "RUST-00075",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-COND-1144A3531C95",
+      "span": {
+        "column": 4,
+        "end": 4381,
+        "end_column": 21,
+        "end_line": 109,
+        "line": 109,
+        "start": 4364
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-28DB73F26FB0",
+      "generated_block": "RUST-00076",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-COND-28DB73F26FB0",
+      "span": {
+        "column": 25,
+        "end": 4400,
+        "end_column": 40,
+        "end_line": 109,
+        "line": 109,
+        "start": 4385
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-C9E2D8A022F0",
+      "generated_block": "RUST-00077",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-013",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-STMT-C9E2D8A022F0",
+      "span": {
+        "column": 5,
+        "end": 4435,
+        "end_column": 30,
+        "end_line": 110,
+        "line": 110,
+        "start": 4410
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001",
+        "TEST-LINK-BOTH-UNAVAILABLE-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-E339B90EFC08",
+      "generated_block": "RUST-00078",
+      "requirements": [
+        "EXEC-REQ-OUTPUT-DEFAULTS"
+      ],
+      "source_id": "ASCP-SRC-STMT-E339B90EFC08",
+      "span": {
+        "column": 1,
+        "end": 4569,
+        "end_column": 24,
+        "end_line": 115,
+        "line": 115,
+        "start": 4546
+      },
+      "tests": [
+        "TEST-LINK-OUTPUT-DEFAULTS"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-6501D1DD4935",
+      "generated_block": "RUST-00079",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-6501D1DD4935",
+      "span": {
+        "column": 1,
+        "end": 4594,
+        "end_column": 25,
+        "end_line": 116,
+        "line": 116,
+        "start": 4570
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-0BD1DE8869A3",
+      "generated_block": "RUST-00080",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-0BD1DE8869A3",
+      "span": {
+        "column": 1,
+        "end": 4621,
+        "end_column": 27,
+        "end_line": 117,
+        "line": 117,
+        "start": 4595
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-8C6ADF7B028D",
+      "generated_block": "RUST-00081",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-8C6ADF7B028D",
+      "span": {
+        "column": 1,
+        "end": 4653,
+        "end_column": 32,
+        "end_line": 118,
+        "line": 118,
+        "start": 4622
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-88790EE5C92A",
+      "generated_block": "RUST-00082",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-88790EE5C92A",
+      "span": {
+        "column": 1,
+        "end": 4688,
+        "end_column": 35,
+        "end_line": 119,
+        "line": 119,
+        "start": 4654
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-39F8E8639950",
+      "generated_block": "RUST-00083",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-39F8E8639950",
+      "span": {
+        "column": 1,
+        "end": 4718,
+        "end_column": 30,
+        "end_line": 120,
+        "line": 120,
+        "start": 4689
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-63250DD6E3B2",
+      "generated_block": "RUST-00084",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-63250DD6E3B2",
+      "span": {
+        "column": 1,
+        "end": 4753,
+        "end_column": 35,
+        "end_line": 121,
+        "line": 121,
+        "start": 4719
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-52D3D83A6B1A",
+      "generated_block": "RUST-00085",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-52D3D83A6B1A",
+      "span": {
+        "column": 1,
+        "end": 4792,
+        "end_column": 39,
+        "end_line": 122,
+        "line": 122,
+        "start": 4754
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-029FD17D66EA",
+      "generated_block": "RUST-00086",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-029FD17D66EA",
+      "span": {
+        "column": 1,
+        "end": 4818,
+        "end_column": 26,
+        "end_line": 123,
+        "line": 123,
+        "start": 4793
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-48AD42CC4969",
+      "generated_block": "RUST-00087",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-48AD42CC4969",
+      "span": {
+        "column": 1,
+        "end": 6077,
+        "end_column": 9,
+        "end_line": 153,
+        "line": 125,
+        "start": 4820
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-69E1B6FD8A70",
+      "generated_block": "RUST-00088",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-69E1B6FD8A70",
+      "span": {
+        "column": 9,
+        "end": 4891,
+        "end_column": 40,
+        "end_line": 127,
+        "line": 127,
+        "start": 4860
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-9351A2ED74F5",
+      "generated_block": "RUST-00089",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-9351A2ED74F5",
+      "span": {
+        "column": 9,
+        "end": 5009,
+        "end_column": 31,
+        "end_line": 130,
+        "line": 130,
+        "start": 4987
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-PRIMARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-E1EB5BEBC18A",
+      "generated_block": "RUST-00090",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-E1EB5BEBC18A",
+      "span": {
+        "column": 9,
+        "end": 5041,
+        "end_column": 32,
+        "end_line": 131,
+        "line": 131,
+        "start": 5018
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-PRIMARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-D794F39C615E",
+      "generated_block": "RUST-00091",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-D794F39C615E",
+      "span": {
+        "column": 9,
+        "end": 5082,
+        "end_column": 41,
+        "end_line": 132,
+        "line": 132,
+        "start": 5050
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-PRIMARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-3C3A46196002",
+      "generated_block": "RUST-00092",
+      "requirements": [
+        "LINK-HLR-002",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-3C3A46196002",
+      "span": {
+        "column": 9,
+        "end": 5124,
+        "end_column": 42,
+        "end_line": 133,
+        "line": 133,
+        "start": 5091
+      },
+      "tests": [
+        "TEST-LINK-STARTUP-PRIMARY-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-A9D3D2D2DF01",
+      "generated_block": "RUST-00093",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-A9D3D2D2DF01",
+      "span": {
+        "column": 9,
+        "end": 5416,
+        "end_column": 75,
+        "end_line": 137,
+        "line": 136,
+        "start": 5293
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-7E9943E265E4",
+      "generated_block": "RUST-00094",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-7E9943E265E4",
+      "span": {
+        "column": 9,
+        "end": 5464,
+        "end_column": 48,
+        "end_line": 138,
+        "line": 138,
+        "start": 5425
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-F1D9BC0787E8",
+      "generated_block": "RUST-00095",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-F1D9BC0787E8",
+      "span": {
+        "column": 9,
+        "end": 5545,
+        "end_column": 81,
+        "end_line": 139,
+        "line": 139,
+        "start": 5473
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-38E622DEB1D6",
+      "generated_block": "RUST-00096",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-38E622DEB1D6",
+      "span": {
+        "column": 9,
+        "end": 5585,
+        "end_column": 40,
+        "end_line": 140,
+        "line": 140,
+        "start": 5554
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-C5DFEB3D124D",
+      "generated_block": "RUST-00097",
+      "requirements": [
+        "LINK-HLR-003",
+        "LINK-HLR-004",
+        "LINK-HLR-006"
+      ],
+      "source_id": "ASCP-SRC-STMT-C5DFEB3D124D",
+      "span": {
+        "column": 9,
+        "end": 5622,
+        "end_column": 37,
+        "end_line": 141,
+        "line": 141,
+        "start": 5594
+      },
+      "tests": [
+        "TEST-LINK-PRIMARY-FAILOVER-001",
+        "TEST-LINK-QUALITY-DEGRADED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-1A656E3E8CF7",
+      "generated_block": "RUST-00098",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-STMT-1A656E3E8CF7",
+      "span": {
+        "column": 9,
+        "end": 5802,
+        "end_column": 35,
+        "end_line": 144,
+        "line": 144,
+        "start": 5776
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-1D79B159A9EB",
+      "generated_block": "RUST-00099",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-STMT-1D79B159A9EB",
+      "span": {
+        "column": 9,
+        "end": 5844,
+        "end_column": 42,
+        "end_line": 145,
+        "line": 145,
+        "start": 5811
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-3A8D9B1590D7",
+      "generated_block": "RUST-00100",
+      "requirements": [
+        "LINK-HLR-005",
+        "LINK-HLR-007",
+        "LINK-HLR-014"
+      ],
+      "source_id": "ASCP-SRC-STMT-3A8D9B1590D7",
+      "span": {
+        "column": 9,
+        "end": 5881,
+        "end_column": 37,
+        "end_line": 146,
+        "line": 146,
+        "start": 5853
+      },
+      "tests": [
+        "TEST-LINK-LOSS-PERSISTED-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-94E7C31BC9A9",
+      "generated_block": "RUST-00101",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-94E7C31BC9A9",
+      "span": {
+        "column": 9,
+        "end": 5938,
+        "end_column": 35,
+        "end_line": 148,
+        "line": 148,
+        "start": 5912
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-082E6D18F5E4",
+      "generated_block": "RUST-00102",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-082E6D18F5E4",
+      "span": {
+        "column": 9,
+        "end": 5978,
+        "end_column": 40,
+        "end_line": 149,
+        "line": 149,
+        "start": 5947
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-794114E2D92B",
+      "generated_block": "RUST-00103",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-794114E2D92B",
+      "span": {
+        "column": 9,
+        "end": 6026,
+        "end_column": 35,
+        "end_line": 151,
+        "line": 151,
+        "start": 6000
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-A72BEC58DCCD",
+      "generated_block": "RUST-00104",
+      "requirements": [
+        "ASCP-REQ-GENERIC-EXECUTION"
+      ],
+      "source_id": "ASCP-SRC-STMT-A72BEC58DCCD",
+      "span": {
+        "column": 9,
+        "end": 6068,
+        "end_column": 42,
+        "end_line": 152,
+        "line": 152,
+        "start": 6035
+      },
+      "tests": [
+        "TEST-GENERIC-EXECUTION"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-88B97ACB290A",
+      "generated_block": "RUST-00105",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-88B97ACB290A",
+      "span": {
+        "column": 1,
+        "end": 6482,
+        "end_column": 7,
+        "end_line": 165,
+        "line": 156,
+        "start": 6185
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-DEC-7E345C4AF44F",
+      "generated_block": "RUST-00106",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-DEC-7E345C4AF44F",
+      "span": {
+        "column": 4,
+        "end": 6205,
+        "end_column": 21,
+        "end_line": 156,
+        "line": 156,
+        "start": 6188
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-COND-944024658FE0",
+      "generated_block": "RUST-00107",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-COND-944024658FE0",
+      "span": {
+        "column": 4,
+        "end": 6205,
+        "end_column": 21,
+        "end_line": 156,
+        "line": 156,
+        "start": 6188
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-2FCFC820C326",
+      "generated_block": "RUST-00108",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-2FCFC820C326",
+      "span": {
+        "column": 5,
+        "end": 6238,
+        "end_column": 28,
+        "end_line": 157,
+        "line": 157,
+        "start": 6215
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-115F523F0F94",
+      "generated_block": "RUST-00109",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-115F523F0F94",
+      "span": {
+        "column": 5,
+        "end": 6267,
+        "end_column": 29,
+        "end_line": 158,
+        "line": 158,
+        "start": 6243
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-FAE0764112FF",
+      "generated_block": "RUST-00110",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-FAE0764112FF",
+      "span": {
+        "column": 5,
+        "end": 6298,
+        "end_column": 31,
+        "end_line": 159,
+        "line": 159,
+        "start": 6272
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-B42D768495B4",
+      "generated_block": "RUST-00111",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-B42D768495B4",
+      "span": {
+        "column": 5,
+        "end": 6334,
+        "end_column": 36,
+        "end_line": 160,
+        "line": 160,
+        "start": 6303
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-A93938A69075",
+      "generated_block": "RUST-00112",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-A93938A69075",
+      "span": {
+        "column": 5,
+        "end": 6372,
+        "end_column": 38,
+        "end_line": 161,
+        "line": 161,
+        "start": 6339
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-7F61268DFDAA",
+      "generated_block": "RUST-00113",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-7F61268DFDAA",
+      "span": {
+        "column": 5,
+        "end": 6405,
+        "end_column": 33,
+        "end_line": 162,
+        "line": 162,
+        "start": 6377
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-82C7DCC99C3A",
+      "generated_block": "RUST-00114",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-82C7DCC99C3A",
+      "span": {
+        "column": 5,
+        "end": 6444,
+        "end_column": 39,
+        "end_line": 163,
+        "line": 163,
+        "start": 6410
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    },
+    {
+      "air_id": "AIR-STMT-93079F21BA07",
+      "generated_block": "RUST-00115",
+      "requirements": [
+        "LINK-HLR-011",
+        "LINK-HLR-012"
+      ],
+      "source_id": "ASCP-SRC-STMT-93079F21BA07",
+      "span": {
+        "column": 5,
+        "end": 6475,
+        "end_column": 31,
+        "end_line": 164,
+        "line": 164,
+        "start": 6449
+      },
+      "tests": [
+        "TEST-LINK-INVALID-001"
+      ]
+    }
+  ],
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-FAF49B35395C",
+  "schema_version": "AEROST-SCHEMA-0.2"
+}

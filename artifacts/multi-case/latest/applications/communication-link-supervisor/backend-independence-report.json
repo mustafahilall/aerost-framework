@@ -1,0 +1,10 @@
+{
+  "compiled": true,
+  "forbidden_reference_calls": [],
+  "generated_from_air": true,
+  "passed": true,
+  "reference_executor_called": false,
+  "separate_cargo_crate": true,
+  "source_map_complete": true,
+  "unmapped_air_ids": []
+}

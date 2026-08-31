@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "application": {
+      "properties": {
+        "air_artifact": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "input_domain": {
+          "type": "string"
+        },
+        "manifest": {
+          "type": "string"
+        },
+        "manifest_sha256": {
+          "type": "string"
+        },
+        "mutation_profile": {
+          "type": "string"
+        },
+        "profile_version": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "string"
+        },
+        "runtime_fault_policy": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "profile_version",
+        "manifest",
+        "manifest_sha256",
+        "source",
+        "requirements",
+        "runtime_fault_policy",
+        "input_domain",
+        "mutation_profile",
+        "air_artifact"
+      ],
+      "type": "object"
+    },
+    "assurance_obligations": {
+      "type": "object"
+    },
+    "assurance_suite_comparison": {
+      "type": "object"
+    },
+    "automatic_test_synthesis": {
+      "type": "object"
+    },
+    "backend_independence": {
+      "type": "object"
+    },
+    "bounded_input_domain": {
+      "type": "object"
+    },
+    "conformance": {
+      "type": "object"
+    },
+    "coverage": {
+      "type": "object"
+    },
+    "differential": {
+      "type": "object"
+    },
+    "executed_cycles": {
+      "type": "integer"
+    },
+    "expressive_adequacy": {
+      "type": "object"
+    },
+    "external_executor_independence": {
+      "type": "object"
+    },
+    "host_timing": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "mcdc": {
+      "type": "object"
+    },
+    "mutation": {
+      "type": "object"
+    },
+    "mutation_aware_suite_reduction": {
+      "type": "object"
+    },
+    "obligation_only_suite_reduction": {
+      "type": "object"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "reproducibility": {
+      "type": "object"
+    },
+    "runtime_fault_policy": {
+      "type": "object"
+    },
+    "scenario_count": {
+      "type": "integer"
+    },
+    "three_way_differential": {
+      "type": "object"
+    },
+    "traceability": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "application",
+    "profile_version",
+    "scenario_count",
+    "executed_cycles",
+    "differential",
+    "coverage",
+    "mcdc",
+    "mutation",
+    "traceability",
+    "expressive_adequacy",
+    "reproducibility",
+    "host_timing",
+    "conformance",
+    "backend_independence",
+    "runtime_fault_policy",
+    "three_way_differential",
+    "external_executor_independence",
+    "assurance_obligations",
+    "bounded_input_domain",
+    "automatic_test_synthesis",
+    "obligation_only_suite_reduction",
+    "mutation_aware_suite_reduction",
+    "assurance_suite_comparison"
+  ],
+  "type": "object"
+}

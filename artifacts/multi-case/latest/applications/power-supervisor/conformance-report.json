@@ -1,0 +1,81 @@
+{
+  "accepted_compiled": 4,
+  "accepted_total": 4,
+  "complete": true,
+  "passed": 8,
+  "records": [
+    {
+      "accepted": true,
+      "compiled": true,
+      "diagnostic": null,
+      "expected_accept": true,
+      "file": "P-BOOL-DECL-001.ascp",
+      "generated": true,
+      "passed": true
+    },
+    {
+      "accepted": true,
+      "compiled": true,
+      "diagnostic": null,
+      "expected_accept": true,
+      "file": "P-COMMENT-001.ascp",
+      "generated": true,
+      "passed": true
+    },
+    {
+      "accepted": true,
+      "compiled": true,
+      "diagnostic": null,
+      "expected_accept": true,
+      "file": "P-ENUM-STATE-001.ascp",
+      "generated": true,
+      "passed": true
+    },
+    {
+      "accepted": true,
+      "compiled": true,
+      "diagnostic": null,
+      "expected_accept": true,
+      "file": "P-LIMITED-CASE-001.ascp",
+      "generated": true,
+      "passed": true
+    },
+    {
+      "accepted": false,
+      "compiled": false,
+      "diagnostic": "invalid type REAL at 3:15",
+      "expected_accept": false,
+      "file": "P-FLOAT-001.ascp",
+      "generated": false,
+      "passed": true
+    },
+    {
+      "accepted": false,
+      "compiled": false,
+      "diagnostic": "expected TRANSITION_STAGE, found OUTPUT_STAGE at 11:1",
+      "expected_accept": false,
+      "file": "P-STAGE-ORDER-001.ascp",
+      "generated": false,
+      "passed": true
+    },
+    {
+      "accepted": false,
+      "compiled": false,
+      "diagnostic": "semantic analysis failed:",
+      "expected_accept": false,
+      "file": "P-STATE-INIT-001.ascp",
+      "generated": false,
+      "passed": true
+    },
+    {
+      "accepted": false,
+      "compiled": false,
+      "diagnostic": "expected IDENT, found WHILE at 12:1",
+      "expected_accept": false,
+      "file": "P-WHILE-001.ascp",
+      "generated": false,
+      "passed": true
+    }
+  ],
+  "total": 8
+}

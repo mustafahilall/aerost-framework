@@ -1,0 +1,18 @@
+TYPE Mode :
+(INIT, RUN);
+END_TYPE
+PROGRAM EnumState
+VAR_INPUT
+    Ready : BOOL;
+END_VAR
+VAR_OUTPUT
+    Active : BOOL;
+END_VAR
+VAR_STATE
+    State : Mode := INIT;
+END_VAR
+TRANSITION_STAGE
+IF Ready THEN State := RUN; END_IF;
+OUTPUT_STAGE
+Active := State = RUN;
+END_PROGRAM

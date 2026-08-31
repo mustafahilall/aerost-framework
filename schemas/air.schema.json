@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "profile_version": {
+      "type": "string"
+    },
+    "program": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "output_stage": {
+          "type": "array"
+        },
+        "outputs": {
+          "type": "array"
+        },
+        "states": {
+          "type": "array"
+        },
+        "transition_stage": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "inputs",
+        "outputs",
+        "states",
+        "transition_stage",
+        "output_stage"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "execution_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "program",
+        "runtime_fault_policy",
+        "diagnostic_policy",
+        "assurance_obligations"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string"
+        },
+        "program": {
+          "type": "string"
+        },
+        "runtime_fault_policy": {
+          "type": "object"
+        },
+        "diagnostic_policy": {
+          "type": "object"
+        },
+        "assurance_obligations": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_version",
+    "execution_contract",
+    "program"
+  ],
+  "type": "object"
+}

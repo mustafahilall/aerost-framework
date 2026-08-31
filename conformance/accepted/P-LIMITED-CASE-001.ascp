@@ -1,0 +1,22 @@
+TYPE Mode :
+(A, B);
+END_TYPE
+PROGRAM LimitedCase
+VAR_INPUT
+    SelectB : BOOL;
+END_VAR
+VAR_OUTPUT
+    IsB : BOOL;
+END_VAR
+VAR_STATE
+    State : Mode := A;
+END_VAR
+TRANSITION_STAGE
+IF SelectB THEN State := B; END_IF;
+OUTPUT_STAGE
+IsB := FALSE;
+CASE State OF
+A: IsB := FALSE;
+B: IsB := TRUE;
+END_CASE;
+END_PROGRAM

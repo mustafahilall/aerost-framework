@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "air_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "domain_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "domain_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "estimated_full_state_transition_evaluations": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "input_count": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "input_vector_count": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "passed": {
+      "const": true
+    },
+    "program_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "AEROST-INPUT-DOMAIN-VALIDATION-0.1"
+    },
+    "search_bounds": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_reachable_states": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "maximum_sequence_depth": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "maximum_transition_evaluations": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maximum_sequence_depth",
+        "maximum_reachable_states",
+        "maximum_transition_evaluations"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "program_id",
+    "domain_id",
+    "air_sha256",
+    "domain_sha256",
+    "input_count",
+    "input_vector_count",
+    "search_bounds",
+    "estimated_full_state_transition_evaluations",
+    "passed"
+  ],
+  "type": "object"
+}

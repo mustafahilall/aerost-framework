@@ -1,0 +1,22 @@
+{
+  "schema_version": "AEROST-SCHEMA-0.2",
+  "requirements": [
+    {"id":"LINK-HLR-001","text":"After reset, remain in INITIALIZING until initialization, input validity, link availability, and command-channel authentication permit operation."},
+    {"id":"LINK-HLR-002","text":"In NOMINAL, prefer the primary communication link and permit mission progression."},
+    {"id":"LINK-HLR-003","text":"When the primary link is unavailable and the secondary link remains available, select the secondary link."},
+    {"id":"LINK-HLR-004","text":"Enter DEGRADED when link quality is degraded, either link is unavailable, or command-channel authentication is lost."},
+    {"id":"LINK-HLR-005","text":"Enter LOST_LINK when link loss persists or both communication links are unavailable."},
+    {"id":"LINK-HLR-006","text":"Command permission shall require an authenticated command channel and at least one available communication link."},
+    {"id":"LINK-HLR-007","text":"LOST_LINK shall request the declared lost-link procedure and return-to-home action in the same logical cycle."},
+    {"id":"LINK-HLR-008","text":"DEGRADED, LOST_LINK, and LOCKOUT shall not transition directly to NOMINAL."},
+    {"id":"LINK-HLR-009","text":"Recovery shall pass through RECOVERY_PENDING after stable communication conditions are observed."},
+    {"id":"LINK-HLR-010","text":"Return to NOMINAL shall require stable recovery and an authorized reset."},
+    {"id":"LINK-HLR-011","text":"Invalid or stale required inputs shall invoke the conservative communication-output policy."},
+    {"id":"LINK-HLR-012","text":"A blocking runtime fault shall inhibit normal commit and invoke the declared communication fault policy."},
+    {"id":"LINK-HLR-013","text":"State transitions and latched link faults shall produce bounded diagnostic identities."},
+    {"id":"LINK-HLR-014","text":"A LOST_LINK or LOCKOUT state shall latch the blocking communication fault until declared recovery conditions clear it."},
+    {"id":"EXEC-REQ-OUTPUT-DEFAULTS","text":"Every output shall receive an unconditional deterministic default before conditional output logic."},
+    {"id":"ASCP-REQ-GENERIC-EXECUTION","text":"Every supported executable statement shall be represented in AIR and executable by the reference interpreter and generated backend."},
+    {"id":"BUILD-REQ-001","text":"Identical controlled source, tool version, and configuration shall produce byte-identical authoritative artifacts."}
+  ]
+}

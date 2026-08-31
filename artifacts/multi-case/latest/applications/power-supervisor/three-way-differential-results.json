@@ -1,0 +1,48 @@
+{
+  "behavior_equivalence_percent": 100.0,
+  "equivalent_cycles": 53,
+  "executed_cycles": 53,
+  "execution_path_count": 3,
+  "execution_paths": [
+    "reference_interpreter",
+    "generated_rust",
+    "external_executor"
+  ],
+  "mismatch_count": 0,
+  "mismatches": [],
+  "pairwise": {
+    "generated_rust_vs_external_executor": {
+      "behavior_equivalence_percent": 100.0,
+      "candidate_path": "external_executor",
+      "equivalent_cycles": 53,
+      "executed_cycles": 53,
+      "expected_path": "generated_rust",
+      "mismatch_count": 0,
+      "mismatches": [],
+      "passed": true
+    },
+    "reference_vs_external_executor": {
+      "behavior_equivalence_percent": 100.0,
+      "candidate_path": "external_executor",
+      "equivalent_cycles": 53,
+      "executed_cycles": 53,
+      "expected_path": "reference_interpreter",
+      "mismatch_count": 0,
+      "mismatches": [],
+      "passed": true
+    },
+    "reference_vs_generated_rust": {
+      "behavior_equivalence_percent": 100.0,
+      "candidate_path": "generated_rust",
+      "equivalent_cycles": 53,
+      "executed_cycles": 53,
+      "expected_path": "reference_interpreter",
+      "mismatch_count": 0,
+      "mismatches": [],
+      "passed": true
+    }
+  },
+  "passed": true,
+  "profile_version": "ASCP-0.2",
+  "schema_version": "AEROST-SCHEMA-0.2"
+}

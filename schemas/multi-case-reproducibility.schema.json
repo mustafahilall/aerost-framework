@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerost.dev/schemas/multi-case-reproducibility.schema.json",
+  "title": "AEROST Multi-Case Reproducibility",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "enabled",
+    "files_compared",
+    "files_identical",
+    "byte_identical",
+    "mismatches"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "AEROST-MULTI-CASE-REPRODUCIBILITY-0.1"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "files_compared": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "files_identical": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "byte_identical": {
+      "type": "boolean"
+    },
+    "mismatches": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

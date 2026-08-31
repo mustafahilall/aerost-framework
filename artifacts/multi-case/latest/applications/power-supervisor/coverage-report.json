@@ -1,0 +1,39 @@
+{
+  "case_arms_reached": [
+    "AIR-STMT-22EA36CE7782::CRITICAL",
+    "AIR-STMT-22EA36CE7782::DEGRADED",
+    "AIR-STMT-22EA36CE7782::ENERGY_CONSERVATION",
+    "AIR-STMT-22EA36CE7782::INITIALIZING",
+    "AIR-STMT-22EA36CE7782::LOCKOUT",
+    "AIR-STMT-22EA36CE7782::NORMAL",
+    "AIR-STMT-22EA36CE7782::RECOVERY_PENDING",
+    "AIR-STMT-A2C5E796C1C9::CRITICAL",
+    "AIR-STMT-A2C5E796C1C9::DEGRADED",
+    "AIR-STMT-A2C5E796C1C9::ENERGY_CONSERVATION",
+    "AIR-STMT-A2C5E796C1C9::INITIALIZING",
+    "AIR-STMT-A2C5E796C1C9::LOCKOUT",
+    "AIR-STMT-A2C5E796C1C9::NORMAL",
+    "AIR-STMT-A2C5E796C1C9::RECOVERY_PENDING"
+  ],
+  "claim_critical_closed": true,
+  "claim_critical_open_count": 0,
+  "complete": true,
+  "condition": {
+    "both_outcomes": 74,
+    "percent": 100.0,
+    "total": 74
+  },
+  "coverage_scope": "all executable AIR statements, both outcomes of every AIR decision, and both outcomes of every atomic AIR condition",
+  "decision": {
+    "both_outcomes": 29,
+    "percent": 100.0,
+    "total": 29
+  },
+  "statement": {
+    "percent": 100.0,
+    "reached": 79,
+    "total": 79
+  },
+  "uncovered_count": 0,
+  "uncovered_items": []
+}

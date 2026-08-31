@@ -1,0 +1,917 @@
+{
+  "algorithm": {
+    "name": "aerost-deterministic-mutation-aware-greedy-multicover",
+    "selection": "maximum remaining obligation-and-mutation-slot gain",
+    "tie_breaking": [
+      "maximum mutation gain",
+      "maximum obligation gain",
+      "minimum cycle count",
+      "lexicographically smallest scenario id"
+    ],
+    "version": "0.1.0"
+  },
+  "claim_boundary": {
+    "global_minimum_claimed": false,
+    "mutation_profile_driven": true,
+    "mutation_scope": "8 application-profile-controlled non-equivalent AIR mutants",
+    "operators": {
+      "MUT-COMMAND-DEFAULT": "command-default",
+      "MUT-INVALID-GUARD": "invalid-guard",
+      "MUT-INVALID-OUTPUT-GUARD": "invalid-output-guard",
+      "MUT-LOST-LINK-OPERATOR": "lost-link-operator",
+      "MUT-LOST-PROCEDURE-DELETE": "lost-procedure-delete",
+      "MUT-RECOVERY-ENTRY-GUARD": "recovery-entry-guard",
+      "MUT-SWAP-LINK-SELECTION": "swap-link-selection",
+      "MUT-WEAKEN-LINK-RECOVERY": "weaken-link-recovery"
+    }
+  },
+  "deterministic": true,
+  "input_summary": {
+    "controlled_mutants": 8,
+    "cycles": 422,
+    "obligations": 211,
+    "required_obligation_witness_slots": 218,
+    "scenarios": 218,
+    "total_required_slots": 226
+  },
+  "mcdc_summary": {
+    "obligations": 7,
+    "required_witnesses_per_obligation": 2,
+    "witness_counts": {
+      "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-64F15C3C5A02": 2,
+      "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7CE862BD5FCD": 2,
+      "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7E9750C7D61B": 2,
+      "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-BED7779F4424": 2,
+      "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-4089AB0D6750": 2,
+      "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-7320AD49DCC7": 2,
+      "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-793843FC2D65": 2
+    }
+  },
+  "mutation_summary": {
+    "killed": 8,
+    "score_percent": 100.0,
+    "selected_detection_cases": {
+      "MUT-COMMAND-DEFAULT": [
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-0356A8F55DA3"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-079386EC830A-A"
+        },
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-0C8788465C61"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-0E3CAB19ABAE"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-1B63975D6222-A"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-2026B77AD385-A"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-3E12FC6DE2D4"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-4C0DC124AB8C"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-5C5E28045614-A"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-5D4EF2FEDB9A"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-8308D1130A7B-B"
+        },
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-8730A5682A5B"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-8F065B691DC6"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-BC724870AAFC"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-CA02F73989C9-A"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-D2CE9B658A53-A"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-DBC272C66760"
+        },
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-FF0B490E9C24"
+        }
+      ],
+      "MUT-INVALID-GUARD": [
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-0C824AC5736A"
+        }
+      ],
+      "MUT-INVALID-OUTPUT-GUARD": [
+        {
+          "cycle": 0,
+          "scenario_id": "SYN-0C824AC5736A"
+        }
+      ],
+      "MUT-LOST-LINK-OPERATOR": [
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-0356A8F55DA3"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-079386EC830A-A"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-1B63975D6222-A"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-8308D1130A7B-B"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-DBC272C66760"
+        }
+      ],
+      "MUT-LOST-PROCEDURE-DELETE": [
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-0356A8F55DA3"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-079386EC830A-A"
+        },
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-0C8788465C61"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-1B63975D6222-A"
+        },
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-5D4EF2FEDB9A"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-8308D1130A7B-B"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-DBC272C66760"
+        }
+      ],
+      "MUT-RECOVERY-ENTRY-GUARD": [
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-A0DEE8309CFE"
+        }
+      ],
+      "MUT-SWAP-LINK-SELECTION": [
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-0C8788465C61"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-1B22F98117D3-A"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-1D5D7D8EB77E"
+        },
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-3E12FC6DE2D4"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-524AA4601452"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-8730A5682A5B"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-886C6BC871B2-B"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-99806F5B93C1"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-A0DEE8309CFE"
+        },
+        {
+          "cycle": 1,
+          "scenario_id": "SYN-CAE11E7875BE-B"
+        },
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-FF0B490E9C24"
+        }
+      ],
+      "MUT-WEAKEN-LINK-RECOVERY": [
+        {
+          "cycle": 2,
+          "scenario_id": "SYN-BC724870AAFC"
+        }
+      ]
+    },
+    "surviving": [],
+    "total": 8
+  },
+  "output_summary": {
+    "covered_obligation_witness_slots": 218,
+    "covered_obligations": 211,
+    "cycle_reduction_percent": 84.123223,
+    "killed_mutants": 8,
+    "scenario_reduction_percent": 85.321101,
+    "selected_cycles": 67,
+    "selected_scenarios": 32
+  },
+  "passed": true,
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-FAF49B35395C",
+  "reduction_run_id": "MUTATION-REDUCE-RUN-7F355C06B300",
+  "schema_version": "AEROST-MUTATION-AWARE-SUITE-REDUCTION-REPORT-0.1",
+  "selection_trace": [
+    {
+      "covered_obligation_witness_slots_after_selection": 82,
+      "cycle_count": 3,
+      "gain": 84,
+      "killed_mutants_after_selection": 2,
+      "mutation_gain": 2,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-3210100F6FEE",
+        "OBL-CASE-AIR-CASEARM-5314E37D9039",
+        "OBL-CASE-AIR-CASEARM-A6A75BD70C12",
+        "OBL-CASE-AIR-CASEARM-AA72EE6244F5",
+        "OBL-CASE-AIR-CASEARM-C303ECB4F360",
+        "OBL-CASE-AIR-CASEARM-CAEFC1E115B8",
+        "OBL-COND-AIR-COND-057158D99548-TRUE",
+        "OBL-COND-AIR-COND-1144A3531C95-FALSE",
+        "OBL-COND-AIR-COND-15CC65FC0325-TRUE",
+        "OBL-COND-AIR-COND-18C272CB4C29-FALSE",
+        "OBL-COND-AIR-COND-28DB73F26FB0-FALSE",
+        "OBL-COND-AIR-COND-4089AB0D6750-FALSE",
+        "OBL-COND-AIR-COND-48160B62BAEF-FALSE",
+        "OBL-COND-AIR-COND-52B17750FFC7-TRUE",
+        "OBL-COND-AIR-COND-5740B33F484E-FALSE",
+        "OBL-COND-AIR-COND-64F15C3C5A02-FALSE",
+        "OBL-COND-AIR-COND-71AF59F91436-TRUE",
+        "OBL-COND-AIR-COND-7320AD49DCC7-FALSE",
+        "OBL-COND-AIR-COND-793843FC2D65-TRUE",
+        "OBL-COND-AIR-COND-7CE862BD5FCD-TRUE",
+        "OBL-COND-AIR-COND-7E9750C7D61B-TRUE",
+        "OBL-COND-AIR-COND-8A22B1F9BCF6-FALSE",
+        "OBL-COND-AIR-COND-9197056085FE-TRUE",
+        "OBL-COND-AIR-COND-944024658FE0-FALSE",
+        "OBL-COND-AIR-COND-BED7779F4424-TRUE",
+        "OBL-COND-AIR-COND-CF3B9050C31B-TRUE",
+        "OBL-COND-AIR-COND-E3E3882462AC-TRUE",
+        "OBL-COND-AIR-COND-E43A0D3C92E1-FALSE",
+        "OBL-COND-AIR-COND-E4D08AF310FC-TRUE",
+        "OBL-DEC-AIR-DEC-03AE84856B0F-FALSE",
+        "OBL-DEC-AIR-DEC-78827340A084-TRUE",
+        "OBL-DEC-AIR-DEC-7E345C4AF44F-FALSE",
+        "OBL-DEC-AIR-DEC-BF704A123803-TRUE",
+        "OBL-DEC-AIR-DEC-C15397ED3F0A-FALSE",
+        "OBL-DEC-AIR-DEC-CD85FB02EB72-TRUE",
+        "OBL-DEC-AIR-DEC-E11528F772D0-TRUE",
+        "OBL-DEC-AIR-DEC-F15FB827C5C1-FALSE",
+        "OBL-RECOVERY-LINK-RECOVERY-DEGRADED",
+        "OBL-REQ-LINK-HLR-001",
+        "OBL-REQ-LINK-HLR-002",
+        "OBL-REQ-LINK-HLR-003",
+        "OBL-REQ-LINK-HLR-004",
+        "OBL-REQ-LINK-HLR-005",
+        "OBL-REQ-LINK-HLR-006",
+        "OBL-REQ-LINK-HLR-007",
+        "OBL-REQ-LINK-HLR-008",
+        "OBL-REQ-LINK-HLR-009",
+        "OBL-REQ-LINK-HLR-011",
+        "OBL-REQ-LINK-HLR-012",
+        "OBL-REQ-LINK-HLR-013",
+        "OBL-REQ-LINK-HLR-014",
+        "OBL-STMT-AIR-STMT-029FD17D66EA",
+        "OBL-STMT-AIR-STMT-082E6D18F5E4",
+        "OBL-STMT-AIR-STMT-0BD1DE8869A3",
+        "OBL-STMT-AIR-STMT-14393895584B",
+        "OBL-STMT-AIR-STMT-363BB5F7BABB",
+        "OBL-STMT-AIR-STMT-38E622DEB1D6",
+        "OBL-STMT-AIR-STMT-39F8E8639950",
+        "OBL-STMT-AIR-STMT-3C3A46196002",
+        "OBL-STMT-AIR-STMT-48AD42CC4969",
+        "OBL-STMT-AIR-STMT-52D3D83A6B1A",
+        "OBL-STMT-AIR-STMT-63250DD6E3B2",
+        "OBL-STMT-AIR-STMT-6501D1DD4935",
+        "OBL-STMT-AIR-STMT-767D388028B1",
+        "OBL-STMT-AIR-STMT-7E9943E265E4",
+        "OBL-STMT-AIR-STMT-7FE4FD402DDD",
+        "OBL-STMT-AIR-STMT-858AECC5C883",
+        "OBL-STMT-AIR-STMT-8747F897C058",
+        "OBL-STMT-AIR-STMT-88790EE5C92A",
+        "OBL-STMT-AIR-STMT-88B97ACB290A",
+        "OBL-STMT-AIR-STMT-8C6ADF7B028D",
+        "OBL-STMT-AIR-STMT-9351A2ED74F5",
+        "OBL-STMT-AIR-STMT-94A658201069",
+        "OBL-STMT-AIR-STMT-94E7C31BC9A9",
+        "OBL-STMT-AIR-STMT-A9D3D2D2DF01",
+        "OBL-STMT-AIR-STMT-AC5A8184A44E",
+        "OBL-STMT-AIR-STMT-B5D2E3D5D648",
+        "OBL-STMT-AIR-STMT-C5DFEB3D124D",
+        "OBL-STMT-AIR-STMT-D794F39C615E",
+        "OBL-STMT-AIR-STMT-E1EB5BEBC18A",
+        "OBL-STMT-AIR-STMT-E339B90EFC08",
+        "OBL-STMT-AIR-STMT-F1D9BC0787E8"
+      ],
+      "newly_killed_mutants": [
+        "MUT-COMMAND-DEFAULT",
+        "MUT-SWAP-LINK-SELECTION"
+      ],
+      "obligation_gain": 82,
+      "scenario_id": "SYN-8730A5682A5B",
+      "selection_index": 1
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 122,
+      "cycle_count": 3,
+      "gain": 40,
+      "killed_mutants_after_selection": 2,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-38926EFE3202",
+        "OBL-CASE-AIR-CASEARM-AD5707966716",
+        "OBL-CASE-AIR-CASEARM-AF4E32DEF0C2",
+        "OBL-COND-AIR-COND-01D9F1A011F4-TRUE",
+        "OBL-COND-AIR-COND-28BAD0606931-FALSE",
+        "OBL-COND-AIR-COND-28DB73F26FB0-TRUE",
+        "OBL-COND-AIR-COND-324E98A1F836-FALSE",
+        "OBL-COND-AIR-COND-32A566D26462-TRUE",
+        "OBL-COND-AIR-COND-38A77753C9BB-FALSE",
+        "OBL-COND-AIR-COND-39E43926C012-TRUE",
+        "OBL-COND-AIR-COND-3BDDB32D00D8-TRUE",
+        "OBL-COND-AIR-COND-441C1085C0BC-TRUE",
+        "OBL-COND-AIR-COND-569BA6F8A5A4-FALSE",
+        "OBL-COND-AIR-COND-5A5880ACA2D4-FALSE",
+        "OBL-COND-AIR-COND-7E9750C7D61B-FALSE",
+        "OBL-COND-AIR-COND-816F5A87C37C-FALSE",
+        "OBL-COND-AIR-COND-BED7779F4424-FALSE",
+        "OBL-COND-AIR-COND-C55DA00B442B-TRUE",
+        "OBL-COND-AIR-COND-CAE388844A15-FALSE",
+        "OBL-COND-AIR-COND-D115437E2970-FALSE",
+        "OBL-COND-AIR-COND-E82911A939C0-TRUE",
+        "OBL-DEC-AIR-DEC-03AE84856B0F-TRUE",
+        "OBL-DEC-AIR-DEC-080D6C64B501-FALSE",
+        "OBL-DEC-AIR-DEC-3C4E9EBBECBB-TRUE",
+        "OBL-DEC-AIR-DEC-9DEE36C5AD49-TRUE",
+        "OBL-DEC-AIR-DEC-CAB019D5C1A2-FALSE",
+        "OBL-DEC-AIR-DEC-E11528F772D0-FALSE",
+        "OBL-DEC-AIR-DEC-E8E90B8FBB1D-TRUE",
+        "OBL-RECOVERY-LINK-RECOVERY-LOCKOUT",
+        "OBL-REQ-LINK-HLR-010",
+        "OBL-RESET-LINK-RESET-RECOVERY-PENDING",
+        "OBL-STMT-AIR-STMT-414DE608629A",
+        "OBL-STMT-AIR-STMT-56C257A8ED2F",
+        "OBL-STMT-AIR-STMT-6D50A2C7A880",
+        "OBL-STMT-AIR-STMT-794114E2D92B",
+        "OBL-STMT-AIR-STMT-7980321B634C",
+        "OBL-STMT-AIR-STMT-A72BEC58DCCD",
+        "OBL-STMT-AIR-STMT-C9E2D8A022F0",
+        "OBL-STMT-AIR-STMT-D2B8560811F4",
+        "OBL-STMT-AIR-STMT-E8FB0D862FC7"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 40,
+      "scenario_id": "SYN-4C0DC124AB8C",
+      "selection_index": 2
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 139,
+      "cycle_count": 3,
+      "gain": 19,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 2,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-4DE54E35330D",
+        "OBL-CASE-AIR-CASEARM-A57D1D16839D",
+        "OBL-COND-AIR-COND-07D709DB7F51-FALSE",
+        "OBL-COND-AIR-COND-1144A3531C95-TRUE",
+        "OBL-COND-AIR-COND-198A1B1EE4CF-TRUE",
+        "OBL-COND-AIR-COND-7320AD49DCC7-TRUE",
+        "OBL-COND-AIR-COND-B72FED13362D-TRUE",
+        "OBL-COND-AIR-COND-B856C7AB9AF6-TRUE",
+        "OBL-DEC-AIR-DEC-C4B7B27E0075-TRUE",
+        "OBL-DEC-AIR-DEC-F15FB827C5C1-TRUE",
+        "OBL-RECOVERY-LINK-RECOVERY-LOST-LINK",
+        "OBL-STMT-AIR-STMT-1A656E3E8CF7",
+        "OBL-STMT-AIR-STMT-1D79B159A9EB",
+        "OBL-STMT-AIR-STMT-3A8D9B1590D7",
+        "OBL-STMT-AIR-STMT-485408464A38",
+        "OBL-STMT-AIR-STMT-99435E75414B",
+        "OBL-STMT-AIR-STMT-EAED9383D904"
+      ],
+      "newly_killed_mutants": [
+        "MUT-LOST-LINK-OPERATOR",
+        "MUT-LOST-PROCEDURE-DELETE"
+      ],
+      "obligation_gain": 17,
+      "scenario_id": "SYN-0356A8F55DA3",
+      "selection_index": 3
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 157,
+      "cycle_count": 1,
+      "gain": 18,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-CASE-AIR-CASEARM-23739F55D41F",
+        "OBL-COMMIT-INHIBITED-AEROST-FAULT-POLICY-698FFF3460AB",
+        "OBL-COND-AIR-COND-71AF59F91436-FALSE",
+        "OBL-COND-AIR-COND-944024658FE0-TRUE",
+        "OBL-CONSERVATIVE-OUTPUT-AEROST-FAULT-POLICY-698FFF3460AB",
+        "OBL-DEC-AIR-DEC-7E345C4AF44F-TRUE",
+        "OBL-DEC-AIR-DEC-BF704A123803-FALSE",
+        "OBL-FAULT-AEROST-FAULT-POLICY-698FFF3460AB",
+        "OBL-STMT-AIR-STMT-115F523F0F94",
+        "OBL-STMT-AIR-STMT-2FCFC820C326",
+        "OBL-STMT-AIR-STMT-69E1B6FD8A70",
+        "OBL-STMT-AIR-STMT-7F61268DFDAA",
+        "OBL-STMT-AIR-STMT-82C7DCC99C3A",
+        "OBL-STMT-AIR-STMT-93079F21BA07",
+        "OBL-STMT-AIR-STMT-A93938A69075",
+        "OBL-STMT-AIR-STMT-B42D768495B4",
+        "OBL-STMT-AIR-STMT-C9718E3467B7",
+        "OBL-STMT-AIR-STMT-FAE0764112FF"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 18,
+      "scenario_id": "SYN-8989333F1E05",
+      "selection_index": 4
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 163,
+      "cycle_count": 2,
+      "gain": 6,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-28BAD0606931-TRUE",
+        "OBL-COND-AIR-COND-32A566D26462-FALSE",
+        "OBL-COND-AIR-COND-3BDDB32D00D8-FALSE",
+        "OBL-COND-AIR-COND-441C1085C0BC-FALSE",
+        "OBL-COND-AIR-COND-E82911A939C0-FALSE",
+        "OBL-DEC-AIR-DEC-9DEE36C5AD49-FALSE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 6,
+      "scenario_id": "SYN-8F065B691DC6",
+      "selection_index": 5
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 169,
+      "cycle_count": 3,
+      "gain": 6,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-15CC65FC0325-FALSE",
+        "OBL-COND-AIR-COND-9197056085FE-FALSE",
+        "OBL-COND-AIR-COND-E3E3882462AC-FALSE",
+        "OBL-COND-AIR-COND-E43A0D3C92E1-TRUE",
+        "OBL-COND-AIR-COND-E4D08AF310FC-FALSE",
+        "OBL-DEC-AIR-DEC-78827340A084-FALSE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 6,
+      "scenario_id": "SYN-1D5D7D8EB77E",
+      "selection_index": 6
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 175,
+      "cycle_count": 3,
+      "gain": 6,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-324E98A1F836-TRUE",
+        "OBL-COND-AIR-COND-569BA6F8A5A4-TRUE",
+        "OBL-COND-AIR-COND-816F5A87C37C-TRUE",
+        "OBL-COND-AIR-COND-CAE388844A15-TRUE",
+        "OBL-DEC-AIR-DEC-CAB019D5C1A2-TRUE",
+        "OBL-STMT-AIR-STMT-94E73C63A6B1"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 6,
+      "scenario_id": "SYN-FF0B490E9C24",
+      "selection_index": 7
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 180,
+      "cycle_count": 3,
+      "gain": 5,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-07D709DB7F51-TRUE",
+        "OBL-COND-AIR-COND-198A1B1EE4CF-FALSE",
+        "OBL-COND-AIR-COND-B72FED13362D-FALSE",
+        "OBL-COND-AIR-COND-B856C7AB9AF6-FALSE",
+        "OBL-DEC-AIR-DEC-C4B7B27E0075-FALSE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 5,
+      "scenario_id": "SYN-DBC272C66760",
+      "selection_index": 8
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 184,
+      "cycle_count": 1,
+      "gain": 4,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-7CE862BD5FCD-FALSE",
+        "OBL-COND-AIR-COND-C55DA00B442B-FALSE",
+        "OBL-DEC-AIR-DEC-3C4E9EBBECBB-FALSE",
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7CE862BD5FCD"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 4,
+      "scenario_id": "SYN-2026B77AD385-A",
+      "selection_index": 9
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 188,
+      "cycle_count": 2,
+      "gain": 4,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-057158D99548-FALSE",
+        "OBL-COND-AIR-COND-52B17750FFC7-FALSE",
+        "OBL-COND-AIR-COND-793843FC2D65-FALSE",
+        "OBL-DEC-AIR-DEC-CD85FB02EB72-FALSE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 4,
+      "scenario_id": "SYN-66CC68030ACF",
+      "selection_index": 10
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 192,
+      "cycle_count": 3,
+      "gain": 4,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-48160B62BAEF-TRUE",
+        "OBL-COND-AIR-COND-5740B33F484E-TRUE",
+        "OBL-DEC-AIR-DEC-C15397ED3F0A-TRUE",
+        "OBL-STMT-AIR-STMT-D18352A49A33"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 4,
+      "scenario_id": "SYN-0C8788465C61",
+      "selection_index": 11
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 196,
+      "cycle_count": 3,
+      "gain": 4,
+      "killed_mutants_after_selection": 4,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-38A77753C9BB-TRUE",
+        "OBL-COND-AIR-COND-D115437E2970-TRUE",
+        "OBL-DEC-AIR-DEC-080D6C64B501-TRUE",
+        "OBL-STMT-AIR-STMT-412CB814D6AB"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 4,
+      "scenario_id": "SYN-5D4EF2FEDB9A",
+      "selection_index": 12
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 198,
+      "cycle_count": 3,
+      "gain": 3,
+      "killed_mutants_after_selection": 5,
+      "mutation_gain": 1,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-39E43926C012-FALSE",
+        "OBL-DEC-AIR-DEC-E8E90B8FBB1D-FALSE"
+      ],
+      "newly_killed_mutants": [
+        "MUT-WEAKEN-LINK-RECOVERY"
+      ],
+      "obligation_gain": 2,
+      "scenario_id": "SYN-BC724870AAFC",
+      "selection_index": 13
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 198,
+      "cycle_count": 1,
+      "gain": 2,
+      "killed_mutants_after_selection": 7,
+      "mutation_gain": 2,
+      "newly_covered_obligations": [],
+      "newly_killed_mutants": [
+        "MUT-INVALID-GUARD",
+        "MUT-INVALID-OUTPUT-GUARD"
+      ],
+      "obligation_gain": 0,
+      "scenario_id": "SYN-0C824AC5736A",
+      "selection_index": 14
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 200,
+      "cycle_count": 1,
+      "gain": 2,
+      "killed_mutants_after_selection": 7,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-64F15C3C5A02-TRUE",
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-64F15C3C5A02"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 2,
+      "scenario_id": "SYN-04502835B33C-B",
+      "selection_index": 15
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 202,
+      "cycle_count": 2,
+      "gain": 2,
+      "killed_mutants_after_selection": 7,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-4089AB0D6750-TRUE",
+        "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-4089AB0D6750"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 2,
+      "scenario_id": "SYN-8308D1130A7B-B",
+      "selection_index": 16
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 204,
+      "cycle_count": 2,
+      "gain": 2,
+      "killed_mutants_after_selection": 7,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-8A22B1F9BCF6-TRUE",
+        "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-793843FC2D65"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 2,
+      "scenario_id": "SYN-CAE11E7875BE-B",
+      "selection_index": 17
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 204,
+      "cycle_count": 3,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 1,
+      "newly_covered_obligations": [],
+      "newly_killed_mutants": [
+        "MUT-RECOVERY-ENTRY-GUARD"
+      ],
+      "obligation_gain": 0,
+      "scenario_id": "SYN-A0DEE8309CFE",
+      "selection_index": 18
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 205,
+      "cycle_count": 1,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-BED7779F4424"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-1833681B9158-B",
+      "selection_index": 19
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 206,
+      "cycle_count": 1,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-64F15C3C5A02"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-5C5E28045614-A",
+      "selection_index": 20
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 207,
+      "cycle_count": 1,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7E9750C7D61B"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-982801FFAE91-B",
+      "selection_index": 21
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 208,
+      "cycle_count": 1,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-BED7779F4424"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-CA02F73989C9-A",
+      "selection_index": 22
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 209,
+      "cycle_count": 1,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7E9750C7D61B"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-D2CE9B658A53-A",
+      "selection_index": 23
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 210,
+      "cycle_count": 1,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-E11528F772D0-AIR-COND-7CE862BD5FCD"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-DF8681C49080-B",
+      "selection_index": 24
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 211,
+      "cycle_count": 2,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-793843FC2D65"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-079386EC830A-A",
+      "selection_index": 25
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 212,
+      "cycle_count": 2,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-4089AB0D6750"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-1B22F98117D3-A",
+      "selection_index": 26
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 213,
+      "cycle_count": 2,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-7320AD49DCC7"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-1B63975D6222-A",
+      "selection_index": 27
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 214,
+      "cycle_count": 2,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-18C272CB4C29-TRUE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-524AA4601452",
+      "selection_index": 28
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 215,
+      "cycle_count": 2,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-MCDC-AIR-DEC-F15FB827C5C1-AIR-COND-7320AD49DCC7"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-886C6BC871B2-B",
+      "selection_index": 29
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 216,
+      "cycle_count": 3,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-01D9F1A011F4-FALSE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-0E3CAB19ABAE",
+      "selection_index": 30
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 217,
+      "cycle_count": 3,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-5A5880ACA2D4-TRUE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-3E12FC6DE2D4",
+      "selection_index": 31
+    },
+    {
+      "covered_obligation_witness_slots_after_selection": 218,
+      "cycle_count": 3,
+      "gain": 1,
+      "killed_mutants_after_selection": 8,
+      "mutation_gain": 0,
+      "newly_covered_obligations": [
+        "OBL-COND-AIR-COND-CF3B9050C31B-FALSE"
+      ],
+      "newly_killed_mutants": [],
+      "obligation_gain": 1,
+      "scenario_id": "SYN-99806F5B93C1",
+      "selection_index": 32
+    }
+  ],
+  "synthesis_run_id": "SYNTH-RUN-095B45F09511",
+  "uncovered_obligations": []
+}

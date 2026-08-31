@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerost.dev/schemas/mutation-profile.schema.json",
+  "title": "AEROST Application Mutation Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "application_id",
+    "profile_version",
+    "manual_suite_gate",
+    "mutations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "AEROST-MUTATION-PROFILE-0.1"
+    },
+    "application_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "mutations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "operator",
+          "description",
+          "operation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^MUT-[A-Z0-9-]+$"
+          },
+          "operator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "manual_suite_gate": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "equivalent_cycles": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "executed_cycles": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "mismatch_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "mismatches": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "executed_cycles",
+    "equivalent_cycles",
+    "mismatch_count",
+    "mismatches"
+  ],
+  "type": "object"
+}

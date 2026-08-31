@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerost.dev/schemas/research-suite.schema.json",
+  "title": "AEROST Research Suite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "suite_id",
+    "profile_version",
+    "applications"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "AEROST-RESEARCH-SUITE-0.1"
+    },
+    "suite_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9.-]*$"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "applications": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

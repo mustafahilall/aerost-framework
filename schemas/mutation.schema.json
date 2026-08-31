@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "detected": {
+      "type": "integer"
+    },
+    "executed_non_equivalent_mutants": {
+      "type": "integer"
+    },
+    "records": {
+      "type": "array"
+    },
+    "score_percent": {
+      "type": "number"
+    },
+    "surviving": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "executed_non_equivalent_mutants",
+    "detected",
+    "surviving",
+    "score_percent",
+    "records"
+  ],
+  "type": "object"
+}

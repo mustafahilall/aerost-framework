@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "claim_critical_closed": {
+      "type": "boolean"
+    },
+    "complete": {
+      "type": "boolean"
+    },
+    "condition": {
+      "properties": {
+        "both_outcomes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "percent": {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number"
+        },
+        "total": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "both_outcomes",
+        "total",
+        "percent"
+      ],
+      "type": "object"
+    },
+    "coverage_scope": {
+      "type": "string"
+    },
+    "decision": {
+      "properties": {
+        "both_outcomes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "percent": {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number"
+        },
+        "total": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "both_outcomes",
+        "total",
+        "percent"
+      ],
+      "type": "object"
+    },
+    "statement": {
+      "properties": {
+        "percent": {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number"
+        },
+        "reached": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "total": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "reached",
+        "total",
+        "percent"
+      ],
+      "type": "object"
+    },
+    "uncovered_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "uncovered_items": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "coverage_scope",
+    "statement",
+    "decision",
+    "condition",
+    "claim_critical_closed",
+    "complete",
+    "uncovered_count",
+    "uncovered_items"
+  ],
+  "type": "object"
+}

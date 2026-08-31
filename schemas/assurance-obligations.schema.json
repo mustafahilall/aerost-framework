@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "generated_by": {
+      "type": "string"
+    },
+    "obligations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "attributes": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "description": {
+            "type": "string"
+          },
+          "id": {
+            "pattern": "OBL-[A-Za-z0-9._-]+",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "STATEMENT_REACHED",
+              "DECISION_TRUE",
+              "DECISION_FALSE",
+              "CONDITION_TRUE",
+              "CONDITION_FALSE",
+              "MCDC_PAIR",
+              "CASE_ARM_REACHED",
+              "FAULT_POLICY_ACTIVATED",
+              "NORMAL_COMMIT_INHIBITED",
+              "CONSERVATIVE_OUTPUT_APPLIED",
+              "RESET_PATH_EXECUTED",
+              "RECOVERY_PATH_EXECUTED",
+              "REQUIREMENT_EXERCISED"
+            ],
+            "type": "string"
+          },
+          "reachable_status": {
+            "enum": [
+              "UNKNOWN",
+              "REACHABLE",
+              "UNREACHABLE_WITHIN_BOUND"
+            ],
+            "type": "string"
+          },
+          "requirements": {
+            "items": {
+              "pattern": "[A-Za-z0-9._-]+",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "subject_ids": {
+            "items": {
+              "pattern": "[A-Za-z0-9._-]+",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "subject_ids",
+          "requirements",
+          "reachable_status",
+          "attributes",
+          "description"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "profile_version": {
+      "type": "string"
+    },
+    "program_id": {
+      "pattern": "[A-Za-z0-9._-]+",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "AEROST-ASSURANCE-OBLIGATIONS-0.1",
+      "type": "string"
+    },
+    "source_air_sha256": {
+      "pattern": "[0-9a-f]{64}",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_version",
+    "program_id",
+    "generated_by",
+    "source_air_sha256",
+    "obligations"
+  ],
+  "title": "AEROST Assurance Obligations",
+  "type": "object"
+}

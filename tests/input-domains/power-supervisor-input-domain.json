@@ -1,0 +1,91 @@
+{
+  "$schema": "../../../schemas/input-domain.schema.json",
+  "schema_version": "AEROST-INPUT-DOMAIN-0.1",
+  "profile_version": "ASCP-0.2",
+  "program_id": "AIR-PROG-E1DC8CAED523",
+  "domain_id": "AEROST-DOMAIN-POWER-SUPERVISOR-0.1",
+  "enumeration": {
+    "strategy": "cartesian",
+    "ordering": "air-declaration-order",
+    "maximum_input_vectors": 20000
+  },
+  "search_bounds": {
+    "maximum_sequence_depth": 8,
+    "maximum_reachable_states": 128,
+    "maximum_transition_evaluations": 3000000
+  },
+  "initial_state_policy": "air_initializers",
+  "inputs": [
+    {
+      "name": "InputSetValid",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "InitializationComplete",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "BatteryAHealthy",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "BatteryBHealthy",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "EssentialPowerAvailable",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "MainBusWarningPersisted",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "MainBusCritical",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "ReserveEnergyLow",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "ReturnEnergyInsufficient",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "ContactorMismatchPersisted",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "RecoveryStable",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "ResetAuthorized",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "PayloadOvercurrent",
+      "type": "BOOL",
+      "values": [false, true]
+    },
+    {
+      "name": "FlightPhaseLanding",
+      "type": "BOOL",
+      "values": [false, true]
+    }
+  ],
+  "constraints": []
+}

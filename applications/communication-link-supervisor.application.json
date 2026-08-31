@@ -1,0 +1,17 @@
+{
+  "schema_version": "AEROST-APPLICATION-MANIFEST-0.2",
+  "application_id": "communication-link-supervisor",
+  "profile_version": "ASCP-0.2",
+  "source": "examples/communication-link-supervisor/source/communication-link-supervisor.ascp",
+  "requirements": "examples/communication-link-supervisor/requirements/requirements.json",
+  "runtime_fault_policy": "examples/communication-link-supervisor/policies/runtime-fault-policy.json",
+  "controlled_scenarios": [
+    "tests/communication-link-scenarios.json",
+    "tests/communication-link-coverage-closure-scenarios.json"
+  ],
+  "manual_requirements_scenarios": "tests/communication-link-scenarios.json",
+  "manual_closure_scenarios": "tests/communication-link-coverage-closure-scenarios.json",
+  "input_domain": "tests/input-domains/communication-link-input-domain.json",
+  "air_artifact_name": "communication-link-supervisor.air.json",
+  "mutation_profile": "examples/communication-link-supervisor/mutations/mutation-profile.json"
+}
