@@ -79,7 +79,7 @@ This research artifact was developed jointly by:
 
 - **Mustafa Hilal** — avionics supervisory-control logic and application-case design, system requirements, assurance criteria and evaluation, controlled scenario design, and evidence analysis.
 
-- **Edanur Arslan** — compiler and software-toolchain development, AIR execution, Safe Rust backend generation, assurance synthesis and reduction, test automation, and validation tooling.
+- **Eda Nur Arslan** — compiler and software-toolchain development, AIR execution, Safe Rust backend generation, assurance synthesis and reduction, test automation, and validation tooling.
 
 - **Joint contributions** — research methodology, test and validation strategy, result interpretation, reproducibility analysis, and manuscript preparation.
 
