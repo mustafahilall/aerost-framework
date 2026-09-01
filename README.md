@@ -21,6 +21,17 @@ The implemented system includes:
 
 The research suite contains exactly two application cases. Application-specific behavior is supplied through controlled source, requirements, policies, scenario sets, input-domain definitions, and mutation profiles; the execution and evidence tooling is shared.
 
+## Implementation Architecture
+
+The AEROST research toolchain is implemented primarily in Python to support
+ASCP parsing, AIR construction, assurance analysis, bounded test synthesis,
+suite reduction, mutation analysis, and evidence generation.
+
+Safe Rust is the generated execution backend rather than the implementation
+language of the research tooling itself. For each controlled application,
+AEROST generates a Rust backend that is compiled and executed as a separate
+process and compared against the AIR reference execution paths.
+
 ## Controlled Evaluation Results
 
 The repository contains the controlled evidence used for the evaluation:
