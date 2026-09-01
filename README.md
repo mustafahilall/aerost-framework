@@ -12,7 +12,7 @@ The implemented system includes:
 - a generic AIR reference interpreter;
 - generated Safe Rust compiled and executed as a separate process;
 - a separately implemented external AIR executor;
-- cycle-level differential comparison on the controlled closure suites;
+- cycle-level differential comparison on both the controlled closure suites and the complete bounded unreduced generated suites;
 - requirement-linked structural coverage and selected modified condition/decision coverage (MC/DC) evidence;
 - bounded stateful assurance-test synthesis;
 - deterministic obligation-only and mutation-aware suite reduction;
@@ -27,9 +27,9 @@ The AEROST research toolchain is implemented primarily in Python to support
 ASCP parsing, AIR construction, assurance analysis, bounded test synthesis,
 suite reduction, mutation analysis, and evidence generation.
 
-Safe Rust is the generated execution backend rather than the implementation language of the research tooling itself. For each controlled application, AEROST generates a Rust backend that is compiled and executed as a separate process and compared cycle-by-cycle with the reference AIR interpreter and the separately implemented AIR executor on the controlled closure suites.
+Safe Rust is the generated execution backend rather than the implementation language of the research tooling itself. For each controlled application, AEROST generates a Rust backend that is compiled and executed as a separate process and compared cycle-by-cycle with the reference AIR interpreter and the separately implemented AIR executor on both the controlled closure suites and the complete bounded unreduced generated suites.
 
-## Controlled Evaluation Results
+## Evaluation Results
 
 The repository contains the controlled evidence used for the evaluation:
 
@@ -42,11 +42,12 @@ The repository contains the controlled evidence used for the evaluation:
 | Declared assurance obligations covered | 538 / 538 |
 | Selected MC/DC objectives covered | 13 / 13 |
 | Unreduced synthesized suite | 551 scenarios / 1,195 cycles |
+| Generated-suite three-path equivalent cycles | 1,195 / 1,195 |
 | Obligation-only reduced suite | 86 scenarios / 202 cycles |
 | Declared mutation distinctions retained by obligation-only reduction | 11 / 16 |
 | Mutation-aware reduced suite | 90 scenarios / 213 cycles |
 | Predeclared mutation distinctions retained by mutation-aware reduction | 16 / 16 |
-| Clean-directory reproducibility | 76 / 76 controlled artifacts byte-identical |
+| Clean-directory reproducibility | 86 / 86 evaluation artifacts byte-identical |
 
 The 16/16 mutation-aware result is an in-sample preservation result: the same predeclared mutation profiles guide reduction and final scoring. It is not a prediction of effectiveness on unseen defects.
 
@@ -79,7 +80,7 @@ The runner executes the multi-case regression checks, rebuilds the generated Rus
 
 AEROST is a host-based research prototype and candidate application/execution profile. The project does not establish an avionics industry standard, IEC 61131-3 conformance, DO-178C compliance, tool qualification, target-platform timing validity or WCET, hardware-in-the-loop or flight validation, aircraft-level safety, universal UAV applicability, formal compiler semantic preservation for every accepted program, or predictive effectiveness on unseen defects.
 
-The external AIR executor is separately implemented, but it consumes the same AIR produced by the common frontend and is not a fully independent second ASCP frontend. The three-path comparison covers the controlled closure suites; the complete generated suite is evaluated through the assurance synthesis, reduction, and mutation pipeline rather than through the same full three-path replay boundary.
+The external AIR executor is separately implemented, but it consumes the same AIR produced by the common frontend and is not a fully independent second ASCP frontend. The three-path comparison covers both the controlled closure suites and the complete bounded unreduced generated suite. Across the two controlled applications, the generated suite contains 551 scenarios and 1,195 cycles, with identical observable behavior across all three execution paths on all 1,195 cycles. This is bounded empirical agreement and does not constitute a formal semantic-preservation proof for every accepted program.
 
 ## Authors and Contributions
 

@@ -4,7 +4,7 @@
     "id": "power-supervisor",
     "input_domain": "tests/input-domains/power-supervisor-input-domain.json",
     "manifest": "applications/power-supervisor.application.json",
-    "manifest_sha256": "e6e2b457db0bad9c46e1df1e2962eed743d3126d6bc6c84bfe228e2a4d0d69ae",
+    "manifest_sha256": "5b039a242217d9d8453cbc9451fd1af0f754f1fd67e49ece246576d056b6689a",
     "mutation_profile": "examples/power-supervisor/mutations/mutation-profile.json",
     "profile_version": "ASCP-0.2",
     "requirements": "examples/power-supervisor/requirements/requirements.json",
@@ -1075,6 +1075,17 @@
     ]
   },
   "automatic_test_synthesis": {
+    "generated_suite_three_way": {
+      "cycle_count": 773,
+      "equivalent_cycles": 773,
+      "executed": true,
+      "executed_cycles": 773,
+      "execution_path_count": 3,
+      "mismatch_count": 0,
+      "passed": true,
+      "scenario_count": 333,
+      "suite": "automatic-unreduced"
+    },
     "obligation_summary": {
       "covered": 327,
       "reachable": 327,
@@ -1103,7 +1114,7 @@
   "bounded_input_domain": {
     "air_sha256": "a81649ef735aed18e3d7040e1c2cbf086acd2bd0781bbd570007daa811da8e29",
     "domain_id": "AEROST-DOMAIN-POWER-SUPERVISOR-0.1",
-    "domain_sha256": "aff5009849444247d4f53c42915d9d06eb959d7e6d98595f661e0462c0109772",
+    "domain_sha256": "c124a3a13a352ada48dd16159c24587960931566b14f813c6c4e1015c4002f5c",
     "estimated_full_state_transition_evaluations": 2097152,
     "input_count": 14,
     "input_vector_count": 16384,
@@ -2096,6 +2107,12 @@
         "valid": true
       },
       {
+        "artifact": "generated-suite-three-way-differential-results.json",
+        "errors": [],
+        "schema": "three-way-differential.schema.json",
+        "valid": true
+      },
+      {
         "artifact": "application-case-validation-summary.json",
         "errors": [],
         "schema": "application-case-validation-summary.schema.json",
@@ -2109,6 +2126,7 @@
     "authoritative_reproducibility_included": false,
     "description": "case-study implementation, three-path core execution, bounded synthesis, obligation-only reduction, profile-driven mutation-aware reduction, and five-suite comparison",
     "generated_backend_compiled_and_executed": true,
+    "generated_suite_three_path_execution_included": true,
     "mutation_aware_evaluation_included": true
   }
 }

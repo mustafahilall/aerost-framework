@@ -147,6 +147,7 @@ def _reproducibility_report(
 def _compact_application(summary: dict[str, Any]) -> dict[str, Any]:
     final_suite = summary["final_automatic_suite"]
     synthesis = summary["automatic_test_synthesis"]
+    generated_three_way = synthesis["generated_suite_three_way"]
     return {
         "id": summary["application"]["id"],
         "manifest": summary["application"]["manifest"],
@@ -157,6 +158,7 @@ def _compact_application(summary: dict[str, Any]) -> dict[str, Any]:
         "controlled_scenarios": summary["core"]["controlled_scenarios"],
         "executed_cycles": summary["core"]["executed_cycles"],
         "equivalent_cycles": summary["core"]["three_way_equivalent_cycles"],
+        "generated_suite_three_way": generated_three_way,
         "assurance_obligations": synthesis["obligation_summary"],
         "final_automatic_suite": {
             "scenario_count": final_suite["scenario_count"],
@@ -176,6 +178,21 @@ def _aggregate(applications: Iterable[dict[str, Any]]) -> dict[str, int]:
         "controlled_scenarios": sum(item["controlled_scenarios"] for item in items),
         "executed_cycles": sum(item["executed_cycles"] for item in items),
         "equivalent_cycles": sum(item["equivalent_cycles"] for item in items),
+        "generated_scenarios": sum(
+            item["generated_suite_three_way"]["scenario_count"] for item in items
+        ),
+        "generated_cycles": sum(
+            item["generated_suite_three_way"]["cycle_count"] for item in items
+        ),
+        "generated_three_way_executed_cycles": sum(
+            item["generated_suite_three_way"]["executed_cycles"] for item in items
+        ),
+        "generated_three_way_equivalent_cycles": sum(
+            item["generated_suite_three_way"]["equivalent_cycles"] for item in items
+        ),
+        "generated_three_way_mismatches": sum(
+            item["generated_suite_three_way"]["mismatch_count"] for item in items
+        ),
         "assurance_obligations_covered": sum(
             item["assurance_obligations"]["covered"] for item in items
         ),
@@ -303,9 +320,21 @@ def run_multi_case_pipeline(
 
     authoritative = bool(compile_backend and check_reproducibility)
     aggregate = _aggregate(compact)
+    generated_three_way_complete = (
+        not compile_backend
+        or (
+            aggregate["generated_three_way_executed_cycles"]
+            == aggregate["generated_cycles"]
+            and aggregate["generated_three_way_equivalent_cycles"]
+            == aggregate["generated_three_way_executed_cycles"]
+            and aggregate["generated_three_way_mismatches"] == 0
+        )
+    )
+
     aggregate_complete = all(
         [
             aggregate["equivalent_cycles"] == aggregate["executed_cycles"],
+            generated_three_way_complete,
             aggregate["assurance_obligations_covered"]
             == aggregate["assurance_obligations_total"],
             aggregate["selected_mcdc_covered"] == aggregate["selected_mcdc_total"],

@@ -33,6 +33,60 @@ def _suite_by_name(comparison: dict[str, Any], name: str) -> dict[str, Any]:
     raise CaseValidationError(f"comparison is missing suite: {name}")
 
 
+def _run_generated_suite_three_way(
+    root: Path,
+    output_dir: Path,
+    air_path: Path,
+    bundle: dict[str, Any],
+    synthesized: dict[str, Any],
+) -> dict[str, Any]:
+    scenarios = synthesized.get("scenarios")
+    if not isinstance(scenarios, list):
+        raise CaseValidationError("synthesized scenario document is missing scenarios")
+
+    binary = bundle.get("binary")
+    if binary is None:
+        raise CaseValidationError(
+            "generated-suite three-path execution requires a compiled backend"
+        )
+
+    protocol = output_dir / "generated-suite-protocol.txt"
+    tool.build_protocol(bundle["air"], scenarios, protocol)
+
+    reference = tool.run_reference_scenarios(bundle["air"], scenarios)
+
+    run = tool.run_command([str(binary), "run", str(protocol)])
+    backend = tool.parse_backend_output(run.stdout, bundle["air"])
+
+    external_path = output_dir / "generated-suite-external-executor-traces.json"
+    external_document = tool.run_external_air_executor(
+        root,
+        air_path,
+        protocol,
+        external_path,
+    )
+    external = external_document["cycles"]
+
+    report = tool.three_way_differential_report(reference, backend, external)
+    report["suite"] = "automatic-unreduced"
+    report["scenario_count"] = len(scenarios)
+
+    _write_json(
+        output_dir / "generated-suite-reference-traces.json",
+        tool.traces_document(reference),
+    )
+    _write_json(
+        output_dir / "generated-suite-backend-traces.json",
+        tool.backend_traces_document(backend),
+    )
+    _write_json(
+        output_dir / "generated-suite-three-way-differential-results.json",
+        report,
+    )
+
+    return report
+
+
 def validate_application_case(
     root: Path,
     manifest_path: Path,
@@ -67,6 +121,17 @@ def validate_application_case(
     domain = tool.load_json(application.input_domain_path)
     domain_summary = validate_domain(bundle["air"], domain)
     synthesized, synthesis_report = synthesize(bundle["air"], obligations, domain)
+
+    generated_three_way = None
+    if compile_backend:
+        generated_three_way = _run_generated_suite_three_way(
+            root,
+            output_dir,
+            air_path,
+            bundle,
+            synthesized,
+        )
+
     reduced, reduction_report = reduce_suite(synthesized, obligations)
     mutation_reduced, mutation_reduction_report = reduce_mutation_aware_suite(
         bundle["air"],
@@ -122,6 +187,11 @@ def validate_application_case(
         "mutation-aware-suite-reduction-report.json": "mutation-aware-suite-reduction-report.schema.json",
         "assurance-suite-comparison.json": "assurance-suite-comparison.schema.json",
     }
+    if compile_backend:
+        schema_pairs[
+            "generated-suite-three-way-differential-results.json"
+        ] = "three-way-differential.schema.json"
+
     schema_records: list[dict[str, Any]] = []
     schemas_valid = True
     for artifact_name, schema_name in schema_pairs.items():
@@ -162,9 +232,18 @@ def validate_application_case(
             final_suite["mutation"]["killed"] == final_suite["mutation"]["total"],
         ]
     )
+    generated_three_way_passed = (
+        not compile_backend
+        or (
+            generated_three_way is not None
+            and bool(generated_three_way["passed"])
+        )
+    )
+
     passed = all(
         [
             core_passed,
+            generated_three_way_passed,
             synthesis_passed,
             reduction_passed,
             mutation_reduction_passed,
@@ -181,6 +260,7 @@ def validate_application_case(
         "application": application.summary(root),
         "validation_scope": {
             "generated_backend_compiled_and_executed": compile_backend,
+            "generated_suite_three_path_execution_included": bool(compile_backend),
             "mutation_aware_evaluation_included": True,
             "authoritative_reproducibility_included": False,
             "description": (
@@ -210,6 +290,35 @@ def validate_application_case(
             "obligation_summary": synthesis_report["obligation_summary"],
             "search_summary": synthesis_report["search_summary"],
             "suite_summary": synthesis_report["suite_summary"],
+            "generated_suite_three_way": {
+                "suite": "automatic-unreduced",
+                "executed": generated_three_way is not None,
+                "scenario_count": len(synthesized["scenarios"]),
+                "cycle_count": sum(
+                    len(scenario["cycles"])
+                    for scenario in synthesized["scenarios"]
+                ),
+                "execution_path_count": (
+                    generated_three_way["execution_path_count"]
+                    if generated_three_way is not None else 0
+                ),
+                "executed_cycles": (
+                    generated_three_way["executed_cycles"]
+                    if generated_three_way is not None else 0
+                ),
+                "equivalent_cycles": (
+                    generated_three_way["equivalent_cycles"]
+                    if generated_three_way is not None else 0
+                ),
+                "mismatch_count": (
+                    generated_three_way["mismatch_count"]
+                    if generated_three_way is not None else 0
+                ),
+                "passed": (
+                    bool(generated_three_way["passed"])
+                    if generated_three_way is not None else None
+                ),
+            },
             "passed": synthesis_passed,
         },
         "obligation_only_reduction": {

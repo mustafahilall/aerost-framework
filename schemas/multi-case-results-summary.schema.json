@@ -54,6 +54,11 @@
         "controlled_scenarios",
         "executed_cycles",
         "equivalent_cycles",
+        "generated_scenarios",
+        "generated_cycles",
+        "generated_three_way_executed_cycles",
+        "generated_three_way_equivalent_cycles",
+        "generated_three_way_mismatches",
         "assurance_obligations_covered",
         "assurance_obligations_total",
         "selected_mcdc_covered",
@@ -75,6 +80,26 @@
         "equivalent_cycles": {
           "type": "integer",
           "minimum": 1
+        },
+        "generated_scenarios": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "generated_cycles": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "generated_three_way_executed_cycles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "generated_three_way_equivalent_cycles": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "generated_three_way_mismatches": {
+          "type": "integer",
+          "minimum": 0
         },
         "assurance_obligations_covered": {
           "type": "integer",

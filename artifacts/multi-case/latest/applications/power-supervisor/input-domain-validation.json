@@ -1,7 +1,7 @@
 {
   "air_sha256": "a81649ef735aed18e3d7040e1c2cbf086acd2bd0781bbd570007daa811da8e29",
   "domain_id": "AEROST-DOMAIN-POWER-SUPERVISOR-0.1",
-  "domain_sha256": "aff5009849444247d4f53c42915d9d06eb959d7e6d98595f661e0462c0109772",
+  "domain_sha256": "c124a3a13a352ada48dd16159c24587960931566b14f813c6c4e1015c4002f5c",
   "estimated_full_state_transition_evaluations": 2097152,
   "input_count": 14,
   "input_vector_count": 16384,

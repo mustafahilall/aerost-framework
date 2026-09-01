@@ -53,6 +53,14 @@ class MultiCaseAssuranceTests(unittest.TestCase):
         self.assertEqual(aggregate["final_automatic_scenarios"], 90)
         self.assertEqual(aggregate["final_automatic_cycles"], 213)
 
+    def test_generated_suite_aggregate_is_reported(self) -> None:
+        aggregate = self.summary["aggregate"]
+        self.assertEqual(aggregate["generated_scenarios"], 551)
+        self.assertEqual(aggregate["generated_cycles"], 1195)
+        self.assertEqual(aggregate["generated_three_way_executed_cycles"], 0)
+        self.assertEqual(aggregate["generated_three_way_equivalent_cycles"], 0)
+        self.assertEqual(aggregate["generated_three_way_mismatches"], 0)
+
 
     def test_root_artifacts_validate_against_schemas(self) -> None:
         report = json.loads(

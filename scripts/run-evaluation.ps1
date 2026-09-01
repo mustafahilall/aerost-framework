@@ -67,6 +67,9 @@ if (-not $Result.authoritative_full_pipeline) { throw "Multi-case result is not 
 if ($Result.assembly_validation_mode) { throw "Authoritative run is marked as assembly validation" }
 if ($Result.application_count -ne 2) { throw "Expected two applications" }
 if ($Aggregate.equivalent_cycles -ne $Aggregate.executed_cycles) { throw "Three-way cycle mismatch remains" }
+if ($Aggregate.generated_three_way_executed_cycles -ne $Aggregate.generated_cycles) { throw "Generated-suite three-way execution is incomplete" }
+if ($Aggregate.generated_three_way_equivalent_cycles -ne $Aggregate.generated_three_way_executed_cycles) { throw "Generated-suite three-way equivalence mismatch remains" }
+if ($Aggregate.generated_three_way_mismatches -ne 0) { throw "Generated-suite three-way mismatches remain" }
 if ($Aggregate.assurance_obligations_covered -ne $Aggregate.assurance_obligations_total) { throw "Assurance obligations remain open" }
 if ($Aggregate.selected_mcdc_covered -ne $Aggregate.selected_mcdc_total) { throw "Selected MC/DC remains open" }
 if ($Aggregate.controlled_mutants_killed -ne $Aggregate.controlled_mutants_total) { throw "Controlled mutants survived" }

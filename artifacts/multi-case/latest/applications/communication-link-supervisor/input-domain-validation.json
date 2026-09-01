@@ -1,7 +1,7 @@
 {
   "air_sha256": "41a572c8fdf905546d59c5872e96ab2a30578598ad5c52bbba28a72a3f8af443",
   "domain_id": "AEROST-DOMAIN-COMMUNICATION-LINK-SUPERVISOR-0.1",
-  "domain_sha256": "25814cda2b30aff44b66787338ab3d6b6f4660e832744d7bd587ab748f202805",
+  "domain_sha256": "2563b81ace52389ff86c8245cf186447d307dd339215029253e85b91a5ca1a8c",
   "estimated_full_state_transition_evaluations": 32768,
   "input_count": 9,
   "input_vector_count": 512,

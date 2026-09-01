@@ -9,6 +9,11 @@
     "executed_cycles": 132,
     "final_automatic_cycles": 213,
     "final_automatic_scenarios": 90,
+    "generated_cycles": 1195,
+    "generated_scenarios": 551,
+    "generated_three_way_equivalent_cycles": 1195,
+    "generated_three_way_executed_cycles": 1195,
+    "generated_three_way_mismatches": 0,
     "selected_mcdc_covered": 13,
     "selected_mcdc_total": 13
   },
@@ -189,6 +194,17 @@
           "uncovered_ids": []
         },
         "scenario_count": 58
+      },
+      "generated_suite_three_way": {
+        "cycle_count": 773,
+        "equivalent_cycles": 773,
+        "executed": true,
+        "executed_cycles": 773,
+        "execution_path_count": 3,
+        "mismatch_count": 0,
+        "passed": true,
+        "scenario_count": 333,
+        "suite": "automatic-unreduced"
       },
       "id": "power-supervisor",
       "manifest": "applications/power-supervisor.application.json",
@@ -372,6 +388,17 @@
         },
         "scenario_count": 32
       },
+      "generated_suite_three_way": {
+        "cycle_count": 422,
+        "equivalent_cycles": 422,
+        "executed": true,
+        "executed_cycles": 422,
+        "execution_path_count": 3,
+        "mismatch_count": 0,
+        "passed": true,
+        "scenario_count": 218,
+        "suite": "automatic-unreduced"
+      },
       "id": "communication-link-supervisor",
       "manifest": "applications/communication-link-supervisor.application.json",
       "mutation_profile": "examples/communication-link-supervisor/mutations/mutation-profile.json",
@@ -386,8 +413,8 @@
   "reproducibility": {
     "byte_identical": true,
     "enabled": true,
-    "files_compared": 76,
-    "files_identical": 76,
+    "files_compared": 86,
+    "files_identical": 86,
     "mismatches": [],
     "schema_version": "AEROST-MULTI-CASE-REPRODUCIBILITY-0.1"
   },
