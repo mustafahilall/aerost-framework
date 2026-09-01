@@ -73,6 +73,16 @@ AEROST is a host-based research prototype and candidate application/execution pr
 
 The external AIR executor is separately implemented, but it consumes the same AIR produced by the common frontend and is not a fully independent second ASCP frontend. The three-path comparison covers the controlled closure suites; the complete generated suite is evaluated through the assurance synthesis, reduction, and mutation pipeline rather than through the same full three-path replay boundary.
 
+## Authors and Contributions
+
+This research artifact was developed jointly by:
+
+- **Mustafa Hilal** — avionics supervisory-control logic and application-case design, system requirements, assurance criteria and evaluation, controlled scenario design, and evidence analysis.
+
+- **Edanur Arslan** — compiler and software-toolchain development, AIR execution, Safe Rust backend generation, assurance synthesis and reduction, test automation, and validation tooling.
+
+- **Joint contributions** — research methodology, test and validation strategy, result interpretation, reproducibility analysis, and manuscript preparation.
+
 ## License
 
 See `NOTICE.md`.
