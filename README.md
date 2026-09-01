@@ -27,10 +27,7 @@ The AEROST research toolchain is implemented primarily in Python to support
 ASCP parsing, AIR construction, assurance analysis, bounded test synthesis,
 suite reduction, mutation analysis, and evidence generation.
 
-Safe Rust is the generated execution backend rather than the implementation
-language of the research tooling itself. For each controlled application,
-AEROST generates a Rust backend that is compiled and executed as a separate
-process and compared against the AIR reference execution paths.
+Safe Rust is the generated execution backend rather than the implementation language of the research tooling itself. For each controlled application, AEROST generates a Rust backend that is compiled and executed as a separate process and compared cycle-by-cycle with the reference AIR interpreter and the separately implemented AIR executor on the controlled closure suites.
 
 ## Controlled Evaluation Results
 
