@@ -216,20 +216,6 @@ The external AIR executor is separately implemented at the AIR execution level b
 
 Across the complete bounded generated suite, the two controlled applications contain 551 scenarios and 1,195 cycles. The reference AIR interpreter, generated Safe Rust backend, and external AIR executor produced identical observable behavior on all 1,195 evaluated cycles.
 
-## Versioning
-
-The stable public baseline is identified by:
-
-```text
-v1.0.0
-```
-
-The corresponding source commit is:
-
-```text
-9669bcc888b3585a77bc4992640defc345325d2a
-```
-
 ## Contributors
 
 **Mustafa Hilal**
