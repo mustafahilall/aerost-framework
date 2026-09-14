@@ -1,96 +1,246 @@
 # AEROST
 
-AEROST is a standardization-oriented research prototype for deterministic supervisory control and reproducible assurance evidence in unmanned aerial vehicle avionics. The project evaluates a restricted supervisory-control profile across two controlled applications: a dual-source electrical-power supervisor and a dual-link communication supervisor.
+AEROST is a deterministic supervisory-control framework for UAV avionics. It provides a restricted supervisory-control profile, explicit cycle semantics, an executable Assurance Intermediate Representation (AIR), generated Safe Rust backends, and reproducible validation and assurance tooling.
 
-## Research Scope
+The framework is evaluated using two representative supervisory applications:
 
-The implemented system includes:
+- dual-source electrical-power supervision;
+- dual-link communication supervision.
+
+## Overview
+
+AEROST is designed around deterministic cyclic supervisory logic with explicit state handling, transition priorities, conservative output behavior, fault policies, and traceable execution identities.
+
+The current implementation includes:
 
 - the AEROST Supervisory Control Profile (ASCP-0.2);
-- explicit deterministic cycle semantics with initialized retained state, transition/output separation, conservative defaults, and atomic commit;
-- lowering to an executable Assurance Intermediate Representation (AIR) with trace metadata;
+- initialized retained state;
+- explicit transition and output stages;
+- deterministic conservative output defaults;
+- atomic cycle commit behavior;
+- lowering to an executable Assurance Intermediate Representation (AIR);
 - a generic AIR reference interpreter;
-- generated Safe Rust compiled and executed as a separate process;
+- generated Safe Rust backends;
 - a separately implemented external AIR executor;
-- cycle-level differential comparison on both the controlled closure suites and the complete bounded unreduced generated suites;
-- requirement-linked structural coverage and selected modified condition/decision coverage (MC/DC) evidence;
-- bounded stateful assurance-test synthesis;
-- deterministic obligation-only and mutation-aware suite reduction;
-- controlled AIR-level mutation analysis; and
-- schema validation and clean-directory byte reproducibility.
+- cycle-level differential execution;
+- requirement-linked structural coverage;
+- selected modified condition/decision coverage (MC/DC);
+- bounded stateful scenario synthesis;
+- deterministic assurance-suite reduction;
+- AIR-level mutation analysis;
+- schema validation;
+- clean-directory reproducibility checks.
 
-The research suite contains exactly two application cases. Application-specific behavior is supplied through controlled source, requirements, policies, scenario sets, input-domain definitions, and mutation profiles; the execution and evidence tooling is shared.
+## Architecture
 
-## Implementation Architecture
+The main execution flow is:
 
-The AEROST research toolchain is implemented primarily in Python to support
-ASCP parsing, AIR construction, assurance analysis, bounded test synthesis,
-suite reduction, mutation analysis, and evidence generation.
+```text
+ASCP source
+    |
+    v
+Parser and semantic analysis
+    |
+    v
+Assurance Intermediate Representation (AIR)
+    |
+    +----------------------+
+    |                      |
+    v                      v
+Reference AIR        Generated Safe Rust
+Interpreter          Backend
+    |                      |
+    +----------+-----------+
+               |
+               v
+        Differential Evaluation
+               |
+               v
+      Assurance and Validation
+             Evidence
+```
 
-Safe Rust is the generated execution backend rather than the implementation language of the research tooling itself. For each controlled application, AEROST generates a Rust backend that is compiled and executed as a separate process and compared cycle-by-cycle with the reference AIR interpreter and the separately implemented AIR executor on both the controlled closure suites and the complete bounded unreduced generated suites.
+A third execution path is provided by a separately implemented external AIR executor.
+
+The external executor consumes the same AIR representation produced by the common frontend. It therefore provides implementation diversity at the AIR execution level, but it is not an independently implemented ASCP frontend.
+
+## Controlled Applications
+
+### Electrical-Power Supervisor
+
+The power-supervision case evaluates deterministic supervisory behavior involving:
+
+- source availability;
+- essential-power conditions;
+- reserve-energy conditions;
+- load shedding;
+- source isolation;
+- critical-bus handling;
+- return-to-home and landing requests;
+- recovery staging;
+- invalid or stale inputs;
+- blocking runtime faults.
+
+### Communication-Link Supervisor
+
+The communication-supervision case evaluates:
+
+- primary and secondary link selection;
+- link degradation;
+- persistent link loss;
+- command-channel authentication;
+- degraded and lost-link modes;
+- recovery staging;
+- return-to-home requests;
+- invalid or stale inputs;
+- blocking runtime faults.
+
+Application-specific behavior is supplied through controlled source programs, requirements, runtime policies, scenarios, bounded input-domain definitions, and mutation profiles. The execution and assurance tooling is shared between both applications.
 
 ## Evaluation Results
 
-The repository contains the controlled evidence used for the evaluation:
+The current baseline contains the following validated results:
 
 | Measure | Result |
 |---|---:|
 | Controlled applications | 2 |
 | Controlled closure scenarios | 95 |
 | Controlled closure cycles | 132 |
-| Three-path equivalent cycles | 132 / 132 |
+| Three-path equivalent controlled cycles | 132 / 132 |
 | Declared assurance obligations covered | 538 / 538 |
 | Selected MC/DC objectives covered | 13 / 13 |
-| Unreduced synthesized suite | 551 scenarios / 1,195 cycles |
-| Generated-suite three-path equivalent cycles | 1,195 / 1,195 |
+| Unreduced generated suite | 551 scenarios / 1,195 cycles |
+| Three-path equivalent generated-suite cycles | 1,195 / 1,195 |
 | Obligation-only reduced suite | 86 scenarios / 202 cycles |
-| Declared mutation distinctions retained by obligation-only reduction | 11 / 16 |
+| Mutation distinctions retained by obligation-only reduction | 11 / 16 |
 | Mutation-aware reduced suite | 90 scenarios / 213 cycles |
-| Predeclared mutation distinctions retained by mutation-aware reduction | 16 / 16 |
+| Mutation distinctions retained by mutation-aware reduction | 16 / 16 |
 | Clean-directory reproducibility | 86 / 86 evaluation artifacts byte-identical |
 
-The 16/16 mutation-aware result is an in-sample preservation result: the same predeclared mutation profiles guide reduction and final scoring. It is not a prediction of effectiveness on unseen defects.
+The mutation-aware result is an in-sample preservation result. The same predeclared mutation profiles are used during reduction and final scoring; the result is therefore not a prediction of effectiveness against previously unseen defects.
+
+The three-path execution results demonstrate bounded empirical agreement for the evaluated programs and scenarios. They do not constitute a formal proof of semantic preservation for every program accepted by the profile.
 
 ## Repository Layout
 
-- `applications/` — manifests for the two controlled applications and the research suite.
-- `examples/` — controlled ASCP source, requirements, runtime-fault policies, and mutation profiles.
-- `specs/` — current ASCP, execution, AIR, conformance, bounded-domain, and assurance-obligation contracts.
-- `tests/` — requirement-oriented scenarios, deterministic structural-closure supplements, and bounded input domains.
-- `conformance/` — accepted and rejected ASCP programs.
-- `tools/` — compiler/evidence implementation, external AIR executor, synthesis/reduction tools, and regression tests.
-- `schemas/` — machine-readable artifact schemas.
-- `artifacts/multi-case/latest/` — controlled two-case evidence bundle.
-- `docs/` — concise technical documentation for the implemented research system.
-- `scripts/run-evaluation.ps1` — authoritative two-case runner.
+```text
+applications/
+    Application manifests and multi-case configuration.
 
-## Reproducing the Two-Case Evaluation
+examples/
+    ASCP application sources, requirements, runtime policies,
+    and mutation profiles.
 
-The recorded evaluation environment used Windows 11, Python 3.13.7, and Rust/Cargo 1.97.1. The Rust toolchain is pinned in `rust-toolchain.toml`.
+specs/
+    ASCP, execution-contract, AIR, conformance,
+    bounded-domain, and assurance-obligation specifications.
 
-On Windows with Python and Rust available:
+tests/
+    Requirement-oriented scenarios, structural-closure scenarios,
+    and bounded input-domain definitions.
+
+conformance/
+    Accepted and rejected ASCP conformance programs.
+
+tools/
+    Compiler, execution, assurance, synthesis, reduction,
+    mutation, validation, and regression tooling.
+
+schemas/
+    Machine-readable schemas for generated evidence.
+
+artifacts/
+    Generated evaluation and reproducibility evidence.
+
+docs/
+    Technical documentation.
+
+scripts/
+    Evaluation and automation scripts.
+```
+
+## Reproducing the Evaluation
+
+The recorded environment uses:
+
+- Windows 11;
+- Python 3.13.7;
+- Rust/Cargo 1.97.1.
+
+The Rust toolchain is pinned through `rust-toolchain.toml`.
+
+From PowerShell:
 
 ```powershell
 .\run-evaluation.cmd
 ```
 
-The runner executes the multi-case regression checks, rebuilds the generated Rust backends, executes the authoritative assurance pipeline, validates the aggregate schemas, and performs the clean-directory reproducibility check. Results are written to `artifacts/multi-case/latest/`.
+The evaluation process:
+
+1. executes the regression checks;
+2. rebuilds the generated Rust backends;
+3. executes the controlled application suites;
+4. executes the bounded generated suites;
+5. compares the three execution paths;
+6. evaluates assurance obligations;
+7. performs suite reduction and mutation analysis;
+8. validates generated schemas and artifacts;
+9. performs the clean-directory reproducibility check.
+
+Evaluation outputs are written under:
+
+```text
+artifacts/multi-case/latest/
+```
 
 ## Interpretation Boundaries
 
-AEROST is a host-based research prototype and candidate application/execution profile. The project does not establish an avionics industry standard, IEC 61131-3 conformance, DO-178C compliance, tool qualification, target-platform timing validity or WCET, hardware-in-the-loop or flight validation, aircraft-level safety, universal UAV applicability, formal compiler semantic preservation for every accepted program, or predictive effectiveness on unseen defects.
+AEROST is a host-based framework for deterministic supervisory-control experimentation and validation.
 
-The external AIR executor is separately implemented, but it consumes the same AIR produced by the common frontend and is not a fully independent second ASCP frontend. The three-path comparison covers both the controlled closure suites and the complete bounded unreduced generated suite. Across the two controlled applications, the generated suite contains 551 scenarios and 1,195 cycles, with identical observable behavior across all three execution paths on all 1,195 cycles. This is bounded empirical agreement and does not constitute a formal semantic-preservation proof for every accepted program.
+The current implementation does not establish:
 
-## Authors and Contributions
+- an avionics industry standard;
+- IEC 61131-3 conformance;
+- DO-178C compliance;
+- development-tool qualification;
+- target-platform WCET;
+- schedulability guarantees;
+- hardware-in-the-loop validation;
+- flight validation;
+- aircraft-level safety;
+- universal applicability to UAV software;
+- formal semantic preservation for every accepted program;
+- predictive mutation effectiveness against unseen defects.
 
-This research artifact was developed jointly by:
+The external AIR executor is separately implemented at the AIR execution level but shares the AIR generated by the common frontend.
 
-- **Mustafa Hilal** — avionics supervisory-control logic and application-case design, system requirements, assurance criteria and evaluation, controlled scenario design, and evidence analysis.
+Across the complete bounded generated suite, the two controlled applications contain 551 scenarios and 1,195 cycles. The reference AIR interpreter, generated Safe Rust backend, and external AIR executor produced identical observable behavior on all 1,195 evaluated cycles.
 
-- **Eda Nur Arslan** — compiler and software-toolchain development, AIR execution, Safe Rust backend generation, assurance synthesis and reduction, test automation, and validation tooling.
+## Versioning
 
-- **Joint contributions** — research methodology, test and validation strategy, result interpretation, reproducibility analysis, and manuscript preparation.
+The stable public baseline is identified by:
+
+```text
+v1.0.0
+```
+
+The corresponding source commit is:
+
+```text
+9669bcc888b3585a77bc4992640defc345325d2a
+```
+
+## Contributors
+
+**Mustafa Hilal**
+
+Supervisory-control logic, application-case design, system requirements, assurance criteria, controlled scenario design, and evidence analysis.
+
+**Eda Nur Arslan**
+
+Compiler and software-toolchain development, AIR execution, Safe Rust backend generation, assurance-suite synthesis and reduction, test automation, and validation tooling.
+
+Joint work includes system methodology, validation strategy, result interpretation, reproducibility analysis, and technical documentation.
 
 ## License
 
